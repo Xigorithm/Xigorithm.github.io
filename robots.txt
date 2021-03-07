@@ -4,11 +4,6 @@ Allow: /
 Allow: /archives/
 Allow: /categories/
 Allow: /tags/
-Allow: /categories/机器学习/
-Allow: /categories/知识图谱/
-Allow: /categories/NLP/
-Allow: /categories/阅读书单/
-Allow: /categories/生活那点事儿/
 
 Disallow: /vendors/
 Disallow: /js/
