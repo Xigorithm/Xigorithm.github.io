@@ -22,6 +22,8 @@
       </categories>
       <tags>
         <tag>知识图谱</tag>
+        <tag>知识推理</tag>
+        <tag>人工智能</tag>
       </tags>
   </entry>
   <entry>
@@ -48,6 +50,7 @@
       </categories>
       <tags>
         <tag>机器学习</tag>
+        <tag>人工智能</tag>
       </tags>
   </entry>
   <entry>
@@ -60,6 +63,7 @@
       </categories>
       <tags>
         <tag>NLP</tag>
+        <tag>人工智能</tag>
       </tags>
   </entry>
   <entry>
@@ -71,7 +75,7 @@
         <category>生活那点事儿</category>
       </categories>
       <tags>
-        <tag>生活那点事儿</tag>
+        <tag>生活感悟</tag>
       </tags>
   </entry>
 </search>
