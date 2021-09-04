@@ -217,9 +217,9 @@
     <category term="NLP" scheme="http://example.com/categories/NLP/"/>
     
     
-    <category term="NLP" scheme="http://example.com/tags/NLP/"/>
-    
     <category term="人工智能" scheme="http://example.com/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
+    
+    <category term="NLP" scheme="http://example.com/tags/NLP/"/>
     
   </entry>
   
@@ -244,9 +244,9 @@
     <category term="机器学习" scheme="http://example.com/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
     
-    <category term="机器学习" scheme="http://example.com/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
-    
     <category term="人工智能" scheme="http://example.com/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
+    
+    <category term="机器学习" scheme="http://example.com/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
