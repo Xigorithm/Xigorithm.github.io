@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-08-04T23:19:38.148Z</updated>
+  <updated>2021-09-04T14:39:58.799Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,45 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>模型与算法之XGboost</title>
+    <link href="http://example.com/2021/09/04/%E6%A8%A1%E5%9E%8B%E4%B8%8E%E7%AE%97%E6%B3%95%E4%B9%8BXGboost/"/>
+    <id>http://example.com/2021/09/04/%E6%A8%A1%E5%9E%8B%E4%B8%8E%E7%AE%97%E6%B3%95%E4%B9%8BXGboost/</id>
+    <published>2021-09-04T14:39:58.000Z</published>
+    <updated>2021-09-04T14:39:58.799Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>编程艺术之设计模式</title>
+    <link href="http://example.com/2021/09/04/%E7%BC%96%E7%A8%8B%E8%89%BA%E6%9C%AF%E4%B9%8B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    <id>http://example.com/2021/09/04/%E7%BC%96%E7%A8%8B%E8%89%BA%E6%9C%AF%E4%B9%8B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</id>
+    <published>2021-09-04T14:37:19.000Z</published>
+    <updated>2021-09-04T14:37:19.523Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>编程艺术之单元测试</title>
+    <link href="http://example.com/2021/09/04/%E7%BC%96%E7%A8%8B%E8%89%BA%E6%9C%AF%E4%B9%8B%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/"/>
+    <id>http://example.com/2021/09/04/%E7%BC%96%E7%A8%8B%E8%89%BA%E6%9C%AF%E4%B9%8B%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/</id>
+    <published>2021-09-04T14:36:54.000Z</published>
+    <updated>2021-09-04T14:36:54.899Z</updated>
+    
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>LSTM算法</title>
