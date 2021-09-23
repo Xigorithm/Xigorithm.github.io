@@ -71,7 +71,7 @@
 
 
 
-  <meta name="keywords" content="人工智能,AI,知识表示,Trans," />
+  <meta name="keywords" content="AI,人工智能,知识表示,Trans," />
 
 
 
@@ -84,18 +84,18 @@
 
 
 
-<meta name="description" content="“知识表示学习是面向知识库中实体和关系的表示学习，通过将实体或关系投影到低维向量空间，我们能够实现对实体和关系的语义信息的表示，可以高效地计算实体、关系及其之间的复杂语义关联，这对知识库的构建、推理与应用均有重要意义。”[1]——刘知远，等  1. 知识表示学习的主要方法1.1 距离模型距离模型又称为结构表示(structured embedding)，是最早的几个知识表示学习的方法之一, SE">
+<meta name="description" content="“知识表示学习是面向知识库中实体和关系的表示学习，通过将实体或关系投影到低维向量空间，我们能够实现对实体和关系的语义信息的表示，可以高效地计算实体、关系及其之间的复杂语义关联，这对知识库的构建、推理与应用均有重要意义。”[1]——刘知远，等  知识表示学习的主要方法1.1 距离模型距离模型又称为结构表示(structured embedding)，是最早的几个知识表示学习的方法之一, SE为每个">
 <meta property="og:type" content="article">
 <meta property="og:title" content="知识表示学习之Trans系列">
 <meta property="og:url" content="http://example.com/2021/02/15/%E7%9F%A5%E8%AF%86%E8%A1%A8%E7%A4%BA%E5%AD%A6%E4%B9%A0%E4%B9%8BTrans%E7%B3%BB%E5%88%97/index.html">
 <meta property="og:site_name" content="xigorithm">
-<meta property="og:description" content="“知识表示学习是面向知识库中实体和关系的表示学习，通过将实体或关系投影到低维向量空间，我们能够实现对实体和关系的语义信息的表示，可以高效地计算实体、关系及其之间的复杂语义关联，这对知识库的构建、推理与应用均有重要意义。”[1]——刘知远，等  1. 知识表示学习的主要方法1.1 距离模型距离模型又称为结构表示(structured embedding)，是最早的几个知识表示学习的方法之一, SE">
+<meta property="og:description" content="“知识表示学习是面向知识库中实体和关系的表示学习，通过将实体或关系投影到低维向量空间，我们能够实现对实体和关系的语义信息的表示，可以高效地计算实体、关系及其之间的复杂语义关联，这对知识库的构建、推理与应用均有重要意义。”[1]——刘知远，等  知识表示学习的主要方法1.1 距离模型距离模型又称为结构表示(structured embedding)，是最早的几个知识表示学习的方法之一, SE为每个">
 <meta property="og:locale">
 <meta property="article:published_time" content="2021-02-15T00:26:20.000Z">
-<meta property="article:modified_time" content="2021-09-21T09:14:10.140Z">
+<meta property="article:modified_time" content="2021-09-23T00:22:19.196Z">
 <meta property="article:author" content="xigorithm">
-<meta property="article:tag" content="人工智能">
 <meta property="article:tag" content="AI">
+<meta property="article:tag" content="人工智能">
 <meta property="article:tag" content="知识表示">
 <meta property="article:tag" content="Trans">
 <meta name="twitter:card" content="summary">
@@ -390,7 +390,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  209
+                  537
                 </span>
               
 
@@ -430,9 +430,11 @@
         <blockquote>
 <p>“知识表示学习是面向知识库中实体和关系的表示学习，通过将实体或关系投影到低维向量空间，我们能够实现对实体和关系的语义信息的表示，可以高效地计算实体、关系及其之间的复杂语义关联，这对知识库的构建、推理与应用均有重要意义。”[1]——刘知远，等</p>
 </blockquote>
-<h2 id="1-知识表示学习的主要方法"><a href="#1-知识表示学习的主要方法" class="headerlink" title="1. 知识表示学习的主要方法"></a>1. 知识表示学习的主要方法</h2><h3 id="1-1-距离模型"><a href="#1-1-距离模型" class="headerlink" title="1.1 距离模型"></a>1.1 距离模型</h3><p>距离模型又称为结构表示(structured embedding)，是最早的几个知识表示学习的方法之一, SE为每个关系<em>r</em>定义了两个矩阵$M_{r,1}$，$M_{r,2}$，来表示</p>
-<p>$$<br>M_{r,1}<br>$$</p>
-<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p>[1] 刘知远等，知识表示学习研究进展，<em>计算机研究与发展</em>， 2016年02期</p>
+<h2 id="知识表示学习的主要方法"><a href="#知识表示学习的主要方法" class="headerlink" title="知识表示学习的主要方法"></a>知识表示学习的主要方法</h2><h3 id="1-1-距离模型"><a href="#1-1-距离模型" class="headerlink" title="1.1 距离模型"></a>1.1 距离模型</h3><p>距离模型又称为结构表示(structured embedding)，是最早的几个知识表示学习的方法之一, SE为每个关系<em>r</em>定义了两个矩阵$M_{r,1}$，$M_{r,2}$，用于三元组中头实体和尾实体的投影操作，SE为每个三元组$(h,r,t)$定义了如下损失函数：<br>$$<br>f_{r}(h,t)=|M_{r,1}l_{h}-M_{r,2}l_t|<em>{l_1}<br>$$<br>SE通过关系矩阵$M_{r,1}$和$M</em>{r,2}$将首实体和尾实体投影到$r$的空间，然后计算投影向量的距离，距离越小，说明两个实体之间存在该关系的关联性就越大。</p>
+<p>但是SE模型的缺陷是，它使用两个不同的矩阵分别对首实体和尾实体进行投影，协同性较差，往往无法精确刻画出两个实体与关系之间的语义关联[1]。</p>
+<h2 id="1-2-单层神经网络模型"><a href="#1-2-单层神经网络模型" class="headerlink" title="1.2 单层神经网络模型"></a>1.2 单层神经网络模型</h2><p>单层神经网络模型(single layer model)，尝试采用单层神经网络的非线性操作来减轻SE模型无法协同精确刻画实体和关系之间的语义关联问题，SLM为每个三元组定义如下评分函数：<br>$$<br>u_r^Tg(M_{r,1}l_{h} +  M_{r,2}l_t)<br>$$<br>$u_r^T$为关系r的表示向量，$g()$为tanh函数。</p>
+<p>虽然SLM是SE模型的改进版本，但是其非线性操作仅提供了实体和关系的微弱语义关系，却引入了的计算复杂度。</p>
+<h2 id="1-3-能量模型"><a href="#1-3-能量模型" class="headerlink" title="1.3 能量模型"></a>1.3 能量模型</h2><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p>[1] 刘知远等，知识表示学习研究进展，<em>计算机研究与发展</em>， 2016年02期</p>
 
       
     </div>
@@ -450,13 +452,13 @@
       
         <div class="post-tags">
           
-            <a href="/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" rel="tag"><i class="fa fa-tag"></i>
-
- 人工智能</a>
-          
             <a href="/tags/AI/" rel="tag"><i class="fa fa-tag"></i>
 
  AI</a>
+          
+            <a href="/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" rel="tag"><i class="fa fa-tag"></i>
+
+ 人工智能</a>
           
             <a href="/tags/%E7%9F%A5%E8%AF%86%E8%A1%A8%E7%A4%BA/" rel="tag"><i class="fa fa-tag"></i>
 
@@ -651,7 +653,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E7%9F%A5%E8%AF%86%E8%A1%A8%E7%A4%BA%E5%AD%A6%E4%B9%A0%E7%9A%84%E4%B8%BB%E8%A6%81%E6%96%B9%E6%B3%95"><span class="nav-number">1.</span> <span class="nav-text">1. 知识表示学习的主要方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-%E8%B7%9D%E7%A6%BB%E6%A8%A1%E5%9E%8B"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 距离模型</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE"><span class="nav-number">2.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9F%A5%E8%AF%86%E8%A1%A8%E7%A4%BA%E5%AD%A6%E4%B9%A0%E7%9A%84%E4%B8%BB%E8%A6%81%E6%96%B9%E6%B3%95"><span class="nav-number">1.</span> <span class="nav-text">知识表示学习的主要方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-%E8%B7%9D%E7%A6%BB%E6%A8%A1%E5%9E%8B"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 距离模型</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-%E5%8D%95%E5%B1%82%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9E%8B"><span class="nav-number">2.</span> <span class="nav-text">1.2 单层神经网络模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-%E8%83%BD%E9%87%8F%E6%A8%A1%E5%9E%8B"><span class="nav-number">3.</span> <span class="nav-text">1.3 能量模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE"><span class="nav-number">4.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
             
 
           </div>
@@ -692,7 +694,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">本站共1.3k字</span>
+  <span class="post-count">本站共1.6k字</span>
 </div>
 
 </div>
@@ -1207,6 +1209,28 @@
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
 
   
 
