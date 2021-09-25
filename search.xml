@@ -164,9 +164,13 @@
     <content><![CDATA[<blockquote>
 <p>“知识表示学习是面向知识库中实体和关系的表示学习，通过将实体或关系投影到低维向量空间，我们能够实现对实体和关系的语义信息的表示，可以高效地计算实体、关系及其之间的复杂语义关联，这对知识库的构建、推理与应用均有重要意义。”[1]——刘知远，等</p>
 </blockquote>
-<h2 id="知识表示学习的主要方法"><a href="#知识表示学习的主要方法" class="headerlink" title="知识表示学习的主要方法"></a>知识表示学习的主要方法</h2><h3 id="1-1-距离模型"><a href="#1-1-距离模型" class="headerlink" title="1.1 距离模型"></a>1.1 距离模型</h3><p>距离模型又称为结构表示(structured embedding)，是最早的几个知识表示学习的方法之一, SE为每个关系<em>r</em>定义了两个矩阵$M_{r,1}$，$M_{r,2}$，用于三元组中头实体和尾实体的投影操作，SE为每个三元组$(h,r,t)$定义了如下损失函数：<br>$$<br>f_{r}(h,t)=|M_{r,1}l_{h}-M_{r,2}l_t|<em>{l_1}<br>$$<br>SE通过关系矩阵$M_{r,1}$和$M</em>{r,2}$将首实体和尾实体投影到$r$的空间，然后计算投影向量的距离，距离越小，说明两个实体之间存在该关系的关联性就越大。</p>
+<h2 id="知识表示学习的主要方法"><a href="#知识表示学习的主要方法" class="headerlink" title="知识表示学习的主要方法"></a>知识表示学习的主要方法</h2><h3 id="1-1-距离模型"><a href="#1-1-距离模型" class="headerlink" title="1.1 距离模型"></a>1.1 距离模型</h3><p>距离模型又称为结构表示(structured embedding)，是最早的几个知识表示学习的方法之一, SE为每个关系<script type="math/tex">r</script>定义了两个矩阵<script type="math/tex">{M_{r,1}}</script>和<script type="math/tex">{M_{r,2}}</script>用于三元组中头实体和尾实体的投影操作，为每个三元组<script type="math/tex">(h,r,t)</script>定义了如下损失函数：</p>
+<script type="math/tex; mode=display">
+{f_{r\left( {h,t} \right)}} = {\left| { {M_{r,1}}{l_h} - {M_{r,2}}{l_t}} \right|_{ {l_1}}}</script><p>SE通过关系矩阵<script type="math/tex">M_{ r,1}</script> 和 <script type="math/tex">{M_{r,2}}</script> 将首实体和尾实体投影到<script type="math/tex">r</script>的空间，然后计算投影向量的距离，距离越小，说明两个实体之间存在该关系的关联性就越大。</p>
 <p>但是SE模型的缺陷是，它使用两个不同的矩阵分别对首实体和尾实体进行投影，协同性较差，往往无法精确刻画出两个实体与关系之间的语义关联[1]。</p>
-<h3 id="1-2-单层神经网络模型"><a href="#1-2-单层神经网络模型" class="headerlink" title="1.2 单层神经网络模型"></a>1.2 单层神经网络模型</h3><p>单层神经网络模型(single layer model)，尝试采用单层神经网络的非线性操作来减轻SE模型无法协同精确刻画实体和关系之间的语义关联问题，SLM为每个三元组定义如下评分函数：<br>$$<br>u_r^Tg(M_{r,1}l_{h} +  M_{r,2}l_t)<br>$$<br>$u_r^T$为关系r的表示向量，$g()$为tanh函数。</p>
+<h3 id="1-2-单层神经网络模型"><a href="#1-2-单层神经网络模型" class="headerlink" title="1.2 单层神经网络模型"></a>1.2 单层神经网络模型</h3><p>单层神经网络模型(single layer model)，尝试采用单层神经网络的非线性操作来减轻SE模型无法协同精确刻画实体和关系之间的语义关联问题，SLM为每个三元组定义如下评分函数：</p>
+<script type="math/tex; mode=display">
+u_r^Tg(M_{r,1}l_{h} +  M_{r,2}l_t)</script><p>$u_r^T$为关系<script type="math/tex">r</script>的表示向量，$g()$为tanh函数。</p>
 <p>虽然SLM是SE模型的改进版本，但是其非线性操作仅提供了实体和关系的微弱语义关系，却引入了的计算复杂度。</p>
 <h3 id="1-3-能量模型"><a href="#1-3-能量模型" class="headerlink" title="1.3 能量模型"></a>1.3 能量模型</h3><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p>[1] 刘知远等，知识表示学习研究进展，<em>计算机研究与发展</em>， 2016年02期</p>
 ]]></content>
