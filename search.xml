@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Java8新特性</title>
+    <url>/2021/09/28/Java8%E6%96%B0%E7%89%B9%E6%80%A7/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>编程是一门艺术</category>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>编程语言</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>LSTM算法</title>
     <url>/2021/08/05/LSTM%E7%AE%97%E6%B3%95/</url>
     <content><![CDATA[]]></content>
@@ -81,7 +94,7 @@
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
       <categories>
-        <category>AI模型与算法</category>
+        <category>技术</category>
       </categories>
       <tags>
         <tag>图数据库</tag>
@@ -250,14 +263,10 @@ u_r^Tg(M_{r,1}l_{h} +  M_{r,2}l_t)</script><p>$u_r^T$为关系<script type="math
     <content><![CDATA[]]></content>
       <categories>
         <category>书单</category>
+        <category>计算机</category>
       </categories>
       <tags>
         <tag>书单</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Java8新特性</title>
-    <url>/2021/09/28/Java8%E6%96%B0%E7%89%B9%E6%80%A7/</url>
-    <content><![CDATA[]]></content>
   </entry>
 </search>
