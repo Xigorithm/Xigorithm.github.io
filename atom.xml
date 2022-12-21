@@ -59,12 +59,19 @@
     <link href="http://example.com/2021/08/05/LSTM%E7%AE%97%E6%B3%95/"/>
     <id>http://example.com/2021/08/05/LSTM%E7%AE%97%E6%B3%95/</id>
     <published>2021-08-04T23:19:38.000Z</published>
-    <updated>2021-09-21T02:00:36.861Z</updated>
+    <updated>2022-12-21T08:40:42.602Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/images/test.JPG" width="250" height="150" hspace="5" style="float:right"></p><blockquote><p>【 摘要】床前明月光，疑是地上霜，举头望明月，低头思故乡。床前明月光，疑是地上霜，举头望明月，低头思故乡。床前明月光，疑是地上霜，举头望明月，低头思故乡。床前明月光，疑是地上霜，举头望明月，低头思故乡。床前明月光，疑是地上霜，举头望明月，低头思故乡。床前明月光，疑是地上霜，举头望明月，低头思故乡。床前明月光，疑是地上霜.</p></blockquote><a id="more"></a><p>床前明月光，疑是地上霜，举头望明月，低头思故乡。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/test.JPG&quot; width=&quot;250&quot; height=&quot;150&quot; hspace=&quot;5&quot; style=&quot;float:right&quot;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;【 摘要】床前明月光，疑是地上霜，举头望明月，低头思故乡。床前明月光，疑是地上霜，举头望明月，低头思故乡。床前明月光，疑是地上霜，举头望明月，低头思故乡。床前明月光，疑是地上霜，举头望明月，低头思故乡。床前明月光，疑是地上霜，举头望明月，低头思故乡。床前明月光，疑是地上霜，举头望明月，低头思故乡。床前明月光，疑是地上霜.&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
     
     
     
-    
-    <category term="AI模型与算法" scheme="http://example.com/categories/AI%E6%A8%A1%E5%9E%8B%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
+    <category term="机器学习" scheme="http://example.com/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
     
     <category term="人工智能" scheme="http://example.com/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
