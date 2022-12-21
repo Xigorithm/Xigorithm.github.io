@@ -48,9 +48,9 @@
     <category term="AI模型与算法" scheme="http://example.com/categories/AI%E6%A8%A1%E5%9E%8B%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
     
     
-    <category term="AI" scheme="http://example.com/tags/AI/"/>
-    
     <category term="人工智能" scheme="http://example.com/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
+    
+    <category term="AI" scheme="http://example.com/tags/AI/"/>
     
   </entry>
   
@@ -67,11 +67,11 @@
     <category term="AI模型与算法" scheme="http://example.com/categories/AI%E6%A8%A1%E5%9E%8B%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
     
     
-    <category term="NLP" scheme="http://example.com/tags/NLP/"/>
+    <category term="人工智能" scheme="http://example.com/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
     
     <category term="AI" scheme="http://example.com/tags/AI/"/>
     
-    <category term="人工智能" scheme="http://example.com/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
+    <category term="NLP" scheme="http://example.com/tags/NLP/"/>
     
   </entry>
   
@@ -212,11 +212,11 @@
     <category term="AI模型与算法" scheme="http://example.com/categories/AI%E6%A8%A1%E5%9E%8B%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
     
     
-    <category term="NLP" scheme="http://example.com/tags/NLP/"/>
+    <category term="人工智能" scheme="http://example.com/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
     
     <category term="AI" scheme="http://example.com/tags/AI/"/>
     
-    <category term="人工智能" scheme="http://example.com/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
+    <category term="NLP" scheme="http://example.com/tags/NLP/"/>
     
   </entry>
   
@@ -242,9 +242,9 @@
     <category term="AI模型与算法" scheme="http://example.com/categories/AI%E6%A8%A1%E5%9E%8B%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
     
     
-    <category term="AI" scheme="http://example.com/tags/AI/"/>
-    
     <category term="人工智能" scheme="http://example.com/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
+    
+    <category term="AI" scheme="http://example.com/tags/AI/"/>
     
     <category term="知识表示" scheme="http://example.com/tags/%E7%9F%A5%E8%AF%86%E8%A1%A8%E7%A4%BA/"/>
     
@@ -273,13 +273,13 @@
     <category term="AI模型与算法" scheme="http://example.com/categories/AI%E6%A8%A1%E5%9E%8B%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
     
     
-    <category term="AI" scheme="http://example.com/tags/AI/"/>
-    
-    <category term="人工智能" scheme="http://example.com/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
-    
     <category term="知识图谱" scheme="http://example.com/tags/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1/"/>
     
     <category term="知识推理" scheme="http://example.com/tags/%E7%9F%A5%E8%AF%86%E6%8E%A8%E7%90%86/"/>
+    
+    <category term="人工智能" scheme="http://example.com/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
+    
+    <category term="AI" scheme="http://example.com/tags/AI/"/>
     
   </entry>
   

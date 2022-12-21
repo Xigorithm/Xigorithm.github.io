@@ -1,19 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>LSTM算法</title>
-    <url>/2021/08/05/LSTM%E7%AE%97%E6%B3%95/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>AI模型与算法</category>
-      </categories>
-      <tags>
-        <tag>NLP</tag>
-        <tag>AI</tag>
-        <tag>人工智能</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>RETE规则推理算法</title>
     <url>/2021/01/10/RETE%E8%A7%84%E5%88%99%E6%8E%A8%E7%90%86%E7%AE%97%E6%B3%95/</url>
     <content><![CDATA[<p>hello</p>
@@ -22,10 +9,23 @@
         <category>AI模型与算法</category>
       </categories>
       <tags>
-        <tag>AI</tag>
-        <tag>人工智能</tag>
         <tag>知识图谱</tag>
         <tag>知识推理</tag>
+        <tag>人工智能</tag>
+        <tag>AI</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>LSTM算法</title>
+    <url>/2021/08/05/LSTM%E7%AE%97%E6%B3%95/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>AI模型与算法</category>
+      </categories>
+      <tags>
+        <tag>人工智能</tag>
+        <tag>AI</tag>
+        <tag>NLP</tag>
       </tags>
   </entry>
   <entry>
@@ -37,9 +37,9 @@
         <category>AI模型与算法</category>
       </categories>
       <tags>
-        <tag>NLP</tag>
-        <tag>AI</tag>
         <tag>人工智能</tag>
+        <tag>AI</tag>
+        <tag>NLP</tag>
       </tags>
   </entry>
   <entry>
@@ -96,8 +96,8 @@
         <category>AI模型与算法</category>
       </categories>
       <tags>
-        <tag>AI</tag>
         <tag>人工智能</tag>
+        <tag>AI</tag>
       </tags>
   </entry>
   <entry>
@@ -152,8 +152,8 @@ u_r^Tg(M_{r,1}l_{h} +  M_{r,2}l_t)</script><p>$u_r^T$为关系<script type="math
         <category>AI模型与算法</category>
       </categories>
       <tags>
-        <tag>AI</tag>
         <tag>人工智能</tag>
+        <tag>AI</tag>
         <tag>知识表示</tag>
         <tag>Trans</tag>
       </tags>
