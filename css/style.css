@@ -139,12 +139,16 @@ a {
   margin: 0;
   padding: 0;
   border-top: 1px solid #ccc;
-  margin-top: 20px;
+  margin-top: 5px;
 }
 .header .menu .menu-item {
   font-size: 18px;
-  margin: 0 15px 0 0;
-  padding: 3px 0 3px 0;
+  font-family: Microsoft Yahei, "Comic Sans MS", cursive, sans-serif;
+  margin-left: 0;
+  margin-right: 40px;
+  margin-top: 3px;
+  margin-bottom: 5px;
+  padding: 1.5px 0 0 0;
   float: left;
   display: inline-block;
 }
@@ -262,6 +266,13 @@ a {
   font-size: 1.5em;
   line-height: 1.2em;
   border-bottom: 1px solid #000;
+  text-align: center;
+}
+.file-title {
+  font-size: 1.5em;
+  line-height: 1.2em;
+  border-bottom: 1px dashed #808080;
+  text-align: center;
 }
 .archive {
   padding: 0 20px;
