@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-01-02T07:46:47.755Z</updated>
+  <updated>2023-01-05T14:10:13.316Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://example.com/2022/12/31/2022%E5%B9%B4%E8%AF%BB%E4%B9%A6%E6%8A%A5%E5%91%8A/"/>
     <id>http://example.com/2022/12/31/2022%E5%B9%B4%E8%AF%BB%E4%B9%A6%E6%8A%A5%E5%91%8A/</id>
     <published>2022-12-31T07:00:44.000Z</published>
-    <updated>2023-01-02T07:46:47.755Z</updated>
+    <updated>2023-01-05T14:10:13.316Z</updated>
     
     <content type="html"><![CDATA[<p><img src="/images/book/2022/读书报告/report0.jpg" width="250" height="150" hspace="5" style="float:right"></p><blockquote><p>【摘要】2022年基本养成了读书的习惯，从2022年1月1号到2022年12月31号，中间就有一天（10月5日）中断了微信的读书记录，其余每天基本能保证30分钟以上的读书记录，读了一些书，更多的是觉得很多有意思的书来不及阅读，希望来年再接再厉，多读好书，进一步完善自己的知识框架。</p></blockquote><a id="more"></a><p><img src="/images/book/2022/读书报告/report1.jpg" alt=""></p><p><img src="/images/book/2022/读书报告/report2.jpg" alt=""></p><p><img src="/images/book/2022/读书报告/report3.jpg" alt=""></p><p><img src="/images/book/2022/读书报告/report4.jpg" alt=""></p><p><img src="/images/book/2022/读书报告/report5.jpg" alt=""></p><p><img src="/images/book/2022/读书报告/report6.jpg" alt=""></p>]]></content>
     
@@ -35,10 +35,96 @@
     
     <category term="我的书单" scheme="http://example.com/categories/%E6%88%91%E7%9A%84%E4%B9%A6%E5%8D%95/"/>
     
+    
+  </entry>
+  
+  <entry>
+    <title>《蛤蟆先生去看心理医生》</title>
+    <link href="http://example.com/2022/12/02/%E3%80%8A%E8%9B%A4%E8%9F%86%E5%85%88%E7%94%9F%E5%8E%BB%E7%9C%8B%E5%BF%83%E7%90%86%E5%8C%BB%E7%94%9F%E3%80%8B/"/>
+    <id>http://example.com/2022/12/02/%E3%80%8A%E8%9B%A4%E8%9F%86%E5%85%88%E7%94%9F%E5%8E%BB%E7%9C%8B%E5%BF%83%E7%90%86%E5%8C%BB%E7%94%9F%E3%80%8B/</id>
+    <published>2022-12-02T07:00:44.000Z</published>
+    <updated>2023-01-05T14:13:56.476Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/images/book/2022/蛤蟆先生去看心理医生/0.jpg" width="250" height="150" hspace="5" style="float:right"></p><blockquote><p>【摘要】蛤蟆本是一个热情、时尚又爱冒险的家伙，惹出过不少麻烦和笑话。可他现在陷入抑郁，不能自拔。他的朋友们决定出手相助，其中包括智慧又威严的獾、关心朋友但有点絮叨的河鼠，还有体贴善良的鼹鼠。他们商量来商量去，决定督促蛤蟆重视这个问题，并带他去接受心理咨询。</p></blockquote><a id="more"></a><p>蛤蟆本是一个热情、时尚又爱冒险的家伙，惹出过不少麻烦和笑话。可他现在陷入抑郁，不能自拔。他的朋友们决定出手相助，其中包括智慧又威严的獾、关心朋友但有点絮叨的河鼠，还有体贴善良的鼹鼠。他们商量来商量去，决定督促蛤蟆重视这个问题，并带他去接受心理咨询。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/book/2022/蛤蟆先生去看心理医生/0.jpg&quot; width=&quot;250&quot; height=&quot;150&quot; hspace=&quot;5&quot; style=&quot;float:right&quot;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;【摘要】蛤蟆本是一个热情、时尚又爱冒险的家伙，惹出过不少麻烦和笑话。可他现在陷入抑郁，不能自拔。他的朋友们决定出手相助，其中包括智慧又威严的獾、关心朋友但有点絮叨的河鼠，还有体贴善良的鼹鼠。他们商量来商量去，决定督促蛤蟆重视这个问题，并带他去接受心理咨询。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="我的书单" scheme="http://example.com/categories/%E6%88%91%E7%9A%84%E4%B9%A6%E5%8D%95/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>《尖叫的数学》</title>
+    <link href="http://example.com/2022/12/02/%E3%80%8A%E5%B0%96%E5%8F%AB%E7%9A%84%E6%95%B0%E5%AD%A6%E3%80%8B/"/>
+    <id>http://example.com/2022/12/02/%E3%80%8A%E5%B0%96%E5%8F%AB%E7%9A%84%E6%95%B0%E5%AD%A6%E3%80%8B/</id>
+    <published>2022-12-02T07:00:44.000Z</published>
+    <updated>2023-01-05T14:14:45.602Z</updated>
+    
+    <content type="html"><![CDATA[<!--<img src="/images/xiaopingguo.jpg" width="250" height="150" hspace="5" style="float:right">--><blockquote><p>【摘要】升级为爸爸后过的第一个父亲节，祝全天下的爸爸都节日快乐。</p></blockquote><a id="more"></a>]]></content>
+    
+    
+    <summary type="html">&lt;!--&lt;img src=&quot;/images/xiaopingguo.jpg&quot; width=&quot;250&quot; height=&quot;150&quot; hspace=&quot;5&quot; style=&quot;float:right&quot;&gt;--&gt;
+&lt;blockquote&gt;
+&lt;p&gt;【摘要】升级为爸爸后过的第一个父亲节，祝全天下的爸爸都节日快乐。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="我的书单" scheme="http://example.com/categories/%E6%88%91%E7%9A%84%E4%B9%A6%E5%8D%95/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>《乔布斯传》</title>
+    <link href="http://example.com/2022/12/02/%E3%80%8A%E6%96%AF%E8%92%82%E5%A4%AB%E4%B9%94%E5%B8%83%E6%96%AF%E4%BC%A0%E3%80%8B/"/>
+    <id>http://example.com/2022/12/02/%E3%80%8A%E6%96%AF%E8%92%82%E5%A4%AB%E4%B9%94%E5%B8%83%E6%96%AF%E4%BC%A0%E3%80%8B/</id>
+    <published>2022-12-02T07:00:44.000Z</published>
+    <updated>2023-01-05T14:14:33.432Z</updated>
+    
+    <content type="html"><![CDATA[<!--<img src="/images/xiaopingguo.jpg" width="250" height="150" hspace="5" style="float:right">--><blockquote><p>【摘要】升级为爸爸后过的第一个父亲节，祝全天下的爸爸都节日快乐。</p></blockquote><a id="more"></a>]]></content>
+    
+    
+    <summary type="html">&lt;!--&lt;img src=&quot;/images/xiaopingguo.jpg&quot; width=&quot;250&quot; height=&quot;150&quot; hspace=&quot;5&quot; style=&quot;float:right&quot;&gt;--&gt;
+&lt;blockquote&gt;
+&lt;p&gt;【摘要】升级为爸爸后过的第一个父亲节，祝全天下的爸爸都节日快乐。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="我的书单" scheme="http://example.com/categories/%E6%88%91%E7%9A%84%E4%B9%A6%E5%8D%95/"/>
+    
     <category term="2022年书单" scheme="http://example.com/categories/%E6%88%91%E7%9A%84%E4%B9%A6%E5%8D%95/2022%E5%B9%B4%E4%B9%A6%E5%8D%95/"/>
     
     
-    <category term="书单" scheme="http://example.com/tags/%E4%B9%A6%E5%8D%95/"/>
+  </entry>
+  
+  <entry>
+    <title>《第一性原理》</title>
+    <link href="http://example.com/2022/12/02/%E3%80%8A%E7%AC%AC%E4%B8%80%E6%80%A7%E5%8E%9F%E7%90%86%E3%80%8B/"/>
+    <id>http://example.com/2022/12/02/%E3%80%8A%E7%AC%AC%E4%B8%80%E6%80%A7%E5%8E%9F%E7%90%86%E3%80%8B/</id>
+    <published>2022-12-02T07:00:44.000Z</published>
+    <updated>2023-01-05T14:13:45.206Z</updated>
+    
+    <content type="html"><![CDATA[<!--<img src="/images/xiaopingguo.jpg" width="250" height="150" hspace="5" style="float:right">--><blockquote><p>【摘要】升级为爸爸后过的第一个父亲节，祝全天下的爸爸都节日快乐。</p></blockquote><a id="more"></a>]]></content>
+    
+    
+    <summary type="html">&lt;!--&lt;img src=&quot;/images/xiaopingguo.jpg&quot; width=&quot;250&quot; height=&quot;150&quot; hspace=&quot;5&quot; style=&quot;float:right&quot;&gt;--&gt;
+&lt;blockquote&gt;
+&lt;p&gt;【摘要】升级为爸爸后过的第一个父亲节，祝全天下的爸爸都节日快乐。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="我的书单" scheme="http://example.com/categories/%E6%88%91%E7%9A%84%E4%B9%A6%E5%8D%95/"/>
+    
     
   </entry>
   
@@ -47,7 +133,7 @@
     <link href="http://example.com/2022/12/02/%E3%80%8A%E8%82%96%E9%80%B8%E7%BE%A4%E7%9A%84%E5%88%9B%E4%B8%9A%E6%89%8B%E8%AE%B0%E3%80%8B/"/>
     <id>http://example.com/2022/12/02/%E3%80%8A%E8%82%96%E9%80%B8%E7%BE%A4%E7%9A%84%E5%88%9B%E4%B8%9A%E6%89%8B%E8%AE%B0%E3%80%8B/</id>
     <published>2022-12-02T07:00:44.000Z</published>
-    <updated>2023-01-02T07:48:27.837Z</updated>
+    <updated>2023-01-05T13:57:33.440Z</updated>
     
     <content type="html"><![CDATA[<p><img src="/images/book/2022/肖逸群创业手记/封面.JPG" width="250" height="150" hspace="5" style="float:right"></p><blockquote><p>【摘要】最近两周花了一些时间，看完了肖厂长的这本创业手记，基本是作者对自己创业一路走来的心路历程的所思所想。作者跟我基本是同龄，应该是比我早一届上的大学，然而他已经多次入选30x30创业领袖榜单，确实是我应该努力学习的榜样。<br>摘取书中的一些金句(鸡汤)自勉吧。</p></blockquote><a id="more"></a><ol><li><p>The dots will somehow connect in your future.</p><p><img src="/images/book/2022/肖逸群创业手记/dots.JPG" alt=""></p></li><li><p>today you do things others not do, tomorrow you do things others can’t do.</p></li><li><p>无知和弱小不是生存的障碍，傲慢才是。</p></li><li><p>life is unfair, get used to it.</p></li><li><p>像诗人一样思考，像农夫一样耕耘。</p></li><li><p>I leave uncultivated today, was precisely yesterday perished tomorrow which person of the body implored.</p><p>我荒废的今日，正是昨日殒身之人祈求的明日。</p></li><li><p>人短期内会为做错的事后悔，但长期会为自己没做的事情后悔。</p></li><li><p>做正确的事比正确地做事更重要。</p></li><li><p>up or not——不增长就死亡。</p></li><li><p>众生畏果，菩萨畏因。</p></li></ol>]]></content>
     
@@ -64,86 +150,6 @@
     <category term="2022年书单" scheme="http://example.com/categories/%E6%88%91%E7%9A%84%E4%B9%A6%E5%8D%95/2022%E5%B9%B4%E4%B9%A6%E5%8D%95/"/>
     
     
-    <category term="书单" scheme="http://example.com/tags/%E4%B9%A6%E5%8D%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>《尖叫的数学》</title>
-    <link href="http://example.com/2022/12/02/%E3%80%8A%E5%B0%96%E5%8F%AB%E7%9A%84%E6%95%B0%E5%AD%A6%E3%80%8B/"/>
-    <id>http://example.com/2022/12/02/%E3%80%8A%E5%B0%96%E5%8F%AB%E7%9A%84%E6%95%B0%E5%AD%A6%E3%80%8B/</id>
-    <published>2022-12-02T07:00:44.000Z</published>
-    <updated>2023-01-02T07:06:29.548Z</updated>
-    
-    <content type="html"><![CDATA[<!--<img src="/images/xiaopingguo.jpg" width="250" height="150" hspace="5" style="float:right">--><blockquote><p>【摘要】升级为爸爸后过的第一个父亲节，祝全天下的爸爸都节日快乐。</p></blockquote><a id="more"></a>]]></content>
-    
-    
-    <summary type="html">&lt;!--&lt;img src=&quot;/images/xiaopingguo.jpg&quot; width=&quot;250&quot; height=&quot;150&quot; hspace=&quot;5&quot; style=&quot;float:right&quot;&gt;--&gt;
-&lt;blockquote&gt;
-&lt;p&gt;【摘要】升级为爸爸后过的第一个父亲节，祝全天下的爸爸都节日快乐。&lt;/p&gt;
-&lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="我的书单" scheme="http://example.com/categories/%E6%88%91%E7%9A%84%E4%B9%A6%E5%8D%95/"/>
-    
-    <category term="2022年书单" scheme="http://example.com/categories/%E6%88%91%E7%9A%84%E4%B9%A6%E5%8D%95/2022%E5%B9%B4%E4%B9%A6%E5%8D%95/"/>
-    
-    
-    <category term="书单" scheme="http://example.com/tags/%E4%B9%A6%E5%8D%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>《乔布斯传》</title>
-    <link href="http://example.com/2022/12/02/%E3%80%8A%E6%96%AF%E8%92%82%E5%A4%AB%E4%B9%94%E5%B8%83%E6%96%AF%E4%BC%A0%E3%80%8B/"/>
-    <id>http://example.com/2022/12/02/%E3%80%8A%E6%96%AF%E8%92%82%E5%A4%AB%E4%B9%94%E5%B8%83%E6%96%AF%E4%BC%A0%E3%80%8B/</id>
-    <published>2022-12-02T07:00:44.000Z</published>
-    <updated>2023-01-02T07:07:37.692Z</updated>
-    
-    <content type="html"><![CDATA[<!--<img src="/images/xiaopingguo.jpg" width="250" height="150" hspace="5" style="float:right">--><blockquote><p>【摘要】升级为爸爸后过的第一个父亲节，祝全天下的爸爸都节日快乐。</p></blockquote><a id="more"></a>]]></content>
-    
-    
-    <summary type="html">&lt;!--&lt;img src=&quot;/images/xiaopingguo.jpg&quot; width=&quot;250&quot; height=&quot;150&quot; hspace=&quot;5&quot; style=&quot;float:right&quot;&gt;--&gt;
-&lt;blockquote&gt;
-&lt;p&gt;【摘要】升级为爸爸后过的第一个父亲节，祝全天下的爸爸都节日快乐。&lt;/p&gt;
-&lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="我的书单" scheme="http://example.com/categories/%E6%88%91%E7%9A%84%E4%B9%A6%E5%8D%95/"/>
-    
-    <category term="2022年书单" scheme="http://example.com/categories/%E6%88%91%E7%9A%84%E4%B9%A6%E5%8D%95/2022%E5%B9%B4%E4%B9%A6%E5%8D%95/"/>
-    
-    
-    <category term="书单" scheme="http://example.com/tags/%E4%B9%A6%E5%8D%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>《第一性原理》</title>
-    <link href="http://example.com/2022/12/02/%E3%80%8A%E7%AC%AC%E4%B8%80%E6%80%A7%E5%8E%9F%E7%90%86%E3%80%8B/"/>
-    <id>http://example.com/2022/12/02/%E3%80%8A%E7%AC%AC%E4%B8%80%E6%80%A7%E5%8E%9F%E7%90%86%E3%80%8B/</id>
-    <published>2022-12-02T07:00:44.000Z</published>
-    <updated>2023-01-02T07:07:06.328Z</updated>
-    
-    <content type="html"><![CDATA[<!--<img src="/images/xiaopingguo.jpg" width="250" height="150" hspace="5" style="float:right">--><blockquote><p>【摘要】升级为爸爸后过的第一个父亲节，祝全天下的爸爸都节日快乐。</p></blockquote><a id="more"></a>]]></content>
-    
-    
-    <summary type="html">&lt;!--&lt;img src=&quot;/images/xiaopingguo.jpg&quot; width=&quot;250&quot; height=&quot;150&quot; hspace=&quot;5&quot; style=&quot;float:right&quot;&gt;--&gt;
-&lt;blockquote&gt;
-&lt;p&gt;【摘要】升级为爸爸后过的第一个父亲节，祝全天下的爸爸都节日快乐。&lt;/p&gt;
-&lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="我的书单" scheme="http://example.com/categories/%E6%88%91%E7%9A%84%E4%B9%A6%E5%8D%95/"/>
-    
-    <category term="2022年书单" scheme="http://example.com/categories/%E6%88%91%E7%9A%84%E4%B9%A6%E5%8D%95/2022%E5%B9%B4%E4%B9%A6%E5%8D%95/"/>
-    
-    
-    <category term="书单" scheme="http://example.com/tags/%E4%B9%A6%E5%8D%95/"/>
-    
   </entry>
   
   <entry>
@@ -151,7 +157,7 @@
     <link href="http://example.com/2022/12/02/%E3%80%8A%E5%A6%82%E4%BD%95%E6%8B%A5%E6%8A%B1%E4%B8%80%E5%8F%AA%E5%88%BA%E7%8C%AC%E3%80%8B/"/>
     <id>http://example.com/2022/12/02/%E3%80%8A%E5%A6%82%E4%BD%95%E6%8B%A5%E6%8A%B1%E4%B8%80%E5%8F%AA%E5%88%BA%E7%8C%AC%E3%80%8B/</id>
     <published>2022-12-02T07:00:44.000Z</published>
-    <updated>2023-01-02T07:06:51.960Z</updated>
+    <updated>2023-01-05T14:14:24.916Z</updated>
     
     <content type="html"><![CDATA[<!--<img src="/images/xiaopingguo.jpg" width="250" height="150" hspace="5" style="float:right">--><blockquote><p>【摘要】升级为爸爸后过的第一个父亲节，祝全天下的爸爸都节日快乐。</p></blockquote><a id="more"></a>]]></content>
     
@@ -167,8 +173,6 @@
     
     <category term="2022年书单" scheme="http://example.com/categories/%E6%88%91%E7%9A%84%E4%B9%A6%E5%8D%95/2022%E5%B9%B4%E4%B9%A6%E5%8D%95/"/>
     
-    
-    <category term="书单" scheme="http://example.com/tags/%E4%B9%A6%E5%8D%95/"/>
     
   </entry>
   
@@ -177,7 +181,7 @@
     <link href="http://example.com/2022/12/02/%E3%80%8A%E8%AE%A4%E7%9F%A5%E8%A7%89%E9%86%92%E3%80%8B/"/>
     <id>http://example.com/2022/12/02/%E3%80%8A%E8%AE%A4%E7%9F%A5%E8%A7%89%E9%86%92%E3%80%8B/</id>
     <published>2022-12-02T07:00:44.000Z</published>
-    <updated>2023-01-02T07:05:58.064Z</updated>
+    <updated>2023-01-05T14:14:16.133Z</updated>
     
     <content type="html"><![CDATA[<!--<img src="/images/xiaopingguo.jpg" width="250" height="150" hspace="5" style="float:right">--><blockquote><p>【摘要】升级为爸爸后过的第一个父亲节，祝全天下的爸爸都节日快乐。</p></blockquote><a id="more"></a>]]></content>
     
@@ -193,34 +197,6 @@
     
     <category term="2022年书单" scheme="http://example.com/categories/%E6%88%91%E7%9A%84%E4%B9%A6%E5%8D%95/2022%E5%B9%B4%E4%B9%A6%E5%8D%95/"/>
     
-    
-    <category term="书单" scheme="http://example.com/tags/%E4%B9%A6%E5%8D%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>《蛤蟆先生去看心理医生》</title>
-    <link href="http://example.com/2022/12/02/%E3%80%8A%E8%9B%A4%E8%9F%86%E5%85%88%E7%94%9F%E5%8E%BB%E7%9C%8B%E5%BF%83%E7%90%86%E5%8C%BB%E7%94%9F%E3%80%8B/"/>
-    <id>http://example.com/2022/12/02/%E3%80%8A%E8%9B%A4%E8%9F%86%E5%85%88%E7%94%9F%E5%8E%BB%E7%9C%8B%E5%BF%83%E7%90%86%E5%8C%BB%E7%94%9F%E3%80%8B/</id>
-    <published>2022-12-02T07:00:44.000Z</published>
-    <updated>2023-01-04T13:02:50.155Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="/images/book/2022/蛤蟆先生去看心理医生/0.jpg" width="250" height="150" hspace="5" style="float:right"></p><blockquote><p>【摘要】蛤蟆本是一个热情、时尚又爱冒险的家伙，惹出过不少麻烦和笑话。可他现在陷入抑郁，不能自拔。他的朋友们决定出手相助，其中包括智慧又威严的獾、关心朋友但有点絮叨的河鼠，还有体贴善良的鼹鼠。他们商量来商量去，决定督促蛤蟆重视这个问题，并带他去接受心理咨询。</p></blockquote><a id="more"></a><p>蛤蟆本是一个热情、时尚又爱冒险的家伙，惹出过不少麻烦和笑话。可他现在陷入抑郁，不能自拔。他的朋友们决定出手相助，其中包括智慧又威严的獾、关心朋友但有点絮叨的河鼠，还有体贴善良的鼹鼠。他们商量来商量去，决定督促蛤蟆重视这个问题，并带他去接受心理咨询。</p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/book/2022/蛤蟆先生去看心理医生/0.jpg&quot; width=&quot;250&quot; height=&quot;150&quot; hspace=&quot;5&quot; style=&quot;float:right&quot;&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;【摘要】蛤蟆本是一个热情、时尚又爱冒险的家伙，惹出过不少麻烦和笑话。可他现在陷入抑郁，不能自拔。他的朋友们决定出手相助，其中包括智慧又威严的獾、关心朋友但有点絮叨的河鼠，还有体贴善良的鼹鼠。他们商量来商量去，决定督促蛤蟆重视这个问题，并带他去接受心理咨询。&lt;/p&gt;
-&lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="我的书单" scheme="http://example.com/categories/%E6%88%91%E7%9A%84%E4%B9%A6%E5%8D%95/"/>
-    
-    <category term="2022年书单" scheme="http://example.com/categories/%E6%88%91%E7%9A%84%E4%B9%A6%E5%8D%95/2022%E5%B9%B4%E4%B9%A6%E5%8D%95/"/>
-    
-    
-    <category term="书单" scheme="http://example.com/tags/%E4%B9%A6%E5%8D%95/"/>
     
   </entry>
   
@@ -229,7 +205,7 @@
     <link href="http://example.com/2022/12/02/%E3%80%8A%E9%BB%91%E5%AE%A2%E4%B8%8E%E7%94%BB%E5%AE%B6%E3%80%8B/"/>
     <id>http://example.com/2022/12/02/%E3%80%8A%E9%BB%91%E5%AE%A2%E4%B8%8E%E7%94%BB%E5%AE%B6%E3%80%8B/</id>
     <published>2022-12-02T07:00:44.000Z</published>
-    <updated>2023-01-02T07:04:30.541Z</updated>
+    <updated>2023-01-05T14:14:05.874Z</updated>
     
     <content type="html"><![CDATA[<!--<img src="/images/xiaopingguo.jpg" width="250" height="150" hspace="5" style="float:right">--><blockquote><p>【摘要】升级为爸爸后过的第一个父亲节，祝全天下的爸爸都节日快乐。</p></blockquote><a id="more"></a>]]></content>
     
@@ -246,8 +222,6 @@
     <category term="2022年书单" scheme="http://example.com/categories/%E6%88%91%E7%9A%84%E4%B9%A6%E5%8D%95/2022%E5%B9%B4%E4%B9%A6%E5%8D%95/"/>
     
     
-    <category term="书单" scheme="http://example.com/tags/%E4%B9%A6%E5%8D%95/"/>
-    
   </entry>
   
   <entry>
@@ -255,7 +229,7 @@
     <link href="http://example.com/2021/06/20/%E7%88%B6%E4%BA%B2%E8%8A%82%E5%BF%AB%E4%B9%90/"/>
     <id>http://example.com/2021/06/20/%E7%88%B6%E4%BA%B2%E8%8A%82%E5%BF%AB%E4%B9%90/</id>
     <published>2021-06-20T07:13:50.000Z</published>
-    <updated>2023-01-02T06:57:28.987Z</updated>
+    <updated>2023-01-05T14:10:25.181Z</updated>
     
     <content type="html"><![CDATA[<!--<img src="/images/xiaopingguo.jpg" width="250" height="150" hspace="5" style="float:right">--><blockquote><p>【摘要】升级为爸爸后过的第一个父亲节，祝全天下的爸爸都节日快乐。</p></blockquote><a id="more"></a><p>前天晚上从西安出差回来，经过昨天一天的休整，整个人已经满血复活了，正好今天周日，也没什么特殊的事情，就想着要不看场比赛。</p><p>其实，上班以后比赛真的看得很少了，一方面时间不允许，工作太忙，很难像学生时代那样，从常规赛开始，追逐自己喜欢的球队、追逐自己喜欢的球星一整个赛季，为他们取得的赫赫战绩、精彩的进球欢呼雀跃，没有那个精力，也没有那个心思。另一方面呢，一代球星代表着一代人的青春，我这一代的青春已经随着姚明、科比、麦迪、邓肯、艾佛森、加内特、皮尔斯、纳什、基德、卡特……们一起退役了。现在的NBA已经很难找到属于我的那个青春符号，所以偶尔也就手机看看体育新闻，谁谁谁又50分了，谁谁谁又三双了，然后感叹一句，现在的小伙子真厉害，可是，还是怀念以前那种肌肉碰肌肉的身体对抗、怀念科比那美如画的后仰中距离、怀念麦迪那潇洒的干拔跳投…</p><p>今天是篮网和雄鹿的抢七生死战，go big or go home全看这一场了，而且今天这场比赛也就冲着杜兰特去看，现如今杜兰特、欧文是我为数不多还想冲着他们看看比赛的球星。上半场两队还是打的难舍难分，都拉不开分差，篮网这边也就指着杜兰特了，一个人大包大揽，其他队友提供的支援太有限，也就格里芬还能攻击一下篮筐，其他人的得分包感觉都没打开，雄鹿那边就身体素质是真好，能冲能抢，只是好些人都叫不上名了。</p><p>到了中场休息，腾讯插播了一个父亲节的文案，才知道今天是父亲节——我升级成父亲后的第一个父亲节。</p><p>我家小苹果这会儿正在隔壁房间睡上午的回笼觉，小苹果现在还不到一周岁，每天上午下午都要小睡一觉，刚过去看一眼，睡得正香呢，两只小手举到耳朵边特别可爱——你健康快乐的成长，就是我在父亲节收到的最好的礼物！</p><p>中午，老婆给我发了两张照片，一张是我很久以前还在学校时候的照片，一张是最近带娃的照片，老婆感叹我老了好多，体型都变了，腰都驼了，我回复：哈哈哈，可不是吗，岁月饶得过谁呢。回头看看熟睡中的女儿，我想这一切都是值得的，有些路有些经历，是人生中不可或缺的，只是希望这些经历可以跟我生命中挚爱的那些人一起度过……</p><p>中午，给老爸打了一个视频电话，问问他最近身体怎么样，给他看看小苹果，小苹果现在还不会喊爷爷，一直在旁边咿咿呀呀的叫着，爷孙两都很开心。</p><p>后来要带娃，比赛我没看完，听说杜兰特投进了一个绝平的踩线长两分，两队打进了加时，最后弹尽粮绝，篮网惜败止步于东部半决赛，替篮网替杜兰特有点遗憾，但是没关系，还年轻，一切都来得及，明年带上欧文我相信奥布莱恩杯会属于你们的，期待明年我和小苹果一块儿看你们的总决赛，生活要有希望，岁月才会美好——祝全天下所有的父亲，节日快乐！</p>]]></content>
     
@@ -270,8 +244,6 @@
     <category term="生活随笔" scheme="http://example.com/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/"/>
     
     
-    <category term="随笔" scheme="http://example.com/tags/%E9%9A%8F%E7%AC%94/"/>
-    
   </entry>
   
   <entry>
@@ -279,7 +251,7 @@
     <link href="http://example.com/2021/01/12/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%A6%82%E8%BF%B0/"/>
     <id>http://example.com/2021/01/12/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%A6%82%E8%BF%B0/</id>
     <published>2021-01-12T09:00:44.000Z</published>
-    <updated>2023-01-04T15:20:29.513Z</updated>
+    <updated>2023-01-05T14:08:49.306Z</updated>
     
     <content type="html"><![CDATA[<p><img src="/images/AI/机器学习概述/0.jpg" width="250" height="150" hspace="5" style="float:right"></p><blockquote><p>【摘要】传统编程基于规则和数据，通过快速地计算来得到指定规则下的答案，对于特定输入，给出确定输出的；而与传统编程不同的是，机器学习其实是从已知的数据和标签中学习得到某种规则，然后运用该规则去预测新数据的标签的过程，对机器学习而言，输入的是训练数据和对应的标签，得到的是数据和标签背后的映射规则。</p></blockquote><a id="more"></a><h1 id="机器学习的定义"><a href="#机器学习的定义" class="headerlink" title="机器学习的定义"></a>机器学习的定义</h1><h2 id="什么是学习？"><a href="#什么是学习？" class="headerlink" title="什么是学习？"></a>什么是学习？</h2><blockquote><p>“如果一个系统，能够通过执行某个过程，就此改进它的性能，那么这个过程就是学习。” —— 1978年诺贝尔经济学奖获得者 Herbert Simon</p></blockquote><h2 id="什么是机器学习？"><a href="#什么是机器学习？" class="headerlink" title="什么是机器学习？"></a>什么是机器学习？</h2><blockquote><p>“对于某类任务T和某项性能评价准则P，如果一个计算机程序在T上，以P作为性能的度量，随着经验E的积累，不断自我完善，那么我们称这个计算机程序从E中进行了学习。”卡耐基梅隆大学教授， Tom Mitchell</p></blockquote><h1 id="机器学习的分类"><a href="#机器学习的分类" class="headerlink" title="机器学习的分类"></a>机器学习的分类</h1><h2 id="按任务类型分类"><a href="#按任务类型分类" class="headerlink" title="按任务类型分类"></a>按任务类型分类</h2><ol><li><p>回归问题：输入输出均为连续变量；</p></li><li><p>分类问题：输出为离散变量；</p></li></ol><h2 id="按学习方式分类"><a href="#按学习方式分类" class="headerlink" title="按学习方式分类"></a>按学习方式分类</h2><ol><li><p>监督学习：训练样本带有标注</p></li><li><p>无监督学习：训练样本无标注，发现数据中的隐藏模式，如聚类和降维任务。</p></li><li><p>强化学习：不断试探和奖励的学习过程。</p></li></ol><h2 id="生成模型和判别模型"><a href="#生成模型和判别模型" class="headerlink" title="生成模型和判别模型"></a>生成模型和判别模型</h2><p>在监督学习中，学习方法可以进一步分为生成方法和判别方法，对应的模型即为生成模型和判别模型。</p><ol><li><p>生成模型</p><p> 生成方法是由数据学习训练集的联合概率分布P(x,y)，然后求出条件概率P(Y|X)作为预测的模型。</p><p> $P\left ( Y|X \right ) =\frac{P\left ( X,Y \right ) }{P\left ( X \right ) } $</p><p> 因为模型表示了给定输入X产生输出Y的生成关系，因此这样的方法被称为生成方法。</p></li><li><p>判别模型</p><p> 判别方法是由数据直接学习决策函数f(x)或条件概率分布P(Y|X)作为预测模型。</p></li></ol><h1 id="机器学习方法三要素"><a href="#机器学习方法三要素" class="headerlink" title="机器学习方法三要素"></a>机器学习方法三要素</h1><blockquote><p>机器学习方法 = 模型 + 策略 + 算法</p></blockquote><p><strong>模型：</strong><br>就是对一个实际业务问题进行建模，将其转化为一个可以用数学语言来描述得问题；</p><p><strong>策略：</strong><br>定义损失函数来描述预测值和理论值之间的误差，将其转换为一个使损失函数最小的优化问题；</p><p><strong>算法：</strong><br>求解最优化问题的方法，一般将其转化为无约束条件的优化问题，然后利用梯度下降或牛顿法求解。</p><h1 id="模型评估的指标"><a href="#模型评估的指标" class="headerlink" title="模型评估的指标"></a>模型评估的指标</h1><h2 id="回归模型评估指标"><a href="#回归模型评估指标" class="headerlink" title="回归模型评估指标"></a>回归模型评估指标</h2><ol><li><p>绝对误差(Mean Absolute Error, MAE)</p><p> 预测值与真实值差的绝对值的平均值：</p><p> $MAE\left ( X,h \right ) = \frac{1}{m} \sum_{i=1}^{m} \left | h\left ( x_{i}  \right ) - y_{i} \right | $</p></li><li><p>均方误差(Mean Squared Error, MSE)</p><p> 预测值与真实值差的平方和的平均值：</p><p> $MAE\left ( X,h \right ) = \frac{1}{m} \sum_{i=1}^{m} \left ( h\left ( x_{i}  \right ) - y_{i} \right )^2 $</p></li><li><p>均方根误差(Root Mean Squared Error, RMSE)</p><p> 预测值与真实值差的平方和的平均值取开方：</p><p> $MAE\left ( X,h \right ) =\sqrt{\frac{1}{m} \sum_{i=1}^{m} \left ( h\left ( x_{i}  \right ) - y_{i} \right )^2 }$</p></li></ol><h2 id="分类模型评估指标"><a href="#分类模型评估指标" class="headerlink" title="分类模型评估指标"></a>分类模型评估指标</h2><ol><li><p>二分类的混淆矩阵</p><p> TP（True Positive）：真正类<br> FP（False Positive）：假正类<br> TN（True Negative）：真负类<br> FN（False Negative）：假负类</p></li><li><p>准确率（accuracy）</p><p> 衡量模型对数据集中样本预测准确的比例。</p><p> $accuracy = \frac{预测正确的样本数目}{总样本数} $</p></li><li><p>精确度(precision)，又称查准率</p><p> 所有预测为正的样本中，真正为正的比例，也就是说预测为正的样本中，有多少预测对了。</p><p> $precision= \frac{TP}{TP+FP} $</p></li><li><p>召回率(recall),又称查全率</p><p> 所有的正样本，有多少被预测出来了</p><p> $recall = \frac{TP}{TP+FN} $</p></li><li><p>F1值与PR曲线</p><p> 在有的任务中，比如搜索引擎，既要关注“检索出的信息有多少是用户感兴趣的”（查准），又要关注“用户感兴趣的信息有多少被检索出来了”（查全），为了兼顾查准和查全，提出了新的衡量标准F1值。</p><p> <strong>PR曲线：</strong></p><p> PR曲线以查全率为x轴，以查准为y轴，按照如下步骤绘制：</p><p> 1) 将预测结果按照预测为正的概率值排序；</p><p> 2) 将概率阈值从1逐渐降低，计算这时的查准和查全率，得到PR曲线上的点；</p><p> 3) 以recall为横坐标，以precision为纵坐标，绘制PR曲线。</p><p> <strong>PR(precision-recall)曲线比较模型性能：</strong></p><p> 1) 如果一条PR曲线完全包住另一条，前者性能优；</p><p> 2) 如果PR曲线发生交叉，则PR曲线下面积大的性能优；</p><p> 3) 使用平衡点(recall==precision)，平衡点值越大性能优；</p><p> 4) F1值度量：</p><p> F1值是precision和recall的调和平均数：<br> $\frac{1}{F_{1} } =\frac{1}{2} \left ( \frac{1}{precision}  + \frac{1}{recall}  \right ) $</p></li><li><p>ROC曲线</p><p> ROC曲线(Receiver Operating Characterstic Curve，受试者工作特征曲线)，一开始并不是为机器学习领域设计的，最早源于军事领域，后来逐渐用于医学、心理学等领域。</p><p> 在ML领域，ROC曲线可以看做是混淆矩阵的改良版本：通过不断调整阈值，从而给出不同版本的混淆矩阵，然后连点成线，得到ROC曲线。</p><p> y轴=真正率=TP/(TP+FN)</p><p> x轴=假正率=FP/(TN+FP)</p><p> ROC曲线作图步骤：</p><p> 1) 将预测结果按照预测为正的概率值排序；</p><p> 2) 将概率阈值从1逐渐降低，计算这时的真正率和假正率，得到ROC曲线上的点；</p><p> 3) 连点成线得到ROC曲线；</p><p> <strong>如何通过ROC曲线对比模型性能：</strong></p><p> 1) 如果一条ROC曲线完全包住另一条ROC曲线，前者性能优；</p><p> 2) 如果ROC曲线发生交叉，则曲线下面积AUC大的性能优；</p></li></ol><h2 id="过拟合、欠拟合和正则化"><a href="#过拟合、欠拟合和正则化" class="headerlink" title="过拟合、欠拟合和正则化"></a>过拟合、欠拟合和正则化</h2><h3 id="过拟合和欠拟合"><a href="#过拟合和欠拟合" class="headerlink" title="过拟合和欠拟合"></a>过拟合和欠拟合</h3><p>误差：模型的预测输出与样本真实值之间的差；</p><p>经验误差也称为训练误差：模型在训练集上的误差；</p><p>泛化误差也称测试误差：模型在新样本上的误差；</p><p>过拟合：模型对训练数据预测很好，对未知数据预测很差；</p><p>欠拟合：特征没有学习到位，对训练数据和测试数据预测都比较差；</p><p>过拟合原因：</p><p>1) 样本特征数量过多；</p><p>2) 噪声过大；</p><p>3) 模型过于复杂；</p><p>解决过拟合的方法：</p><p>1) 获取额外数据进行价差验证；</p><p>2) 重新清洗数据；</p><p>3) 加入正则化项；</p><h3 id="经验风险与结构风险"><a href="#经验风险与结构风险" class="headerlink" title="经验风险与结构风险"></a>经验风险与结构风险</h3><p>经验风险：最小化损失函数</p><p>结构风险：加上了约束项之后的模型，对应的损失函数即为结构风险</p><p>常用的正则化项：L0范数，L1范数，L2范数，向量W的P范数定义如下：</p><p><img src="/images/AI/机器学习概述/1.jpg" alt=""></p>]]></content>
     
@@ -291,12 +263,30 @@
     
     
     
-    <category term="人工智能" scheme="http://example.com/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
-    
-    <category term="机器学习" scheme="http://example.com/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    <category term="机器学习" scheme="http://example.com/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
     
-    <category term="机器学习" scheme="http://example.com/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+  </entry>
+  
+  <entry>
+    <title>神经网络</title>
+    <link href="http://example.com/2021/01/12/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/"/>
+    <id>http://example.com/2021/01/12/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/</id>
+    <published>2021-01-12T09:00:44.000Z</published>
+    <updated>2023-01-05T14:16:15.980Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/images/AI/机器学习概述/0.jpg" width="250" height="150" hspace="5" style="float:right"></p><blockquote><p>【摘要】传统编程基于规则和数据，通过快速地计算来得到指定规则下的答案，对于特定输入，给出确定输出的；而与传统编程不同的是，机器学习其实是从已知的数据和标签中学习得到某种规则，然后运用该规则去预测新数据的标签的过程，对机器学习而言，输入的是训练数据和对应的标签，得到的是数据和标签背后的映射规则。</p></blockquote><a id="more"></a><h1 id="机器学习的定义"><a href="#机器学习的定义" class="headerlink" title="机器学习的定义"></a>机器学习的定义</h1><h2 id="什么是学习？"><a href="#什么是学习？" class="headerlink" title="什么是学习？"></a>什么是学习？</h2><blockquote><p>“如果一个系统，能够通过执行某个过程，就此改进它的性能，那么这个过程就是学习。” —— 1978年诺贝尔经济学奖获得者 Herbert Simon</p></blockquote><h2 id="什么是机器学习？"><a href="#什么是机器学习？" class="headerlink" title="什么是机器学习？"></a>什么是机器学习？</h2><blockquote><p>“对于某类任务T和某项性能评价准则P，如果一个计算机程序在T上，以P作为性能的度量，随着经验E的积累，不断自我完善，那么我们称这个计算机程序从E中进行了学习。”卡耐基梅隆大学教授， Tom Mitchell</p></blockquote><h1 id="机器学习的分类"><a href="#机器学习的分类" class="headerlink" title="机器学习的分类"></a>机器学习的分类</h1><h2 id="按任务类型分类"><a href="#按任务类型分类" class="headerlink" title="按任务类型分类"></a>按任务类型分类</h2><ol><li><p>回归问题：输入输出均为连续变量；</p></li><li><p>分类问题：输出为离散变量；</p></li></ol><h2 id="按学习方式分类"><a href="#按学习方式分类" class="headerlink" title="按学习方式分类"></a>按学习方式分类</h2><ol><li><p>监督学习：训练样本带有标注</p></li><li><p>无监督学习：训练样本无标注，发现数据中的隐藏模式，如聚类和降维任务。</p></li><li><p>强化学习：不断试探和奖励的学习过程。</p></li></ol><h2 id="生成模型和判别模型"><a href="#生成模型和判别模型" class="headerlink" title="生成模型和判别模型"></a>生成模型和判别模型</h2><p>在监督学习中，学习方法可以进一步分为生成方法和判别方法，对应的模型即为生成模型和判别模型。</p><ol><li><p>生成模型</p><p> 生成方法是由数据学习训练集的联合概率分布P(x,y)，然后求出条件概率P(Y|X)作为预测的模型。</p><p> $P\left ( Y|X \right ) =\frac{P\left ( X,Y \right ) }{P\left ( X \right ) } $</p><p> 因为模型表示了给定输入X产生输出Y的生成关系，因此这样的方法被称为生成方法。</p></li><li><p>判别模型</p><p> 判别方法是由数据直接学习决策函数f(x)或条件概率分布P(Y|X)作为预测模型。</p></li></ol><h1 id="机器学习方法三要素"><a href="#机器学习方法三要素" class="headerlink" title="机器学习方法三要素"></a>机器学习方法三要素</h1><blockquote><p>机器学习方法 = 模型 + 策略 + 算法</p></blockquote><p><strong>模型：</strong><br>就是对一个实际业务问题进行建模，将其转化为一个可以用数学语言来描述得问题；</p><p><strong>策略：</strong><br>定义损失函数来描述预测值和理论值之间的误差，将其转换为一个使损失函数最小的优化问题；</p><p><strong>算法：</strong><br>求解最优化问题的方法，一般将其转化为无约束条件的优化问题，然后利用梯度下降或牛顿法求解。</p><h1 id="模型评估的指标"><a href="#模型评估的指标" class="headerlink" title="模型评估的指标"></a>模型评估的指标</h1><h2 id="回归模型评估指标"><a href="#回归模型评估指标" class="headerlink" title="回归模型评估指标"></a>回归模型评估指标</h2><ol><li><p>绝对误差(Mean Absolute Error, MAE)</p><p> 预测值与真实值差的绝对值的平均值：</p><p> $MAE\left ( X,h \right ) = \frac{1}{m} \sum_{i=1}^{m} \left | h\left ( x_{i}  \right ) - y_{i} \right | $</p></li><li><p>均方误差(Mean Squared Error, MSE)</p><p> 预测值与真实值差的平方和的平均值：</p><p> $MAE\left ( X,h \right ) = \frac{1}{m} \sum_{i=1}^{m} \left ( h\left ( x_{i}  \right ) - y_{i} \right )^2 $</p></li><li><p>均方根误差(Root Mean Squared Error, RMSE)</p><p> 预测值与真实值差的平方和的平均值取开方：</p><p> $MAE\left ( X,h \right ) =\sqrt{\frac{1}{m} \sum_{i=1}^{m} \left ( h\left ( x_{i}  \right ) - y_{i} \right )^2 }$</p></li></ol><h2 id="分类模型评估指标"><a href="#分类模型评估指标" class="headerlink" title="分类模型评估指标"></a>分类模型评估指标</h2><ol><li><p>二分类的混淆矩阵</p><p> TP（True Positive）：真正类<br> FP（False Positive）：假正类<br> TN（True Negative）：真负类<br> FN（False Negative）：假负类</p></li><li><p>准确率（accuracy）</p><p> 衡量模型对数据集中样本预测准确的比例。</p><p> $accuracy = \frac{预测正确的样本数目}{总样本数} $</p></li><li><p>精确度(precision)，又称查准率</p><p> 所有预测为正的样本中，真正为正的比例，也就是说预测为正的样本中，有多少预测对了。</p><p> $precision= \frac{TP}{TP+FP} $</p></li><li><p>召回率(recall),又称查全率</p><p> 所有的正样本，有多少被预测出来了</p><p> $recall = \frac{TP}{TP+FN} $</p></li><li><p>F1值与PR曲线</p><p> 在有的任务中，比如搜索引擎，既要关注“检索出的信息有多少是用户感兴趣的”（查准），又要关注“用户感兴趣的信息有多少被检索出来了”（查全），为了兼顾查准和查全，提出了新的衡量标准F1值。</p><p> <strong>PR曲线：</strong></p><p> PR曲线以查全率为x轴，以查准为y轴，按照如下步骤绘制：</p><p> 1) 将预测结果按照预测为正的概率值排序；</p><p> 2) 将概率阈值从1逐渐降低，计算这时的查准和查全率，得到PR曲线上的点；</p><p> 3) 以recall为横坐标，以precision为纵坐标，绘制PR曲线。</p><p> <strong>PR(precision-recall)曲线比较模型性能：</strong></p><p> 1) 如果一条PR曲线完全包住另一条，前者性能优；</p><p> 2) 如果PR曲线发生交叉，则PR曲线下面积大的性能优；</p><p> 3) 使用平衡点(recall==precision)，平衡点值越大性能优；</p><p> 4) F1值度量：</p><p> F1值是precision和recall的调和平均数：<br> $\frac{1}{F_{1} } =\frac{1}{2} \left ( \frac{1}{precision}  + \frac{1}{recall}  \right ) $</p></li><li><p>ROC曲线</p><p> ROC曲线(Receiver Operating Characterstic Curve，受试者工作特征曲线)，一开始并不是为机器学习领域设计的，最早源于军事领域，后来逐渐用于医学、心理学等领域。</p><p> 在ML领域，ROC曲线可以看做是混淆矩阵的改良版本：通过不断调整阈值，从而给出不同版本的混淆矩阵，然后连点成线，得到ROC曲线。</p><p> y轴=真正率=TP/(TP+FN)</p><p> x轴=假正率=FP/(TN+FP)</p><p> ROC曲线作图步骤：</p><p> 1) 将预测结果按照预测为正的概率值排序；</p><p> 2) 将概率阈值从1逐渐降低，计算这时的真正率和假正率，得到ROC曲线上的点；</p><p> 3) 连点成线得到ROC曲线；</p><p> <strong>如何通过ROC曲线对比模型性能：</strong></p><p> 1) 如果一条ROC曲线完全包住另一条ROC曲线，前者性能优；</p><p> 2) 如果ROC曲线发生交叉，则曲线下面积AUC大的性能优；</p></li></ol><h2 id="过拟合、欠拟合和正则化"><a href="#过拟合、欠拟合和正则化" class="headerlink" title="过拟合、欠拟合和正则化"></a>过拟合、欠拟合和正则化</h2><h3 id="过拟合和欠拟合"><a href="#过拟合和欠拟合" class="headerlink" title="过拟合和欠拟合"></a>过拟合和欠拟合</h3><p>误差：模型的预测输出与样本真实值之间的差；</p><p>经验误差也称为训练误差：模型在训练集上的误差；</p><p>泛化误差也称测试误差：模型在新样本上的误差；</p><p>过拟合：模型对训练数据预测很好，对未知数据预测很差；</p><p>欠拟合：特征没有学习到位，对训练数据和测试数据预测都比较差；</p><p>过拟合原因：</p><p>1) 样本特征数量过多；</p><p>2) 噪声过大；</p><p>3) 模型过于复杂；</p><p>解决过拟合的方法：</p><p>1) 获取额外数据进行价差验证；</p><p>2) 重新清洗数据；</p><p>3) 加入正则化项；</p><h3 id="经验风险与结构风险"><a href="#经验风险与结构风险" class="headerlink" title="经验风险与结构风险"></a>经验风险与结构风险</h3><p>经验风险：最小化损失函数</p><p>结构风险：加上了约束项之后的模型，对应的损失函数即为结构风险</p><p>常用的正则化项：L0范数，L1范数，L2范数，向量W的P范数定义如下：</p><p><img src="/images/AI/机器学习概述/1.jpg" alt=""></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/AI/机器学习概述/0.jpg&quot; width=&quot;250&quot; height=&quot;150&quot; hspace=&quot;5&quot; style=&quot;float:right&quot;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;【摘要】传统编程基于规则和数据，通过快速地计算来得到指定规则下的答案，对于特定输入，给出确定输出的；而与传统编程不同的是，机器学习其实是从已知的数据和标签中学习得到某种规则，然后运用该规则去预测新数据的标签的过程，对机器学习而言，输入的是训练数据和对应的标签，得到的是数据和标签背后的映射规则。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="深度学习" scheme="http://example.com/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
     
   </entry>
   
