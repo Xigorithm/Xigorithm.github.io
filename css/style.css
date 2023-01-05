@@ -125,12 +125,15 @@ a {
 }
 .header .blog-title {
   font-size: 2.5em;
+  font-family: "Comic Sans MS", cursive, sans-serif;
   text-align: center;
   padding-top: 0.5em;
 }
 .header .subtitle {
-  font-size: 14px;
+  font-size: 16px;
   color: #808080;
+  font-style: italic;
+  text-align: right;
 }
 .header .menu {
   margin: 0;
@@ -139,6 +142,7 @@ a {
   margin-top: 20px;
 }
 .header .menu .menu-item {
+  font-size: 18px;
   margin: 0 15px 0 0;
   padding: 3px 0 3px 0;
   float: left;
@@ -269,7 +273,7 @@ a {
 }
 .archive .post-archive .post-item {
   margin: 6px 0;
-  line-height: 1.5;
+  line-height: 1.8;
 }
 .archive .post-archive .post-item .post-date {
   float: right;
