@@ -195,6 +195,20 @@ a {
   padding: 5px;
   line-height: 1.5em;
 }
+.post .post-content img {
+  max-width: 100%;
+  padding: 0.5em 0;
+  margin: auto;
+  display: block;
+}
+.post .post-content caption {
+  color: #444;
+  display: block;
+  font-size: 0.9em;
+  margin-top: 0.1em;
+  position: relative;
+  text-align: center;
+}
 .post figure {
   margin: 0;
 }
