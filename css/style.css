@@ -119,6 +119,20 @@ a {
 .highlight .strong {
   font-weight: bold;
 }
+.post-content img {
+  max-width: 100%;
+  padding: 0.5em 0;
+  margin: auto;
+  display: block;
+}
+.post-content img .caption {
+  color: #444;
+  display: block;
+  font-size: 0.9em;
+  margin-top: 0.1em;
+  position: relative;
+  text-align: center;
+}
 .header {
   margin-bottom: 2em;
   padding: 0 20px;
@@ -194,20 +208,6 @@ a {
 .post .post-content ol li {
   padding: 5px;
   line-height: 1.5em;
-}
-.post .post-content img {
-  max-width: 100%;
-  padding: 0.5em 0;
-  margin: auto;
-  display: block;
-}
-.post .post-content caption {
-  color: #444;
-  display: block;
-  font-size: 0.9em;
-  margin-top: 0.1em;
-  position: relative;
-  text-align: center;
 }
 .post figure {
   margin: 0;
