@@ -15,41 +15,9 @@
       </categories>
   </entry>
   <entry>
-    <title>我的书单</title>
-    <url>/2021/01/01/%E6%88%91%E7%9A%84%E4%B9%A6%E5%8D%95/</url>
-    <content><![CDATA[<table align="center" border="2px">
-    <tr>
-        <th align="center">时间</th>
-        <th align="center">书单</th> 
-        <th align="center">标签</th> 
-        <th align="center">推荐指数</th> 
-    </tr>
-    <tr>
-        <td align="center" rowspan="3">2022年书单</td>
-        <td><a href="/2022/01/25/蛤蟆先生去看心理医生/">《蛤蟆先生去看心理医生》</a></td>
-        <td>心理、情感</td>
-        <td>★★★★</td>
-    </tr>
-    <tr>
-        <td><a href="/2022/12/29/肖逸群的创业手记/">《肖逸群的创业手记》</a></td>
-        <td>创业</td>
-        <td>★★★</td>
-   </tr>
-   <tr>
-        <td><a href="/2022/12/31/2022年读书报告/">2022年读书报告</a></td>
-        <td>总结</td>
-        <td>\</td>
-   </tr>
-
-
-</table>
-
-]]></content>
-  </entry>
-  <entry>
     <title>机器学习概述</title>
     <url>/2021/01/12/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%A6%82%E8%BF%B0/</url>
-    <content><![CDATA[<p><img src="/images/AI/机器学习概述/0.jpg" width="250" height="150" hspace="5" style="float:right"></p>
+    <content><![CDATA[<!--<img src="/images/AI/机器学习概述/0.jpg" width="250" height="150" hspace="5" style="float:right">-->
 <blockquote>
 <p>【摘要】传统编程基于规则和数据，通过快速地计算来得到指定规则下的答案，对于特定输入，给出确定输出的；而与传统编程不同的是，机器学习其实是从已知的数据和标签中学习得到某种规则，然后运用该规则去预测新数据的标签的过程，对机器学习而言，输入的是训练数据和对应的标签，得到的是数据和标签背后的映射规则。</p>
 </blockquote>
@@ -164,8 +132,7 @@
 <p>3) 加入正则化项；</p>
 <h3 id="经验风险与结构风险"><a href="#经验风险与结构风险" class="headerlink" title="经验风险与结构风险"></a>经验风险与结构风险</h3><p>经验风险：最小化损失函数</p>
 <p>结构风险：加上了约束项之后的模型，对应的损失函数即为结构风险</p>
-<p>常用的正则化项：L0范数，L1范数，L2范数，向量W的P范数定义如下：</p>
-<p><img src="/images/AI/机器学习概述/1.jpg" alt></p>
+<p>常用的正则化项：L0范数，L1范数，L2范数等。</p>
 ]]></content>
       <categories>
         <category>机器学习</category>
@@ -236,13 +203,75 @@
     <content><![CDATA[<blockquote>
 <p>&ensp; &ensp; 【摘要】蛤蟆本是一个热情、时尚又爱冒险的家伙，惹出过不少麻烦和笑话。可他现在陷入抑郁，不能自拔。他的朋友们决定出手相助，其中包括智慧又威严的獾、关心朋友但有点絮叨的河鼠，还有体贴善良的鼹鼠。他们商量来商量去，决定督促蛤蟆重视这个问题，并带他去接受心理咨询。<br>&ensp; &ensp;&ensp;这本书在微信读书上也得到了很高的评价，5.7万人点评有90%的推荐率，而且这本书也排进了TOP200的总榜单。</p>
 </blockquote>
-<p><img src="/images/book/2022/蛤蟆先生去看心理医生/0.jpg" alt></p>
+<p><img src="/images/book/2022/蛤蟆先生去看心理医生/0.jpg" alt=""></p>
 <a id="more"></a>
-<p>&ensp; &ensp;&ensp;<font size="6">蛤</font>蟆本是一个热情、时尚又爱冒险的家伙，惹出过不少麻烦和笑话。可他现在陷入抑郁，不能自拔。他的朋友们决定出手相助，其中包括智慧又威严的獾、关心朋友但有点絮叨的河鼠，还有体贴善良的鼹鼠。他们商量来商量去，决定督促蛤蟆重视这个问题，并带他去接受心理咨询。</p>
+<p>&ensp;&ensp;&ensp;<font size = "6">蛤</font>蟆本是一个热情、时尚又爱冒险的家伙，惹出过不少麻烦和笑话。可他现在陷入抑郁，不能自拔。他的朋友们决定出手相助，其中包括智慧又威严的獾、关心朋友但有点絮叨的河鼠，还有体贴善良的鼹鼠。他们商量来商量去，决定督促蛤蟆重视这个问题，并带他去接受心理咨询。</p>
 ]]></content>
       <categories>
         <category>我的书单</category>
         <category>2022年书单</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Logistic回归算法原理及实现</title>
+    <url>/2023/01/09/Logistic%E5%9B%9E%E5%BD%92%E7%AE%97%E6%B3%95%E5%8E%9F%E7%90%86%E5%8F%8A%E5%AE%9E%E7%8E%B0/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>朴素贝叶斯算法原理及实现</title>
+    <url>/2023/01/09/%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF%E7%AE%97%E6%B3%95%E5%8E%9F%E7%90%86%E5%8F%8A%E5%AE%9E%E7%8E%B0/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>K近邻算法原理及实现</title>
+    <url>/2023/01/09/K%E8%BF%91%E9%82%BB%E7%AE%97%E6%B3%95%E5%8E%9F%E7%90%86%E5%8F%8A%E5%AE%9E%E7%8E%B0/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>梯度下降算法</title>
+    <url>/2021/01/13/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E7%AE%97%E6%B3%95/</url>
+    <content><![CDATA[<blockquote>
+<p>&ensp; &ensp;【摘要】当前位置的梯度方向，为函数在该位置处方向导数最大的方向，也是函数值上升最快的方向，梯度的反方向为函数值下降最快的方向；<br>&ensp; &ensp;&ensp;当前位置的梯度的模，为最大方向导数的值。</p>
+</blockquote>
+<h1 id="下山问题"><a href="#下山问题" class="headerlink" title="下山问题"></a>下山问题</h1><blockquote>
+<p>假设处在一个山的半山腰位置，问怎么走，下山最快？</p>
+</blockquote>
+<h1 id="答案"><a href="#答案" class="headerlink" title="答案"></a>答案</h1><blockquote>
+<p>不断沿着梯度的反方向走，下山最快。</p>
+</blockquote>
+<h1 id="解释与证明"><a href="#解释与证明" class="headerlink" title="解释与证明"></a>解释与证明</h1><p><strong>导数：</strong>对于一元函数，导数表示一元函数的变化率，比如$f\left ( x \right ) =x^{2}$，导数为：$\lim_{t \to 0} \frac{f\left ( x+t \right )-f\left ( x \right )  }{t} =2x$。</p>
+<p><strong>偏导数：</strong>对于多元函数，用偏导数表示多元函数沿着自变量坐标轴方向的导数，也即函数沿坐标轴方向的切线的斜率。$z=f\left ( x,y \right ) $，对x,y的偏导数分别为：$\frac{\partial z}{\partial x} $和$\frac{\partial z}{\partial y} $。</p>
+<p><strong>方向导数：</strong>如果方向不是沿着坐标轴方向，而是沿着任意方向呢？则是方向导数，表示多元函数沿某一方向的变化率。</p>
+<p>定义$xy$平面上一点$(a,b)$，以及单位向量：$\vec{u} =\left ( \cos \theta ,\sin \theta  \right )  $，$\theta$表示该单位向量与x轴的夹角，在曲面$z=f(x,y)$上，从点$(a,b,f(a,b))$出发，沿$\vec{u} $方向走$t$个单位长度后，函数值$z=f\left ( a+\cos \theta ,b+\sin \theta  \right ) $，则在点$(a,b)$处$\vec{方向的方向导数：<br>u} =\left ( \cos \theta ,\sin \theta  \right )  $方向的方向导数：</p>
+<script type="math/tex; mode=display">\lim_{t \to 0}\frac{f\left ( a+t\cos \theta ,b+t\sin \theta  \right ) - f\left ( a,b \right )  }{t} \\
+= \lim_{t \to 0}\frac{f\left ( a+t\cos \theta ,b+t\sin \theta \right )  - f\left ( a,b+t\sin \theta \right ) }{t} + \lim_{t \to 0}\frac{f\left ( a,b+t\sin \theta \right )  - f\left ( a,b \right ) }{t}</script><p>令$x=t\cos \theta, y=t\sin \theta$，则通过链式法则，上式为：</p>
+<script type="math/tex; mode=display">\frac{\partial }{\partial x} f\left ( a,b \right ) \frac{dx}{dt} +\frac{\partial }{\partial y} f\left ( a,b \right ) \frac{dy}{dt} \\
+=f_{x}  \left ( a,b \right ) \cos \theta + f_{y} \left ( a,b \right ) \sin \theta</script><p>写成向量内积的形式，即：</p>
+<script type="math/tex; mode=display">方向导数=(f_{x}(a,b),f_{y}(a,b))(\cos \theta ,\sin \theta )</script><p>也就是说，在该点，<strong>任意方向的方向导数是偏导数的线性组合，组合系数是该方向的方向向量。</strong></p>
+<p>注意内积是标量，所以方向导数是标量。</p>
+<p><strong>梯度：</strong>偏导数构成的向量为梯度，记作$\bigtriangledown f$，对于二元函数$\bigtriangledown f=(\frac{\partial z}{\partial x},\frac{\partial z}{\partial y}  )$，对于多元函数$\bigtriangledown f=(\frac{\partial z}{\partial x},\frac{\partial z}{\partial y},…  )$ 。</p>
+<p>根据：</p>
+<script type="math/tex; mode=display">方向导数=(f_{x}(a,b),f_{y}(a,b))(\cos \theta ,\sin \theta ) \\
+=\left | f_{x}(a,b),f_{y}(a,b) \right | \cdot 1 \cdot \cos \varphi  \\
+=\left | \bigtriangledown f(a,b) \right |\cdot \cos \varphi</script><p>其中$\varPhi$为梯度与方向向量$\vec{u} $的夹角，显然当$\varphi = 0$时，即方向向量沿着梯度方向时，方向导数最大，最大值为梯度的模；当$\varphi = \pi$时，即方向向量沿着梯度的反方向时，方向导数最小，最小值为梯度的模的负数。</p>
+<p>至此，得到梯度的几何意义：</p>
+<blockquote>
+<ol>
+<li>当前位置的额梯度方向，为函数在该位置处方向导数最大的方向，也是函数值上升最快的方向，梯度的反方向为函数值下降最快的方向；</li>
+<li>当前位置的梯度的模，为最大方向导数的值。</li>
+</ol>
+</blockquote>
+]]></content>
+      <categories>
+        <category>机器学习</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>线性回归算法原理及实现</title>
+    <url>/2021/01/15/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E7%AE%97%E6%B3%95%E5%8E%9F%E7%90%86%E5%8F%8A%E5%AE%9E%E7%8E%B0/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>机器学习</category>
       </categories>
   </entry>
 </search>
