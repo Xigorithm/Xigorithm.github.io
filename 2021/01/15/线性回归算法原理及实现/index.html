@@ -50,11 +50,11 @@
         </li>
       
         <li class="menu-item">
-          <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0" class="menu-item-link">机器学习</a>
+          <a href="/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0" class="menu-item-link">机器学习</a>
         </li>
       
         <li class="menu-item">
-          <a href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0" class="menu-item-link">深度学习</a>
+          <a href="/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0" class="menu-item-link">深度学习</a>
         </li>
       
         <li class="menu-item">
@@ -66,7 +66,7 @@
         </li>
       
         <li class="menu-item">
-          <a href="/about/about.html" class="menu-item-link">关于</a>
+          <a href="/about" class="menu-item-link">关于</a>
         </li>
       
     </ul>
@@ -88,8 +88,9 @@
 <script type="math/tex; mode=display">h\left ( x \right ) =w_{1}x^{\left ( 1 \right ) } +w_{2}x^{\left ( 2 \right ) }+...+w_{N}x^{\left ( N \right ) } + b</script><p>写成矩阵的形式，即向量$w=\left ( w_1,w_2,…w_n \right ) $是由各个向量权重组成的，向量$x=\left (x ^{\left ( 1 \right ) } ,x ^{\left ( 2 \right ) },…,x ^{\left ( N \right ) } \right ) $是某个样本数据的特征向量；$b$为偏置常数，则：</p>
 <script type="math/tex; mode=display">h\left ( x \right ) =wx+b</script><p>那么机器学习的任务就是从过去的经验数据中，学习权重系数$w$和偏置常数$b$的最优值，使得回归模型对房子价格预测最准。</p>
 <h2 id="2-2-学习策略"><a href="#2-2-学习策略" class="headerlink" title="2.2 学习策略"></a>2.2 学习策略</h2><p>&ensp;&ensp;&ensp;&ensp;选择合适的策略来学习最优的权重系数$w$和偏置常数$b$。对于回归问题，我们可以使用最小均方误差损失来描述模型的好坏：</p>
-<script type="math/tex; mode=display">L\left ( w,b \right ) =\frac{1}{2} \sum_{i=1}^{M}\left [ h\left ( x_{i};w;b \right ) -y_{i} \right ]^{2}</script><p>c<br>其中$ h\left ( x_{i};w;b \right )$是对样本数据$x_{i}$的预测值，$y_{i}$是样本数据$x_{i}$的真实值，样本总数为$M$，$w$是各个特征权重组成的向量，$b$是偏置常数。</p>
-<p>当上面的损失函数$L(w,b)$取最小值时，意味着所有样本的预测值和实际值之间的差距是最小的，这时候相当于我们模型的预测效果是最好的。<br>c<br>所以我们的策略就是最小化上面的损失函数：</p>
+<script type="math/tex; mode=display">L\left ( w,b \right ) =\frac{1}{2} \sum_{i=1}^{M}\left [ h\left ( x_{i};w;b \right ) -y_{i} \right ]^{2}</script><p>其中$ h\left ( x_{i};w;b \right )$是对样本数据$x_{i}$的预测值，$y_{i}$是样本数据$x_{i}$的真实值，样本总数为$M$，$w$是各个特征权重组成的向量，$b$是偏置常数。</p>
+<p>当上面的损失函数$L(w,b)$取最小值时，意味着所有样本的预测值和实际值之间的差距是最小的，这时候相当于我们模型的预测效果是最好的。</p>
+<p>所以我们的策略就是最小化上面的损失函数：</p>
 <script type="math/tex; mode=display">\min_{w,b}L\left ( w,b \right )  =\min_{w} \frac{1}{2} \sum_{i=1}^{M}\left [ h\left ( x_{i};w;b \right ) -y_{i} \right ]^{2}</script><p>通过求解上面的最优化问题，我们可以得到其中的待定参数$w_j$和偏置常数$b$的值。</p>
 <h2 id="2-3-优化算法"><a href="#2-3-优化算法" class="headerlink" title="2.3 优化算法"></a>2.3 优化算法</h2><p>&ensp;&ensp;&ensp;&ensp;针对上述的优化问题，可以使用常用的梯度下降算法来求解，对损失函数求偏导：</p>
 <script type="math/tex; mode=display">\begin{aligned}
