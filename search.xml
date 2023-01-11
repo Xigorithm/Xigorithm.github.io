@@ -42,46 +42,6 @@
       </categories>
   </entry>
   <entry>
-    <title>梯度下降算法</title>
-    <url>/2021/01/13/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E7%AE%97%E6%B3%95/</url>
-    <content><![CDATA[<blockquote>
-<p>&ensp; &ensp;【摘要】当前位置的梯度方向，为函数在该位置处方向导数最大的方向，也是函数值上升最快的方向，梯度的反方向为函数值下降最快的方向；<br>&ensp; &ensp;&ensp;当前位置的梯度的模，为最大方向导数的值。</p>
-</blockquote>
-<h1 id="下山问题"><a href="#下山问题" class="headerlink" title="下山问题"></a>下山问题</h1><blockquote>
-<p>假设处在一个山的半山腰位置，问怎么走，下山最快？</p>
-</blockquote>
-<h1 id="答案"><a href="#答案" class="headerlink" title="答案"></a>答案</h1><blockquote>
-<p>不断沿着梯度的反方向走，下山最快。</p>
-</blockquote>
-<h1 id="解释与证明"><a href="#解释与证明" class="headerlink" title="解释与证明"></a>解释与证明</h1><p><strong>导数：</strong>对于一元函数，导数表示一元函数的变化率，比如$f\left ( x \right ) =x^{2}$，导数为：$\lim_{t \to 0} \frac{f\left ( x+t \right )-f\left ( x \right )  }{t} =2x$。</p>
-<p><strong>偏导数：</strong>对于多元函数，用偏导数表示多元函数沿着自变量坐标轴方向的导数，也即函数沿坐标轴方向的切线的斜率。$z=f\left ( x,y \right ) $，对x,y的偏导数分别为：$\frac{\partial z}{\partial x} $和$\frac{\partial z}{\partial y} $。</p>
-<p><strong>方向导数：</strong>如果方向不是沿着坐标轴方向，而是沿着任意方向呢？则是方向导数，表示多元函数沿某一方向的变化率。</p>
-<p>定义$xy$平面上一点$(a,b)$，以及单位向量：$\vec{u} =\left ( \cos \theta ,\sin \theta  \right )  $，$\theta$表示该单位向量与x轴的夹角，在曲面$z=f(x,y)$上，从点$(a,b,f(a,b))$出发，沿$\vec{u} $方向走$t$个单位长度后，函数值$z=f\left ( a+\cos \theta ,b+\sin \theta  \right ) $，则在点$(a,b)$处$\vec{方向的方向导数：<br>u} =\left ( \cos \theta ,\sin \theta  \right )  $方向的方向导数：</p>
-<script type="math/tex; mode=display">\lim_{t \to 0}\frac{f\left ( a+t\cos \theta ,b+t\sin \theta  \right ) - f\left ( a,b \right )  }{t} \\
-= \lim_{t \to 0}\frac{f\left ( a+t\cos \theta ,b+t\sin \theta \right )  - f\left ( a,b+t\sin \theta \right ) }{t} + \lim_{t \to 0}\frac{f\left ( a,b+t\sin \theta \right )  - f\left ( a,b \right ) }{t}</script><p>令$x=t\cos \theta, y=t\sin \theta$，则通过链式法则，上式为：</p>
-<script type="math/tex; mode=display">\frac{\partial }{\partial x} f\left ( a,b \right ) \frac{dx}{dt} +\frac{\partial }{\partial y} f\left ( a,b \right ) \frac{dy}{dt} \\
-=f_{x}  \left ( a,b \right ) \cos \theta + f_{y} \left ( a,b \right ) \sin \theta</script><p>写成向量内积的形式，即：</p>
-<script type="math/tex; mode=display">方向导数=(f_{x}(a,b),f_{y}(a,b))(\cos \theta ,\sin \theta )</script><p>也就是说，在该点，<strong>任意方向的方向导数是偏导数的线性组合，组合系数是该方向的方向向量。</strong></p>
-<p>注意内积是标量，所以方向导数是标量。</p>
-<p><strong>梯度：</strong>偏导数构成的向量为梯度，记作$\bigtriangledown f$，对于二元函数$\bigtriangledown f=(\frac{\partial z}{\partial x},\frac{\partial z}{\partial y}  )$，对于多元函数$\bigtriangledown f=(\frac{\partial z}{\partial x},\frac{\partial z}{\partial y},…  )$ 。</p>
-<p>根据：</p>
-<script type="math/tex; mode=display">方向导数=(f_{x}(a,b),f_{y}(a,b))(\cos \theta ,\sin \theta ) \\
-=\left | f_{x}(a,b),f_{y}(a,b) \right | \cdot 1 \cdot \cos \varphi  \\
-=\left | \bigtriangledown f(a,b) \right |\cdot \cos \varphi</script><p>其中$\varPhi$为梯度与方向向量$\vec{u} $的夹角，显然当$\varphi = 0$时，即方向向量沿着梯度方向时，方向导数最大，最大值为梯度的模；当$\varphi = \pi$时，即方向向量沿着梯度的反方向时，方向导数最小，最小值为梯度的模的负数。</p>
-<p>至此，得到梯度的几何意义：</p>
-<blockquote>
-<ol>
-<li>当前位置的额梯度方向，为函数在该位置处方向导数最大的方向，也是函数值上升最快的方向，梯度的反方向为函数值下降最快的方向；</li>
-<li>当前位置的梯度的模，为最大方向导数的值。</li>
-</ol>
-</blockquote>
-]]></content>
-      <categories>
-        <category>人工智能</category>
-        <category>机器学习</category>
-      </categories>
-  </entry>
-  <entry>
     <title>机器学习概述</title>
     <url>/2021/01/12/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%A6%82%E8%BF%B0/</url>
     <content><![CDATA[<!--<img src="/images/AI/机器学习概述/0.jpg" width="250" height="150" hspace="5" style="float:right">-->
@@ -198,6 +158,46 @@
 <h3 id="经验风险与结构风险"><a href="#经验风险与结构风险" class="headerlink" title="经验风险与结构风险"></a>经验风险与结构风险</h3><p>经验风险：最小化损失函数</p>
 <p>结构风险：加上了约束项之后的模型，对应的损失函数即为结构风险</p>
 <p>常用的正则化项：L0范数，L1范数，L2范数等。</p>
+]]></content>
+      <categories>
+        <category>人工智能</category>
+        <category>机器学习</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>梯度下降算法</title>
+    <url>/2021/01/13/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E7%AE%97%E6%B3%95/</url>
+    <content><![CDATA[<blockquote>
+<p>&ensp; &ensp;【摘要】当前位置的梯度方向，为函数在该位置处方向导数最大的方向，也是函数值上升最快的方向，梯度的反方向为函数值下降最快的方向；<br>&ensp; &ensp;&ensp;当前位置的梯度的模，为最大方向导数的值。</p>
+</blockquote>
+<h1 id="下山问题"><a href="#下山问题" class="headerlink" title="下山问题"></a>下山问题</h1><blockquote>
+<p>假设处在一个山的半山腰位置，问怎么走，下山最快？</p>
+</blockquote>
+<h1 id="答案"><a href="#答案" class="headerlink" title="答案"></a>答案</h1><blockquote>
+<p>不断沿着梯度的反方向走，下山最快。</p>
+</blockquote>
+<h1 id="解释与证明"><a href="#解释与证明" class="headerlink" title="解释与证明"></a>解释与证明</h1><p><strong>导数：</strong>对于一元函数，导数表示一元函数的变化率，比如$f\left ( x \right ) =x^{2}$，导数为：$\lim_{t \to 0} \frac{f\left ( x+t \right )-f\left ( x \right )  }{t} =2x$。</p>
+<p><strong>偏导数：</strong>对于多元函数，用偏导数表示多元函数沿着自变量坐标轴方向的导数，也即函数沿坐标轴方向的切线的斜率。$z=f\left ( x,y \right ) $，对x,y的偏导数分别为：$\frac{\partial z}{\partial x} $和$\frac{\partial z}{\partial y} $。</p>
+<p><strong>方向导数：</strong>如果方向不是沿着坐标轴方向，而是沿着任意方向呢？则是方向导数，表示多元函数沿某一方向的变化率。</p>
+<p>定义$xy$平面上一点$(a,b)$，以及单位向量：$\vec{u} =\left ( \cos \theta ,\sin \theta  \right )  $，$\theta$表示该单位向量与x轴的夹角，在曲面$z=f(x,y)$上，从点$(a,b,f(a,b))$出发，沿$\vec{u} $方向走$t$个单位长度后，函数值$z=f\left ( a+\cos \theta ,b+\sin \theta  \right ) $，则在点$(a,b)$处$\vec{方向的方向导数：<br>u} =\left ( \cos \theta ,\sin \theta  \right )  $方向的方向导数：</p>
+<script type="math/tex; mode=display">\lim_{t \to 0}\frac{f\left ( a+t\cos \theta ,b+t\sin \theta  \right ) - f\left ( a,b \right )  }{t} \\
+= \lim_{t \to 0}\frac{f\left ( a+t\cos \theta ,b+t\sin \theta \right )  - f\left ( a,b+t\sin \theta \right ) }{t} + \lim_{t \to 0}\frac{f\left ( a,b+t\sin \theta \right )  - f\left ( a,b \right ) }{t}</script><p>令$x=t\cos \theta, y=t\sin \theta$，则通过链式法则，上式为：</p>
+<script type="math/tex; mode=display">\frac{\partial }{\partial x} f\left ( a,b \right ) \frac{dx}{dt} +\frac{\partial }{\partial y} f\left ( a,b \right ) \frac{dy}{dt} \\
+=f_{x}  \left ( a,b \right ) \cos \theta + f_{y} \left ( a,b \right ) \sin \theta</script><p>写成向量内积的形式，即：</p>
+<script type="math/tex; mode=display">方向导数=(f_{x}(a,b),f_{y}(a,b))(\cos \theta ,\sin \theta )</script><p>也就是说，在该点，<strong>任意方向的方向导数是偏导数的线性组合，组合系数是该方向的方向向量。</strong></p>
+<p>注意内积是标量，所以方向导数是标量。</p>
+<p><strong>梯度：</strong>偏导数构成的向量为梯度，记作$\bigtriangledown f$，对于二元函数$\bigtriangledown f=(\frac{\partial z}{\partial x},\frac{\partial z}{\partial y}  )$，对于多元函数$\bigtriangledown f=(\frac{\partial z}{\partial x},\frac{\partial z}{\partial y},…  )$ 。</p>
+<p>根据：</p>
+<script type="math/tex; mode=display">方向导数=(f_{x}(a,b),f_{y}(a,b))(\cos \theta ,\sin \theta ) \\
+=\left | f_{x}(a,b),f_{y}(a,b) \right | \cdot 1 \cdot \cos \varphi  \\
+=\left | \bigtriangledown f(a,b) \right |\cdot \cos \varphi</script><p>其中$\varPhi$为梯度与方向向量$\vec{u} $的夹角，显然当$\varphi = 0$时，即方向向量沿着梯度方向时，方向导数最大，最大值为梯度的模；当$\varphi = \pi$时，即方向向量沿着梯度的反方向时，方向导数最小，最小值为梯度的模的负数。</p>
+<p>至此，得到梯度的几何意义：</p>
+<blockquote>
+<ol>
+<li>当前位置的额梯度方向，为函数在该位置处方向导数最大的方向，也是函数值上升最快的方向，梯度的反方向为函数值下降最快的方向；</li>
+<li>当前位置的梯度的模，为最大方向导数的值。</li>
+</ol>
+</blockquote>
 ]]></content>
       <categories>
         <category>人工智能</category>
