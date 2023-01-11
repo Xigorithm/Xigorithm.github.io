@@ -242,20 +242,13 @@
 <script type="math/tex; mode=display">\min_{w,b}L\left ( w,b \right )  =\min_{w} \frac{1}{2} \sum_{i=1}^{M}\left [ h\left ( x_{i};w;b \right ) -y_{i} \right ]^{2}</script><p>通过求解上面的最优化问题，我们可以得到其中的待定参数$w_j$和偏置常数$b$的值。</p>
 <h2 id="2-3-优化算法"><a href="#2-3-优化算法" class="headerlink" title="2.3 优化算法"></a>2.3 优化算法</h2><p>&ensp;&ensp;&ensp;&ensp;针对上述的优化问题，可以使用常用的梯度下降算法来求解，对损失函数求偏导：</p>
 <script type="math/tex; mode=display">\begin{aligned}
-
 \frac{\partial }{\partial w}L(w,b) &= \frac{\partial }{\partial w}  \left [ \frac{1}{2} \sum_{i=1}^{M} \left [ h\left ( x_i;w;b \right ) -y_i \right ]^2 \right ]\\ &=2\cdot \frac{1}{2}\cdot \left [ h\left ( x_i;w;b \right ) -y_i \right ]\cdot \frac{\partial }{\partial w} \left [ h\left ( x_i;w;b \right ) -y_i \right ]\\ &=\left ( wx_i+b-y_i \right )\cdot \frac{\partial }{\partial w} \left ( wx_i+b-y_i \right )\\ &=\left ( wx_i+b-y_i \right )x_i
-
 \end{aligned}</script><script type="math/tex; mode=display">\begin{aligned}
-
 \frac{\partial }{\partial b}L(w,b) &= \frac{\partial }{\partial b}\left [ \frac{1}{2}\sum_{i=1}^{M} \left [ h(x_i;w;b) -y_i \right ]^2   \right ]\\ &=2\cdot \frac{1}{2}\cdot \left [ h(x_i;w;b) -y_i\right ]\cdot \frac{\partial }{\partial b} \left [ h(x_i;w;b) -y_i \right ]\\ &= (wx_i+b-y_i)\cdot \frac{\partial }{\partial b}(wx_i+b-y_i)\\ &= (wx_i+b-y_i)
-
 \end{aligned}</script><p>所以得到权重系数向量$w$和偏置常数$b$的更新公式为：</p>
 <script type="math/tex; mode=display">\begin{aligned}
-
 w\longleftarrow w-\eta \cdot \frac{\partial }{\partial w}L(w,b)  =w-\eta (wx_i+b-y_i)x_i
-
 \end{aligned}</script><script type="math/tex; mode=display">
-
 b\longleftarrow b-\eta \cdot \frac{\partial }{\partial b}L(w,b)  =b-\eta (wx_i+b-y_i)</script><p>其中$0&lt; \eta &lt;1$是学习率，这样通过迭代可以使损失函数以较快的速度不断减小，直到满足要求。</p>
 <h1 id="3-算法流程与实现"><a href="#3-算法流程与实现" class="headerlink" title="3. 算法流程与实现"></a>3. 算法流程与实现</h1><h2 id="3-1-算法流程"><a href="#3-1-算法流程" class="headerlink" title="3.1 算法流程"></a>3.1 算法流程</h2><p>输入：训练集$T={(x_1,y_1),(x_2,y_2),…,(x_N,y_N)}$，学习率$\eta$。</p>
 <p>输出：线性回归模型$h(x)=wx+b$；</p>
@@ -263,29 +256,64 @@ b\longleftarrow b-\eta \cdot \frac{\partial }{\partial b}L(w,b)  =b-\eta (wx_i+b
 <p>第1步：选取初始向量$w$和偏置常数$b$。</p>
 <p>第2步：基于训练集进行参数更新:</p>
 <script type="math/tex; mode=display">\begin{aligned}
-
 w\longleftarrow w-\eta \cdot \frac{\partial }{\partial w}L(w,b)  =w-\eta (wx_i+b-y_i)x_i
-
 \end{aligned}</script><script type="math/tex; mode=display">
-
 b\longleftarrow b-\eta \cdot \frac{\partial }{\partial b}L(w,b)  =b-\eta (wx_i+b-y_i)</script><p>第3步：重复步骤2，直至模型满足训练要求。</p>
 <h2 id="3-2-算法实现"><a href="#3-2-算法实现" class="headerlink" title="3.2 算法实现"></a>3.2 算法实现</h2><p><strong>任务描述：</strong></p>
 <p>使用波士顿房价预测，波士顿房价数据与1978年开始统计，共包含506个样本数据点，每个样本都涵盖房屋的13种特征信息和对应的房屋价格，特征情况如下表所示：</p>
-<p>| 特征值 | 特征说明 |</p>
-<p>|————|————|</p>
-<p>|     ZN   |   住宅用地所占比例     |</p>
-<p>|     INDUS   |   城镇中非商业用地所占比例     |</p>
-<p>|     NOX   |   环保指标     |</p>
-<p>|     RM   |   每栋住宅的房间数     |</p>
-<p>|     AGE   |   1940年以前建成的自住单位比例     |</p>
-<p>|     RAD   |   距离高速公路的便利指数     |</p>
-<p>|     TAX   |   每一万美元的不动产税率     |</p>
-<p>|     LSTAT   |   房东属于低收入阶层的比例     |</p>
-<p>|     MEDV   |   自住房屋房价的中位数     |</p>
-<p>|     …   |   …     |</p>
-<p><strong>代码实现：</strong></p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># 1. 数据加载</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> sklearn.datasets <span class="keyword">import</span> load_boston</span><br><span class="line"></span><br><span class="line">boston = load_boston()</span><br><span class="line"></span><br><span class="line">X = boston.data</span><br><span class="line"></span><br><span class="line">y = boston.target</span><br><span class="line"></span><br><span class="line">print(X.shape)</span><br><span class="line"></span><br><span class="line">print(y.shape)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 2. 划分数据集</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> train_test_split</span><br><span class="line"></span><br><span class="line">X_train,X_test,y_train,y_test = train_test_split(X,y,train_size=<span class="number">0.7</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 3. 数据标准化</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> sklearn <span class="keyword">import</span> preprocessing</span><br><span class="line"></span><br><span class="line">standard_X = preprocessing.StandardScaler()</span><br><span class="line"></span><br><span class="line">X_train = standard_X.fit_transform(X_train)</span><br><span class="line"></span><br><span class="line">X_test = standard_X.transform(X_test)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">standard_y = preprocessing.StandardScaler()</span><br><span class="line"></span><br><span class="line">y_train = standard_y.fit_transform(y_train.reshape(-<span class="number">1</span>,<span class="number">1</span>))</span><br><span class="line"></span><br><span class="line">y_test = standard_y.transform(y_test.reshape(-<span class="number">1</span>,<span class="number">1</span>))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 4. 运用ElasticNet回归模型训练和预测</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> sklearn.linear_model <span class="keyword">import</span> ElasticNet</span><br><span class="line"></span><br><span class="line">ElasticNet_clf = ElasticNet(alpha=<span class="number">0.1</span>, l1_ratio=<span class="number">0.71</span>)</span><br><span class="line"></span><br><span class="line">ElasticNet_clf.fit(X_train, y_train.ravel())</span><br><span class="line"></span><br><span class="line">ElasticNet_clf_score = ElasticNet_clf.score(X_test, y_test.ravel())</span><br><span class="line"></span><br><span class="line">print(<span class="string">&#x27;lasso模型得分:&#x27;</span>, ElasticNet_clf_score)</span><br><span class="line"></span><br><span class="line">print(<span class="string">&#x27;特征权重:&#x27;</span>,ElasticNet_clf.coef_)</span><br><span class="line"></span><br><span class="line">print(<span class="string">&#x27;偏置值:&#x27;</span>,ElasticNet_clf.intercept_)</span><br><span class="line"></span><br><span class="line">print(<span class="string">&#x27;迭代次数:&#x27;</span>, ElasticNet_clf.n_iter_)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 5. 画图</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line">fig = plt.figure(figsize=(<span class="number">20</span>,<span class="number">3</span>))</span><br><span class="line"></span><br><span class="line">axes = fig.add_subplot(<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">line1, = axes.plot(<span class="built_in">range</span>(<span class="built_in">len</span>(y_test)), y_test, <span class="string">&#x27;b&#x27;</span>, label=<span class="string">&#x27;Actual_value&#x27;</span>)</span><br><span class="line"></span><br><span class="line">ElasticNet_clf_result = ElasticNet_clf.predict(X_test)</span><br><span class="line"></span><br><span class="line">line2, = axes.plot(<span class="built_in">range</span>(<span class="built_in">len</span>(ElasticNet_clf_result)), ElasticNet_clf_result, <span class="string">&#x27;r--&#x27;</span>, label=<span class="string">&#x27;ElasticNet_Predicted&#x27;</span>, linewidth = <span class="number">2</span>)</span><br><span class="line"></span><br><span class="line">axes.grid()</span><br><span class="line"></span><br><span class="line">fig.tight_layout()</span><br><span class="line"></span><br><span class="line">plt.legend(handles=[line1,line2])</span><br><span class="line"></span><br><span class="line">plt.title(<span class="string">&#x27;ElasticNet&#x27;</span>)</span><br><span class="line"></span><br><span class="line">plt.show()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>预测结果：</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>特征值</th>
+<th>特征说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ZN</td>
+<td>住宅用地所占比例</td>
+</tr>
+<tr>
+<td>INDUS</td>
+<td>城镇中非商业用地所占比例</td>
+</tr>
+<tr>
+<td>NOX</td>
+<td>环保指标</td>
+</tr>
+<tr>
+<td>RM</td>
+<td>每栋住宅的房间数</td>
+</tr>
+<tr>
+<td>AGE</td>
+<td>1940年以前建成的自住单位比例</td>
+</tr>
+<tr>
+<td>RAD</td>
+<td>距离高速公路的便利指数</td>
+</tr>
+<tr>
+<td>TAX</td>
+<td>每一万美元的不动产税率</td>
+</tr>
+<tr>
+<td>LSTAT</td>
+<td>房东属于低收入阶层的比例</td>
+</tr>
+<tr>
+<td>MEDV</td>
+<td>自住房屋房价的中位数</td>
+</tr>
+<tr>
+<td>…</td>
+<td>…</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>代码实现：</strong><br><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 1. 数据加载</span></span><br><span class="line"><span class="keyword">from</span> sklearn.datasets <span class="keyword">import</span> load_boston</span><br><span class="line">boston = load_boston()</span><br><span class="line">X = boston.data</span><br><span class="line">y = boston.target</span><br><span class="line">print(X.shape)</span><br><span class="line">print(y.shape)</span><br><span class="line"><span class="comment"># 2. 划分数据集</span></span><br><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> train_test_split</span><br><span class="line">X_train,X_test,y_train,y_test = train_test_split(X,y,train_size=<span class="number">0.7</span>)</span><br><span class="line"><span class="comment"># 3. 数据标准化</span></span><br><span class="line"><span class="keyword">from</span> sklearn <span class="keyword">import</span> preprocessing</span><br><span class="line">standard_X = preprocessing.StandardScaler()</span><br><span class="line">X_train = standard_X.fit_transform(X_train)</span><br><span class="line">X_test = standard_X.transform(X_test)</span><br><span class="line">standard_y = preprocessing.StandardScaler()</span><br><span class="line">y_train = standard_y.fit_transform(y_train.reshape(-<span class="number">1</span>,<span class="number">1</span>))</span><br><span class="line">y_test = standard_y.transform(y_test.reshape(-<span class="number">1</span>,<span class="number">1</span>))</span><br><span class="line"><span class="comment"># 4. 运用ElasticNet回归模型训练和预测</span></span><br><span class="line"><span class="keyword">from</span> sklearn.linear_model <span class="keyword">import</span> ElasticNet</span><br><span class="line">ElasticNet_clf = ElasticNet(alpha=<span class="number">0.1</span>, l1_ratio=<span class="number">0.71</span>)</span><br><span class="line">ElasticNet_clf.fit(X_train, y_train.ravel())</span><br><span class="line">ElasticNet_clf_score = ElasticNet_clf.score(X_test, y_test.ravel())</span><br><span class="line">print(<span class="string">&#x27;lasso模型得分:&#x27;</span>, ElasticNet_clf_score)</span><br><span class="line">print(<span class="string">&#x27;特征权重:&#x27;</span>,ElasticNet_clf.coef_)</span><br><span class="line">print(<span class="string">&#x27;偏置值:&#x27;</span>,ElasticNet_clf.intercept_)</span><br><span class="line">print(<span class="string">&#x27;迭代次数:&#x27;</span>, ElasticNet_clf.n_iter_)</span><br><span class="line"><span class="comment"># 5. 画图</span></span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line">fig = plt.figure(figsize=(<span class="number">20</span>,<span class="number">3</span>))</span><br><span class="line">axes = fig.add_subplot(<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>)</span><br><span class="line">line1, = axes.plot(<span class="built_in">range</span>(<span class="built_in">len</span>(y_test)), y_test, <span class="string">&#x27;b&#x27;</span>, label=<span class="string">&#x27;Actual_value&#x27;</span>)</span><br><span class="line">ElasticNet_clf_result = ElasticNet_clf.predict(X_test)</span><br><span class="line">line2, = axes.plot(<span class="built_in">range</span>(<span class="built_in">len</span>(ElasticNet_clf_result)), ElasticNet_clf_result, <span class="string">&#x27;r--&#x27;</span>, label=<span class="string">&#x27;ElasticNet_Predicted&#x27;</span>, linewidth = <span class="number">2</span>)</span><br><span class="line">axes.grid()</span><br><span class="line">fig.tight_layout()</span><br><span class="line">plt.legend(handles=[line1,line2])</span><br><span class="line">plt.title(<span class="string">&#x27;ElasticNet&#x27;</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure><br>预测结果：</p>
 <p><img src="/images/AI/线性回归/Figure_1.png" alt=""></p>
 ]]></content>
       <categories>
