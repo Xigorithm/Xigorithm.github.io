@@ -53,7 +53,23 @@ lnL(w,b) &= \sum_{i=1}^{M} {y_i\cdot ln[p(y_i=1|x_i)]+(1-y_i)ln[1-p(y_i=1|x_i)]}
 \end{aligned}</script><p>我们需要使每个样本属于其真实标记的概率越大越好，即最大对数似然函数：</p>
 <script type="math/tex; mode=display">
 \max_{w,b}\sum_{i=1}^{M}{y_i\cdot (w\cdot x_i+b)-ln(1+e^{w\cdot x_i+b})}</script><p>可以用梯度下降或牛顿法来求解该优化问题。</p>
-<h1 id="3-Logistic回归优化算法"><a href="#3-Logistic回归优化算法" class="headerlink" title="3. Logistic回归优化算法"></a>3. Logistic回归优化算法</h1>]]></content>
+<h1 id="3-Logistic回归优化算法"><a href="#3-Logistic回归优化算法" class="headerlink" title="3. Logistic回归优化算法"></a>3. Logistic回归优化算法</h1><h2 id="3-1-算法流程"><a href="#3-1-算法流程" class="headerlink" title="3.1 算法流程"></a>3.1 算法流程</h2><p>选用批量梯度下降算法，现分别对权重矩阵$w$和偏置常数$b$求偏导：</p>
+<script type="math/tex; mode=display">\begin{aligned}
+\frac{\partial }{\partial w}lnL(w,b)&=\frac{\partial }{\partial w}\sum_{i=1}^{M}{y_i\cdot (w\cdot x_i+b)-ln(1+e^{}wx_i+b)}\\ &= \sum_{i=1}^{M}(y_i-\frac{e^{wx_i+b}}{1+e^{wx_i+b}} )x_i
+\end{aligned}</script><script type="math/tex; mode=display">\begin{aligned}
+\frac{\partial }{\partial b}lnL(w,b) &= \frac{\partial }{\partial b}\sum_{i=1}^{M}{y_i\cdot (w\cdot x_i+b)-ln(1+e^{}wx_i+b)}\\ &= \sum_{i=1}^{M}(y_i-\frac{e^{wx_i+b}}{1+e^{wx_i+b}} )
+\end{aligned}</script><p>每次随机选取一个样本点$(x_i,y_i)$，对$w,b$进行一次更新，得到迭代公式：</p>
+<script type="math/tex; mode=display">\begin{aligned}
+w\gets w+\eta (y_i-\frac{e^{wx_i+b}}{1+e^{wx_i+b}} )x_i
+\end{aligned}</script><script type="math/tex; mode=display">\begin{aligned}
+b\gets b+\eta (y_i-\frac{e^{wx_i+b}}{1+e^{wx_i+b}} )
+\end{aligned}</script><p>Logistic回归流程：</p>
+<p>输入：训练集$T={(x_1,y_1),(x_2,y_2),…,(x_M,y_M)}$，学习率$\eta$;</p>
+<p>输出：Logistic回归模型$h(x)=\frac{1}{1+e^{-(wx_i+b)}}$。</p>
+<p>第1步：选取初始值向量$w$和偏置常数$b$;</p>
+<p>第2步：在训练集中随机选取数据$(x_i,y_i)$，根据上面的迭代公式进行参数更新；</p>
+<p>第3步：重复步骤2，直至模型满足训练要求。</p>
+]]></content>
       <categories>
         <category>人工智能</category>
         <category>机器学习</category>
