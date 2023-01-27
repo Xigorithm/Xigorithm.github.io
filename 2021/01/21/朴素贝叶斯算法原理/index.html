@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <!DOCTYPE html>
+<html lang="zh-Hans">
+<link rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css">
+
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+<script src="//lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js"> </script>
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  
+  <title>朴素贝叶斯算法原理 - July&#39;s blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  
+  <meta name="keywords" content=>
+  
+    <meta name="description" content="每天进步一点点">
+  
+  
+    <link rel="shortcut icon" type="image/x-icon" href="/images/icon/football2.png?v=1.02">
+  
+  
+    <link rel="alternate" href="/atom.xml " title="July&#39;s blog" type="application/atom+xml">
+  
+
+  
+<script src="/js/fancybox.js"></script>
+
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+<meta name="generator" content="Hexo 5.3.0"></head>
+  <body>
+    <div class="container">
+      
+<header class="header">
+  <div class="blog-title">
+    <a href="/" class="logo">July&#39;s blog</a>
+    <div class="subtitle">life feeds on negative entropy.</div>
+  </div>
+  <nav class="navbar">
+    <ul class="menu">
+      
+        <li class="menu-item">
+          <a href="/" class="menu-item-link">主页</a>
+        </li>
+      
+        <li class="menu-item">
+          <a href="/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0" class="menu-item-link">机器学习</a>
+        </li>
+      
+        <li class="menu-item">
+          <a href="/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0" class="menu-item-link">深度学习</a>
+        </li>
+      
+        <li class="menu-item">
+          <a href="/categories/%E6%88%91%E7%9A%84%E4%B9%A6%E5%8D%95" class="menu-item-link">书单</a>
+        </li>
+      
+        <li class="menu-item">
+          <a href="/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94" class="menu-item-link">生活随笔</a>
+        </li>
+      
+        <li class="menu-item">
+          <a href="/about" class="menu-item-link">关于</a>
+        </li>
+      
+    </ul>
+  </nav>
+
+</header>
+
+
+<article class="post">
+  <h1 class="article-title"></h1>
+  <div class="post-title">
+    <h1 class="file-title">朴素贝叶斯算法原理</h1>
+  </div>
+   
+  <div class="post-content">
+    <blockquote>
+<p>&ensp;&ensp;&ensp;&ensp;朴素贝叶斯是一个基于贝叶斯定理和特征条件独立假设的分类方法，属于生成模型。<br>&ensp;&ensp;&ensp;&ensp;特征的条件独立假设指的是：假设训练集第$i$个样本$x_i$的$M$个特征${x_i}^{(1)},{x_i}^{(2)},…,{x_i}^{(M)}$彼此之间相互独立，基于条件独立假设，可以求出输入-输出的联合概率$P(x,y)$，然后对于新的输入$x_i$，利用贝叶斯定理求出后验概率$p(y_i|x_i)$，即该对象属于某一类的概率，然后选择具有最大后验概率的类作为该对象所属的类别。</p>
+</blockquote>
+<h1 id="1-算法原理"><a href="#1-算法原理" class="headerlink" title="1. 算法原理"></a>1. 算法原理</h1><p>&ensp;&ensp;&ensp;&ensp;给定训练集$T={(x_1,y_1),(x_2,y_2),…,(x_n,y_n)}$，我们可以知道分类结果$y_i$的种类，假设一共有K种，用$c_1,c_2,…,c_K$表示，则先验概率分布$p(y=c_k)$和$p(x=x_i|y=c_k)$是可以先求出来的， 我们的目标是求后验概率分布$p(y=c_k|x=x_i)$。</p>
+<p>由条件概率公式可知：</p>
+<script type="math/tex; mode=display">
+p(y=c_k|x=x_i)=\frac{p(x=x_i,y=c_k)}{p(x=x_i)} \tag{1.1}</script><p>由乘法公式：</p>
+<script type="math/tex; mode=display">
+p(x=x_i,y=c_k)=p(x=x_i|y=c_k)p(y=c_k) \tag{1.2}</script><p>由全概率公式：</p>
+<script type="math/tex; mode=display">
+p(x=x_i)=\sum_{k=1}^{K} p(x=x_i|y=c_k)\times p(y=c_k) \tag{1.3}</script><p>从而得到贝叶斯定理：</p>
+<script type="math/tex; mode=display">
+p(y=c_k|x=x_i)=\frac{p(x=x_i|y=c_k)\times p(y=c_k)}{ {\textstyle \sum_{k=1}^{K}p(x=x_i|y=c_k)\times p(y=c_k)} } \tag{1.4}</script><p>根据特征条件独立假设，即假设样本中各个特征之间是相互独立的，则有:</p>
+<script type="math/tex; mode=display">\begin{aligned}
+p(x=x_i|y=c_k)&=p(x^{(1)}={x_i}^{(1)},x^{(2)}={x_i}^{(2)},...,x^{(N)}={x_i}^{(N)})\\ &=p(x^{(1)}={x_i}^{(1)}|y=c_k)\cdot p(x^{(2)}={x_i}^{(2)}|y=c_k)\cdot ...\cdot p(x^{(N)}={x_i}^{(N)}|y=c_k)\\ &= \prod_{j=1}^{N}p(x^{(j)}={x_i}^{(j)}|y=c_k) 
+\end{aligned} \tag{1.5}</script><p>得到后验概率的完整表达式:</p>
+<script type="math/tex; mode=display">
+p(y=c_k|x=x_i)=\frac{p(y=c_k)\cdot  {\textstyle \prod_{j=1}^{N}}p(x^{j}={x_i}^{(j)}|y=c_k) }{ {\textstyle \sum_{k=1}^{K}[p(y=c_k)\cdot  {\textstyle \prod_{j=1}^{N}p(x^{(j)}={x_i}^{(j)}|y=c_k)} ]} } \tag{1.6}</script><p>公式1.6即是朴素贝叶斯分类的基本公式，当需要判定输入样本$x_i$的分类类别时，只需一次计算在样本$x_i$条件下$y_i$属于各类别$c_1,c_2,…,c_k$的条件概率$p(y=c_k|x=x_i),k=1,2,…,K$的大小，然后选择该条件概率最大的对应的类别作为预测的分类。</p>
+<h1 id="2-算法实例"><a href="#2-算法实例" class="headerlink" title="2. 算法实例"></a>2. 算法实例</h1><p>&ensp;&ensp;&ensp;&ensp;结合具体的实例来看一下朴素贝叶斯分类的应用过程。</p>
+<p>在实际应用中$x=x_i$代表“具有某些特征”，$y=c_k$代表“属于某类别”，我们要求$p(y=c_k|x=x_i)$，即已知某个样本具有某些特征的条件下，求具有这些特征的样本数据各个类别的概率，即$p(“属于某类别”|“具有某些特征”)$，根据贝叶斯公式：</p>
+<script type="math/tex; mode=display">\begin{aligned}
+p(“属于某类别”|“具有某些特征”) &= \frac{p(“具有某些特征”|“属于某类别”)|p(“属于某类别”)}{p(“具有某些特征”)}\\ &= \frac{p(“属于某类别”) {\textstyle \prod_{j=1}^{N}p(“具有特征j”|“属于某类别”)} }{p(“具有某些特征”)}  
+\end{aligned}\tag{2.1}</script><p>以常见的垃圾邮件识别为例，假设现在有10000封邮件，事先已经人为标记为“垃圾邮件”和“非垃圾邮件”两大类，其中“垃圾邮件”3000封，“非垃圾邮件”7000封，我们的任务是，基于这10000封邮件，运用朴素贝叶斯模型，预测新邮件是否为垃圾邮件。</p>
+<p><strong>第1步：分词</strong></p>
+<p>对训练集，即10000封邮件，每封邮件的内容进行分词，比如邮件内容“机器学习算法介绍”，分词后可能得到：“机器学习”，“算法”，“介绍”，分好的词按类别混合在一起，得到“词袋”。</p>
+<p><strong>第2步：统计</strong></p>
+<p>统计词袋中各个词在各个类别下出现的概率，比如统计3000封垃圾邮件中，“机器学习”这个词出现的概率：</p>
+<script type="math/tex; mode=display">
+p(“机器学习”|“垃圾邮件”)=\frac{N_{kj}}{N_K} \tag{2.2}</script><p>其中$N_k$表示该类别中包含的总邮件文本数目，$N_{kj}$表示该类别中“机器学习”这个词的邮件文本数目。</p>
+<p><strong>第3步：预测</strong></p>
+<p>对于新邮件，对其进行分词后，建设得到M个词，word1,word2,…,wordM，则要计算：</p>
+<script type="math/tex; mode=display">\begin{aligned}
+p(“垃圾邮件”|“word1”,“word2”,...,“wordM”)\\ =\frac{p(“word1”,“word2”,...,“wordM”|“垃圾邮件”)\times p(“垃圾邮件”)}{p(“word1”,“word2”,...,“wordM”)}
+\end{aligned}  \tag{2.3}</script><p>和</p>
+<script type="math/tex; mode=display">\begin{aligned}
+p(“非垃圾邮件”|“word1”,“word2”,...,“wordM”)\\ =\frac{p(“word1”,“word2”,...,“wordM”|“非垃圾邮件”)\times p(“非垃圾邮件”)}{p(“word1”,“word2”,...,“wordM”)}
+\end{aligned} \tag{2.4}</script><p>由于分母是一样的，所以比较分子大的作为最终预测的分类。根据训练集，p(“垃圾邮件”)和p(“非垃圾邮件”)基于统计可以计算得到，而根据特征条件独立，有：</p>
+<script type="math/tex; mode=display">\begin{aligned}
+p(“word1”,“word2”,...,“wordM”|“垃圾邮件”)\\ =p(“word1”|“垃圾邮件”)p(“word2”|“垃圾邮件”),...,p(“wordM”|“垃圾邮件”)
+\end{aligned} \tag{2.5}</script><p>$p(”wordi“|”垃圾邮件“)$即各个特征词的条件概率，基于词袋统计也可以计算得到，从而代入公式2.3和2.4即可比较新邮件属于不同类别的概率大小。</p>
+
+  </div>
+  <div class="post-footer">
+    
+
+    
+      
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+  });
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@2.7.8/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
+
+    <a href="#top" class="top">Back to Top</a>
+  </div>
+</article>
+<footer>
+  &copy; 2021-2023
+  <span class="author">
+    July
+  </span>
+</footer>
+    </div>
+  </body>
+</html>
