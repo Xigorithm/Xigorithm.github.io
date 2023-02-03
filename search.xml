@@ -16,7 +16,7 @@
   </entry>
   <entry>
     <title>机器学习概述</title>
-    <url>/2021/01/12/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%A6%82%E8%BF%B0/</url>
+    <url>/2017/01/12/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%A6%82%E8%BF%B0/</url>
     <content><![CDATA[<!--<img src="/images/AI/机器学习概述/0.jpg" width="250" height="150" hspace="5" style="float:right">-->
 <blockquote>
 <p>【摘要】传统编程基于规则和数据，通过快速地计算来得到指定规则下的答案，对于特定c输入，给出确定输出的；而与传统编程不同的是，机器学习其实是从已知的数据和标签中学习得到某种规则，然后运用该规则去预测新数据的标签的过程，对机器学习而言，输入的是训练数据和对应的标签，得到的是数据和标签背后的映射规则。</p>
@@ -141,7 +141,7 @@
   </entry>
   <entry>
     <title>梯度下降算法</title>
-    <url>/2021/01/13/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E7%AE%97%E6%B3%95/</url>
+    <url>/2017/01/13/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E7%AE%97%E6%B3%95/</url>
     <content><![CDATA[<blockquote>
 <p>&ensp; &ensp;【摘要】当前位置的梯度方向，为函数在该位置处方向导数最大的方向，也是函数值上升最快的方向，梯度的反方向为函数值下降最快的方向；<br>&ensp; &ensp;&ensp;当前位置的梯度的模，为最大方向导数的值。</p>
 </blockquote>
@@ -258,7 +258,7 @@
   </entry>
   <entry>
     <title>Logistic回归算法原理</title>
-    <url>/2021/01/16/Logistic%E5%9B%9E%E5%BD%92%E7%AE%97%E6%B3%95%E5%8E%9F%E7%90%86/</url>
+    <url>/2017/01/16/Logistic%E5%9B%9E%E5%BD%92%E7%AE%97%E6%B3%95%E5%8E%9F%E7%90%86/</url>
     <content><![CDATA[<blockquote>
 <p>Logistic回归模型就是将线性回归的结果输入一个sigmoid函数，将回归值映射到0~1，表示输出为类别的概率。</p>
 </blockquote>
@@ -310,11 +310,11 @@ b\gets b+\eta (y_i-\frac{e^{wx_i+b}}{1+e^{wx_i+b}} )
   </entry>
   <entry>
     <title>K近邻算法原理</title>
-    <url>/2021/01/26/K%E8%BF%91%E9%82%BB%E7%AE%97%E6%B3%95%E5%8E%9F%E7%90%86/</url>
+    <url>/2017/01/26/K%E8%BF%91%E9%82%BB%E7%AE%97%E6%B3%95%E5%8E%9F%E7%90%86/</url>
     <content><![CDATA[<blockquote>
 <p>&ensp;&ensp;&ensp;&ensp;K近邻(K-Nearest Neighber, KNN)的思想是：对于任意一个新的样本点，我们可以在这M个已知类别标签的样本点选取k个与其距离最接近的点作为它的最近邻点，然后统计这k个最近邻点的类别标签，将统计最多的列表标签作为预测点的列表。</p>
 </blockquote>
-<h1 id="1-K近邻分类原理"><a href="#1-K近邻分类原理" class="headerlink" title="1. K近邻分类原理"></a>1. K近邻分类原理</h1><p>&ensp;&ensp;&ensp;&ensp;K近邻算法主要有3个要素：K值的选择、距离的度量、分类决策规则。</p>
+<h1 id="1-K近邻分类原理"><a href="#1-K近邻分类原理" class="headerlink" title="1 K近邻分类原理"></a>1 K近邻分类原理</h1><p>&ensp;&ensp;&ensp;&ensp;K近邻算法主要有3个要素：K值的选择、距离的度量、分类决策规则。</p>
 <h2 id="1-1-K值选择"><a href="#1-1-K值选择" class="headerlink" title="1.1 K值选择"></a>1.1 K值选择</h2><p>&ensp;&ensp;&ensp;&ensp;K值的选择会对K近邻算法的结果产生较大影响：K值过小，相当于使用一个较小的邻域中的实例来训练模型，容易产生欠拟合，模型的估计误差较大；K值选择过大，相当于用一个较大的领域中的实例来训练模型，这种情况下输入较远的训练实例也会对预测起作用，容易产生过拟合，因而也会影响模型的估计误差。</p>
 <h2 id="1-2-距离度量"><a href="#1-2-距离度量" class="headerlink" title="1.2 距离度量"></a>1.2 距离度量</h2><p>&ensp;&ensp;&ensp;&ensp;距离度量方式有多种，一般使用较多的是欧式距离，假设有两个N维向量$x_i,x_j$，如下：</p>
 <script type="math/tex; mode=display">
@@ -331,7 +331,7 @@ L=\frac{1}{K} \sum_{x_i\in N_k}^{} I(y_i \ne c_r)=1-\frac{1}{K} \sum_{x_i\in N_k
 min[1-\frac{1}{K}\sum_{x_i\in N_k}^{}I(y_i=c_r)  ]\tag{1.5}</script><p>即:</p>
 <script type="math/tex; mode=display">
 max\frac{1}{K}\sum_{x_i\in N_k}^{}I(y_i=c_r) \tag{1.6}</script><p>从上面的式子可以看出，使误分类率最小等价于使预测样本实例x选定的K个最近邻训练样本实例$x_i(i=1,2,…,K)$的类别标签$y_i$尽可能多的和预测样本实例$x_j$的预测类别$c_r$相同。</p>
-<h1 id="2-K近邻分类算法流程"><a href="#2-K近邻分类算法流程" class="headerlink" title="2. K近邻分类算法流程"></a>2. K近邻分类算法流程</h1><p>输入：训练集$T={(x_1,y_1),(x_2,y_2),…,(x_M,y_M)}$，其中$x_i=((x_i)^(1),(x_i)^(2),…,(x_i)^(N))$为第i个训练样本实例，$y_i$为$x_i$对应的列表标签。</p>
+<h1 id="2-K近邻分类算法流程"><a href="#2-K近邻分类算法流程" class="headerlink" title="2 K近邻分类算法流程"></a>2 K近邻分类算法流程</h1><p>输入：训练集$T={(x_1,y_1),(x_2,y_2),…,(x_M,y_M)}$，其中$x_i=((x_i)^(1),(x_i)^(2),…,(x_i)^(N))$为第i个训练样本实例，$y_i$为$x_i$对应的类别标签。</p>
 <p>输出：带预测实例$x_j$所属的类别$y_j$。</p>
 <p>步骤如下：</p>
 <p>第1步：</p>
@@ -340,7 +340,17 @@ max\frac{1}{K}\sum_{x_i\in N_k}^{}I(y_i=c_r) \tag{1.6}</script><p>从上面的�
 <p>根据多数表决规则决定待预测实例$x_j$所属的类别$y_j$，即：</p>
 <script type="math/tex; mode=display">
 y_i=arg\max_{c_r}\frac{1}{K}\sum_{x_i\in N_k}^{} I(y_i=c_r) \tag{2.1}</script><p>其中$i=1,2,…,K;r=1,2,…,R$。</p>
-<h1 id="3-K近邻回归原理"><a href="#3-K近邻回归原理" class="headerlink" title="3. K近邻回归原理"></a>3. K近邻回归原理</h1><h1 id="4-K近邻算法应用实例"><a href="#4-K近邻算法应用实例" class="headerlink" title="4. K近邻算法应用实例"></a>4. K近邻算法应用实例</h1>]]></content>
+<h1 id="3-K近邻回归原理"><a href="#3-K近邻回归原理" class="headerlink" title="3 K近邻回归原理"></a>3 K近邻回归原理</h1><p>K近邻算法不仅可以用于分类，也可以用于回归任务。当用于回归任务时，基本原理和分类任务是一样的，仍然是三要素：K值选择、距离度量方法、回归决策规则，前面两个要素一样，最后一点是将分类决策规则改成回归决策规则。</p>
+<h2 id="3-1-回归决策规则"><a href="#3-1-回归决策规则" class="headerlink" title="3.1 回归决策规则"></a>3.1 回归决策规则</h2><p>在找到待预测实例$x_j$的K个最近邻训练样本实例$x_i(i=1,2,…,K)$后，分类问题采取的决策规则是统计这K个样本的类别情况，然后选择其中占比最高的类别作为待预测实例$x_j$的类别。回归问题稍加变化，把这K个最近邻训练样本实例$x_i$的输出值$y_i$的平均作为待预测实例的值，即：</p>
+<script type="math/tex; mode=display">
+y_j=\frac{1}{K}\sum_{i=1}^{K}  y_i \tag{3.1}</script><h2 id="3-2-K近邻回归算法流程"><a href="#3-2-K近邻回归算法流程" class="headerlink" title="3.2 K近邻回归算法流程"></a>3.2 K近邻回归算法流程</h2><p>输入：训练集$T={(x_1,y_1),(x_2,y_2),…,(x_M,y_M)}$，其中$x_i=((x_i)^(1),(x_i)^(2),…,(x_i)^(N))$为第i个训练样本实例，$y_i$为$x_i$对应的类别标签。</p>
+<p>输出：待预测实例$x_j$的输出值$y_j$。</p>
+<p>步骤如下：</p>
+<p>第1步：</p>
+<p>根据选定的K值，选择合适的距离度量方式，在训练集T中找出待预测实例$x_j$的K个最近邻点$x_i$，这K个训练样本实例构成的集合记为$N_k$。</p>
+<p>第2步：</p>
+<p>根据取平均规则决定预测实例$x_j$所属的输出值$y_j$，即公式(3.1)。</p>
+]]></content>
       <categories>
         <category>人工智能</category>
         <category>机器学习</category>
@@ -348,8 +358,8 @@ y_i=arg\max_{c_r}\frac{1}{K}\sum_{x_i\in N_k}^{} I(y_i=c_r) \tag{2.1}</script><p
   </entry>
   <entry>
     <title>SVM算法原理</title>
-    <url>/2021/01/30/SVM%E7%AE%97%E6%B3%95%E5%8E%9F%E7%90%86/</url>
-    <content><![CDATA[]]></content>
+    <url>/2017/01/30/SVM%E7%AE%97%E6%B3%95%E5%8E%9F%E7%90%86/</url>
+    <content><![CDATA[<h1 id="1-硬间隔SVM"><a href="#1-硬间隔SVM" class="headerlink" title="1 硬间隔SVM"></a>1 硬间隔SVM</h1><h2 id="1-1-由感知机到SVM"><a href="#1-1-由感知机到SVM" class="headerlink" title="1.1 由感知机到SVM"></a>1.1 由感知机到SVM</h2><h2 id="1-2-公式推导与求解"><a href="#1-2-公式推导与求解" class="headerlink" title="1.2 公式推导与求解"></a>1.2 公式推导与求解</h2><h1 id="2-软间隔SVM"><a href="#2-软间隔SVM" class="headerlink" title="2 软间隔SVM"></a>2 软间隔SVM</h1><h1 id="3-合页损失函数"><a href="#3-合页损失函数" class="headerlink" title="3 合页损失函数"></a>3 合页损失函数</h1><h1 id="非线性SVM"><a href="#非线性SVM" class="headerlink" title="非线性SVM"></a>非线性SVM</h1>]]></content>
       <categories>
         <category>人工智能</category>
         <category>机器学习</category>
@@ -357,7 +367,7 @@ y_i=arg\max_{c_r}\frac{1}{K}\sum_{x_i\in N_k}^{} I(y_i=c_r) \tag{2.1}</script><p
   </entry>
   <entry>
     <title>朴素贝叶斯算法原理</title>
-    <url>/2021/01/21/%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF%E7%AE%97%E6%B3%95%E5%8E%9F%E7%90%86/</url>
+    <url>/2017/01/21/%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF%E7%AE%97%E6%B3%95%E5%8E%9F%E7%90%86/</url>
     <content><![CDATA[<blockquote>
 <p>&ensp;&ensp;&ensp;&ensp;朴素贝叶斯是一个基于贝叶斯定理和特征条件独立假设的分类方法，属于生成模型。<br>&ensp;&ensp;&ensp;&ensp;特征的条件独立假设指的是：假设训练集第$i$个样本$x_i$的$M$个特征${x_i}^{(1)},{x_i}^{(2)},…,{x_i}^{(M)}$彼此之间相互独立，基于条件独立假设，可以求出输入-输出的联合概率$P(x,y)$，然后对于新的输入$x_i$，利用贝叶斯定理求出后验概率$p(y_i|x_i)$，即该对象属于某一类的概率，然后选择具有最大后验概率的类作为该对象所属的类别。</p>
 </blockquote>
@@ -406,7 +416,7 @@ p(“word1”,“word2”,...,“wordM”|“垃圾邮件”)\\ =p(“word1”|�
   </entry>
   <entry>
     <title>线性回归算法原理</title>
-    <url>/2021/01/15/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E7%AE%97%E6%B3%95%E5%8E%9F%E7%90%86/</url>
+    <url>/2017/01/15/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E7%AE%97%E6%B3%95%E5%8E%9F%E7%90%86/</url>
     <content><![CDATA[<h1 id="1-问题引入"><a href="#1-问题引入" class="headerlink" title="1. 问题引入"></a>1. 问题引入</h1><p>&ensp;&ensp;&ensp;&ensp;回归分析是一种预测性建模技术，主要用来研究因变量$y_i$和自变量$x_i$之间的关系，通常被用于预测分析、时间序列等。</p>
 <p>&ensp;&ensp;&ensp;&ensp;假设特征和结果满足线性关系，则线性回归的目标就是用一条直线去拟合样本点，当新的样本数据进来时，根据拟合的直线去预测新样本的结果。</p>
 <h1 id="2-线性回归模型"><a href="#2-线性回归模型" class="headerlink" title="2. 线性回归模型"></a>2. 线性回归模型</h1><h2 id="2-1-模型建立"><a href="#2-1-模型建立" class="headerlink" title="2.1 模型建立"></a>2.1 模型建立</h2><p>&ensp;&ensp;&ensp;&ensp;假设南京的房价与房屋的特征满足线性回归模型，我们用$x(1),x(2),…x(N)$表示影响房子价格的特征因素，如面积、房子朝向、地理位置等，房子价格为$h(x)$，是一个由变量$x_i$共同决定的函数，由于不同的因素对房屋价格的影响程度是不同的，所以给每项特征因素赋予一个权重$w(j)$，则得到因变量与自变量之间的函数表达式：</p>
@@ -493,6 +503,72 @@ b\longleftarrow b-\eta \cdot \frac{\partial }{\partial b}L(w,b)  =b-\eta (wx_i+b
 <p><strong>代码实现：</strong><br><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 1. 数据加载</span></span><br><span class="line"><span class="keyword">from</span> sklearn.datasets <span class="keyword">import</span> load_boston</span><br><span class="line">boston = load_boston()</span><br><span class="line">X = boston.data</span><br><span class="line">y = boston.target</span><br><span class="line">print(X.shape)</span><br><span class="line">print(y.shape)</span><br><span class="line"><span class="comment"># 2. 划分数据集</span></span><br><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> train_test_split</span><br><span class="line">X_train,X_test,y_train,y_test = train_test_split(X,y,train_size=<span class="number">0.7</span>)</span><br><span class="line"><span class="comment"># 3. 数据标准化</span></span><br><span class="line"><span class="keyword">from</span> sklearn <span class="keyword">import</span> preprocessing</span><br><span class="line">standard_X = preprocessing.StandardScaler()</span><br><span class="line">X_train = standard_X.fit_transform(X_train)</span><br><span class="line">X_test = standard_X.transform(X_test)</span><br><span class="line">standard_y = preprocessing.StandardScaler()</span><br><span class="line">y_train = standard_y.fit_transform(y_train.reshape(-<span class="number">1</span>,<span class="number">1</span>))</span><br><span class="line">y_test = standard_y.transform(y_test.reshape(-<span class="number">1</span>,<span class="number">1</span>))</span><br><span class="line"><span class="comment"># 4. 运用ElasticNet回归模型训练和预测</span></span><br><span class="line"><span class="keyword">from</span> sklearn.linear_model <span class="keyword">import</span> ElasticNet</span><br><span class="line">ElasticNet_clf = ElasticNet(alpha=<span class="number">0.1</span>, l1_ratio=<span class="number">0.71</span>)</span><br><span class="line">ElasticNet_clf.fit(X_train, y_train.ravel())</span><br><span class="line">ElasticNet_clf_score = ElasticNet_clf.score(X_test, y_test.ravel())</span><br><span class="line">print(<span class="string">&#x27;lasso模型得分:&#x27;</span>, ElasticNet_clf_score)</span><br><span class="line">print(<span class="string">&#x27;特征权重:&#x27;</span>,ElasticNet_clf.coef_)</span><br><span class="line">print(<span class="string">&#x27;偏置值:&#x27;</span>,ElasticNet_clf.intercept_)</span><br><span class="line">print(<span class="string">&#x27;迭代次数:&#x27;</span>, ElasticNet_clf.n_iter_)</span><br><span class="line"><span class="comment"># 5. 画图</span></span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line">fig = plt.figure(figsize=(<span class="number">20</span>,<span class="number">3</span>))</span><br><span class="line">axes = fig.add_subplot(<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>)</span><br><span class="line">line1, = axes.plot(<span class="built_in">range</span>(<span class="built_in">len</span>(y_test)), y_test, <span class="string">&#x27;b&#x27;</span>, label=<span class="string">&#x27;Actual_value&#x27;</span>)</span><br><span class="line">ElasticNet_clf_result = ElasticNet_clf.predict(X_test)</span><br><span class="line">line2, = axes.plot(<span class="built_in">range</span>(<span class="built_in">len</span>(ElasticNet_clf_result)), ElasticNet_clf_result, <span class="string">&#x27;r--&#x27;</span>, label=<span class="string">&#x27;ElasticNet_Predicted&#x27;</span>, linewidth = <span class="number">2</span>)</span><br><span class="line">axes.grid()</span><br><span class="line">fig.tight_layout()</span><br><span class="line">plt.legend(handles=[line1,line2])</span><br><span class="line">plt.title(<span class="string">&#x27;ElasticNet&#x27;</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure><br>预测结果：</p>
 <p><img src="/images/AI/线性回归/Figure_1.png" alt=""></p>
 ]]></content>
+      <categories>
+        <category>人工智能</category>
+        <category>机器学习</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>决策树算法原理</title>
+    <url>/2017/02/01/%E5%86%B3%E7%AD%96%E6%A0%91%E7%AE%97%E6%B3%95%E5%8E%9F%E7%90%86/</url>
+    <content><![CDATA[<blockquote>
+<p>&ensp;&ensp;&ensp;&ensp;决策树是一种树状结构模型，可以进行基本的分类与回归，决策树也是集成学习经常采用的基模型。<br>&ensp;&ensp;&ensp;&ensp;决策树有多种类型，常用的ID3决策树、C4.5决策树、CART决策树等，不同决策树之间总体思想大同小异，主要涉及三个要素：特征选择、决策树生成和决策树剪枝。</p>
+</blockquote>
+<h1 id="1-特征选择"><a href="#1-特征选择" class="headerlink" title="1 特征选择"></a>1 特征选择</h1><h2 id="1-1-信息增益"><a href="#1-1-信息增益" class="headerlink" title="1.1 信息增益"></a>1.1 信息增益</h2><h2 id="1-2-信息增益比"><a href="#1-2-信息增益比" class="headerlink" title="1.2 信息增益比"></a>1.2 信息增益比</h2><h2 id="1-3-基尼系数"><a href="#1-3-基尼系数" class="headerlink" title="1.3 基尼系数"></a>1.3 基尼系数</h2><h1 id="2-决策树生成"><a href="#2-决策树生成" class="headerlink" title="2 决策树生成"></a>2 决策树生成</h1><h2 id="2-1-ID3决策树"><a href="#2-1-ID3决策树" class="headerlink" title="2.1 ID3决策树"></a>2.1 ID3决策树</h2><h2 id="2-2-C4-5决策树"><a href="#2-2-C4-5决策树" class="headerlink" title="2.2 C4.5决策树"></a>2.2 C4.5决策树</h2><h2 id="2-3-CART决策树"><a href="#2-3-CART决策树" class="headerlink" title="2.3 CART决策树"></a>2.3 CART决策树</h2><h1 id="3-决策树剪枝"><a href="#3-决策树剪枝" class="headerlink" title="3 决策树剪枝"></a>3 决策树剪枝</h1>]]></content>
+      <categories>
+        <category>人工智能</category>
+        <category>机器学习</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>集成学习</title>
+    <url>/2017/02/05/%E9%9B%86%E6%88%90%E5%AD%A6%E4%B9%A0/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>人工智能</category>
+        <category>机器学习</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>随机森林算法原理</title>
+    <url>/2017/02/07/%E9%9A%8F%E6%9C%BA%E6%A3%AE%E6%9E%97%E7%AE%97%E6%B3%95%E5%8E%9F%E7%90%86/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>人工智能</category>
+        <category>机器学习</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>AdaBoost算法原理</title>
+    <url>/2017/02/10/AdaBoost%E7%AE%97%E6%B3%95%E5%8E%9F%E7%90%86/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>人工智能</category>
+        <category>机器学习</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>梯度提升树</title>
+    <url>/2017/02/12/%E6%A2%AF%E5%BA%A6%E6%8F%90%E5%8D%87%E6%A0%91/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>人工智能</category>
+        <category>机器学习</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>XGBoost算法原理</title>
+    <url>/2017/02/14/XGBoost%E7%AE%97%E6%B3%95%E5%8E%9F%E7%90%86/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>人工智能</category>
+        <category>机器学习</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>K-Means聚类算法原理</title>
+    <url>/2017/02/18/K-Means%E8%81%9A%E7%B1%BB%E7%AE%97%E6%B3%95%E5%8E%9F%E7%90%86/</url>
+    <content><![CDATA[]]></content>
       <categories>
         <category>人工智能</category>
         <category>机器学习</category>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+  <!DOCTYPE html>
+<html lang="zh-Hans">
+<link rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css">
+
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+<script src="//lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js"> </script>
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  
+  <title>K近邻算法原理 - July</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  
+  <meta name="keywords" content=>
+  
+    <meta name="description" content="每天进步一点点">
+  
+  
+    <link rel="shortcut icon" type="image/x-icon" href="/images/icon/football2.png?v=1.02">
+  
+  
+    <link rel="alternate" href="/atom.xml " title="July" type="application/atom+xml">
+  
+
+  
+<script src="/js/fancybox.js"></script>
+
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+<meta name="generator" content="Hexo 5.3.0"></head>
+  <body>
+    <div class="container">
+      
+<header class="header">
+  <div class="blog-title">
+    <a href="/" class="logo">July</a>
+    <div class="subtitle">life feeds on negative entropy.</div>
+  </div>
+  <nav class="navbar">
+    <ul class="menu">
+      
+        <li class="menu-item">
+          <a href="/" class="menu-item-link">主页</a>
+        </li>
+      
+        <li class="menu-item">
+          <a href="/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD" class="menu-item-link">人工智能</a>
+        </li>
+      
+        <li class="menu-item">
+          <a href="/categories/%E6%88%91%E7%9A%84%E4%B9%A6%E5%8D%95" class="menu-item-link">我的书单</a>
+        </li>
+      
+        <li class="menu-item">
+          <a href="/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94" class="menu-item-link">生活随笔</a>
+        </li>
+      
+        <li class="menu-item">
+          <a href="/about" class="menu-item-link">关于</a>
+        </li>
+      
+    </ul>
+  </nav>
+
+</header>
+
+
+<article class="post">
+  <h1 class="article-title"></h1>
+  <div class="post-title">
+    <h1 class="file-title">K近邻算法原理</h1>
+  </div>
+   
+  <div class="post-content">
+    <blockquote>
+<p>&ensp;&ensp;&ensp;&ensp;K近邻(K-Nearest Neighber, KNN)的思想是：对于任意一个新的样本点，我们可以在这M个已知类别标签的样本点选取k个与其距离最接近的点作为它的最近邻点，然后统计这k个最近邻点的类别标签，将统计最多的列表标签作为预测点的列表。</p>
+</blockquote>
+<h1 id="1-K近邻分类原理"><a href="#1-K近邻分类原理" class="headerlink" title="1 K近邻分类原理"></a>1 K近邻分类原理</h1><p>&ensp;&ensp;&ensp;&ensp;K近邻算法主要有3个要素：K值的选择、距离的度量、分类决策规则。</p>
+<h2 id="1-1-K值选择"><a href="#1-1-K值选择" class="headerlink" title="1.1 K值选择"></a>1.1 K值选择</h2><p>&ensp;&ensp;&ensp;&ensp;K值的选择会对K近邻算法的结果产生较大影响：K值过小，相当于使用一个较小的邻域中的实例来训练模型，容易产生欠拟合，模型的估计误差较大；K值选择过大，相当于用一个较大的领域中的实例来训练模型，这种情况下输入较远的训练实例也会对预测起作用，容易产生过拟合，因而也会影响模型的估计误差。</p>
+<h2 id="1-2-距离度量"><a href="#1-2-距离度量" class="headerlink" title="1.2 距离度量"></a>1.2 距离度量</h2><p>&ensp;&ensp;&ensp;&ensp;距离度量方式有多种，一般使用较多的是欧式距离，假设有两个N维向量$x_i,x_j$，如下：</p>
+<script type="math/tex; mode=display">
+x_i = ({x_i}^{(1)},{x_i}^{(2)},...,{x_i}^{(N)})\tag{1.1}</script><script type="math/tex; mode=display">
+x_j = ({x_j}^{(1)},{x_j}^{(2)},...,{x_j}^{(N)})\tag{1.2}</script><p>则它们之间的闵可夫斯基距离为：</p>
+<script type="math/tex; mode=display">
+L_p(x_i,x_j)=\sqrt[p]{\sum_{n=1}^{N} ({x_i}^{(n)}-{x_j}^{(n)})^p} \tag{1.3}</script><p>当$p=1$时，上面的距离即是曼哈顿距离，当$p=2$时，上面的距离就是欧氏距离。</p>
+<h2 id="1-3-分类决策规则"><a href="#1-3-分类决策规则" class="headerlink" title="1.3 分类决策规则"></a>1.3 分类决策规则</h2><p>&ensp;&ensp;&ensp;&ensp;与朴素贝叶斯一样，可以使用0-1损失函数来衡量，误分类的概率为：</p>
+<script type="math/tex; mode=display">
+p(y\ne f(x))=1-p(y=f(x)) \tag{1.4}</script><p>其中$f(x)$就是分类决策函数。对于给定的预测样本实例$x_j$，假设最后预测它的分类为$c_r$，再假设$x_j$最近邻的K个训练样本实例$x_i(i=1,2,…,K)$，构成的集合为$N_k$，训练样本实例$x_i$对应的类别标签为$y_i$，则误分类率为：</p>
+<script type="math/tex; mode=display">
+L=\frac{1}{K} \sum_{x_i\in N_k}^{} I(y_i \ne c_r)=1-\frac{1}{K} \sum_{x_i\in N_k}^{}I(y_i=c_r)</script><p>这里I为指示函数，即I(true)=1,I(false)=0，我们的目标就是使误分类率L最小化，即：</p>
+<script type="math/tex; mode=display">
+min[1-\frac{1}{K}\sum_{x_i\in N_k}^{}I(y_i=c_r)  ]\tag{1.5}</script><p>即:</p>
+<script type="math/tex; mode=display">
+max\frac{1}{K}\sum_{x_i\in N_k}^{}I(y_i=c_r) \tag{1.6}</script><p>从上面的式子可以看出，使误分类率最小等价于使预测样本实例x选定的K个最近邻训练样本实例$x_i(i=1,2,…,K)$的类别标签$y_i$尽可能多的和预测样本实例$x_j$的预测类别$c_r$相同。</p>
+<h1 id="2-K近邻分类算法流程"><a href="#2-K近邻分类算法流程" class="headerlink" title="2 K近邻分类算法流程"></a>2 K近邻分类算法流程</h1><p>输入：训练集$T={(x_1,y_1),(x_2,y_2),…,(x_M,y_M)}$，其中$x_i=((x_i)^(1),(x_i)^(2),…,(x_i)^(N))$为第i个训练样本实例，$y_i$为$x_i$对应的类别标签。</p>
+<p>输出：带预测实例$x_j$所属的类别$y_j$。</p>
+<p>步骤如下：</p>
+<p>第1步：</p>
+<p>根据选定的K值，选择合适的距离度量方式，在训练集T中找出待预测实例$x_j$的K个最近邻点$x_i$，这K个训练样本实例构成的集合记为$N_k$。</p>
+<p>第2步：</p>
+<p>根据多数表决规则决定待预测实例$x_j$所属的类别$y_j$，即：</p>
+<script type="math/tex; mode=display">
+y_i=arg\max_{c_r}\frac{1}{K}\sum_{x_i\in N_k}^{} I(y_i=c_r) \tag{2.1}</script><p>其中$i=1,2,…,K;r=1,2,…,R$。</p>
+<h1 id="3-K近邻回归原理"><a href="#3-K近邻回归原理" class="headerlink" title="3 K近邻回归原理"></a>3 K近邻回归原理</h1><p>K近邻算法不仅可以用于分类，也可以用于回归任务。当用于回归任务时，基本原理和分类任务是一样的，仍然是三要素：K值选择、距离度量方法、回归决策规则，前面两个要素一样，最后一点是将分类决策规则改成回归决策规则。</p>
+<h2 id="3-1-回归决策规则"><a href="#3-1-回归决策规则" class="headerlink" title="3.1 回归决策规则"></a>3.1 回归决策规则</h2><p>在找到待预测实例$x_j$的K个最近邻训练样本实例$x_i(i=1,2,…,K)$后，分类问题采取的决策规则是统计这K个样本的类别情况，然后选择其中占比最高的类别作为待预测实例$x_j$的类别。回归问题稍加变化，把这K个最近邻训练样本实例$x_i$的输出值$y_i$的平均作为待预测实例的值，即：</p>
+<script type="math/tex; mode=display">
+y_j=\frac{1}{K}\sum_{i=1}^{K}  y_i \tag{3.1}</script><h2 id="3-2-K近邻回归算法流程"><a href="#3-2-K近邻回归算法流程" class="headerlink" title="3.2 K近邻回归算法流程"></a>3.2 K近邻回归算法流程</h2><p>输入：训练集$T={(x_1,y_1),(x_2,y_2),…,(x_M,y_M)}$，其中$x_i=((x_i)^(1),(x_i)^(2),…,(x_i)^(N))$为第i个训练样本实例，$y_i$为$x_i$对应的类别标签。</p>
+<p>输出：待预测实例$x_j$的输出值$y_j$。</p>
+<p>步骤如下：</p>
+<p>第1步：</p>
+<p>根据选定的K值，选择合适的距离度量方式，在训练集T中找出待预测实例$x_j$的K个最近邻点$x_i$，这K个训练样本实例构成的集合记为$N_k$。</p>
+<p>第2步：</p>
+<p>根据取平均规则决定预测实例$x_j$所属的输出值$y_j$，即公式(3.1)。</p>
+
+  </div>
+  <div class="post-footer">
+    
+
+    
+      
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+  });
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@2.7.8/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
+
+    <a href="#top" class="top">Back to Top</a>
+  </div>
+</article>
+<footer>
+  &copy; 2017-2023
+  <span class="author">
+    July
+  </span>
+</footer>
+    </div>
+  </body>
+</html>

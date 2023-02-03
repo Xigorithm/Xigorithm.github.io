@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+  <!DOCTYPE html>
+<html lang="zh-Hans">
+<link rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css">
+
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+<script src="//lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js"> </script>
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  
+  <title>梯度下降算法 - July</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  
+  <meta name="keywords" content=>
+  
+    <meta name="description" content="每天进步一点点">
+  
+  
+    <link rel="shortcut icon" type="image/x-icon" href="/images/icon/football2.png?v=1.02">
+  
+  
+    <link rel="alternate" href="/atom.xml " title="July" type="application/atom+xml">
+  
+
+  
+<script src="/js/fancybox.js"></script>
+
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+<meta name="generator" content="Hexo 5.3.0"></head>
+  <body>
+    <div class="container">
+      
+<header class="header">
+  <div class="blog-title">
+    <a href="/" class="logo">July</a>
+    <div class="subtitle">life feeds on negative entropy.</div>
+  </div>
+  <nav class="navbar">
+    <ul class="menu">
+      
+        <li class="menu-item">
+          <a href="/" class="menu-item-link">主页</a>
+        </li>
+      
+        <li class="menu-item">
+          <a href="/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD" class="menu-item-link">人工智能</a>
+        </li>
+      
+        <li class="menu-item">
+          <a href="/categories/%E6%88%91%E7%9A%84%E4%B9%A6%E5%8D%95" class="menu-item-link">我的书单</a>
+        </li>
+      
+        <li class="menu-item">
+          <a href="/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94" class="menu-item-link">生活随笔</a>
+        </li>
+      
+        <li class="menu-item">
+          <a href="/about" class="menu-item-link">关于</a>
+        </li>
+      
+    </ul>
+  </nav>
+
+</header>
+
+
+<article class="post">
+  <h1 class="article-title"></h1>
+  <div class="post-title">
+    <h1 class="file-title">梯度下降算法</h1>
+  </div>
+   
+  <div class="post-content">
+    <blockquote>
+<p>&ensp; &ensp;【摘要】当前位置的梯度方向，为函数在该位置处方向导数最大的方向，也是函数值上升最快的方向，梯度的反方向为函数值下降最快的方向；<br>&ensp; &ensp;&ensp;当前位置的梯度的模，为最大方向导数的值。</p>
+</blockquote>
+<h1 id="下山问题"><a href="#下山问题" class="headerlink" title="下山问题"></a>下山问题</h1><blockquote>
+<p>假设处在一个山的半山腰位置，问怎么走，下山最快？</p>
+</blockquote>
+<h1 id="答案"><a href="#答案" class="headerlink" title="答案"></a>答案</h1><blockquote>
+<p>不断沿着梯度的反方向走，下山最快。</p>
+</blockquote>
+<h1 id="解释与证明"><a href="#解释与证明" class="headerlink" title="解释与证明"></a>解释与证明</h1><p><strong>导数：</strong>对于一元函数，导数表示一元函数的变化率，比如$f\left ( x \right ) =x^{2}$，导数为：$\lim_{t \to 0} \frac{f\left ( x+t \right )-f\left ( x \right )  }{t} =2x$。</p>
+<p><strong>偏导数：</strong>对于多元函数，用偏导数表示多元函数沿着自变量坐标轴方向的导数，也即函数沿坐标轴方向的切线的斜率。$z=f\left ( x,y \right ) $，对x,y的偏导数分别为：$\frac{\partial z}{\partial x} $和$\frac{\partial z}{\partial y} $。</p>
+<p><strong>方向导数：</strong>如果方向不是沿着坐标轴方向，而是沿着任意方向呢？则是方向导数，表示多元函数沿某一方向的变化率。</p>
+<p>定义$xy$平面上一点$(a,b)$，以及单位向量：$\vec{u} =\left ( \cos \theta ,\sin \theta  \right )  $，$\theta$表示该单位向量与x轴的夹角，在曲面$z=f(x,y)$上，从点$(a,b,f(a,b))$出发，沿$\vec{u} $方向走$t$个单位长度后，函数值$z=f\left ( a+\cos \theta ,b+\sin \theta  \right ) $，则在点$(a,b)$处$\vec{方向的方向导数：<br>u} =\left ( \cos \theta ,\sin \theta  \right )  $方向的方向导数：</p>
+<script type="math/tex; mode=display">\lim_{t \to 0}\frac{f\left ( a+t\cos \theta ,b+t\sin \theta  \right ) - f\left ( a,b \right )  }{t} \\
+= \lim_{t \to 0}\frac{f\left ( a+t\cos \theta ,b+t\sin \theta \right )  - f\left ( a,b+t\sin \theta \right ) }{t} + \lim_{t \to 0}\frac{f\left ( a,b+t\sin \theta \right )  - f\left ( a,b \right ) }{t}</script><p>令$x=t\cos \theta, y=t\sin \theta$，则通过链式法则，上式为：</p>
+<script type="math/tex; mode=display">\frac{\partial }{\partial x} f\left ( a,b \right ) \frac{dx}{dt} +\frac{\partial }{\partial y} f\left ( a,b \right ) \frac{dy}{dt} \\
+=f_{x}  \left ( a,b \right ) \cos \theta + f_{y} \left ( a,b \right ) \sin \theta</script><p>写成向量内积的形式，即：</p>
+<script type="math/tex; mode=display">方向导数=(f_{x}(a,b),f_{y}(a,b))(\cos \theta ,\sin \theta )</script><p>也就是说，在该点，<strong>任意方向的方向导数是偏导数的线性组合，组合系数是该方向的方向向量。</strong></p>
+<p>注意内积是标量，所以方向导数是标量。</p>
+<p><strong>梯度：</strong>偏导数构成的向量为梯度，记作$\bigtriangledown f$，对于二元函数$\bigtriangledown f=(\frac{\partial z}{\partial x},\frac{\partial z}{\partial y}  )$，对于多元函数$\bigtriangledown f=(\frac{\partial z}{\partial x},\frac{\partial z}{\partial y},…  )$ 。</p>
+<p>根据：</p>
+<script type="math/tex; mode=display">方向导数=(f_{x}(a,b),f_{y}(a,b))(\cos \theta ,\sin \theta ) \\
+=\left | f_{x}(a,b),f_{y}(a,b) \right | \cdot 1 \cdot \cos \varphi  \\
+=\left | \bigtriangledown f(a,b) \right |\cdot \cos \varphi</script><p>其中$\varPhi$为梯度与方向向量$\vec{u} $的夹角，显然当$\varphi = 0$时，即方向向量沿着梯度方向时，方向导数最大，最大值为梯度的模；当$\varphi = \pi$时，即方向向量沿着梯度的反方向时，方向导数最小，最小值为梯度的模的负数。</p>
+<p>至此，得到梯度的几何意义：</p>
+<blockquote>
+<ol>
+<li>当前位置的额梯度方向，为函数在该位置处方向导数最大的方向，也是函数值上升最快的方向，梯度的反方向为函数值下降最快的方向；</li>
+<li>当前位置的梯度的模，为最大方向导数的值。</li>
+</ol>
+</blockquote>
+
+  </div>
+  <div class="post-footer">
+    
+
+    
+      
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+  });
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@2.7.8/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
+
+    <a href="#top" class="top">Back to Top</a>
+  </div>
+</article>
+<footer>
+  &copy; 2017-2023
+  <span class="author">
+    July
+  </span>
+</footer>
+    </div>
+  </body>
+</html>

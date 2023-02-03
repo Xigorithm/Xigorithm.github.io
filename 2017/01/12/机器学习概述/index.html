@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+  <!DOCTYPE html>
+<html lang="zh-Hans">
+<link rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css">
+
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+<script src="//lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js"> </script>
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  
+  <title>机器学习概述 - July</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  
+  <meta name="keywords" content=>
+  
+    <meta name="description" content="每天进步一点点">
+  
+  
+    <link rel="shortcut icon" type="image/x-icon" href="/images/icon/football2.png?v=1.02">
+  
+  
+    <link rel="alternate" href="/atom.xml " title="July" type="application/atom+xml">
+  
+
+  
+<script src="/js/fancybox.js"></script>
+
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+<meta name="generator" content="Hexo 5.3.0"></head>
+  <body>
+    <div class="container">
+      
+<header class="header">
+  <div class="blog-title">
+    <a href="/" class="logo">July</a>
+    <div class="subtitle">life feeds on negative entropy.</div>
+  </div>
+  <nav class="navbar">
+    <ul class="menu">
+      
+        <li class="menu-item">
+          <a href="/" class="menu-item-link">主页</a>
+        </li>
+      
+        <li class="menu-item">
+          <a href="/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD" class="menu-item-link">人工智能</a>
+        </li>
+      
+        <li class="menu-item">
+          <a href="/categories/%E6%88%91%E7%9A%84%E4%B9%A6%E5%8D%95" class="menu-item-link">我的书单</a>
+        </li>
+      
+        <li class="menu-item">
+          <a href="/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94" class="menu-item-link">生活随笔</a>
+        </li>
+      
+        <li class="menu-item">
+          <a href="/about" class="menu-item-link">关于</a>
+        </li>
+      
+    </ul>
+  </nav>
+
+</header>
+
+
+<article class="post">
+  <h1 class="article-title"></h1>
+  <div class="post-title">
+    <h1 class="file-title">机器学习概述</h1>
+  </div>
+   
+  <div class="post-content">
+    <!--<img src="/images/AI/机器学习概述/0.jpg" width="250" height="150" hspace="5" style="float:right">-->
+<blockquote>
+<p>【摘要】传统编程基于规则和数据，通过快速地计算来得到指定规则下的答案，对于特定c输入，给出确定输出的；而与传统编程不同的是，机器学习其实是从已知的数据和标签中学习得到某种规则，然后运用该规则去预测新数据的标签的过程，对机器学习而言，输入的是训练数据和对应的标签，得到的是数据和标签背后的映射规则。</p>
+</blockquote>
+<a id="more"></a>
+<h1 id="机器学习的定义"><a href="#机器学习的定义" class="headerlink" title="机器学习的定义"></a>机器学习的定义</h1><h2 id="什么是学习？"><a href="#什么是学习？" class="headerlink" title="什么是学习？"></a>什么是学习？</h2><blockquote>
+<p>“如果一个系统，能够通过执行某个过程，就此改进它的性能，那么这个过程就是学习。” —— 1978年诺贝尔经济学奖获得者 Herbert Simon</p>
+</blockquote>
+<h2 id="什么是机器学习？"><a href="#什么是机器学习？" class="headerlink" title="什么是机器学习？"></a>什么是机器学习？</h2><blockquote>
+<p>“对于某类任务T和某项性能评价准则P，如果一个计算机程序在T上，以P作为性能的度量，随着经验E的积累，不断自我完善，那么我们称这个计算机程序从E中进行了学习。”卡耐基梅隆大学教授， Tom Mitchell</p>
+</blockquote>
+<h1 id="机器学习的分类"><a href="#机器学习的分类" class="headerlink" title="机器学习的分类"></a>机器学习的分类</h1><h2 id="按任务类型分类"><a href="#按任务类型分类" class="headerlink" title="按任务类型分类"></a>按任务类型分类</h2><ol>
+<li><p>回归问题：输入输出均为连续变量；</p>
+</li>
+<li><p>分类问题：输出为离散变量；</p>
+</li>
+</ol>
+<h2 id="按学习方式分类"><a href="#按学习方式分类" class="headerlink" title="按学习方式分类"></a>按学习方式分类</h2><ol>
+<li><p>监督学习：训练样本带有标注</p>
+</li>
+<li><p>无监督学习：训练样本无标注，发现数据中的隐藏模式，如聚类和降维任务。</p>
+</li>
+<li><p>强化学习：不断试探和奖励的学习过程。</p>
+</li>
+</ol>
+<h2 id="生成模型和判别模型"><a href="#生成模型和判别模型" class="headerlink" title="生成模型和判别模型"></a>生成模型和判别模型</h2><p>在监督学习中，学习方法可以进一步分为生成方法和判别方法，对应的模型即为生成模型和判别模型。</p>
+<ol>
+<li><p>生成模型</p>
+<p> 生成方法是由数据学习训练集的联合概率分布P(x,y)，然后求出条件概率P(Y|X)作为预测的模型。</p>
+<p> $P\left ( Y|X \right ) =\frac{P\left ( X,Y \right ) }{P\left ( X \right ) } $</p>
+<p> 因为模型表示了给定输入X产生输出Y的生成关系，因此这样的方法被称为生成方法。</p>
+</li>
+<li><p>判别模型</p>
+<p> 判别方法是由数据直接学习决策函数f(x)或条件概率分布P(Y|X)作为预测模型。</p>
+</li>
+</ol>
+<h1 id="机器学习方法三要素"><a href="#机器学习方法三要素" class="headerlink" title="机器学习方法三要素"></a>机器学习方法三要素</h1><blockquote>
+<p>机器学习方法 = 模型 + 策略 + 算法</p>
+</blockquote>
+<p><strong>模型：</strong><br>就是对一个实际业务问题进行建模，将其转化为一个可以用数学语言来描述得问题；</p>
+<p><strong>策略：</strong><br>定义损失函数来描述预测值和理论值之间的误差，将其转换为一个使损失函数最小的优化问题；</p>
+<p><strong>算法：</strong><br>求解最优化问题的方法，一般将其转化为无约束条件的优化问题，然后利用梯度下降或牛顿法求解。</p>
+<h1 id="模型评估的指标"><a href="#模型评估的指标" class="headerlink" title="模型评估的指标"></a>模型评估的指标</h1><h2 id="回归模型评估指标"><a href="#回归模型评估指标" class="headerlink" title="回归模型评估指标"></a>回归模型评估指标</h2><ol>
+<li><p>绝对误差(Mean Absolute Error, MAE)</p>
+<p> 预测值与真实值差的绝对值的平均值：</p>
+<p> $MAE\left ( X,h \right ) = \frac{1}{m} \sum_{i=1}^{m} \left | h\left ( x_{i}  \right ) - y_{i} \right | $</p>
+</li>
+<li><p>均方误差(Mean Squared Error, MSE)</p>
+<p> 预测值与真实值差的平方和的平均值：</p>
+<p> $MAE\left ( X,h \right ) = \frac{1}{m} \sum_{i=1}^{m} \left ( h\left ( x_{i}  \right ) - y_{i} \right )^2 $</p>
+</li>
+<li><p>均方根误差(Root Mean Squared Error, RMSE)</p>
+<p> 预测值与真实值差的平方和的平均值取开方：</p>
+<p> $MAE\left ( X,h \right ) =\sqrt{\frac{1}{m} \sum_{i=1}^{m} \left ( h\left ( x_{i}  \right ) - y_{i} \right )^2 }$</p>
+</li>
+</ol>
+<h2 id="分类模型评估指标"><a href="#分类模型评估指标" class="headerlink" title="分类模型评估指标"></a>分类模型评估指标</h2><ol>
+<li><p>二分类的混淆矩阵</p>
+<p> TP（True Positive）：真正类<br> FP（False Positive）：假正类<br> TN（True Negative）：真负类<br> FN（False Negative）：假负类</p>
+</li>
+<li><p>准确率（accuracy）</p>
+<p> 衡量模型对数据集中样本预测准确的比例。</p>
+<p> $accuracy = \frac{预测正确的样本数目}{总样本数} $</p>
+</li>
+<li><p>精确度(precision)，又称查准率</p>
+<p> 所有预测为正的样本中，真正为正的比例，也就是说预测为正的样本中，有多少预测对了。</p>
+<p> $precision= \frac{TP}{TP+FP} $</p>
+</li>
+<li><p>召回率(recall),又称查全率</p>
+<p> 所有的正样本，有多少被预测出来了</p>
+<p> $recall = \frac{TP}{TP+FN} $</p>
+</li>
+<li><p>F1值与PR曲线</p>
+<p> 在有的任务中，比如搜索引擎，既要关注“检索出的信息有多少是用户感兴趣的”（查准），又要关注“用户感兴趣的信息有多少被检索出来了”（查全），为了兼顾查准和查全，提出了新的衡量标准F1值。</p>
+<p> <strong>PR曲线：</strong></p>
+<p> PR曲线以查全率为x轴，以查准为y轴，按照如下步骤绘制：</p>
+<p> 1) 将预测结果按照预测为正的概率值排序；</p>
+<p> 2) 将概率阈值从1逐渐降低，计算这时的查准和查全率，得到PR曲线上的点；</p>
+<p> 3) 以recall为横坐标，以precision为纵坐标，绘制PR曲线。</p>
+<p> <strong>PR(precision-recall)曲线比较模型性能：</strong></p>
+<p> 1) 如果一条PR曲线完全包住另一条，前者性能优；</p>
+<p> 2) 如果PR曲线发生交叉，则PR曲线下面积大的性能优；</p>
+<p> 3) 使用平衡点(recall==precision)，平衡点值越大性能优；</p>
+<p> 4) F1值度量：</p>
+<p> F1值是precision和recall的调和平均数：<br> $\frac{1}{F_{1} } =\frac{1}{2} \left ( \frac{1}{precision}  + \frac{1}{recall}  \right ) $</p>
+</li>
+<li><p>ROC曲线</p>
+<p> ROC曲线(Receiver Operating Characterstic Curve，受试者工作特征曲线)，一开始并不是为机器学习领域设计的，最早源于军事领域，后来逐渐用于医学、心理学等领域。</p>
+<p> 在ML领域，ROC曲线可以看做是混淆矩阵的改良版本：通过不断调整阈值，从而给出不同版本的混淆矩阵，然后连点成线，得到ROC曲线。</p>
+<p> y轴=真正率=TP/(TP+FN)</p>
+<p> x轴=假正率=FP/(TN+FP)</p>
+<p> ROC曲线作图步骤：</p>
+<p> 1) 将预测结果按照预测为正的概率值排序；</p>
+<p> 2) 将概率阈值从1逐渐降低，计算这时的真正率和假正率，得到ROC曲线上的点；</p>
+<p> 3) 连点成线得到ROC曲线；</p>
+<p> <strong>如何通过ROC曲线对比模型性能：</strong></p>
+<p> 1) 如果一条ROC曲线完全包住另一条ROC曲线，前者性能优；</p>
+<p> 2) 如果ROC曲线发生交叉，则曲线下面积AUC大的性能优；</p>
+</li>
+</ol>
+<h2 id="过拟合、欠拟合和正则化"><a href="#过拟合、欠拟合和正则化" class="headerlink" title="过拟合、欠拟合和正则化"></a>过拟合、欠拟合和正则化</h2><h3 id="过拟合和欠拟合"><a href="#过拟合和欠拟合" class="headerlink" title="过拟合和欠拟合"></a>过拟合和欠拟合</h3><p>误差：模型的预测输出与样本真实值之间的差；</p>
+<p>经验误差也称为训练误差：模型在训练集上的误差；</p>
+<p>泛化误差也称测试误差：模型在新样本上的误差；</p>
+<p>过拟合：模型对训练数据预测很好，对未知数据预测很差；</p>
+<p>欠拟合：特征没有学习到位，对训练数据和测试数据预测都比较差；</p>
+<p>过拟合原因：</p>
+<p>1) 样本特征数量过多；</p>
+<p>2) 噪声过大；</p>
+<p>3) 模型过于复杂；</p>
+<p>解决过拟合的方法：</p>
+<p>1) 获取额外数据进行价差验证；</p>
+<p>2) 重新清洗数据；</p>
+<p>3) 加入正则化项；</p>
+<h3 id="经验风险与结构风险"><a href="#经验风险与结构风险" class="headerlink" title="经验风险与结构风险"></a>经验风险与结构风险</h3><p>经验风险：最小化损失函数</p>
+<p>结构风险：加上了约束项之后的模型，对应的损失函数即为结构风险</p>
+<p>常用的正则化项：L0范数，L1范数，L2范数等。</p>
+
+  </div>
+  <div class="post-footer">
+    
+
+    
+      
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+  });
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@2.7.8/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
+
+    <a href="#top" class="top">Back to Top</a>
+  </div>
+</article>
+<footer>
+  &copy; 2017-2023
+  <span class="author">
+    July
+  </span>
+</footer>
+    </div>
+  </body>
+</html>
