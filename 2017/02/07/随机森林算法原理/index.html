@@ -78,7 +78,14 @@
   </div>
    
   <div class="post-content">
-    
+    <blockquote>
+<p>&ensp;&ensp;&ensp;&ensp;Bagging模型的代表作是大名鼎鼎的随机森林(Random Forest, RF)。RF默认采用CART作为基学习器，而且它在Bagging模型的基础上再进一步，每次训练基学习器时，除了样本随机采样外，对样本的特征也进行随机采样。</p>
+</blockquote>
+<p>如图所示：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/16811553-b8e260241aaff3f1.jpg?imageMogr2/auto-orient/strip|imageView2/2/w/400/format/webp" alt=""></p>
+<p>&ensp;&ensp;&ensp;&ensp;由于采用的是CART，所以RF既可以用来做分类，也可以用来回归。RF用来分类时使用CART分类树作为基学习器，最后的投票结果是取票数最多的类别作为最终的预测结果；RF用来回归时使用CART回归树作为基学习器，最后的预测结果采用所有CART回归树的预测值的均值。</p>
+<p>&ensp;&ensp;&ensp;&ensp;由于RF每次都是对样本及样本的特征进行随机采样来训练基学习器，因此泛化能力较强。</p>
+
   </div>
   <div class="post-footer">
     
