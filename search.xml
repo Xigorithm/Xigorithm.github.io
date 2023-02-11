@@ -359,7 +359,173 @@ y_j=\frac{1}{K}\sum_{i=1}^{K}  y_i \tag{3.1}</script><h2 id="3-2-K近邻回归�
   <entry>
     <title>SVM算法原理</title>
     <url>/2017/01/30/SVM%E7%AE%97%E6%B3%95%E5%8E%9F%E7%90%86/</url>
-    <content><![CDATA[<h1 id="1-硬间隔SVM"><a href="#1-硬间隔SVM" class="headerlink" title="1 硬间隔SVM"></a>1 硬间隔SVM</h1><h2 id="1-1-由感知机到SVM"><a href="#1-1-由感知机到SVM" class="headerlink" title="1.1 由感知机到SVM"></a>1.1 由感知机到SVM</h2><h2 id="1-2-公式推导与求解"><a href="#1-2-公式推导与求解" class="headerlink" title="1.2 公式推导与求解"></a>1.2 公式推导与求解</h2><h1 id="2-软间隔SVM"><a href="#2-软间隔SVM" class="headerlink" title="2 软间隔SVM"></a>2 软间隔SVM</h1><h1 id="3-合页损失函数"><a href="#3-合页损失函数" class="headerlink" title="3 合页损失函数"></a>3 合页损失函数</h1><h1 id="非线性SVM"><a href="#非线性SVM" class="headerlink" title="非线性SVM"></a>非线性SVM</h1>]]></content>
+    <content><![CDATA[<h1 id="1-硬间隔SVM"><a href="#1-硬间隔SVM" class="headerlink" title="1 硬间隔SVM"></a>1 硬间隔SVM</h1><h2 id="1-1-由感知机到SVM"><a href="#1-1-由感知机到SVM" class="headerlink" title="1.1 由感知机到SVM"></a>1.1 由感知机到SVM</h2><p>假设样本点是线性可分的，感知机模型的思想是：利用分割超平面$\vec{w}\cdot \vec{x}+b=0$将样本点划分为两类；假设存在误分类点，则通过使误分类点到分割超平面的距离最小来不断调整超平面，直到所有误分类点被纠正后迭代停止。</p>
+<p>感知机模型的表达式如下：</p>
+<script type="math/tex; mode=display">
+h(x)=sign(wx+b)=\left\{\begin{matrix} -1,
+  & wx+b<0 \\ 1,
+  & wx+b>0
+\end{matrix}\right. \tag{1.1}</script><p>由于初始的$w$和b的取值不同，因此最后得到的分割超平面也可能不同，所以感知机模型的分割超平面$wx+b=0$有多个。</p>
+<p>既然这样，那么能不能进一步找到一个最优的分割超平面呢？办法就是下面介绍的支持向量机(Support Vector Machines, SVM)模型。</p>
+<p>SVM模型和感知机模型一样，也是一种二分类模型，SVM的思想是：不仅要让样本点被分割超平面分开，还希望那些距离分割超平面最近的点到分割超平面的距离最大。</p>
+<h2 id="1-2-公式推导与求解"><a href="#1-2-公式推导与求解" class="headerlink" title="1.2 公式推导与求解"></a>1.2 公式推导与求解</h2><h3 id="1-2-1-公式推导"><a href="#1-2-1-公式推导" class="headerlink" title="1.2.1 公式推导"></a>1.2.1 公式推导</h3><p>假设样本点$(x_i, y_i)$到超平面$wx+b=0$的几何间距为$\gamma _i$，则：</p>
+<script type="math/tex; mode=display">
+\gamma _i=\frac{\left | wx_i+b \right | }{\left \| w \right \| }  \tag{1.2}</script><p>又因为$\left | y_i \right | =1$恒成立，且对于正确分类点$y_i\times (wx_i+b)&gt;0$恒成立，所以进一步有：</p>
+<script type="math/tex; mode=display">
+\gamma _i=\frac{\left | wx_i+b \right | }{\left \| w \right \| } =\frac{|y_i|\cdot  \left | wx_i+b \right | }{\left \| w \right \| }=\frac{ \left | y_i\cdot (wx_i+b) \right | }{\left \| w \right \| }=\frac{ y_i\cdot (wx_i+b)}{\left \| w \right \| } \tag{1.3}</script><p>取训练数据集T中距离超平面的最小几何间距$\min_{} \gamma _i,(i=1,2,…,M)$作为数据集T关于超平面$wx+b=0$的几何间距，记为$\gamma$，即：$\gamma=\min_{} \gamma _i,(i=1,2,…,M)$，按照SVM的思想，即需要求解以下优化问题：</p>
+<script type="math/tex; mode=display">
+\begin{align*}
+ \max_{w,b}\gamma   & \\
+ s.t. \gamma _i\ge \gamma , & i=1,2,...,M
+\end{align*} \tag{1.4}</script><p>即：</p>
+<script type="math/tex; mode=display">
+\begin{align*}
+ \max_{w,b}\gamma   & \\
+ s.t. \frac{ y_i\cdot (wx_i+b)}{\left \| w \right \| }\ge \gamma , & i=1,2,...,M
+\end{align*} \tag{1.5}</script><p>令：</p>
+<script type="math/tex; mode=display">
+\begin{align*}
+M=\frac{w}{||w||\gamma }  \\
+N=\frac{b}{||w||\gamma }
+\end{align*} \tag{1.6}</script><p>则约束条件为：$s.t. y_i(M\cdot x_i+N)\ge 1$，优化目标为$\gamma$最大，由：$||M||=\frac{||w||}{||w||\gamma }=\frac{1}{\gamma } $，因此最大化$\gamma$，即最小化$\frac{1}{2}||M||^2 $，则整个优化问题转化为：</p>
+<script type="math/tex; mode=display">
+\begin{align*}
+\min_{M,N} \frac{1}{2}||M||^2  \\
+s.t. y_i(Mx_i+N)\ge 1
+\end{align*} \tag{1.7}</script><p>重写为：</p>
+<script type="math/tex; mode=display">
+\begin{align*}
+\min_{w,b} \frac{1}{2}||2||^2  \\
+s.t. y_i(wx_i+b)\ge 1,i=1,2,...,M
+\end{align*} \tag{1.8}</script><p>这是一个含有不等式约束的凸二次规划问题，可以对其使用拉格朗日乘子法得到其对偶问题。</p>
+<h3 id="1-2-2-求最优解"><a href="#1-2-2-求最优解" class="headerlink" title="1.2.2 求最优解"></a>1.2.2 求最优解</h3><p>首先，我们将有约束条件的原始目标函数转换为无约束的新构造的拉格朗日目标函数：</p>
+<script type="math/tex; mode=display">
+L(w,b,\alpha )=\frac{1}{2}||w||^2 - {\textstyle \sum_{i=1}^{M}} \alpha _i(y_i(wx_i+b)-1) \tag{1.9}</script><p>其中$\alpha _i$为拉格朗日乘子，且$\alpha _i\ge 0$，令：$\theta (w)=\max_{\alpha _i\ge 0} L(w,b,\alpha )$，当样本点不满足约束条件时，即在可行解区域外：$y_i(wx_i+b)&lt;1$，此时，将$\alpha _i$设置为无穷大，则$\theta(w)$也为无穷大。</p>
+<p>当样本点满足约束条件时，即在可行解区域内：$y_i(wx_i+b)\ge1$，此时$\theta(w)$为原函数本身，于是，合并两种情况得到新的目标函数：</p>
+<script type="math/tex; mode=display">
+\theta (w)=\left\{\begin{matrix}
+\frac{1}{2}||w||^2,x\in 可行区域  \\
++\propto ,x\in 不可行区域
+\end{matrix}\right. \tag{1.10}</script><p>原约束问题等价于：</p>
+<script type="math/tex; mode=display">
+\min_{w,b}\theta (w)=\min_{w,b}\max_{\alpha _i\ge 0}L(w,b,\alpha )=p^{\ast }   \tag{1.11}</script><p>新的目标函数先求最大值，再求最小值，这样的话首先要面对带有需要求解的参数$w$和$b$的方程，而$\alpha_i$又是不等式约束，求解过程不好做，所以我们需要使用拉格朗日函数对偶性，将最小和最大位置互换，得到：</p>
+<script type="math/tex; mode=display">
+\max_{\alpha _i\ge 0}\min_{w,b}L(w,b,\alpha )=d^{\ast }   \tag{1.12}</script><p>要有$p^{\ast }=d^{\ast }$，需要满足两个条件：</p>
+<p>1) 优化问题是凸优化问题；</p>
+<p>2) 满足KKT条件；</p>
+<p>本优化问题显然是一个凸优化问题，因此条件1满足，对于条件2，即要求：</p>
+<script type="math/tex; mode=display">
+\left\{\begin{matrix}
+\alpha _i\ge 0 \\
+y_i(wx_i+b)-1\ge 0 \\
+\alpha _i(y_i(wx_i+b)-1)=0
+\end{matrix}\right. \tag{1.13}</script><p>为了得到求解对偶问题的具体形式，令$L(w,b,\alpha)$对$w$和$b$求偏导为0，可得：</p>
+<script type="math/tex; mode=display">
+\begin{align*}
+ w= {\textstyle \sum_{i=1}^{N}}\alpha _iy_ix_i \\
+ {\textstyle \sum_{i=1}^{N}}\alpha _iy_i=0 
+\end{align*} \tag{1.14}</script><p>将式(1.14)代入拉格朗日目标函数，即式(1.9)，消去$w$和$b$得到：</p>
+<script type="math/tex; mode=display">\begin{aligned}
+L(w,b,\alpha )&=\frac{1}{2} {\textstyle \sum_{i=1}^{M}} {\textstyle \sum_{j=1}^{M}}\alpha _i\alpha _jy_iy_j(x_i\cdot x_j)- {\textstyle \sum_{i=1}^{M}}\alpha _iy_i(( {\textstyle \sum_{j=1}^{M}}\alpha _jy_jx_j)\cdot x_i+b)+ {\textstyle \sum_{i=1}^{M}}\alpha_i \\ &=-\frac{1}{2} {\textstyle \sum_{i=1}^{M}} {\textstyle \sum_{j=1}^{M}}\alpha _i\alpha _jy_iy_j(x_i\cdot x_j)+ {\textstyle \sum_{i=1}^{M}}\alpha _i         
+\end{aligned}\tag{1.15}</script><p>即：</p>
+<script type="math/tex; mode=display">
+\min_{w,b}L(w,b,\alpha ) =\min_{w,b} -\frac{1}{2} {\textstyle \sum_{i=1}^{M}} {\textstyle \sum_{j=1}^{M}}\alpha _i\alpha _jy_iy_j(x_i\cdot x_j)+ {\textstyle \sum_{i=1}^{M}}\alpha _i \tag{1.16}</script><p>求$\min_{w,b}L(w,b,\alpha )$对$\alpha$的极大，即是对偶问题：</p>
+<script type="math/tex; mode=display">
+\begin{align*}
+ \max_{\alpha } -\frac{1}{2} {\textstyle \sum_{i=1}^{M}} {\textstyle \sum_{j=1}^{M}}\alpha _i\alpha _jy_iy_j(x_i\cdot x_j)+ {\textstyle \sum_{i=1}^{M}}\alpha _i \\
+s.t.    {\textstyle \sum_{i=1}^{M}}\alpha _iy_i=0  \\
+   \alpha _i \ge 0,i=1,2,...,N
+\end{align*} \tag{1.17}</script><p>把目标式子加一个负号，求解最大转换为求解最小:</p>
+<script type="math/tex; mode=display">
+\begin{align*}
+ \min_{\alpha } \frac{1}{2} {\textstyle \sum_{i=1}^{M}} {\textstyle \sum_{j=1}^{M}}\alpha _i\alpha _jy_iy_j(x_i\cdot x_j)- {\textstyle \sum_{i=1}^{M}}\alpha _i \\
+s.t.    {\textstyle \sum_{i=1}^{M}}\alpha _iy_i=0  \\
+   \alpha _i \ge 0,i=1,2,...,N
+\end{align*} \tag{1.18}</script><p>现在我们的优化问题变成了公式(1.18)，对于这个问题，有更高效的优化算法，即序列最小优化（SMO）算法，通过SMO算法可以得到$\alpha ^{\ast } $ ，在根据$\alpha ^{\ast } $可以求解出$w$和$b$，进而求得最初的目标：找到最优决策平面。</p>
+<p>前面的推导都是基于KKT条件成立的假设进行的，KKT条件如下：</p>
+<script type="math/tex; mode=display">
+\left\{\begin{matrix}
+ \alpha _i\ge 0\\
+ y_i(w_i\cdot x_i+b)-1\ge 0\\
+ \alpha _i(y_i(w_i\cdot x_i+b)-1)=0
+\end{matrix}\right. \tag{1.19}</script><p>另外根据前面的推导，下面公式成立：</p>
+<script type="math/tex; mode=display">
+\begin{align*}
+ w= {\textstyle \sum_{i=1}^{M}}\alpha _iy_ix_i \\
+ {\textstyle \sum_{i=1}^{M}}\alpha _iy_i=0 
+\end{align*} \tag{1.20}</script><p>由此可知，在$\alpha ^{\ast } $中，至少存在一个$\alpha _j ^{\ast }&gt;0$(若全为0，则$w=0$，矛盾)，对此$j$有：$y_j(w^*\cdot x_j+b^{\ast })-1=0$，因此得到：</p>
+<script type="math/tex; mode=display">
+w^{\ast }= {\textstyle \sum_{i=1}^{M}}\alpha _i^{\ast }y_ix_i</script><script type="math/tex; mode=display">
+b^{\ast }= y_j-{\textstyle \sum_{i=1}^{M}}\alpha _i^{\ast }y_i(x_i \cdot x_j) \tag{1.21}</script><p>对于任意训练样本$(x_i,y_i)$，总有$\alpha_i=0$<br>或者$y_j(wx_j+b)=1$,。若$\alpha_i=0$，则该样本不会再最后求解模型参数的式子中出现，若$\alpha_i&gt;0$，则必有$y_j(wx_j+b)=1$，所对应的样本点位于最大间隔边界上，是一个支持向量，这显示出SVM的一个重要特性：训练完成后，大部分的训练样本都不需要保留，最终模型只跟支持向量相关。</p>
+<h3 id="1-2-3-小结"><a href="#1-2-3-小结" class="headerlink" title="1.2.3 小结"></a>1.2.3 小结</h3><p>总结一下线性可分SVM模型的过程：</p>
+<p>输入：</p>
+<p>线性可分训练集$T=\left \{ (x_1,y_1),(x_2,y_2),…,(x_M,y_M) \right \} $，且$y_i \in\left \{ -1,1 \right \} ,i=1,2,…,M$。</p>
+<p>输出：</p>
+<p>分割超平面$wx+b=0$和分类决策函数$h(x)=sign(wx+b)$。</p>
+<p>步骤如下：</p>
+<p>第1步：构造约束优化问题：</p>
+<script type="math/tex; mode=display">
+\begin{align*}
+ \min_{\alpha } \frac{1}{2} {\textstyle \sum_{i=1}^{M}} {\textstyle \sum_{j=1}^{M}}\alpha _i\alpha _jy_iy_j(x_i\cdot x_j)- {\textstyle \sum_{i=1}^{M}}\alpha _i \\
+s.t.    {\textstyle \sum_{i=1}^{M}}\alpha _iy_i=0  \\
+   \alpha _i \ge 0,i=1,2,...,N
+\end{align*} \tag{1.22}</script><p>第2步：利用SMO算法求解上面的优化问题，得到$\alpha$向量的值$\alpha ^\ast $；</p>
+<p>第3步：利用公式1.21计算$w$向量的值$w ^\ast $；</p>
+<p>第4步：找到满足$\alpha _{s}^{\ast } &gt;0$对应的支持向量点$(x_s,y_s),s=1,2,…,S$，利用公式1.21计算$b^{\ast }$；</p>
+<p>第5步：由$w ^\ast $和$b^{\ast }$得到分割超平面$w^{\ast }x+b^{\ast }=0$和分类决策函数$h(x)=sign(w^{\ast }x+b^{\ast })$。</p>
+<h1 id="2-软间隔SVM"><a href="#2-软间隔SVM" class="headerlink" title="2 软间隔SVM"></a>2 软间隔SVM</h1><p>硬间隔SVM模型虽然比感知机具有更好的鲁棒性，但其前提是要求样本数据点线性可分，在实际问题中，不同类别的样本点可能会存在混叠，针对这种情况，可以通过增加松弛因子来解决。</p>
+<p>线性可分SVM模型的原始优化问题为公式(1.8)，考虑到实际情况下存在样本混叠，所以为每一个样本点$(x_i,y_i)$增加一个对应的松弛变量$\xi _i,\xi _i\ge 0$，则约束条件变为：$y_i(wx_i+b)\ge 1-\xi_i,i=1,2,…,M$，因为$1-\xi_i\le1$，所以这相当于在原来的基础上对每个样本点$(x_i,y_i)$降低了限制要求，这个特权可以随便给吗？显然不行，如果只是给予各个样本点特权而不对其进行适当的约束，那么这个模型之前建立的约束就变得毫无意义了，所以SVM模型采取的措施是：每个样本点在软间隔里面享受了优惠，对应的就要在优化问题里面接受惩罚，具体就是在优化目标里面加上一个惩罚项$c\xi_i$，所以原来的优化问题变为：</p>
+<script type="math/tex; mode=display">
+\min_{w,b}\frac{1}{2}||w||^2 +c\sum_{i=1}^{M}\xi _i   \tag{2.1}</script><p>约束条件：</p>
+<script type="math/tex; mode=display">\begin{align*}
+ s.t. y_i(wx_i+b)\ge 1-\xi_i \\
+\xi _i\ge 0,i=1,2,...,M
+\end{align*}</script><p>其中$c&gt;0$是一个惩罚参数。</p>
+<p>采取跟硬间隔SVM类似的步骤，先将优化问题(2.1)转换为对偶优化问题，然后依次求解出拉格朗日乘子向量、权重向量$w$和偏置常数b，得到分割超平面和分类决策函数。</p>
+<h1 id="3-合页损失函数"><a href="#3-合页损失函数" class="headerlink" title="3 合页损失函数"></a>3 合页损失函数</h1><p>硬间隔SVM和软间隔SVM都叫做线性SVM，是一种线性模型，线性SVM还有另外一种解释，就是最小化如下目标函数：</p>
+<script type="math/tex; mode=display">
+\min_{w,b}\sum_{i=1}^{M}[1-y_i(wx_i+b)]_{+}+\lambda ||w||^2 \tag{3.1}</script><p>式中第一项$[1-y_i(wx_i+b)]_{+}$称为合页损失函数，如:</p>
+<script type="math/tex; mode=display">
+[z]_{+}=\left\{\begin{matrix}
+ z,z>0\\
+0,z\le 0
+\end{matrix}\right.\tag{3.2}</script><p>第二项是正则化项。</p>
+<p>由公式3.2可知:</p>
+<script type="math/tex; mode=display">
+[1-y_i(wx_i+b)]_{+}=\left\{\begin{matrix}
+ 1-y_i(wx_i+b),y_i(wx_i+b)<1\\
+0,y_i(wx_i+b)\ge 1
+\end{matrix}\right. \tag{3.3}</script><p>当样本点$(x_i,y_i)$被正确分类且函数间隔$y_i(wx_i+b)$大于1时，损失是0，否则损失是$1-y_i(wx_i+b)$。</p>
+<p>令$[1-y_i(wx_i+b)]_{+}=\xi_i$，则$\xi_i\ge0$成立，且有：</p>
+<p>1) 当$1-y_i(wx_i+b)&gt;0$时，有$y_i(wx_i+b)=1-\xi_i$；</p>
+<p>2) 当$1-y_i(wx_i+b)\le0$时，有$\xi_i=0$，即$y_i(wx_i+b)\ge1-\xi_i$；</p>
+<p>综合1)和2)可知$y_i(wx_i+b)\ge1-\xi_i$恒成立。</p>
+<p>进一步，取$\lambda=\frac{1}{2c}$，则公式(3.1)等价于如下约束优化问题：</p>
+<script type="math/tex; mode=display">
+\min_{w,b,\xi } \frac{1}{c}(\frac{1}{2}||w||^2+c\sum_{i=1}^{M}\xi _i  )  \tag{3.4}</script><p>约束条件：</p>
+<script type="math/tex; mode=display">
+\begin{align*}
+s.t. y_i(wx_i+b)\ge 1-\xi _i,i=1,2,...,M \\
+\xi _i\ge 0,i=1,2,...,M
+\end{align*}</script><p>公式(3.4)就是前面软间隔支持向量机模型的原始最优化问题，即公式(2.1)。</p>
+<p>即软间隔SVM模型的原始最优化问题等价于最小化合页损失，从损失函数的角度证明了线性SVM模型的合理性。</p>
+<h1 id="4-非线性SVM"><a href="#4-非线性SVM" class="headerlink" title="4 非线性SVM"></a>4 非线性SVM</h1><p>对于输入空间中的非线性问题，可以通过非线性变换将它转换为某个维度特征空间中的线性分类问题，在高维特征空间中学习线性SVM。由于线性SVM学习的对偶问题里，目标函数和分类决策函数都只涉及实例和实例之间的内积，所以不需要显示指定非线性变换，而是用核函数替换当中的内积。核函数表示，通过一个非线性变换后的两个实例健的内积，具体地，$K(x,z)$是一个函数，或正定核，意味着存在一个从输入空间到特征空间的映射$\phi (x)$，对任意输入空间中的$x,z$，有：$K(x,z)=\phi(x)\cdot\phi(z)$，在线性SVM学习的对偶问题中，用核函数$K(x,z)$替代内积，求解得到的就是非线性SVM：</p>
+<script type="math/tex; mode=display">
+f(x)=sign(\sum_{i=1}^{M}\alpha _i^\ast y_iK(x,x_i)+b^\ast  ) \tag{4.1}</script><p>综合以上讨论，可以得到非线性SVM的学习算法如下：</p>
+<p>输入：</p>
+<p>训练数据集$T=\left \{ (x_1,y_1),(x_2,y_2),…,(x_M,y_M) \right \} ,其中y_i\int \left \{ +1,-1 \right \} ,i=1,2,…,M$；</p>
+<p>输出：分离超平面和分类决策函数；</p>
+<p>1) 选择适当的核函数$K(x,z)$和惩罚参数$c&gt;0$，构造并求解凸二次规划问题:</p>
+<script type="math/tex; mode=display">
+\min_{\alpha }\frac{1}{2}\sum_{i=1}^{M}\sum_{j=1}^{M}\alpha _i\alpha _jy_iy_jK(x_i,x_j)-\sum_{i=1}^{M}\alpha _i</script><p>约束条件：</p>
+<script type="math/tex; mode=display">
+\begin{align*}
+s.t. \sum_{i=1}^{M}\alpha _iy_i=0  \\
+0\le \alpha _i\le c,i=1,2,...,M
+\end{align*}</script><p>2) 计算</p>
+<p>选择$\alpha ^\ast $的一个分量$\alpha_j ^\ast $满足条件$0 &lt; \alpha_j ^\ast &lt; c$，计算$b^\ast =y_j-\sum_{i=1}^{M}\alpha _i^\ast  y_iK(x_i,x_j)$</p>
+<p>3) 得到分类决策函数，即公式(4.1)。</p>
+]]></content>
       <categories>
         <category>人工智能</category>
         <category>机器学习</category>
@@ -514,7 +680,65 @@ b\longleftarrow b-\eta \cdot \frac{\partial }{\partial b}L(w,b)  =b-\eta (wx_i+b
     <content><![CDATA[<blockquote>
 <p>&ensp;&ensp;&ensp;&ensp;决策树是一种树状结构模型，可以进行基本的分类与回归，决策树也是集成学习经常采用的基模型。<br>&ensp;&ensp;&ensp;&ensp;决策树有多种类型，常用的ID3决策树、C4.5决策树、CART决策树等，不同决策树之间总体思想大同小异，主要涉及三个要素：特征选择、决策树生成和决策树剪枝。</p>
 </blockquote>
-<h1 id="1-特征选择"><a href="#1-特征选择" class="headerlink" title="1 特征选择"></a>1 特征选择</h1><h2 id="1-1-信息增益"><a href="#1-1-信息增益" class="headerlink" title="1.1 信息增益"></a>1.1 信息增益</h2><h2 id="1-2-信息增益比"><a href="#1-2-信息增益比" class="headerlink" title="1.2 信息增益比"></a>1.2 信息增益比</h2><h2 id="1-3-基尼系数"><a href="#1-3-基尼系数" class="headerlink" title="1.3 基尼系数"></a>1.3 基尼系数</h2><h1 id="2-决策树生成"><a href="#2-决策树生成" class="headerlink" title="2 决策树生成"></a>2 决策树生成</h1><h2 id="2-1-ID3决策树"><a href="#2-1-ID3决策树" class="headerlink" title="2.1 ID3决策树"></a>2.1 ID3决策树</h2><h2 id="2-2-C4-5决策树"><a href="#2-2-C4-5决策树" class="headerlink" title="2.2 C4.5决策树"></a>2.2 C4.5决策树</h2><h2 id="2-3-CART决策树"><a href="#2-3-CART决策树" class="headerlink" title="2.3 CART决策树"></a>2.3 CART决策树</h2><h1 id="3-决策树剪枝"><a href="#3-决策树剪枝" class="headerlink" title="3 决策树剪枝"></a>3 决策树剪枝</h1>]]></content>
+<h1 id="1-特征选择"><a href="#1-特征选择" class="headerlink" title="1 特征选择"></a>1 特征选择</h1><p>在实际建立决策树的过程中，每次特征选择都要遵循对应的标准，比如信息增益、信息增益比、基尼系数等。</p>
+<h2 id="1-1-信息增益"><a href="#1-1-信息增益" class="headerlink" title="1.1 信息增益"></a>1.1 信息增益</h2><p><strong>熵:</strong></p>
+<p>在信息论中，用熵来度量随机变量的不确定程度，随机变量的不确定性越大，熵值越大。</p>
+<p>如果一个随机变量$Y$的可能取值为$Y=\left \{ c_1,c_2,…,c_k \right \} $，其概率分布为$P(Y=c_i)=p_i,i=1,2,…,K$。则随机变量$Y$的熵定义为$H(Y)$，即：</p>
+<script type="math/tex; mode=display">
+H(Y)=-\sum_{i=1}^{K}p_ilogp_i  \tag{1.1}</script><p>log为以2或者e为底的对数。</p>
+<p><strong>联合熵：</strong></p>
+<p>当有两个随机变量$X$和$Y$时，同理可以定义它们的联合熵$H(X,Y)$，即：</p>
+<script type="math/tex; mode=display">
+H(X,Y)=-\sum_{i=1}^{N}p(x_i,y_i)logp(x_i,y_i) \tag{1.2}</script><p><strong>条件熵：</strong></p>
+<p>有了联合熵，就可以得到条件熵的表达式了，在随机变量$X$发生的前提下，随机变量$Y$发生，新带来的的熵，用$H(Y|X)$表示：</p>
+<script type="math/tex; mode=display">
+H(Y|X)=-\sum_{i=1}^{N}p(x_i,y_i)logp(y_i|x_i) \tag{1.3}</script><p>条件熵用来衡量在已知随机变量$X$的条件下，随机变量$Y$的不确定性。</p>
+<p><strong>信息增益:</strong></p>
+<p>随机变量$Y$的熵$H(Y)$与$Y$的条件熵$H(Y|X)$之差就是信息增益，记为$g(Y,X)$，即：</p>
+<script type="math/tex; mode=display">
+g(Y,X)=H(Y)-H(Y|X) \tag{1.4}</script><p>实际上，熵与条件熵的差也称为互信息。ID3决策树使用信息增益作为特征选择标准，信息增益依赖于特征，不同特征往往具有不同的信息增益，信息增益大的特征具有更强的分类能力。</p>
+<h2 id="1-2-信息增益比"><a href="#1-2-信息增益比" class="headerlink" title="1.2 信息增益比"></a>1.2 信息增益比</h2><p>用信息增益作为划分训练集特征的标准时，有一个潜在的问题，那就是相比之下其会倾向于选择类别取值较多的特征，因此人们提出使用信息增益比来对这一问题进行校正。</p>
+<p>特征$X$对训练集的信息增益比定义为特征$X$的信息增益$g(Y,X)$与特征$X$的取值的熵$H(X)$的比值，记为$g_R(Y,X)$，即：</p>
+<script type="math/tex; mode=display">
+g_R(Y,X) = \frac{g(Y,X)}{H(X)} \tag{1.5}</script><h2 id="1-3-基尼系数"><a href="#1-3-基尼系数" class="headerlink" title="1.3 基尼系数"></a>1.3 基尼系数</h2><p>基尼系数可以用来度量任何不均匀分布，且介于0~1之间的数(0指完全相等，1指完全不相等)。分类度量时，总体包含的类别越杂乱，基尼系数就越大（与熵的概念类似）。</p>
+<p>基尼系数主要用来度量数据集的不纯度，基尼系数越小，表明样本只属于同一类的概率越高，即样本纯净度越高，在计算出数据集某个特征所有的基尼系数之后，就可以得到利用该特征进行样本产生的基尼系数增加值(GiniGain)，决策树模型在生成的过程中就是递归选择GiniGain最小的节点作为分叉点，直至子数据集都属于同一类或者所有特征用光。</p>
+<p>在分类问题中，假设有K个类别$c_1,c_2,…,c_k$，样本点属于第k类的概率为$p_k$，则该概率分布的基尼系数定义为：</p>
+<script type="math/tex; mode=display">
+Gini(p)=\sum_{k=1}^{K}p_k(1-p_k)=1-\sum_{k=1}^{K}p_k^2 \tag{1.6}</script><p>对于给定的样本集合D，其基尼系数为：</p>
+<script type="math/tex; mode=display">
+Gini(D)=1-\sum_{k=1}^{K}(\frac{|c_k|}{|D|} )^2 \tag{1.7}</script><p>其中，$c_k$是属于第k类的样本子集，K是类别的个数。</p>
+<h1 id="2-决策树生成"><a href="#2-决策树生成" class="headerlink" title="2 决策树生成"></a>2 决策树生成</h1><h2 id="2-1-ID3决策树"><a href="#2-1-ID3决策树" class="headerlink" title="2.1 ID3决策树"></a>2.1 ID3决策树</h2><p>ID3决策树使用信息增益作为特征选择标准。</p>
+<p>输入：</p>
+<p>假设训练数据集D包含M个样本，样本一共包含有K个类别，类别集合为C；每个样本含有N个特征，特征集合为F，停止分裂的阈值为$\varepsilon $。</p>
+<p>输出：决策树T。</p>
+<p>步骤如下：</p>
+<p>第1步：如果训练集D中的M个样本不属于同一类别，但是特征集合只含有单个特征，则直接返回单节点树T，且该样本集合D中实例数最大的类作为该树节点的类别。</p>
+<p>第2步：如果训练集D中的M个样本不属于同一类别，但是特征集合只含有单一特征，则也直接返回单节点树T，且该样本集合D中实例数最大的类作为该数节点的类别。</p>
+<p>第3步：如果非以上两种情况，则分别计算特征集合F中的N个特征的信息增益，选择信息增益最大的特征$F_n$，如果该信息增益小于阈值$\varepsilon$，则返回上述单节点树T，其将该样本集合D中实例数最大的类作为该树节点的类别。</p>
+<p>第4步：否则，按照特征$F_n$的不同取值种类，将对应的样本D分成不同的子类别$D_i$，每个字类别产生一棵树的子节点。</p>
+<p>第5步：对于每个子节点，令$D=D_i,F=F-F_n$，递归调用第1步到第4步，直到得到满足条件的ID3决策树。</p>
+<h2 id="2-2-C4-5决策树"><a href="#2-2-C4-5决策树" class="headerlink" title="2.2 C4.5决策树"></a>2.2 C4.5决策树</h2><p>使用信息增益来选择特征的一个缺点就是容易偏向于优先选取取值种类较多的特征，除此之外，ID3决策树还有两个缺点：1）不能处理连续值的特征；2）容易过拟合。</p>
+<p>针对以上3个缺点，C4.5决策树给出了解决办法。</p>
+<p>针对缺点1：ID3决策树容易偏向于优先选取取值种类较多的特征。</p>
+<p>解决办法是使用信息增益比来替代信息增益进行特征选择。</p>
+<p>针对缺点2：ID3决策树不能处理连续值的特征。</p>
+<p>C4.5决策树的思路是先将连续的特征离散化，比如，年收入特征是一个连续特征，我们可以先对训练样本中年收入特征下的所有取值进行排序，找出类别标签有变化的地方，作为阈值进行划分。</p>
+<p>针对缺点3：ID3决策树容易过拟合</p>
+<p>决策树的过拟合问题主要是由于树的分叉过细造成的，决策树分叉过细会导致最后生成的决策树模型对训练集中的数据拟合很好，但是对新的预测数据拟合得较差。</p>
+<p>C4.5决策树引入了正则化项进行初步的剪枝来缓解过拟合问题。</p>
+<p>除了以上三点改进外，C4.5决策树和ID3决策树几乎一样。</p>
+<h2 id="2-3-CART决策树"><a href="#2-3-CART决策树" class="headerlink" title="2.3 CART决策树"></a>2.3 CART决策树</h2><p>C4.5决策树虽然在ID3决策树的基础上做了一些改进，但是还是存在一些不足，主要表现在以下三点：</p>
+<p>第一，C4.5决策树使用了熵模型，以信息增益比作为特征的选择标准，每次划分子树的过程中会涉及很多的对数计算，计算复杂度较高。</p>
+<p>第二，ID3决策树和C4.5决策树采用的都是多叉树形式，每次分叉成子树时都是按照其所选择特征包含的所有种类数来划分的，也就是说，一旦按照某个特征切分后，该特征在之后的算法执行过程中将不再起作用，但事实证明，这样划分特征是过于粗糙的，特征信息的利用率低。另外C4.5决策树对连续值的处理方式是按照区间将其离散化，这样或多或少会损失一部分信息。</p>
+<p>第三，当我们面对的不是一个类别的预测问题，而是一个连续结果预测的回归问题时，ID3决策树和C4.5决策树都无法处理。</p>
+<p>针对问题1：ID3决策树和C4.5决策树特征选择过程对数计算复杂度高。</p>
+<p>当CART决策树用于分类任务时，采用基尼系数作为特征选择的标准，当CART决策树用于回归任务时，采用平方误差最小化准则进行特征选择，可以减少大量的对数运算问题。</p>
+<p>针对问题2：ID3决策树和C4.5决策树对特征划分过于迅速</p>
+<p>与ID3决策树和C4.5决策树采用多叉树进行特征划分不同，CART分类树与回归树采用二叉树来对每个特征进行划分。</p>
+<p>针对问题3：ID3决策树和C4.5决策树不能处理回归问题。</p>
+<p>回归问题的结果取值是很多个连续的值，因此不能像分类问题一样采取信息增益或基尼系数等特征选择标准，那怎么办？很简单，直接使用均方误差就行，即计算每一次特征划分后的结果与实际结果值之间的均方误差，采用均方误差最小的划分作为最优划分。</p>
+<p>解决了特征选择问题，还剩另外一个结果处理的问题，所以决策树采用的结果处理方式是对每一个叶子节点里面包含的样本类别进行统计，然后选择样本类别占多数的类别标签作为该叶子结点的类别标签。对于回归问题，稍作变化，即每个叶子节点对应的结果就取该叶子节点中所有样本点标签值的均值。</p>
+<h3 id="2-3-1-CART分类树"><a href="#2-3-1-CART分类树" class="headerlink" title="2.3.1 CART分类树"></a>2.3.1 CART分类树</h3><h3 id="2-3-2-CART回归树"><a href="#2-3-2-CART回归树" class="headerlink" title="2.3.2 CART回归树"></a>2.3.2 CART回归树</h3><h1 id="3-决策树剪枝"><a href="#3-决策树剪枝" class="headerlink" title="3 决策树剪枝"></a>3 决策树剪枝</h1>]]></content>
       <categories>
         <category>人工智能</category>
         <category>机器学习</category>
