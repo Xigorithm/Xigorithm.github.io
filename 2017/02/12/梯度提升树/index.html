@@ -78,7 +78,66 @@
   </div>
    
   <div class="post-content">
-    
+    <h1 id="1-提升树的定义"><a href="#1-提升树的定义" class="headerlink" title="1 提升树的定义"></a>1 提升树的定义</h1><p>提升树(Boosting Tree)是一种以分类树或回归树作为基分类器的提升方法，具有非常好的性能。实际上，提升树就是一种采用加法模型与前向分步算法，并以决策树为基分类器的提升方法。当处理分类问题时，基分类器采用CART分类树，当处理回归问题时，基分类器采用CART回归树。</p>
+<p><strong>提升树的原理：</strong></p>
+<p>假设第k轮训练得到的基学习器为$T_k(x;\theta_k),k=1,2,…,K$，则最后的集成决策函数为：</p>
+<script type="math/tex; mode=display">
+f_K(\boldsymbol{x})=\sum_{k=1}^{K}T_k(\boldsymbol{x};\theta _k)  \tag{1.1}</script><p>其中$\theta_k$为第k个基学习器的CART分类树或回归树的参数，K表示基模学习器的个数。</p>
+<p>再利用前向分步算法，可知第k轮得到的提升树模型为:$f_k(x)=f_{k-1}(x)+T_k(x;\theta_k)$，假设提升树模型的整体损失函数为:$L(y_i,f_k(x_i))$，则可通过使损失函数最小化的策略来确定下一棵决策树的参数$\theta_k$，即：</p>
+<script type="math/tex; mode=display">
+\theta _k=arg\min_{\theta _k}\sum_{i=1}^{M}L(y_i,f_k(\boldsymbol{x}_i))   \tag{1.2}</script><p>具体来说，不同类型的提升树模型使用不同的损失函数。</p>
+<p><strong>分类问题损失函数：</strong></p>
+<script type="math/tex; mode=display">
+L(y,f_k(\boldsymbol{x}))=e^{-y\cdot \hat{y} } \tag{1.3}</script><p>其中，y表示样本x的真实值，$\hat{y}$表示集成模型对样本x的预测值，模型在训练集$T=\left \{ (x_1,y_1),…,(x_M,y_M) \right \} $上的整体损失函数为：</p>
+<script type="math/tex; mode=display">
+L=\sum_{i=1}^{M}L(y_i,f_k(\boldsymbol{x}_i)) =\sum_{i=1}^{M}e^{-y_i\hat{y_i} }  \tag{1.4}</script><p><strong>回归问题的损失函数：</strong></p>
+<script type="math/tex; mode=display">
+L(y,f_k(\boldsymbol{x}))=[y-\hat{y} ]^2 \tag{1.5}</script><p>其中y表示样本x的真实值，$\hat{y}$为集成模型对样本x的预测值，有：</p>
+<script type="math/tex; mode=display">
+\hat{y}=f_k(\boldsymbol{x})=\sum_{k=1}^{K}\alpha _kT_k(\boldsymbol{x})  \tag{1.5}</script><p>所以，$L(y,f_k(\boldsymbol{x}))=[y-f_k(\boldsymbol{x})]^2=[y-(f_{k-1}(\boldsymbol{x})+T_k(\boldsymbol{x};\theta _k))]^2=[y-f_{k-1}(\boldsymbol{x})-T_k(\boldsymbol{x};\theta _k)]^2$，令$R_k=y-f_{k-1}(\boldsymbol{x})$，很明显$R_k$表示的是样本的实际值减去第k-1轮模型的预测值$f_{k-1}(x)$，因此$R_k$其实就是模型经过k-1轮迭代后的实际值y进行预测的残差。</p>
+<p>上面的损失函数可以表示为：</p>
+<script type="math/tex; mode=display">
+L(y,f_k(\boldsymbol{x}))=[R_k-T_k(\boldsymbol{x};\theta _k)]^2 \tag{1.6}</script><p>所以要想上面的损失函数最小，只需使使$T_k(x;\theta_k)$尽量接近$R_{k-1}$即可。这相当于第$k$轮迭代时，我们的目标其实是使该轮建立的CART回归树$T_k(x;\theta_k)$能尽量拟合前面k-1轮迭代后剩余的残差$R_{k-1}$。</p>
+<p>所以回归提升树模型的完整过程如下。</p>
+<p>输入：训练集$T=\left \{ (x_1,y_1),…,(x_M,y_M) \right \} $。</p>
+<p>输出：回归提升树$f_K(\boldsymbol{x})=\sum_{k=1}^{K}T_k(\boldsymbol{x};\theta _k) $。</p>
+<p>步骤如下：</p>
+<p>第1步：初始化$f_0(x)=0$;</p>
+<p>第2步：对于$k=1,2,…,K$，按照如下步骤进行：</p>
+<p>(1) 计算经过k-1轮迭代后样本$x_i$的残差：$R_{ki}=y_i-f_{k-1}(x_i),i=1,2,…,M$。</p>
+<p>(2) 基于各样本的残差学习出第k轮的CART回归树$T_k(x;\theta_k)$；</p>
+<p>(3) 更新提升树$f_k(x)=f_{k-1}(x)+T_k(x;\theta_k)$；</p>
+<p>(4) 重复上述过程，直到k=K，得到K轮迭代后的回归提升树模型。</p>
+<h1 id="2-梯度提升树"><a href="#2-梯度提升树" class="headerlink" title="2 梯度提升树"></a>2 梯度提升树</h1><p>上面的提升树模型中，使用的指数损失函数和平方损失函数都有一个比较大的优点，那就是它们在向量$\boldsymbol{x}$上可微，因此可以直接使用梯度下降算法进行求解，并求得各个基学习器中的参数，但如果损失函数不可微呢？</p>
+<p>针对这个问题，Friedman提出了用梯度提升的方法来解决，就是利用损失函数的负梯度将当前模型的值来作为提升树算法中的残差的近似替代，即：</p>
+<script type="math/tex; mode=display">
+R_{ki}=-[\frac{\partial L(y_i,f(\boldsymbol{x}_i)}{\partial f(\boldsymbol{x}_i)} ]_{f(\boldsymbol{x}_i)=f_{k-1}(\boldsymbol{x}_i)} \tag{2.1}</script><p>对于分类问题，一般称作GBDT（Gradient Boosting Decision Tree），对于回归问题，一般称作GBRT(Gradient Boosting Regession Tree)。</p>
+<h2 id="2-1-梯度提升树的原理推导"><a href="#2-1-梯度提升树的原理推导" class="headerlink" title="2.1 梯度提升树的原理推导"></a>2.1 梯度提升树的原理推导</h2><p>将函数$f(x)$在$x-x_{k-1}$处进行一阶泰勒展开，得到：</p>
+<script type="math/tex; mode=display">
+f(\boldsymbol{x})\approx f(x_{k-1})+f^{'}(x_{k-1})(\boldsymbol{x}-x_{k-1})  \tag{2.2}</script><p>再取$x=x_k$，得到：</p>
+<script type="math/tex; mode=display">
+f(x_{k})\approx f(x_{k-1})+f^{'}(x_{k-1})(x_{k}-x_{k-1})  \tag{2.3}</script><p>类似，对提升树模型的损失函数$L(y,f(x))$在$f(x)=f_{k-1}(x)$处进行一阶泰勒展开，可得：</p>
+<script type="math/tex; mode=display">
+L(y,f(\boldsymbol{x}))\approx L(y,f_{k-1}(\boldsymbol{x}))+[\frac{\partial L(y,f(\boldsymbol{x}))}{\partial f(\boldsymbol{x})} ]_{f(\boldsymbol{x})=f_{k-1}(\boldsymbol{x})}(\boldsymbol{x}-f_{k-1}(\boldsymbol{x})) \tag{2.4}</script><p>再取$f(x)=f_k(x)$，得到：</p>
+<script type="math/tex; mode=display">
+L(y,f_k(\boldsymbol{x}))\approx L(y,f_{k-1}(\boldsymbol{x}))+[\frac{\partial L(y,f(\boldsymbol{x}))}{\partial f(\boldsymbol{x})} ]_{f(\boldsymbol{x})-f_{k-1}(\boldsymbol{x})}(f_k(\boldsymbol{x})-f_{k-1}(\boldsymbol{x})) \tag{2.5}</script><p>又$f_k(\boldsymbol{x})-f_{k-1}(\boldsymbol{x})=T_k(\boldsymbol{x};\theta _k)$，得到：</p>
+<script type="math/tex; mode=display">
+L(y,f_k(\boldsymbol{x}))\approx L(y,f_{k-1}(\boldsymbol{x}))+[\frac{\partial L(y,f(\boldsymbol{x}))}{\partial f(\boldsymbol{x})} ]_{f(\boldsymbol{x})-f_{k-1}(\boldsymbol{x})}(T_k(\boldsymbol{x};\theta _k)) \tag{2.6}</script><p>即：</p>
+<script type="math/tex; mode=display">
+L(y,f_k(\boldsymbol{x}))- L(y,f_{k-1}(\boldsymbol{x}))=[\frac{\partial L(y,f(\boldsymbol{x}))}{\partial f(\boldsymbol{x})} ]_{f(\boldsymbol{x})-f_{k-1}(\boldsymbol{x})}(T_k(\boldsymbol{x};\theta _k)) \tag{2.7}</script><p>其中$L(y,f_k{\boldsymbol{x}})，L(y,f_{k-1}{\boldsymbol{x}})$分别代表经过k轮和k-1轮迭代后提升树模型的损失，我们的目标是希望每一轮迭代都能在前面一轮的基础上减少损失，即：</p>
+<script type="math/tex; mode=display">
+L(y,f_k{\boldsymbol{x}})\le L(y,f_{k-1}{\boldsymbol{x}})
+\tag{2.8}</script><p>显然，当：</p>
+<script type="math/tex; mode=display">T_k(\boldsymbol{x};\theta _k)=-[\frac{\partial L(y,f(\boldsymbol{x}))}{\partial f(\boldsymbol{x})} ]_{f(\boldsymbol{x})-f_{k-1}(\boldsymbol{x})}\tag{2.9}</script><p>时，公式2.8肯定成立。</p>
+<p>公式2.9左边是当前需要学习得到的基学习器（第k轮得到的CART回归树），右边是损失函数的负梯度在当前模型$f_{k-1}(\boldsymbol{x})$处的值。从上面的过程来看，我们并没有将提升树模型的损失直接对变量x进行展开，而是将其在$f(\boldsymbol{x})=f_{k-1}(\boldsymbol{x})$处进行展开，因此我们只需要损失函数对$f_{\boldsymbol{x}}$可微，而不需要$f(\boldsymbol{x})$对变量x也可微，这进一步扩大了提升树模型的使用范围。</p>
+<p>在提升树模型中，我们只需要用第k轮的CART回归树去拟合损失函数的负梯度在当前模型处的值即可保证模型的整体损失不断下降，直至收敛于一个比较理想的值。损失函数的负梯度在当前模型的值是数值类型，具有可加性，这也是为什么我们强调梯度提升树模型中使用的基学习器被限定为CART回归树的原因（分类树的结果直接做加法没有意义）。另外，梯度提升树模型并不只适用于回归问题，由于CART回归树拟合的是损失函数的负梯度在当前模型的值，而不是直接的模型预测结果，因此该模型也可以用于分类问题，只不过对于分类问题，需要将平方损失函数换成对应的对数损失函数或者指数损失函数。</p>
+<h2 id="2-2-GBDT模型的优缺点"><a href="#2-2-GBDT模型的优缺点" class="headerlink" title="2.2 GBDT模型的优缺点"></a>2.2 GBDT模型的优缺点</h2><p><strong>优点：</strong></p>
+<p>（1）模型的预测准确率相对较高。</p>
+<p>（2）由于指定使用 CART 回归树当作基学习器，因而既可以处理标称型数据，又可以处理标量型数据。</p>
+<p>（3）在处理回归问题时，由于可以选择Huber损失函数或Quantile损失函数，因此相对于AdaBoost而言，对噪声的敏感性大大降低。</p>
+<p><strong>缺点：</strong></p>
+<p>和AdaBoost一样，各个基学习器之间存在强关联，不利于做并行化处理。</p>
+
   </div>
   <div class="post-footer">
     

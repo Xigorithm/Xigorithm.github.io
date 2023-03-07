@@ -1,842 +1,383 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search>
-  <entry>
-    <title>2022年读书报告</title>
-    <url>/2022/12/31/2022%E5%B9%B4%E8%AF%BB%E4%B9%A6%E6%8A%A5%E5%91%8A/</url>
-    <content><![CDATA[<blockquote>
-<p>【摘要】2022年基本养成了读书的习惯，从2022年1月1号到2022年12月31号，中间就有一天（10月5日）中断了微信的读书记录，其余每天基本能保证30分钟以上的读书记录，读了一些书，更多的是觉得很多有意思的书来不及阅读，希望来年再接再厉，多读好书，进一步完善自己的知识框架。</p>
-</blockquote>
-<a id="more"></a>
-<p><img src="/images/book/2022/读书报告/30.JPG" alt=""></p>
-]]></content>
+<search> 
+  
+  
+    
+    <entry>
+      <title>2022年读书报告</title>
+      <link href="2022/12/31/2022%E5%B9%B4%E8%AF%BB%E4%B9%A6%E6%8A%A5%E5%91%8A/"/>
+      <url>2022/12/31/2022%E5%B9%B4%E8%AF%BB%E4%B9%A6%E6%8A%A5%E5%91%8A/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>【摘要】2022年基本养成了读书的习惯，从2022年1月1号到2022年12月31号，中间就有一天（10月5日）中断了微信的读书记录，其余每天基本能保证30分钟以上的读书记录，读了一些书，更多的是觉得很多有意思的书来不及阅读，希望来年再接再厉，多读好书，进一步完善自己的知识框架。</p></blockquote><a id="more"></a><p><img src="/images/book/2022/读书报告/30.JPG" alt=""></p>]]></content>
+      
+      
       <categories>
-        <category>我的书单</category>
-        <category>2022年书单</category>
+          
+          <category> 我的书单 </category>
+          
+          <category> 2022年书单 </category>
+          
       </categories>
-  </entry>
-  <entry>
-    <title>机器学习概述</title>
-    <url>/2017/01/12/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%A6%82%E8%BF%B0/</url>
-    <content><![CDATA[<!--<img src="/images/AI/机器学习概述/0.jpg" width="250" height="150" hspace="5" style="float:right">-->
-<blockquote>
-<p>【摘要】传统编程基于规则和数据，通过快速地计算来得到指定规则下的答案，对于特定c输入，给出确定输出的；而与传统编程不同的是，机器学习其实是从已知的数据和标签中学习得到某种规则，然后运用该规则去预测新数据的标签的过程，对机器学习而言，输入的是训练数据和对应的标签，得到的是数据和标签背后的映射规则。</p>
-</blockquote>
-<a id="more"></a>
-<h1 id="机器学习的定义"><a href="#机器学习的定义" class="headerlink" title="机器学习的定义"></a>机器学习的定义</h1><h2 id="什么是学习？"><a href="#什么是学习？" class="headerlink" title="什么是学习？"></a>什么是学习？</h2><blockquote>
-<p>“如果一个系统，能够通过执行某个过程，就此改进它的性能，那么这个过程就是学习。” —— 1978年诺贝尔经济学奖获得者 Herbert Simon</p>
-</blockquote>
-<h2 id="什么是机器学习？"><a href="#什么是机器学习？" class="headerlink" title="什么是机器学习？"></a>什么是机器学习？</h2><blockquote>
-<p>“对于某类任务T和某项性能评价准则P，如果一个计算机程序在T上，以P作为性能的度量，随着经验E的积累，不断自我完善，那么我们称这个计算机程序从E中进行了学习。”卡耐基梅隆大学教授， Tom Mitchell</p>
-</blockquote>
-<h1 id="机器学习的分类"><a href="#机器学习的分类" class="headerlink" title="机器学习的分类"></a>机器学习的分类</h1><h2 id="按任务类型分类"><a href="#按任务类型分类" class="headerlink" title="按任务类型分类"></a>按任务类型分类</h2><ol>
-<li><p>回归问题：输入输出均为连续变量；</p>
-</li>
-<li><p>分类问题：输出为离散变量；</p>
-</li>
-</ol>
-<h2 id="按学习方式分类"><a href="#按学习方式分类" class="headerlink" title="按学习方式分类"></a>按学习方式分类</h2><ol>
-<li><p>监督学习：训练样本带有标注</p>
-</li>
-<li><p>无监督学习：训练样本无标注，发现数据中的隐藏模式，如聚类和降维任务。</p>
-</li>
-<li><p>强化学习：不断试探和奖励的学习过程。</p>
-</li>
-</ol>
-<h2 id="生成模型和判别模型"><a href="#生成模型和判别模型" class="headerlink" title="生成模型和判别模型"></a>生成模型和判别模型</h2><p>在监督学习中，学习方法可以进一步分为生成方法和判别方法，对应的模型即为生成模型和判别模型。</p>
-<ol>
-<li><p>生成模型</p>
-<p> 生成方法是由数据学习训练集的联合概率分布P(x,y)，然后求出条件概率P(Y|X)作为预测的模型。</p>
-<p> $P\left ( Y|X \right ) =\frac{P\left ( X,Y \right ) }{P\left ( X \right ) } $</p>
-<p> 因为模型表示了给定输入X产生输出Y的生成关系，因此这样的方法被称为生成方法。</p>
-</li>
-<li><p>判别模型</p>
-<p> 判别方法是由数据直接学习决策函数f(x)或条件概率分布P(Y|X)作为预测模型。</p>
-</li>
-</ol>
-<h1 id="机器学习方法三要素"><a href="#机器学习方法三要素" class="headerlink" title="机器学习方法三要素"></a>机器学习方法三要素</h1><blockquote>
-<p>机器学习方法 = 模型 + 策略 + 算法</p>
-</blockquote>
-<p><strong>模型：</strong><br>就是对一个实际业务问题进行建模，将其转化为一个可以用数学语言来描述得问题；</p>
-<p><strong>策略：</strong><br>定义损失函数来描述预测值和理论值之间的误差，将其转换为一个使损失函数最小的优化问题；</p>
-<p><strong>算法：</strong><br>求解最优化问题的方法，一般将其转化为无约束条件的优化问题，然后利用梯度下降或牛顿法求解。</p>
-<h1 id="模型评估的指标"><a href="#模型评估的指标" class="headerlink" title="模型评估的指标"></a>模型评估的指标</h1><h2 id="回归模型评估指标"><a href="#回归模型评估指标" class="headerlink" title="回归模型评估指标"></a>回归模型评估指标</h2><ol>
-<li><p>绝对误差(Mean Absolute Error, MAE)</p>
-<p> 预测值与真实值差的绝对值的平均值：</p>
-<p> $MAE\left ( X,h \right ) = \frac{1}{m} \sum_{i=1}^{m} \left | h\left ( x_{i}  \right ) - y_{i} \right | $</p>
-</li>
-<li><p>均方误差(Mean Squared Error, MSE)</p>
-<p> 预测值与真实值差的平方和的平均值：</p>
-<p> $MAE\left ( X,h \right ) = \frac{1}{m} \sum_{i=1}^{m} \left ( h\left ( x_{i}  \right ) - y_{i} \right )^2 $</p>
-</li>
-<li><p>均方根误差(Root Mean Squared Error, RMSE)</p>
-<p> 预测值与真实值差的平方和的平均值取开方：</p>
-<p> $MAE\left ( X,h \right ) =\sqrt{\frac{1}{m} \sum_{i=1}^{m} \left ( h\left ( x_{i}  \right ) - y_{i} \right )^2 }$</p>
-</li>
-</ol>
-<h2 id="分类模型评估指标"><a href="#分类模型评估指标" class="headerlink" title="分类模型评估指标"></a>分类模型评估指标</h2><ol>
-<li><p>二分类的混淆矩阵</p>
-<p> TP（True Positive）：真正类<br> FP（False Positive）：假正类<br> TN（True Negative）：真负类<br> FN（False Negative）：假负类</p>
-</li>
-<li><p>准确率（accuracy）</p>
-<p> 衡量模型对数据集中样本预测准确的比例。</p>
-<p> $accuracy = \frac{预测正确的样本数目}{总样本数} $</p>
-</li>
-<li><p>精确度(precision)，又称查准率</p>
-<p> 所有预测为正的样本中，真正为正的比例，也就是说预测为正的样本中，有多少预测对了。</p>
-<p> $precision= \frac{TP}{TP+FP} $</p>
-</li>
-<li><p>召回率(recall),又称查全率</p>
-<p> 所有的正样本，有多少被预测出来了</p>
-<p> $recall = \frac{TP}{TP+FN} $</p>
-</li>
-<li><p>F1值与PR曲线</p>
-<p> 在有的任务中，比如搜索引擎，既要关注“检索出的信息有多少是用户感兴趣的”（查准），又要关注“用户感兴趣的信息有多少被检索出来了”（查全），为了兼顾查准和查全，提出了新的衡量标准F1值。</p>
-<p> <strong>PR曲线：</strong></p>
-<p> PR曲线以查全率为x轴，以查准为y轴，按照如下步骤绘制：</p>
-<p> 1) 将预测结果按照预测为正的概率值排序；</p>
-<p> 2) 将概率阈值从1逐渐降低，计算这时的查准和查全率，得到PR曲线上的点；</p>
-<p> 3) 以recall为横坐标，以precision为纵坐标，绘制PR曲线。</p>
-<p> <strong>PR(precision-recall)曲线比较模型性能：</strong></p>
-<p> 1) 如果一条PR曲线完全包住另一条，前者性能优；</p>
-<p> 2) 如果PR曲线发生交叉，则PR曲线下面积大的性能优；</p>
-<p> 3) 使用平衡点(recall==precision)，平衡点值越大性能优；</p>
-<p> 4) F1值度量：</p>
-<p> F1值是precision和recall的调和平均数：<br> $\frac{1}{F_{1} } =\frac{1}{2} \left ( \frac{1}{precision}  + \frac{1}{recall}  \right ) $</p>
-</li>
-<li><p>ROC曲线</p>
-<p> ROC曲线(Receiver Operating Characterstic Curve，受试者工作特征曲线)，一开始并不是为机器学习领域设计的，最早源于军事领域，后来逐渐用于医学、心理学等领域。</p>
-<p> 在ML领域，ROC曲线可以看做是混淆矩阵的改良版本：通过不断调整阈值，从而给出不同版本的混淆矩阵，然后连点成线，得到ROC曲线。</p>
-<p> y轴=真正率=TP/(TP+FN)</p>
-<p> x轴=假正率=FP/(TN+FP)</p>
-<p> ROC曲线作图步骤：</p>
-<p> 1) 将预测结果按照预测为正的概率值排序；</p>
-<p> 2) 将概率阈值从1逐渐降低，计算这时的真正率和假正率，得到ROC曲线上的点；</p>
-<p> 3) 连点成线得到ROC曲线；</p>
-<p> <strong>如何通过ROC曲线对比模型性能：</strong></p>
-<p> 1) 如果一条ROC曲线完全包住另一条ROC曲线，前者性能优；</p>
-<p> 2) 如果ROC曲线发生交叉，则曲线下面积AUC大的性能优；</p>
-</li>
-</ol>
-<h2 id="过拟合、欠拟合和正则化"><a href="#过拟合、欠拟合和正则化" class="headerlink" title="过拟合、欠拟合和正则化"></a>过拟合、欠拟合和正则化</h2><h3 id="过拟合和欠拟合"><a href="#过拟合和欠拟合" class="headerlink" title="过拟合和欠拟合"></a>过拟合和欠拟合</h3><p>误差：模型的预测输出与样本真实值之间的差；</p>
-<p>经验误差也称为训练误差：模型在训练集上的误差；</p>
-<p>泛化误差也称测试误差：模型在新样本上的误差；</p>
-<p>过拟合：模型对训练数据预测很好，对未知数据预测很差；</p>
-<p>欠拟合：特征没有学习到位，对训练数据和测试数据预测都比较差；</p>
-<p>过拟合原因：</p>
-<p>1) 样本特征数量过多；</p>
-<p>2) 噪声过大；</p>
-<p>3) 模型过于复杂；</p>
-<p>解决过拟合的方法：</p>
-<p>1) 获取额外数据进行价差验证；</p>
-<p>2) 重新清洗数据；</p>
-<p>3) 加入正则化项；</p>
-<h3 id="经验风险与结构风险"><a href="#经验风险与结构风险" class="headerlink" title="经验风险与结构风险"></a>经验风险与结构风险</h3><p>经验风险：最小化损失函数</p>
-<p>结构风险：加上了约束项之后的模型，对应的损失函数即为结构风险</p>
-<p>常用的正则化项：L0范数，L1范数，L2范数等。</p>
-]]></content>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>读书笔记——《肖逸群的创业手记》</title>
+      <link href="2022/12/29/%E8%82%96%E9%80%B8%E7%BE%A4%E7%9A%84%E5%88%9B%E4%B8%9A%E6%89%8B%E8%AE%B0/"/>
+      <url>2022/12/29/%E8%82%96%E9%80%B8%E7%BE%A4%E7%9A%84%E5%88%9B%E4%B8%9A%E6%89%8B%E8%AE%B0/</url>
+      
+        <content type="html"><![CDATA[<p><img src="/images/book/2022/肖逸群创业手记/封面.JPG" width="250" height="150" hspace="5" style="float:right"></p><blockquote><p>&ensp; &ensp;【摘要】最近两周花了一些时间，看完了肖厂长的这本创业手记，基本是作者对自己创业一路走来的心路历程的所思所想。作者跟我基本是同龄，应该是比我早一届上的大学，然而他已经多次入选30x30创业领袖榜单，确实是我应该努力学习的榜样。<br>摘取书中的一些金句(鸡汤)自勉吧。</p></blockquote><a id="more"></a><ol><li><p>The dots will somehow connect in your future.</p><p> 乔布斯在一次经典演讲中的一段话:</p><blockquote><p>&ensp;&ensp;Again, you can’t connect the dots looking forward; you can only connect them looking backwards. So you have to trust that the dots will somehow connect in your future. You have to trust in something — your gut, destiny, life, karma, whatever. Because believing that the dots will connect down the road, will give you the confidence to follow your heart, even when it leads you off the well-worn path. And that will make all the difference.<br>&ensp;&ensp;再次说明的是，你在向未来展望的时候不可能将这些点联系起来，而只可能在回顾过去的时候这么做。所以你必须相信这些点会在你未来的某一天串联在一起。你必须相信某样东西，无论是你的勇气、命运、生命还是因缘。因为如果你相信一路上的这些点会串联起来，你将会有信心追随自己的内心而前进，哪怕由此走上不同于常人的道路也无所畏惧。而这将会让一切都变得不同。</p></blockquote></li><li><p>today you do things others not do, tomorrow you do things others can’t do.</p></li><li><p>无知和弱小不是生存的障碍，傲慢才是。</p></li><li><p>life is unfair, get used to it.</p></li><li><p>像诗人一样思考，像农夫一样耕耘。</p></li><li><p>I leave uncultivated today, was precisely yesterday perished tomorrow which person of the body implored.</p><p>我荒废的今日，正是昨日殒身之人祈求的明日。</p></li><li><p>人短期内会为做错的事后悔，但长期会为自己没做的事情后悔。</p></li><li><p>做正确的事比正确地做事更重要。</p></li><li><p>up or not——不增长就死亡。</p></li><li><p>众生畏果，菩萨畏因。</p></li></ol>]]></content>
+      
+      
       <categories>
-        <category>人工智能</category>
-        <category>机器学习</category>
+          
+          <category> 我的书单 </category>
+          
+          <category> 2022年书单 </category>
+          
       </categories>
-  </entry>
-  <entry>
-    <title>梯度下降算法</title>
-    <url>/2017/01/13/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E7%AE%97%E6%B3%95/</url>
-    <content><![CDATA[<blockquote>
-<p>&ensp; &ensp;【摘要】当前位置的梯度方向，为函数在该位置处方向导数最大的方向，也是函数值上升最快的方向，梯度的反方向为函数值下降最快的方向；<br>&ensp; &ensp;&ensp;当前位置的梯度的模，为最大方向导数的值。</p>
-</blockquote>
-<h1 id="下山问题"><a href="#下山问题" class="headerlink" title="下山问题"></a>下山问题</h1><blockquote>
-<p>假设处在一个山的半山腰位置，问怎么走，下山最快？</p>
-</blockquote>
-<h1 id="答案"><a href="#答案" class="headerlink" title="答案"></a>答案</h1><blockquote>
-<p>不断沿着梯度的反方向走，下山最快。</p>
-</blockquote>
-<h1 id="解释与证明"><a href="#解释与证明" class="headerlink" title="解释与证明"></a>解释与证明</h1><p><strong>导数：</strong>对于一元函数，导数表示一元函数的变化率，比如$f\left ( x \right ) =x^{2}$，导数为：$\lim_{t \to 0} \frac{f\left ( x+t \right )-f\left ( x \right )  }{t} =2x$。</p>
-<p><strong>偏导数：</strong>对于多元函数，用偏导数表示多元函数沿着自变量坐标轴方向的导数，也即函数沿坐标轴方向的切线的斜率。$z=f\left ( x,y \right ) $，对x,y的偏导数分别为：$\frac{\partial z}{\partial x} $和$\frac{\partial z}{\partial y} $。</p>
-<p><strong>方向导数：</strong>如果方向不是沿着坐标轴方向，而是沿着任意方向呢？则是方向导数，表示多元函数沿某一方向的变化率。</p>
-<p>定义$xy$平面上一点$(a,b)$，以及单位向量：$\vec{u} =\left ( \cos \theta ,\sin \theta  \right )  $，$\theta$表示该单位向量与x轴的夹角，在曲面$z=f(x,y)$上，从点$(a,b,f(a,b))$出发，沿$\vec{u} $方向走$t$个单位长度后，函数值$z=f\left ( a+\cos \theta ,b+\sin \theta  \right ) $，则在点$(a,b)$处$\vec{方向的方向导数：<br>u} =\left ( \cos \theta ,\sin \theta  \right )  $方向的方向导数：</p>
-<script type="math/tex; mode=display">\lim_{t \to 0}\frac{f\left ( a+t\cos \theta ,b+t\sin \theta  \right ) - f\left ( a,b \right )  }{t} \\
-= \lim_{t \to 0}\frac{f\left ( a+t\cos \theta ,b+t\sin \theta \right )  - f\left ( a,b+t\sin \theta \right ) }{t} + \lim_{t \to 0}\frac{f\left ( a,b+t\sin \theta \right )  - f\left ( a,b \right ) }{t}</script><p>令$x=t\cos \theta, y=t\sin \theta$，则通过链式法则，上式为：</p>
-<script type="math/tex; mode=display">\frac{\partial }{\partial x} f\left ( a,b \right ) \frac{dx}{dt} +\frac{\partial }{\partial y} f\left ( a,b \right ) \frac{dy}{dt} \\
-=f_{x}  \left ( a,b \right ) \cos \theta + f_{y} \left ( a,b \right ) \sin \theta</script><p>写成向量内积的形式，即：</p>
-<script type="math/tex; mode=display">方向导数=(f_{x}(a,b),f_{y}(a,b))(\cos \theta ,\sin \theta )</script><p>也就是说，在该点，<strong>任意方向的方向导数是偏导数的线性组合，组合系数是该方向的方向向量。</strong></p>
-<p>注意内积是标量，所以方向导数是标量。</p>
-<p><strong>梯度：</strong>偏导数构成的向量为梯度，记作$\bigtriangledown f$，对于二元函数$\bigtriangledown f=(\frac{\partial z}{\partial x},\frac{\partial z}{\partial y}  )$，对于多元函数$\bigtriangledown f=(\frac{\partial z}{\partial x},\frac{\partial z}{\partial y},…  )$ 。</p>
-<p>根据：</p>
-<script type="math/tex; mode=display">方向导数=(f_{x}(a,b),f_{y}(a,b))(\cos \theta ,\sin \theta ) \\
-=\left | f_{x}(a,b),f_{y}(a,b) \right | \cdot 1 \cdot \cos \varphi  \\
-=\left | \bigtriangledown f(a,b) \right |\cdot \cos \varphi</script><p>其中$\varPhi$为梯度与方向向量$\vec{u} $的夹角，显然当$\varphi = 0$时，即方向向量沿着梯度方向时，方向导数最大，最大值为梯度的模；当$\varphi = \pi$时，即方向向量沿着梯度的反方向时，方向导数最小，最小值为梯度的模的负数。</p>
-<p>至此，得到梯度的几何意义：</p>
-<blockquote>
-<ol>
-<li>当前位置的额梯度方向，为函数在该位置处方向导数最大的方向，也是函数值上升最快的方向，梯度的反方向为函数值下降最快的方向；</li>
-<li>当前位置的梯度的模，为最大方向导数的值。</li>
-</ol>
-</blockquote>
-]]></content>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>读书笔记——《蛤蟆先生去看心理医生》</title>
+      <link href="2022/01/25/%E8%9B%A4%E8%9F%86%E5%85%88%E7%94%9F%E5%8E%BB%E7%9C%8B%E5%BF%83%E7%90%86%E5%8C%BB%E7%94%9F/"/>
+      <url>2022/01/25/%E8%9B%A4%E8%9F%86%E5%85%88%E7%94%9F%E5%8E%BB%E7%9C%8B%E5%BF%83%E7%90%86%E5%8C%BB%E7%94%9F/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>&ensp; &ensp; 【摘要】蛤蟆本是一个热情、时尚又爱冒险的家伙，惹出过不少麻烦和笑话。可他现在陷入抑郁，不能自拔。他的朋友们决定出手相助，其中包括智慧又威严的獾、关心朋友但有点絮叨的河鼠，还有体贴善良的鼹鼠。他们商量来商量去，决定督促蛤蟆重视这个问题，并带他去接受心理咨询。<br>&ensp; &ensp;&ensp;这本书在微信读书上也得到了很高的评价，5.7万人点评有90%的推荐率，而且这本书也排进了TOP200的总榜单。</p></blockquote><p><img src="/images/book/2022/蛤蟆先生去看心理医生/0.jpg" alt=""></p><a id="more"></a><p>&ensp;&ensp;&ensp;<font size = "6">蛤</font>蟆本是一个热情、时尚又爱冒险的家伙，惹出过不少麻烦和笑话。可他现在陷入抑郁，不能自拔。他的朋友们决定出手相助，其中包括智慧又威严的獾、关心朋友但有点絮叨的河鼠，还有体贴善良的鼹鼠。他们商量来商量去，决定督促蛤蟆重视这个问题，并带他去接受心理咨询。</p>]]></content>
+      
+      
       <categories>
-        <category>人工智能</category>
-        <category>机器学习</category>
+          
+          <category> 我的书单 </category>
+          
+          <category> 2022年书单 </category>
+          
       </categories>
-  </entry>
-  <entry>
-    <title>父亲节快乐</title>
-    <url>/2021/06/20/%E7%88%B6%E4%BA%B2%E8%8A%82%E5%BF%AB%E4%B9%90/</url>
-    <content><![CDATA[<!--<img src="/images/xiaopingguo.jpg" width="250" height="150" hspace="5" style="float:right">-->
-<blockquote>
-<p>【摘要】升级为爸爸后过的第一个父亲节，祝全天下的爸爸都节日快乐。</p>
-</blockquote>
-<a id="more"></a>
-<p>前天晚上从西安出差回来，经过昨天一天的休整，整个人已经满血复活了，正好今天周日，也没什么特殊的事情，就想着要不看场比赛。</p>
-<p>其实，上班以后比赛真的看得很少了，一方面时间不允许，工作太忙，很难像学生时代那样，从常规赛开始，追逐自己喜欢的球队、追逐自己喜欢的球星一整个赛季，为他们取得的赫赫战绩、精彩的进球欢呼雀跃，没有那个精力，也没有那个心思。另一方面呢，一代球星代表着一代人的青春，我这一代的青春已经随着姚明、科比、麦迪、邓肯、艾佛森、加内特、皮尔斯、纳什、基德、卡特……们一起退役了。现在的NBA已经很难找到属于我的那个青春符号，所以偶尔也就手机看看体育新闻，谁谁谁又50分了，谁谁谁又三双了，然后感叹一句，现在的小伙子真厉害，可是，还是怀念以前那种肌肉碰肌肉的身体对抗、怀念科比那美如画的后仰中距离、怀念麦迪那潇洒的干拔跳投…</p>
-<p>今天是篮网和雄鹿的抢七生死战，go big or go home全看这一场了，而且今天这场比赛也就冲着杜兰特去看，现如今杜兰特、欧文是我为数不多还想冲着他们看看比赛的球星。上半场两队还是打的难舍难分，都拉不开分差，篮网这边也就指着杜兰特了，一个人大包大揽，其他队友提供的支援太有限，也就格里芬还能攻击一下篮筐，其他人的得分包感觉都没打开，雄鹿那边就身体素质是真好，能冲能抢，只是好些人都叫不上名了。</p>
-<p>到了中场休息，腾讯插播了一个父亲节的文案，才知道今天是父亲节——我升级成父亲后的第一个父亲节。</p>
-<p>我家小苹果这会儿正在隔壁房间睡上午的回笼觉，小苹果现在还不到一周岁，每天上午下午都要小睡一觉，刚过去看一眼，睡得正香呢，两只小手举到耳朵边特别可爱——你健康快乐的成长，就是我在父亲节收到的最好的礼物！</p>
-<p>中午，老婆给我发了两张照片，一张是我很久以前还在学校时候的照片，一张是最近带娃的照片，老婆感叹我老了好多，体型都变了，腰都驼了，我回复：哈哈哈，可不是吗，岁月饶得过谁呢。回头看看熟睡中的女儿，我想这一切都是值得的，有些路有些经历，是人生中不可或缺的，只是希望这些经历可以跟我生命中挚爱的那些人一起度过……</p>
-<p>中午，给老爸打了一个视频电话，问问他最近身体怎么样，给他看看小苹果，小苹果现在还不会喊爷爷，一直在旁边咿咿呀呀的叫着，爷孙两都很开心。</p>
-<p>后来要带娃，比赛我没看完，听说杜兰特投进了一个绝平的踩线长两分，两队打进了加时，最后弹尽粮绝，篮网惜败止步于东部半决赛，替篮网替杜兰特有点遗憾，但是没关系，还年轻，一切都来得及，明年带上欧文我相信奥布莱恩杯会属于你们的，期待明年我和小苹果一块儿看你们的总决赛，生活要有希望，岁月才会美好——祝全天下所有的父亲，节日快乐！</p>
-]]></content>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>父亲节快乐</title>
+      <link href="2021/06/20/%E7%88%B6%E4%BA%B2%E8%8A%82%E5%BF%AB%E4%B9%90/"/>
+      <url>2021/06/20/%E7%88%B6%E4%BA%B2%E8%8A%82%E5%BF%AB%E4%B9%90/</url>
+      
+        <content type="html"><![CDATA[<!--<img src="/images/xiaopingguo.jpg" width="250" height="150" hspace="5" style="float:right">--><blockquote><p>【摘要】升级为爸爸后过的第一个父亲节，祝全天下的爸爸都节日快乐。</p></blockquote><a id="more"></a><p>前天晚上从西安出差回来，经过昨天一天的休整，整个人已经满血复活了，正好今天周日，也没什么特殊的事情，就想着要不看场比赛。</p><p>其实，上班以后比赛真的看得很少了，一方面时间不允许，工作太忙，很难像学生时代那样，从常规赛开始，追逐自己喜欢的球队、追逐自己喜欢的球星一整个赛季，为他们取得的赫赫战绩、精彩的进球欢呼雀跃，没有那个精力，也没有那个心思。另一方面呢，一代球星代表着一代人的青春，我这一代的青春已经随着姚明、科比、麦迪、邓肯、艾佛森、加内特、皮尔斯、纳什、基德、卡特……们一起退役了。现在的NBA已经很难找到属于我的那个青春符号，所以偶尔也就手机看看体育新闻，谁谁谁又50分了，谁谁谁又三双了，然后感叹一句，现在的小伙子真厉害，可是，还是怀念以前那种肌肉碰肌肉的身体对抗、怀念科比那美如画的后仰中距离、怀念麦迪那潇洒的干拔跳投…</p><p>今天是篮网和雄鹿的抢七生死战，go big or go home全看这一场了，而且今天这场比赛也就冲着杜兰特去看，现如今杜兰特、欧文是我为数不多还想冲着他们看看比赛的球星。上半场两队还是打的难舍难分，都拉不开分差，篮网这边也就指着杜兰特了，一个人大包大揽，其他队友提供的支援太有限，也就格里芬还能攻击一下篮筐，其他人的得分包感觉都没打开，雄鹿那边就身体素质是真好，能冲能抢，只是好些人都叫不上名了。</p><p>到了中场休息，腾讯插播了一个父亲节的文案，才知道今天是父亲节——我升级成父亲后的第一个父亲节。</p><p>我家小苹果这会儿正在隔壁房间睡上午的回笼觉，小苹果现在还不到一周岁，每天上午下午都要小睡一觉，刚过去看一眼，睡得正香呢，两只小手举到耳朵边特别可爱——你健康快乐的成长，就是我在父亲节收到的最好的礼物！</p><p>中午，老婆给我发了两张照片，一张是我很久以前还在学校时候的照片，一张是最近带娃的照片，老婆感叹我老了好多，体型都变了，腰都驼了，我回复：哈哈哈，可不是吗，岁月饶得过谁呢。回头看看熟睡中的女儿，我想这一切都是值得的，有些路有些经历，是人生中不可或缺的，只是希望这些经历可以跟我生命中挚爱的那些人一起度过……</p><p>中午，给老爸打了一个视频电话，问问他最近身体怎么样，给他看看小苹果，小苹果现在还不会喊爷爷，一直在旁边咿咿呀呀的叫着，爷孙两都很开心。</p><p>后来要带娃，比赛我没看完，听说杜兰特投进了一个绝平的踩线长两分，两队打进了加时，最后弹尽粮绝，篮网惜败止步于东部半决赛，替篮网替杜兰特有点遗憾，但是没关系，还年轻，一切都来得及，明年带上欧文我相信奥布莱恩杯会属于你们的，期待明年我和小苹果一块儿看你们的总决赛，生活要有希望，岁月才会美好——祝全天下所有的父亲，节日快乐！</p>]]></content>
+      
+      
       <categories>
-        <category>生活随笔</category>
+          
+          <category> 生活随笔 </category>
+          
       </categories>
-  </entry>
-  <entry>
-    <title>读书笔记——《肖逸群的创业手记》</title>
-    <url>/2022/12/29/%E8%82%96%E9%80%B8%E7%BE%A4%E7%9A%84%E5%88%9B%E4%B8%9A%E6%89%8B%E8%AE%B0/</url>
-    <content><![CDATA[<p><img src="/images/book/2022/肖逸群创业手记/封面.JPG" width="250" height="150" hspace="5" style="float:right"></p>
-<blockquote>
-<p>&ensp; &ensp;【摘要】最近两周花了一些时间，看完了肖厂长的这本创业手记，基本是作者对自己创业一路走来的心路历程的所思所想。作者跟我基本是同龄，应该是比我早一届上的大学，然而他已经多次入选30x30创业领袖榜单，确实是我应该努力学习的榜样。<br>摘取书中的一些金句(鸡汤)自勉吧。</p>
-</blockquote>
-<a id="more"></a>
-<ol>
-<li><p>The dots will somehow connect in your future.</p>
-<p> 乔布斯在一次经典演讲中的一段话:</p>
-<blockquote>
-<p>&ensp;&ensp;Again, you can’t connect the dots looking forward; you can only connect them looking backwards. So you have to trust that the dots will somehow connect in your future. You have to trust in something — your gut, destiny, life, karma, whatever. Because believing that the dots will connect down the road, will give you the confidence to follow your heart, even when it leads you off the well-worn path. And that will make all the difference.<br>&ensp;&ensp;再次说明的是，你在向未来展望的时候不可能将这些点联系起来，而只可能在回顾过去的时候这么做。所以你必须相信这些点会在你未来的某一天串联在一起。你必须相信某样东西，无论是你的勇气、命运、生命还是因缘。因为如果你相信一路上的这些点会串联起来，你将会有信心追随自己的内心而前进，哪怕由此走上不同于常人的道路也无所畏惧。而这将会让一切都变得不同。</p>
-</blockquote>
-</li>
-<li><p>today you do things others not do, tomorrow you do things others can’t do.</p>
-</li>
-<li><p>无知和弱小不是生存的障碍，傲慢才是。</p>
-</li>
-<li><p>life is unfair, get used to it.</p>
-</li>
-<li><p>像诗人一样思考，像农夫一样耕耘。</p>
-</li>
-<li><p>I leave uncultivated today, was precisely yesterday perished tomorrow which person of the body implored.</p>
-<p>我荒废的今日，正是昨日殒身之人祈求的明日。</p>
-</li>
-<li><p>人短期内会为做错的事后悔，但长期会为自己没做的事情后悔。</p>
-</li>
-<li><p>做正确的事比正确地做事更重要。</p>
-</li>
-<li><p>up or not——不增长就死亡。</p>
-</li>
-<li><p>众生畏果，菩萨畏因。</p>
-</li>
-</ol>
-]]></content>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>K-Means聚类算法原理</title>
+      <link href="2017/02/18/K-Means%E8%81%9A%E7%B1%BB%E7%AE%97%E6%B3%95%E5%8E%9F%E7%90%86/"/>
+      <url>2017/02/18/K-Means%E8%81%9A%E7%B1%BB%E7%AE%97%E6%B3%95%E5%8E%9F%E7%90%86/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
       <categories>
-        <category>我的书单</category>
-        <category>2022年书单</category>
+          
+          <category> 人工智能 </category>
+          
+          <category> 机器学习 </category>
+          
       </categories>
-  </entry>
-  <entry>
-    <title>读书笔记——《蛤蟆先生去看心理医生》</title>
-    <url>/2022/01/25/%E8%9B%A4%E8%9F%86%E5%85%88%E7%94%9F%E5%8E%BB%E7%9C%8B%E5%BF%83%E7%90%86%E5%8C%BB%E7%94%9F/</url>
-    <content><![CDATA[<blockquote>
-<p>&ensp; &ensp; 【摘要】蛤蟆本是一个热情、时尚又爱冒险的家伙，惹出过不少麻烦和笑话。可他现在陷入抑郁，不能自拔。他的朋友们决定出手相助，其中包括智慧又威严的獾、关心朋友但有点絮叨的河鼠，还有体贴善良的鼹鼠。他们商量来商量去，决定督促蛤蟆重视这个问题，并带他去接受心理咨询。<br>&ensp; &ensp;&ensp;这本书在微信读书上也得到了很高的评价，5.7万人点评有90%的推荐率，而且这本书也排进了TOP200的总榜单。</p>
-</blockquote>
-<p><img src="/images/book/2022/蛤蟆先生去看心理医生/0.jpg" alt=""></p>
-<a id="more"></a>
-<p>&ensp;&ensp;&ensp;<font size = "6">蛤</font>蟆本是一个热情、时尚又爱冒险的家伙，惹出过不少麻烦和笑话。可他现在陷入抑郁，不能自拔。他的朋友们决定出手相助，其中包括智慧又威严的獾、关心朋友但有点絮叨的河鼠，还有体贴善良的鼹鼠。他们商量来商量去，决定督促蛤蟆重视这个问题，并带他去接受心理咨询。</p>
-]]></content>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>XGBoost算法原理</title>
+      <link href="2017/02/14/XGBoost%E7%AE%97%E6%B3%95%E5%8E%9F%E7%90%86/"/>
+      <url>2017/02/14/XGBoost%E7%AE%97%E6%B3%95%E5%8E%9F%E7%90%86/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>XGBoost(eXtreme Gradient Boosting)是GBDT的一种改进形式，具有很好的性能，在各大比赛中大放异彩。</p></blockquote><h1 id="1-XGBoost的算法原理"><a href="#1-XGBoost的算法原理" class="headerlink" title="1 XGBoost的算法原理"></a>1 XGBoost的算法原理</h1><h1 id="2-XGBoost与GBDT的比较"><a href="#2-XGBoost与GBDT的比较" class="headerlink" title="2 XGBoost与GBDT的比较"></a>2 XGBoost与GBDT的比较</h1>]]></content>
+      
+      
       <categories>
-        <category>我的书单</category>
-        <category>2022年书单</category>
+          
+          <category> 人工智能 </category>
+          
+          <category> 机器学习 </category>
+          
       </categories>
-  </entry>
-  <entry>
-    <title>Logistic回归算法原理</title>
-    <url>/2017/01/16/Logistic%E5%9B%9E%E5%BD%92%E7%AE%97%E6%B3%95%E5%8E%9F%E7%90%86/</url>
-    <content><![CDATA[<blockquote>
-<p>Logistic回归模型就是将线性回归的结果输入一个sigmoid函数，将回归值映射到0~1，表示输出为类别的概率。</p>
-</blockquote>
-<h1 id="1-Logistic回归模型"><a href="#1-Logistic回归模型" class="headerlink" title="1. Logistic回归模型"></a>1. Logistic回归模型</h1><p>&ensp;&ensp;&ensp;&ensp;线性回归表达式如下：</p>
-<script type="math/tex; mode=display">
-z_i=w\cdot x_i+b</script><p>$x_i$是第$i$个样本的$N$个特征组成的特征向量，$w$为$N$个特征对应的特征权重组成的向量，$b$是偏置常数。</p>
-<p>Sigmoid函数：</p>
-<script type="math/tex; mode=display">
-y_i = \frac{1}{1+e^{-z_i}}</script><p>其中$z_i$是自变量，$y_i$是因变量，$e$是自然常数。</p>
-<p>线性回归的结果套一个sigmoid函数就能得到Logistic回归的结果，即：</p>
-<script type="math/tex; mode=display">
-y_i = \frac{1}{1+e^{-z_i}}=\frac{1}{1+e^{-(w\cdot x_i+b)}}</script><p>如果我们将$y_i=1$视为$x_i$作为正例的可能性，即：</p>
-<script type="math/tex; mode=display">
-p(y_i=1|x_i)=\frac{1}{1+e^{-(w\cdot x_i+b)}}=\frac{e^{w\cdot x_i+b}}{1+e^{w\cdot x_i+b}}</script><p>那么反例$y_i=0$的可能性为:</p>
-<script type="math/tex; mode=display">
-p(y_i=0|x_i)=1-p(y_i=1|x_i)=\frac{1}{1+e^{w\cdot x_i+b}}</script><p>定义两者的比值$\frac{p(y_i=1|x_i)}{p(y_i=0|x_i)}$为“概率”，对其取对数得到“对数概率”：</p>
-<script type="math/tex; mode=display">
-ln\frac{p(y_i=1|x_i)}{p(y_i=0|x_i)}=w\cdot x_i+b</script><p>可见对数概率的结果正好是线性回归的预测结果$w\cdot x_i+b$，因此，Logistic回归的本质其实就是用线性回归的预测结果$w\cdot x_i+b$去逼近真实标记的对数概率$ln\frac{y}{1-y}$，实际上这也是Logistic回归也被称为“对数概率回归”的原因。</p>
-<h1 id="2-Logistic回归学习策略"><a href="#2-Logistic回归学习策略" class="headerlink" title="2. Logistic回归学习策略"></a>2. Logistic回归学习策略</h1><p>&ensp;&ensp;&ensp;&ensp;在上面我们已经知道正例和反例的概率表达式，接下来则要构造似然函数，将其转换为一个优化问题来求解$w$和$b$。</p>
-<p>对给定数据集$T={(x_1,y_1),(x_2,y_2),…,(x_M,y_M)}$，定义似然函数：</p>
-<script type="math/tex; mode=display">
-L(w,b)=\prod_{i=1}^{M}[p(y_i=1|x_i)]^{y_i}[1-p(y_i=1|x_i)] ^{1-y_i}</script><p>取对数，得到对数似然函数：</p>
-<script type="math/tex; mode=display">\begin{aligned}
-lnL(w,b) &= \sum_{i=1}^{M} {y_i\cdot ln[p(y_i=1|x_i)]+(1-y_i)ln[1-p(y_i=1|x_i)]}\\ &= \sum_{i=1}^{M}{y_i\cdot ln\frac{e^{w\cdot x_i+b}}{1+e^{w\cdot x_i+b}}+(1-y_i)\cdot ln\frac{1}{1+e^{}w\cdot x_i+b} }\\ &= \sum_{i=1}^{M}{y_i\cdot (w\cdot x_i+b)-y_i\cdot ln(1+e^{wx_i+b})+(y_i-1)\cdot ln(1+e^{wx_i+b})}\\ &= \sum_{i=1}^{M}{y_i\cdot (w\cdot x_i+b)-ln(1+e^{w\cdot x_i+b})}
-\end{aligned}</script><p>我们需要使每个样本属于其真实标记的概率越大越好，即最大对数似然函数：</p>
-<script type="math/tex; mode=display">
-\max_{w,b}\sum_{i=1}^{M}{y_i\cdot (w\cdot x_i+b)-ln(1+e^{w\cdot x_i+b})}</script><p>可以用梯度下降或牛顿法来求解该优化问题。</p>
-<h1 id="3-Logistic回归优化算法"><a href="#3-Logistic回归优化算法" class="headerlink" title="3. Logistic回归优化算法"></a>3. Logistic回归优化算法</h1><h2 id="3-1-算法流程"><a href="#3-1-算法流程" class="headerlink" title="3.1 算法流程"></a>3.1 算法流程</h2><p>选用批量梯度下降算法，现分别对权重矩阵$w$和偏置常数$b$求偏导：</p>
-<script type="math/tex; mode=display">\begin{aligned}
-\frac{\partial }{\partial w}lnL(w,b)&=\frac{\partial }{\partial w}\sum_{i=1}^{M}{y_i\cdot (w\cdot x_i+b)-ln(1+e^{}wx_i+b)}\\ &= \sum_{i=1}^{M}(y_i-\frac{e^{wx_i+b}}{1+e^{wx_i+b}} )x_i
-\end{aligned}</script><script type="math/tex; mode=display">\begin{aligned}
-\frac{\partial }{\partial b}lnL(w,b) &= \frac{\partial }{\partial b}\sum_{i=1}^{M}{y_i\cdot (w\cdot x_i+b)-ln(1+e^{}wx_i+b)}\\ &= \sum_{i=1}^{M}(y_i-\frac{e^{wx_i+b}}{1+e^{wx_i+b}} )
-\end{aligned}</script><p>每次随机选取一个样本点$(x_i,y_i)$，对$w,b$进行一次更新，得到迭代公式：</p>
-<script type="math/tex; mode=display">\begin{aligned}
-w\gets w+\eta (y_i-\frac{e^{wx_i+b}}{1+e^{wx_i+b}} )x_i
-\end{aligned}</script><script type="math/tex; mode=display">\begin{aligned}
-b\gets b+\eta (y_i-\frac{e^{wx_i+b}}{1+e^{wx_i+b}} )
-\end{aligned}</script><p>Logistic回归流程：</p>
-<p>输入：训练集$T={(x_1,y_1),(x_2,y_2),…,(x_M,y_M)}$，学习率$\eta$;</p>
-<p>输出：Logistic回归模型$h(x)=\frac{1}{1+e^{-(wx_i+b)}}$。</p>
-<p>第1步：选取初始值向量$w$和偏置常数$b$;</p>
-<p>第2步：在训练集中随机选取数据$(x_i,y_i)$，根据上面的迭代公式进行参数更新；</p>
-<p>第3步：重复步骤2，直至模型满足训练要求。</p>
-]]></content>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>梯度提升树</title>
+      <link href="2017/02/12/%E6%A2%AF%E5%BA%A6%E6%8F%90%E5%8D%87%E6%A0%91/"/>
+      <url>2017/02/12/%E6%A2%AF%E5%BA%A6%E6%8F%90%E5%8D%87%E6%A0%91/</url>
+      
+        <content type="html"><![CDATA[<h1 id="1-提升树的定义"><a href="#1-提升树的定义" class="headerlink" title="1 提升树的定义"></a>1 提升树的定义</h1><p>提升树(Boosting Tree)是一种以分类树或回归树作为基分类器的提升方法，具有非常好的性能。实际上，提升树就是一种采用加法模型与前向分步算法，并以决策树为基分类器的提升方法。当处理分类问题时，基分类器采用CART分类树，当处理回归问题时，基分类器采用CART回归树。</p><p><strong>提升树的原理：</strong></p><p>假设第k轮训练得到的基学习器为$T_k(x;\theta_k),k=1,2,…,K$，则最后的集成决策函数为：</p><script type="math/tex; mode=display">f_K(\boldsymbol{x})=\sum_{k=1}^{K}T_k(\boldsymbol{x};\theta _k)  \tag{1.1}</script><p>其中$\theta_k$为第k个基学习器的CART分类树或回归树的参数，K表示基模学习器的个数。</p><p>再利用前向分步算法，可知第k轮得到的提升树模型为:$f_k(x)=f_{k-1}(x)+T_k(x;\theta_k)$，假设提升树模型的整体损失函数为:$L(y_i,f_k(x_i))$，则可通过使损失函数最小化的策略来确定下一棵决策树的参数$\theta_k$，即：</p><script type="math/tex; mode=display">\theta _k=arg\min_{\theta _k}\sum_{i=1}^{M}L(y_i,f_k(\boldsymbol{x}_i))   \tag{1.2}</script><p>具体来说，不同类型的提升树模型使用不同的损失函数。</p><p><strong>分类问题损失函数：</strong></p><script type="math/tex; mode=display">L(y,f_k(\boldsymbol{x}))=e^{-y\cdot \hat{y} } \tag{1.3}</script><p>其中，y表示样本x的真实值，$\hat{y}$表示集成模型对样本x的预测值，模型在训练集$T=\left \{ (x_1,y_1),…,(x_M,y_M) \right \} $上的整体损失函数为：</p><script type="math/tex; mode=display">L=\sum_{i=1}^{M}L(y_i,f_k(\boldsymbol{x}_i)) =\sum_{i=1}^{M}e^{-y_i\hat{y_i} }  \tag{1.4}</script><p><strong>回归问题的损失函数：</strong></p><script type="math/tex; mode=display">L(y,f_k(\boldsymbol{x}))=[y-\hat{y} ]^2 \tag{1.5}</script><p>其中y表示样本x的真实值，$\hat{y}$为集成模型对样本x的预测值，有：</p><script type="math/tex; mode=display">\hat{y}=f_k(\boldsymbol{x})=\sum_{k=1}^{K}\alpha _kT_k(\boldsymbol{x})  \tag{1.5}</script><p>所以，$L(y,f_k(\boldsymbol{x}))=[y-f_k(\boldsymbol{x})]^2=[y-(f_{k-1}(\boldsymbol{x})+T_k(\boldsymbol{x};\theta _k))]^2=[y-f_{k-1}(\boldsymbol{x})-T_k(\boldsymbol{x};\theta _k)]^2$，令$R_k=y-f_{k-1}(\boldsymbol{x})$，很明显$R_k$表示的是样本的实际值减去第k-1轮模型的预测值$f_{k-1}(x)$，因此$R_k$其实就是模型经过k-1轮迭代后的实际值y进行预测的残差。</p><p>上面的损失函数可以表示为：</p><script type="math/tex; mode=display">L(y,f_k(\boldsymbol{x}))=[R_k-T_k(\boldsymbol{x};\theta _k)]^2 \tag{1.6}</script><p>所以要想上面的损失函数最小，只需使使$T_k(x;\theta_k)$尽量接近$R_{k-1}$即可。这相当于第$k$轮迭代时，我们的目标其实是使该轮建立的CART回归树$T_k(x;\theta_k)$能尽量拟合前面k-1轮迭代后剩余的残差$R_{k-1}$。</p><p>所以回归提升树模型的完整过程如下。</p><p>输入：训练集$T=\left \{ (x_1,y_1),…,(x_M,y_M) \right \} $。</p><p>输出：回归提升树$f_K(\boldsymbol{x})=\sum_{k=1}^{K}T_k(\boldsymbol{x};\theta _k) $。</p><p>步骤如下：</p><p>第1步：初始化$f_0(x)=0$;</p><p>第2步：对于$k=1,2,…,K$，按照如下步骤进行：</p><p>(1) 计算经过k-1轮迭代后样本$x_i$的残差：$R_{ki}=y_i-f_{k-1}(x_i),i=1,2,…,M$。</p><p>(2) 基于各样本的残差学习出第k轮的CART回归树$T_k(x;\theta_k)$；</p><p>(3) 更新提升树$f_k(x)=f_{k-1}(x)+T_k(x;\theta_k)$；</p><p>(4) 重复上述过程，直到k=K，得到K轮迭代后的回归提升树模型。</p><h1 id="2-梯度提升树"><a href="#2-梯度提升树" class="headerlink" title="2 梯度提升树"></a>2 梯度提升树</h1><p>上面的提升树模型中，使用的指数损失函数和平方损失函数都有一个比较大的优点，那就是它们在向量$\boldsymbol{x}$上可微，因此可以直接使用梯度下降算法进行求解，并求得各个基学习器中的参数，但如果损失函数不可微呢？</p><p>针对这个问题，Friedman提出了用梯度提升的方法来解决，就是利用损失函数的负梯度将当前模型的值来作为提升树算法中的残差的近似替代，即：</p><script type="math/tex; mode=display">R_{ki}=-[\frac{\partial L(y_i,f(\boldsymbol{x}_i)}{\partial f(\boldsymbol{x}_i)} ]_{f(\boldsymbol{x}_i)=f_{k-1}(\boldsymbol{x}_i)} \tag{2.1}</script><p>对于分类问题，一般称作GBDT（Gradient Boosting Decision Tree），对于回归问题，一般称作GBRT(Gradient Boosting Regession Tree)。</p><h2 id="2-1-梯度提升树的原理推导"><a href="#2-1-梯度提升树的原理推导" class="headerlink" title="2.1 梯度提升树的原理推导"></a>2.1 梯度提升树的原理推导</h2><p>将函数$f(x)$在$x-x_{k-1}$处进行一阶泰勒展开，得到：</p><script type="math/tex; mode=display">f(\boldsymbol{x})\approx f(x_{k-1})+f^{'}(x_{k-1})(\boldsymbol{x}-x_{k-1})  \tag{2.2}</script><p>再取$x=x_k$，得到：</p><script type="math/tex; mode=display">f(x_{k})\approx f(x_{k-1})+f^{'}(x_{k-1})(x_{k}-x_{k-1})  \tag{2.3}</script><p>类似，对提升树模型的损失函数$L(y,f(x))$在$f(x)=f_{k-1}(x)$处进行一阶泰勒展开，可得：</p><script type="math/tex; mode=display">L(y,f(\boldsymbol{x}))\approx L(y,f_{k-1}(\boldsymbol{x}))+[\frac{\partial L(y,f(\boldsymbol{x}))}{\partial f(\boldsymbol{x})} ]_{f(\boldsymbol{x})=f_{k-1}(\boldsymbol{x})}(\boldsymbol{x}-f_{k-1}(\boldsymbol{x})) \tag{2.4}</script><p>再取$f(x)=f_k(x)$，得到：</p><script type="math/tex; mode=display">L(y,f_k(\boldsymbol{x}))\approx L(y,f_{k-1}(\boldsymbol{x}))+[\frac{\partial L(y,f(\boldsymbol{x}))}{\partial f(\boldsymbol{x})} ]_{f(\boldsymbol{x})-f_{k-1}(\boldsymbol{x})}(f_k(\boldsymbol{x})-f_{k-1}(\boldsymbol{x})) \tag{2.5}</script><p>又$f_k(\boldsymbol{x})-f_{k-1}(\boldsymbol{x})=T_k(\boldsymbol{x};\theta _k)$，得到：</p><script type="math/tex; mode=display">L(y,f_k(\boldsymbol{x}))\approx L(y,f_{k-1}(\boldsymbol{x}))+[\frac{\partial L(y,f(\boldsymbol{x}))}{\partial f(\boldsymbol{x})} ]_{f(\boldsymbol{x})-f_{k-1}(\boldsymbol{x})}(T_k(\boldsymbol{x};\theta _k)) \tag{2.6}</script><p>即：</p><script type="math/tex; mode=display">L(y,f_k(\boldsymbol{x}))- L(y,f_{k-1}(\boldsymbol{x}))=[\frac{\partial L(y,f(\boldsymbol{x}))}{\partial f(\boldsymbol{x})} ]_{f(\boldsymbol{x})-f_{k-1}(\boldsymbol{x})}(T_k(\boldsymbol{x};\theta _k)) \tag{2.7}</script><p>其中$L(y,f_k{\boldsymbol{x}})，L(y,f_{k-1}{\boldsymbol{x}})$分别代表经过k轮和k-1轮迭代后提升树模型的损失，我们的目标是希望每一轮迭代都能在前面一轮的基础上减少损失，即：</p><script type="math/tex; mode=display">L(y,f_k{\boldsymbol{x}})\le L(y,f_{k-1}{\boldsymbol{x}})\tag{2.8}</script><p>显然，当：</p><script type="math/tex; mode=display">T_k(\boldsymbol{x};\theta _k)=-[\frac{\partial L(y,f(\boldsymbol{x}))}{\partial f(\boldsymbol{x})} ]_{f(\boldsymbol{x})-f_{k-1}(\boldsymbol{x})}\tag{2.9}</script><p>时，公式2.8肯定成立。</p><p>公式2.9左边是当前需要学习得到的基学习器（第k轮得到的CART回归树），右边是损失函数的负梯度在当前模型$f_{k-1}(\boldsymbol{x})$处的值。从上面的过程来看，我们并没有将提升树模型的损失直接对变量x进行展开，而是将其在$f(\boldsymbol{x})=f_{k-1}(\boldsymbol{x})$处进行展开，因此我们只需要损失函数对$f_{\boldsymbol{x}}$可微，而不需要$f(\boldsymbol{x})$对变量x也可微，这进一步扩大了提升树模型的使用范围。</p><p>在提升树模型中，我们只需要用第k轮的CART回归树去拟合损失函数的负梯度在当前模型处的值即可保证模型的整体损失不断下降，直至收敛于一个比较理想的值。损失函数的负梯度在当前模型的值是数值类型，具有可加性，这也是为什么我们强调梯度提升树模型中使用的基学习器被限定为CART回归树的原因（分类树的结果直接做加法没有意义）。另外，梯度提升树模型并不只适用于回归问题，由于CART回归树拟合的是损失函数的负梯度在当前模型的值，而不是直接的模型预测结果，因此该模型也可以用于分类问题，只不过对于分类问题，需要将平方损失函数换成对应的对数损失函数或者指数损失函数。</p><h2 id="2-2-GBDT模型的优缺点"><a href="#2-2-GBDT模型的优缺点" class="headerlink" title="2.2 GBDT模型的优缺点"></a>2.2 GBDT模型的优缺点</h2><p><strong>优点：</strong></p><p>（1）模型的预测准确率相对较高。</p><p>（2）由于指定使用 CART 回归树当作基学习器，因而既可以处理标称型数据，又可以处理标量型数据。</p><p>（3）在处理回归问题时，由于可以选择Huber损失函数或Quantile损失函数，因此相对于AdaBoost而言，对噪声的敏感性大大降低。</p><p><strong>缺点：</strong></p><p>和AdaBoost一样，各个基学习器之间存在强关联，不利于做并行化处理。</p>]]></content>
+      
+      
       <categories>
-        <category>人工智能</category>
-        <category>机器学习</category>
+          
+          <category> 人工智能 </category>
+          
+          <category> 机器学习 </category>
+          
       </categories>
-  </entry>
-  <entry>
-    <title>K近邻算法原理</title>
-    <url>/2017/01/26/K%E8%BF%91%E9%82%BB%E7%AE%97%E6%B3%95%E5%8E%9F%E7%90%86/</url>
-    <content><![CDATA[<blockquote>
-<p>&ensp;&ensp;&ensp;&ensp;K近邻(K-Nearest Neighber, KNN)的思想是：对于任意一个新的样本点，我们可以在这M个已知类别标签的样本点选取k个与其距离最接近的点作为它的最近邻点，然后统计这k个最近邻点的类别标签，将统计最多的列表标签作为预测点的列表。</p>
-</blockquote>
-<h1 id="1-K近邻分类原理"><a href="#1-K近邻分类原理" class="headerlink" title="1 K近邻分类原理"></a>1 K近邻分类原理</h1><p>&ensp;&ensp;&ensp;&ensp;K近邻算法主要有3个要素：K值的选择、距离的度量、分类决策规则。</p>
-<h2 id="1-1-K值选择"><a href="#1-1-K值选择" class="headerlink" title="1.1 K值选择"></a>1.1 K值选择</h2><p>&ensp;&ensp;&ensp;&ensp;K值的选择会对K近邻算法的结果产生较大影响：K值过小，相当于使用一个较小的邻域中的实例来训练模型，容易产生欠拟合，模型的估计误差较大；K值选择过大，相当于用一个较大的领域中的实例来训练模型，这种情况下输入较远的训练实例也会对预测起作用，容易产生过拟合，因而也会影响模型的估计误差。</p>
-<h2 id="1-2-距离度量"><a href="#1-2-距离度量" class="headerlink" title="1.2 距离度量"></a>1.2 距离度量</h2><p>&ensp;&ensp;&ensp;&ensp;距离度量方式有多种，一般使用较多的是欧式距离，假设有两个N维向量$x_i,x_j$，如下：</p>
-<script type="math/tex; mode=display">
-x_i = ({x_i}^{(1)},{x_i}^{(2)},...,{x_i}^{(N)})\tag{1.1}</script><script type="math/tex; mode=display">
-x_j = ({x_j}^{(1)},{x_j}^{(2)},...,{x_j}^{(N)})\tag{1.2}</script><p>则它们之间的闵可夫斯基距离为：</p>
-<script type="math/tex; mode=display">
-L_p(x_i,x_j)=\sqrt[p]{\sum_{n=1}^{N} ({x_i}^{(n)}-{x_j}^{(n)})^p} \tag{1.3}</script><p>当$p=1$时，上面的距离即是曼哈顿距离，当$p=2$时，上面的距离就是欧氏距离。</p>
-<h2 id="1-3-分类决策规则"><a href="#1-3-分类决策规则" class="headerlink" title="1.3 分类决策规则"></a>1.3 分类决策规则</h2><p>&ensp;&ensp;&ensp;&ensp;与朴素贝叶斯一样，可以使用0-1损失函数来衡量，误分类的概率为：</p>
-<script type="math/tex; mode=display">
-p(y\ne f(x))=1-p(y=f(x)) \tag{1.4}</script><p>其中$f(x)$就是分类决策函数。对于给定的预测样本实例$x_j$，假设最后预测它的分类为$c_r$，再假设$x_j$最近邻的K个训练样本实例$x_i(i=1,2,…,K)$，构成的集合为$N_k$，训练样本实例$x_i$对应的类别标签为$y_i$，则误分类率为：</p>
-<script type="math/tex; mode=display">
-L=\frac{1}{K} \sum_{x_i\in N_k}^{} I(y_i \ne c_r)=1-\frac{1}{K} \sum_{x_i\in N_k}^{}I(y_i=c_r)</script><p>这里I为指示函数，即I(true)=1,I(false)=0，我们的目标就是使误分类率L最小化，即：</p>
-<script type="math/tex; mode=display">
-min[1-\frac{1}{K}\sum_{x_i\in N_k}^{}I(y_i=c_r)  ]\tag{1.5}</script><p>即:</p>
-<script type="math/tex; mode=display">
-max\frac{1}{K}\sum_{x_i\in N_k}^{}I(y_i=c_r) \tag{1.6}</script><p>从上面的式子可以看出，使误分类率最小等价于使预测样本实例x选定的K个最近邻训练样本实例$x_i(i=1,2,…,K)$的类别标签$y_i$尽可能多的和预测样本实例$x_j$的预测类别$c_r$相同。</p>
-<h1 id="2-K近邻分类算法流程"><a href="#2-K近邻分类算法流程" class="headerlink" title="2 K近邻分类算法流程"></a>2 K近邻分类算法流程</h1><p>输入：训练集$T={(x_1,y_1),(x_2,y_2),…,(x_M,y_M)}$，其中$x_i=((x_i)^(1),(x_i)^(2),…,(x_i)^(N))$为第i个训练样本实例，$y_i$为$x_i$对应的类别标签。</p>
-<p>输出：带预测实例$x_j$所属的类别$y_j$。</p>
-<p>步骤如下：</p>
-<p>第1步：</p>
-<p>根据选定的K值，选择合适的距离度量方式，在训练集T中找出待预测实例$x_j$的K个最近邻点$x_i$，这K个训练样本实例构成的集合记为$N_k$。</p>
-<p>第2步：</p>
-<p>根据多数表决规则决定待预测实例$x_j$所属的类别$y_j$，即：</p>
-<script type="math/tex; mode=display">
-y_i=arg\max_{c_r}\frac{1}{K}\sum_{x_i\in N_k}^{} I(y_i=c_r) \tag{2.1}</script><p>其中$i=1,2,…,K;r=1,2,…,R$。</p>
-<h1 id="3-K近邻回归原理"><a href="#3-K近邻回归原理" class="headerlink" title="3 K近邻回归原理"></a>3 K近邻回归原理</h1><p>K近邻算法不仅可以用于分类，也可以用于回归任务。当用于回归任务时，基本原理和分类任务是一样的，仍然是三要素：K值选择、距离度量方法、回归决策规则，前面两个要素一样，最后一点是将分类决策规则改成回归决策规则。</p>
-<h2 id="3-1-回归决策规则"><a href="#3-1-回归决策规则" class="headerlink" title="3.1 回归决策规则"></a>3.1 回归决策规则</h2><p>在找到待预测实例$x_j$的K个最近邻训练样本实例$x_i(i=1,2,…,K)$后，分类问题采取的决策规则是统计这K个样本的类别情况，然后选择其中占比最高的类别作为待预测实例$x_j$的类别。回归问题稍加变化，把这K个最近邻训练样本实例$x_i$的输出值$y_i$的平均作为待预测实例的值，即：</p>
-<script type="math/tex; mode=display">
-y_j=\frac{1}{K}\sum_{i=1}^{K}  y_i \tag{3.1}</script><h2 id="3-2-K近邻回归算法流程"><a href="#3-2-K近邻回归算法流程" class="headerlink" title="3.2 K近邻回归算法流程"></a>3.2 K近邻回归算法流程</h2><p>输入：训练集$T={(x_1,y_1),(x_2,y_2),…,(x_M,y_M)}$，其中$x_i=((x_i)^(1),(x_i)^(2),…,(x_i)^(N))$为第i个训练样本实例，$y_i$为$x_i$对应的类别标签。</p>
-<p>输出：待预测实例$x_j$的输出值$y_j$。</p>
-<p>步骤如下：</p>
-<p>第1步：</p>
-<p>根据选定的K值，选择合适的距离度量方式，在训练集T中找出待预测实例$x_j$的K个最近邻点$x_i$，这K个训练样本实例构成的集合记为$N_k$。</p>
-<p>第2步：</p>
-<p>根据取平均规则决定预测实例$x_j$所属的输出值$y_j$，即公式(3.1)。</p>
-]]></content>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>AdaBoost算法原理</title>
+      <link href="2017/02/10/AdaBoost%E7%AE%97%E6%B3%95%E5%8E%9F%E7%90%86/"/>
+      <url>2017/02/10/AdaBoost%E7%AE%97%E6%B3%95%E5%8E%9F%E7%90%86/</url>
+      
+        <content type="html"><![CDATA[<p>&ensp;&ensp;&ensp;&ensp;AdaBoost每次训练基模型时都是用所有的训练集样本及样本的所有特征，具体操作过程是：每一轮训练结束后得到一个基学习器，并计算该基学习器在训练样本上的预测误差率，然后根据这个误差率来更新下一轮训练时训练集各样本的权重系数和本轮基学习器的投票权重，目标是使得本轮被错误预测了的样本在下一轮训练中得到更大的权重，使其受到更多的重视，并且预测越准确的基学习器在最后集成时占的投票权重系数越大。这样通过多轮迭代可以得到多个基学习器及其对应的投票权重，最后按照各自的权重进行投票来输出最终的预测结果。如图所示：</p><p><img src="/images/AI/adaboost/1.JPG" alt=""></p><h1 id="1-AdaBoost的工作过程"><a href="#1-AdaBoost的工作过程" class="headerlink" title="1 AdaBoost的工作过程"></a>1 AdaBoost的工作过程</h1><p>AdaBoost的运行主要涉及4个问题：</p><p><strong>问题1：</strong>如何计算每一次训练集样本的权重?</p><p>AdaBoost每一轮都会使用全部的训练集样本，但是每一轮都会改变样本的权重分布，其方法是：用本轮得到的基学习器对所有训练样本进行一次预测，得到一个预测误差率；下一轮训练中各个训练样本的情况由该训练样本自身、本轮基学习器对该样本的预测值、本轮基学习器对训练样本的整体预测误差率三者共同决定。</p><p><strong>问题2：如何训练基模型？</strong></p><p>AdaBoost与RF一样，既可以用于分类也可以用于回归问题，因为它们默认使用的基学习器都是CART决策树。所以，只要每一轮将原始样本按照新的权重系数重新计算出来后，基学习器的训练与普通的单模型训练过程是完全一致的。</p><p><strong>问题3：如何计算基模型的预测误差率？</strong></p><p>对于分类问题，计算模型的预测误差率可以直接使用0-1损失函数；对于回归问题，计算模型的预测误差率可以使用平方损失函数或指数损失函数。</p><p><strong>问题4：如何计算各个基学习器的投票权重？</strong></p><p>各个基学习器的投票权重$\alpha_k$是根据每一轮的预测误差率计算得到的，假设通过K轮迭代，我们得到了各个基学习器的投票权重$\alpha_k,k=1,2,…,K$，那么对于结果为{1,-1}的二分类问题，最后的投票公式是：</p><script type="math/tex; mode=display">f(x)=sign\sum_{k=1}^{K} \alpha _k\cdot T_k(x) \tag{1.1}</script><p>其中，$T_k(x)$是第k个基学习器的预测结果值。</p><h1 id="2-AdaBoost多分类问题"><a href="#2-AdaBoost多分类问题" class="headerlink" title="2 AdaBoost多分类问题"></a>2 AdaBoost多分类问题</h1><p>AdaBoost多分类问题有两种实现算法，分别称作SAMME算法和SAMME.R算法。两个算法的主要思想一致，只不过在分类过程中，某些步骤采用了不同的处理方式。</p><p>对于包含有M个样本的训练集$T=\left \{ (x_1,y_1),(x_2,y_2),…,(x_M,y_M) \right \} $，假设样本总共有L个类别，即$y_i\in \left \{ c_1,c_2,…,c_L \right \},i=1,2,…,M $,AdaBoost多分类问题的处理过程如下：</p><h2 id="2-1-SAMME算法"><a href="#2-1-SAMME算法" class="headerlink" title="2.1 SAMME算法"></a>2.1 SAMME算法</h2><p>第1步：初始化数据的分布权重，采用平等对待的方式，即：</p><script type="math/tex; mode=display">D_1=(w_{11},w_{12},...,w_{1M}),w_{1i}=\frac{1}{M},i=1,2,...,M  \tag{2.1}</script><p>第2步：利用具有权重$D_1$的训练数据集，采用某个基本模型进行训练，得到第一个基分类器$T_1(x)$。</p><p>第3步：计算基分类器$T_1(x)$在训练集上的分类误差率$e_1$，即：</p><script type="math/tex; mode=display">e_1=\sum_{i=1}^{M}w_{1i}I(T_1(x_i)\ne y_i)  \tag{2.2}</script><p>第4步：按照下式计算基分类器$T_1(x)$的投票权重$\alpha_1$。</p><script type="math/tex; mode=display">\alpha _1=\frac{1}{2}ln\frac{1-e_1}{e_1}+ln(L-1)   \tag{2.3}</script><p>这里的$L$是多分类的类别数，当$L=2$时，相当于二分类问题。</p><p>按照公式(2.3)来取值，当分类误差率$e_1&lt;\frac{1}{2}$时，一方面可以保证基分类器的投票权重$\alpha_1&gt;0$；另一方面，可以保证基分类器的投票权重$\alpha_1$随着$e_1$的减小而增加。这样产生的效果是：当基分类器的分类误差率小于0.5时，分类器的分类误差率越小，最终它获得的投票权重就越大，从而自动让最终的模型偏向于预测效果较好的基学习器，这是AdaBoost的第一个巧妙之处。</p><p>第5步：按下式更新第二轮训练集的权重分布。</p><script type="math/tex; mode=display">D_2=(w_{21},w_{22},...,w_{2M}) \tag{2.4}</script><p>其中：</p><script type="math/tex; mode=display">w_{2i}=\frac{w_{1i}exp(-\alpha _1y_iT_i(x_i))}{\sum_{i=1}^{M}w_{1i}exp(-\alpha _1y_iT_1(x_i)) } ,i=1,2,...,M</script><p>上式的分母可以看做是一个归一化因子，将其记为:$Z_k,k=1,,2,…,K$，下表k表示的是第k轮，则：</p><script type="math/tex; mode=display">w_{2i}=\frac{w_{1i}exp(-\alpha _1y_iT_i(x_i))}{Z_2} ,i=1,2,...,M</script><p>又因为$y_i\in\left \{ -1,1 \right \} (i=1,2,…,M)$是样本$x_i$的实际值，$G_1(x_i)$是样本$x_i$的预测值，即$\in\left \{ -1,1 \right \} $，所以上式可等价写成:</p><script type="math/tex; mode=display">w_{2i}=\begin{cases}\frac{w_{1i}}{Z_2}e^{-\alpha _1} ,T_1(x_i)=y_i \\\frac{w_{1i}}{Z_2}e^{\alpha _1},T_1(x_i)\ne y_i \end{cases}\tag{2.5}</script><p>$\alpha_1$是第一轮训练的基分类器的投票权重，它的值大于0的，所以上面的式子其实反映的是：当$T_1(x_i) \ne y_i$时，在下一轮训练中，其对应的样本权重$w_{2i}$会在$w_{1i}$的基础上变大，而当$T_1(x_i)=y_i$时，在下一轮训练中，其对应的样本权重$w_{2i}$会在$w_{1i}$的基础上缩小。</p><p>这样导致的一个效果就是，上一轮被错误分类了的样本，在这一轮中，其对应的样本权重会被放大；而上一轮被正确分类了的样本，在这一轮中，其对应的样本权重会被缩小。随着基学习器的一轮轮迭代，AdaBoost会越来越把注意力集中到之前分类错误的样本上。这就是AdaBoost的第二个巧妙之处。</p><p>第6步：利用更新后得到的第2轮的样本权重再次训练得到第2个基分类器$T_2(x)$，由$T_2(x)$计算分类误差率$e_2$和投票权重$\alpha_2$，最终重复上述过程多次，总共可得到K个基分类器$T_1(x),T_2(2),…,T_k(x)$及其对应的投票权重$\alpha_1,\alpha_2,…,\alpha_k$，然后按照下式做集成：</p><script type="math/tex; mode=display">f(x)=arg\max_{c_i}\left [ \sum_{k=1}^{K} \alpha _kI(T_k(x)=c_i) \right ]   \tag{2.6}</script><p>上式表示让每个基分类器$T_k(x),(k=1,2,…,K)$对样本x进行一次带权投票，最后选出得票分数最大的类别$c_i$作为样本$x$的最终预测类别。这里$I$取所有$L$个类别$c_1,c_2,…,c_L$中的一个。实际上，当为二分类问题时，上式就等价于下面的形式：</p><script type="math/tex; mode=display">f(x)=sign(\sum_{k=1}^{K}\alpha _kT_k(x) ) \tag{2.7}</script><h2 id="2-2-SAMME-R算法"><a href="#2-2-SAMME-R算法" class="headerlink" title="2.2 SAMME.R算法"></a>2.2 SAMME.R算法</h2><p>第1步：先初始化数据的分布权重，采用平等对待的方式，即：</p><script type="math/tex; mode=display">D_1=(w_{11},w_{12},...,w_{1M}),w_{1i}=\frac{1}{M,i=1,2,...,M}\tag{2.8}</script><p>第2步：利用具有权重$D_1$的训练数据集，采用某个基本模型（可以是适合训练集数据类型的任意模型）进行训练，得到第一个基分类器$T_1(x)$。</p><p>第3步：利用，基分类器$T_1(x)$计算各训练集样本$x_i$属于各类别$c_m$的加权概率，即：</p><script type="math/tex; mode=display">p_{1i}^{l}=w_{1i}P(y_i=c_l|x_i),i=1,2,...,M,l=1,2,...,L \tag{2.9}</script><p>第4步：计算基分类器$T_1(x)$对样本$x_i$在第$l$个类别上的投票权重。</p><script type="math/tex; mode=display">a_1^{(l)}(x_i)=(L-1)(lnp_{1i}^{(l)}-\frac{1}{L}\sum_{l=1}^{L}lnp_{1i}^{(l)}),l=1,2,...,L \tag{2.10}</script><p>第5步：按照下式更新第二轮训练集的权重分布。</p><script type="math/tex; mode=display">D_2=(w_{21},w_{22},...,w_{2M})\tag{2.11}</script><p>其中:</p><script type="math/tex; mode=display">w_{2i}=w_{1i}\cdot exp(-\frac{L-1}{L}\sum_{l=1}^{L}\delta _i^{(l)}lnp_{1i}^{(l)}  ),i=1,2,...,M \tag{2.12}</script><script type="math/tex; mode=display">\delta _i^{(l)}=\left\{\begin{matrix} 1,y_i=c_l\\-\frac{1}{L-1},y_i\ne c_l \end{matrix}\right. \tag{2.13}</script><p>第6步：归一化训练集样本权重$D_2=(w_{21},w_{22},…,w_{2M})$，使得权重之和为1.</p><p>第7步：利用更新后得到的第2轮的样本权重再次训练第2个基分类器$T_2(x)$；由$T_2(x)$计算$p_{2i}^{(l)}$和$a_2^{(l)}(x_i)$，得到$D_3$；重复此过程，直到得到最终$K$个基分类器及$K$个基分类器所对应的$a_k^{(l)}(x_i),k=1,2,…,K,l=1,2,…,L$，并按照下式进行组合得到最终的多分类器：</p><script type="math/tex; mode=display">f(x)=arg\max_{c_l}[\sum_{k=1}^{K}a_k^{(l)}(x_i) ]  \tag{2.14}</script><h1 id="3-AdaBoost的回归问题"><a href="#3-AdaBoost的回归问题" class="headerlink" title="3 AdaBoost的回归问题"></a>3 AdaBoost的回归问题</h1><p>AdaBoost的回归问题与分类问题的过程及原理类似，只是在计算预测误差率时采用的方式不同，分类问题采用的是0-1损失，而回归问题一般采用平方和或指数误差来衡量误差率。进行基学习器集成时，分类问题采用的是按权重投票决定最终结果，而回归问题是取各基学习器预测结果乘以各自权重后的求和作为最终结果。</p><p>AdaBoost回归问题的处理过程如下：</p><p>输入：训练集$T=\left \{ (x_1,y_1),(x_2,y_2),…,(x_M,y_M) \right \} $。</p><p>输出：最终的集成模型$f(x)$。</p><p>步骤如下：</p><p>第1步：先初始化数据的分布权重，采用平等对待的方式，即：</p><script type="math/tex; mode=display">D_1=(w_{11},w_{12},...,w_{1M}),w_{1i}=\frac{1}{M,i=1,2,...,M}\tag{2.15}</script><p>第2步：利用具有权重$D_1$的训练数据集，采用某个基本模型（可以是适合训练集数据类型的任意模型）进行训练，得到第一个基分类器$T_1(x)$。</p><p>第3步：计算基分类器$T_1(x)$在训练集上的预测误差率$e_1$。</p><p>(a)先计算训练集上的最大误差:$E_1=max|y_i-T_1(x_i)|$</p><p>(b)再计算每个样本的相对误差$e_{1i},i=1,2,…,M$</p><p>(c)计算回归预测误差率:$e_1=\sum_{i=1}^{M}w_{1i}e_{1i} $</p><p>第4步：按下式计算基分类器$T_1(x)$的投票权重$\alpha_1$。</p><script type="math/tex; mode=display">\alpha_1=\frac{e_1}{1-e_1} \tag{2.16}</script><p>第5步：按下式更新第二轮训练集的权重分布：</p><script type="math/tex; mode=display">D_2=(w_{21},w_{22},...,w_{2M})\tag{2.17}</script><p>第6步：利用更新后得到的第2轮的样本权重再次训练一个基学习器，重复上述过程K次，得到K个基学习器$T_1(x),…,T_k(x)$及其对应的权重$\alpha_1,…,\alpha_k$，最后按照下式做集成：</p><script type="math/tex; mode=display">f(x)=\sum_{k=1}^{K}(ln\frac{1}{\alpha _k} )T_k(x)  \tag{2.18}</script><h1 id="4-总结"><a href="#4-总结" class="headerlink" title="4 总结"></a>4 总结</h1><p><strong>AdaBoost的优点：</strong></p><p>(1) 基学习器可以有多种选择，构建比较灵活。</p><p>(2) AdaBoost作为分了器时，分类精度较高，而且不容易发生过拟合。</p><p><strong>缺点：</strong></p><p>(1) AdaBoost对噪声比较敏感，因为异常样本在迭代中很可能会获得较高的权重。</p><p>(2) 由于各个基学习器之间存在强关联，不利于模型的并行化，因此在处理大数据时没有优势。</p>]]></content>
+      
+      
       <categories>
-        <category>人工智能</category>
-        <category>机器学习</category>
+          
+          <category> 人工智能 </category>
+          
+          <category> 机器学习 </category>
+          
       </categories>
-  </entry>
-  <entry>
-    <title>SVM算法原理</title>
-    <url>/2017/01/30/SVM%E7%AE%97%E6%B3%95%E5%8E%9F%E7%90%86/</url>
-    <content><![CDATA[<h1 id="1-硬间隔SVM"><a href="#1-硬间隔SVM" class="headerlink" title="1 硬间隔SVM"></a>1 硬间隔SVM</h1><h2 id="1-1-由感知机到SVM"><a href="#1-1-由感知机到SVM" class="headerlink" title="1.1 由感知机到SVM"></a>1.1 由感知机到SVM</h2><p>假设样本点是线性可分的，感知机模型的思想是：利用分割超平面$\vec{w}\cdot \vec{x}+b=0$将样本点划分为两类；假设存在误分类点，则通过使误分类点到分割超平面的距离最小来不断调整超平面，直到所有误分类点被纠正后迭代停止。</p>
-<p>感知机模型的表达式如下：</p>
-<script type="math/tex; mode=display">
-h(x)=sign(wx+b)=\left\{\begin{matrix} -1,
-  & wx+b<0 \\ 1,
-  & wx+b>0
-\end{matrix}\right. \tag{1.1}</script><p>由于初始的$w$和b的取值不同，因此最后得到的分割超平面也可能不同，所以感知机模型的分割超平面$wx+b=0$有多个。</p>
-<p>既然这样，那么能不能进一步找到一个最优的分割超平面呢？办法就是下面介绍的支持向量机(Support Vector Machines, SVM)模型。</p>
-<p>SVM模型和感知机模型一样，也是一种二分类模型，SVM的思想是：不仅要让样本点被分割超平面分开，还希望那些距离分割超平面最近的点到分割超平面的距离最大。</p>
-<h2 id="1-2-公式推导与求解"><a href="#1-2-公式推导与求解" class="headerlink" title="1.2 公式推导与求解"></a>1.2 公式推导与求解</h2><h3 id="1-2-1-公式推导"><a href="#1-2-1-公式推导" class="headerlink" title="1.2.1 公式推导"></a>1.2.1 公式推导</h3><p>假设样本点$(x_i, y_i)$到超平面$wx+b=0$的几何间距为$\gamma _i$，则：</p>
-<script type="math/tex; mode=display">
-\gamma _i=\frac{\left | wx_i+b \right | }{\left \| w \right \| }  \tag{1.2}</script><p>又因为$\left | y_i \right | =1$恒成立，且对于正确分类点$y_i\times (wx_i+b)&gt;0$恒成立，所以进一步有：</p>
-<script type="math/tex; mode=display">
-\gamma _i=\frac{\left | wx_i+b \right | }{\left \| w \right \| } =\frac{|y_i|\cdot  \left | wx_i+b \right | }{\left \| w \right \| }=\frac{ \left | y_i\cdot (wx_i+b) \right | }{\left \| w \right \| }=\frac{ y_i\cdot (wx_i+b)}{\left \| w \right \| } \tag{1.3}</script><p>取训练数据集T中距离超平面的最小几何间距$\min_{} \gamma _i,(i=1,2,…,M)$作为数据集T关于超平面$wx+b=0$的几何间距，记为$\gamma$，即：$\gamma=\min_{} \gamma _i,(i=1,2,…,M)$，按照SVM的思想，即需要求解以下优化问题：</p>
-<script type="math/tex; mode=display">
-\begin{align*}
- \max_{w,b}\gamma   & \\
- s.t. \gamma _i\ge \gamma , & i=1,2,...,M
-\end{align*} \tag{1.4}</script><p>即：</p>
-<script type="math/tex; mode=display">
-\begin{align*}
- \max_{w,b}\gamma   & \\
- s.t. \frac{ y_i\cdot (wx_i+b)}{\left \| w \right \| }\ge \gamma , & i=1,2,...,M
-\end{align*} \tag{1.5}</script><p>令：</p>
-<script type="math/tex; mode=display">
-\begin{align*}
-M=\frac{w}{||w||\gamma }  \\
-N=\frac{b}{||w||\gamma }
-\end{align*} \tag{1.6}</script><p>则约束条件为：$s.t. y_i(M\cdot x_i+N)\ge 1$，优化目标为$\gamma$最大，由：$||M||=\frac{||w||}{||w||\gamma }=\frac{1}{\gamma } $，因此最大化$\gamma$，即最小化$\frac{1}{2}||M||^2 $，则整个优化问题转化为：</p>
-<script type="math/tex; mode=display">
-\begin{align*}
-\min_{M,N} \frac{1}{2}||M||^2  \\
-s.t. y_i(Mx_i+N)\ge 1
-\end{align*} \tag{1.7}</script><p>重写为：</p>
-<script type="math/tex; mode=display">
-\begin{align*}
-\min_{w,b} \frac{1}{2}||2||^2  \\
-s.t. y_i(wx_i+b)\ge 1,i=1,2,...,M
-\end{align*} \tag{1.8}</script><p>这是一个含有不等式约束的凸二次规划问题，可以对其使用拉格朗日乘子法得到其对偶问题。</p>
-<h3 id="1-2-2-求最优解"><a href="#1-2-2-求最优解" class="headerlink" title="1.2.2 求最优解"></a>1.2.2 求最优解</h3><p>首先，我们将有约束条件的原始目标函数转换为无约束的新构造的拉格朗日目标函数：</p>
-<script type="math/tex; mode=display">
-L(w,b,\alpha )=\frac{1}{2}||w||^2 - {\textstyle \sum_{i=1}^{M}} \alpha _i(y_i(wx_i+b)-1) \tag{1.9}</script><p>其中$\alpha _i$为拉格朗日乘子，且$\alpha _i\ge 0$，令：$\theta (w)=\max_{\alpha _i\ge 0} L(w,b,\alpha )$，当样本点不满足约束条件时，即在可行解区域外：$y_i(wx_i+b)&lt;1$，此时，将$\alpha _i$设置为无穷大，则$\theta(w)$也为无穷大。</p>
-<p>当样本点满足约束条件时，即在可行解区域内：$y_i(wx_i+b)\ge1$，此时$\theta(w)$为原函数本身，于是，合并两种情况得到新的目标函数：</p>
-<script type="math/tex; mode=display">
-\theta (w)=\left\{\begin{matrix}
-\frac{1}{2}||w||^2,x\in 可行区域  \\
-+\propto ,x\in 不可行区域
-\end{matrix}\right. \tag{1.10}</script><p>原约束问题等价于：</p>
-<script type="math/tex; mode=display">
-\min_{w,b}\theta (w)=\min_{w,b}\max_{\alpha _i\ge 0}L(w,b,\alpha )=p^{\ast }   \tag{1.11}</script><p>新的目标函数先求最大值，再求最小值，这样的话首先要面对带有需要求解的参数$w$和$b$的方程，而$\alpha_i$又是不等式约束，求解过程不好做，所以我们需要使用拉格朗日函数对偶性，将最小和最大位置互换，得到：</p>
-<script type="math/tex; mode=display">
-\max_{\alpha _i\ge 0}\min_{w,b}L(w,b,\alpha )=d^{\ast }   \tag{1.12}</script><p>要有$p^{\ast }=d^{\ast }$，需要满足两个条件：</p>
-<p>1) 优化问题是凸优化问题；</p>
-<p>2) 满足KKT条件；</p>
-<p>本优化问题显然是一个凸优化问题，因此条件1满足，对于条件2，即要求：</p>
-<script type="math/tex; mode=display">
-\left\{\begin{matrix}
-\alpha _i\ge 0 \\
-y_i(wx_i+b)-1\ge 0 \\
-\alpha _i(y_i(wx_i+b)-1)=0
-\end{matrix}\right. \tag{1.13}</script><p>为了得到求解对偶问题的具体形式，令$L(w,b,\alpha)$对$w$和$b$求偏导为0，可得：</p>
-<script type="math/tex; mode=display">
-\begin{align*}
- w= {\textstyle \sum_{i=1}^{N}}\alpha _iy_ix_i \\
- {\textstyle \sum_{i=1}^{N}}\alpha _iy_i=0 
-\end{align*} \tag{1.14}</script><p>将式(1.14)代入拉格朗日目标函数，即式(1.9)，消去$w$和$b$得到：</p>
-<script type="math/tex; mode=display">\begin{aligned}
-L(w,b,\alpha )&=\frac{1}{2} {\textstyle \sum_{i=1}^{M}} {\textstyle \sum_{j=1}^{M}}\alpha _i\alpha _jy_iy_j(x_i\cdot x_j)- {\textstyle \sum_{i=1}^{M}}\alpha _iy_i(( {\textstyle \sum_{j=1}^{M}}\alpha _jy_jx_j)\cdot x_i+b)+ {\textstyle \sum_{i=1}^{M}}\alpha_i \\ &=-\frac{1}{2} {\textstyle \sum_{i=1}^{M}} {\textstyle \sum_{j=1}^{M}}\alpha _i\alpha _jy_iy_j(x_i\cdot x_j)+ {\textstyle \sum_{i=1}^{M}}\alpha _i         
-\end{aligned}\tag{1.15}</script><p>即：</p>
-<script type="math/tex; mode=display">
-\min_{w,b}L(w,b,\alpha ) =\min_{w,b} -\frac{1}{2} {\textstyle \sum_{i=1}^{M}} {\textstyle \sum_{j=1}^{M}}\alpha _i\alpha _jy_iy_j(x_i\cdot x_j)+ {\textstyle \sum_{i=1}^{M}}\alpha _i \tag{1.16}</script><p>求$\min_{w,b}L(w,b,\alpha )$对$\alpha$的极大，即是对偶问题：</p>
-<script type="math/tex; mode=display">
-\begin{align*}
- \max_{\alpha } -\frac{1}{2} {\textstyle \sum_{i=1}^{M}} {\textstyle \sum_{j=1}^{M}}\alpha _i\alpha _jy_iy_j(x_i\cdot x_j)+ {\textstyle \sum_{i=1}^{M}}\alpha _i \\
-s.t.    {\textstyle \sum_{i=1}^{M}}\alpha _iy_i=0  \\
-   \alpha _i \ge 0,i=1,2,...,N
-\end{align*} \tag{1.17}</script><p>把目标式子加一个负号，求解最大转换为求解最小:</p>
-<script type="math/tex; mode=display">
-\begin{align*}
- \min_{\alpha } \frac{1}{2} {\textstyle \sum_{i=1}^{M}} {\textstyle \sum_{j=1}^{M}}\alpha _i\alpha _jy_iy_j(x_i\cdot x_j)- {\textstyle \sum_{i=1}^{M}}\alpha _i \\
-s.t.    {\textstyle \sum_{i=1}^{M}}\alpha _iy_i=0  \\
-   \alpha _i \ge 0,i=1,2,...,N
-\end{align*} \tag{1.18}</script><p>现在我们的优化问题变成了公式(1.18)，对于这个问题，有更高效的优化算法，即序列最小优化（SMO）算法，通过SMO算法可以得到$\alpha ^{\ast } $ ，在根据$\alpha ^{\ast } $可以求解出$w$和$b$，进而求得最初的目标：找到最优决策平面。</p>
-<p>前面的推导都是基于KKT条件成立的假设进行的，KKT条件如下：</p>
-<script type="math/tex; mode=display">
-\left\{\begin{matrix}
- \alpha _i\ge 0\\
- y_i(w_i\cdot x_i+b)-1\ge 0\\
- \alpha _i(y_i(w_i\cdot x_i+b)-1)=0
-\end{matrix}\right. \tag{1.19}</script><p>另外根据前面的推导，下面公式成立：</p>
-<script type="math/tex; mode=display">
-\begin{align*}
- w= {\textstyle \sum_{i=1}^{M}}\alpha _iy_ix_i \\
- {\textstyle \sum_{i=1}^{M}}\alpha _iy_i=0 
-\end{align*} \tag{1.20}</script><p>由此可知，在$\alpha ^{\ast } $中，至少存在一个$\alpha _j ^{\ast }&gt;0$(若全为0，则$w=0$，矛盾)，对此$j$有：$y_j(w^*\cdot x_j+b^{\ast })-1=0$，因此得到：</p>
-<script type="math/tex; mode=display">
-w^{\ast }= {\textstyle \sum_{i=1}^{M}}\alpha _i^{\ast }y_ix_i</script><script type="math/tex; mode=display">
-b^{\ast }= y_j-{\textstyle \sum_{i=1}^{M}}\alpha _i^{\ast }y_i(x_i \cdot x_j) \tag{1.21}</script><p>对于任意训练样本$(x_i,y_i)$，总有$\alpha_i=0$<br>或者$y_j(wx_j+b)=1$,。若$\alpha_i=0$，则该样本不会再最后求解模型参数的式子中出现，若$\alpha_i&gt;0$，则必有$y_j(wx_j+b)=1$，所对应的样本点位于最大间隔边界上，是一个支持向量，这显示出SVM的一个重要特性：训练完成后，大部分的训练样本都不需要保留，最终模型只跟支持向量相关。</p>
-<h3 id="1-2-3-小结"><a href="#1-2-3-小结" class="headerlink" title="1.2.3 小结"></a>1.2.3 小结</h3><p>总结一下线性可分SVM模型的过程：</p>
-<p>输入：</p>
-<p>线性可分训练集$T=\left \{ (x_1,y_1),(x_2,y_2),…,(x_M,y_M) \right \} $，且$y_i \in\left \{ -1,1 \right \} ,i=1,2,…,M$。</p>
-<p>输出：</p>
-<p>分割超平面$wx+b=0$和分类决策函数$h(x)=sign(wx+b)$。</p>
-<p>步骤如下：</p>
-<p>第1步：构造约束优化问题：</p>
-<script type="math/tex; mode=display">
-\begin{align*}
- \min_{\alpha } \frac{1}{2} {\textstyle \sum_{i=1}^{M}} {\textstyle \sum_{j=1}^{M}}\alpha _i\alpha _jy_iy_j(x_i\cdot x_j)- {\textstyle \sum_{i=1}^{M}}\alpha _i \\
-s.t.    {\textstyle \sum_{i=1}^{M}}\alpha _iy_i=0  \\
-   \alpha _i \ge 0,i=1,2,...,N
-\end{align*} \tag{1.22}</script><p>第2步：利用SMO算法求解上面的优化问题，得到$\alpha$向量的值$\alpha ^\ast $；</p>
-<p>第3步：利用公式1.21计算$w$向量的值$w ^\ast $；</p>
-<p>第4步：找到满足$\alpha _{s}^{\ast } &gt;0$对应的支持向量点$(x_s,y_s),s=1,2,…,S$，利用公式1.21计算$b^{\ast }$；</p>
-<p>第5步：由$w ^\ast $和$b^{\ast }$得到分割超平面$w^{\ast }x+b^{\ast }=0$和分类决策函数$h(x)=sign(w^{\ast }x+b^{\ast })$。</p>
-<h1 id="2-软间隔SVM"><a href="#2-软间隔SVM" class="headerlink" title="2 软间隔SVM"></a>2 软间隔SVM</h1><p>硬间隔SVM模型虽然比感知机具有更好的鲁棒性，但其前提是要求样本数据点线性可分，在实际问题中，不同类别的样本点可能会存在混叠，针对这种情况，可以通过增加松弛因子来解决。</p>
-<p>线性可分SVM模型的原始优化问题为公式(1.8)，考虑到实际情况下存在样本混叠，所以为每一个样本点$(x_i,y_i)$增加一个对应的松弛变量$\xi _i,\xi _i\ge 0$，则约束条件变为：$y_i(wx_i+b)\ge 1-\xi_i,i=1,2,…,M$，因为$1-\xi_i\le1$，所以这相当于在原来的基础上对每个样本点$(x_i,y_i)$降低了限制要求，这个特权可以随便给吗？显然不行，如果只是给予各个样本点特权而不对其进行适当的约束，那么这个模型之前建立的约束就变得毫无意义了，所以SVM模型采取的措施是：每个样本点在软间隔里面享受了优惠，对应的就要在优化问题里面接受惩罚，具体就是在优化目标里面加上一个惩罚项$c\xi_i$，所以原来的优化问题变为：</p>
-<script type="math/tex; mode=display">
-\min_{w,b}\frac{1}{2}||w||^2 +c\sum_{i=1}^{M}\xi _i   \tag{2.1}</script><p>约束条件：</p>
-<script type="math/tex; mode=display">\begin{align*}
- s.t. y_i(wx_i+b)\ge 1-\xi_i \\
-\xi _i\ge 0,i=1,2,...,M
-\end{align*}</script><p>其中$c&gt;0$是一个惩罚参数。</p>
-<p>采取跟硬间隔SVM类似的步骤，先将优化问题(2.1)转换为对偶优化问题，然后依次求解出拉格朗日乘子向量、权重向量$w$和偏置常数b，得到分割超平面和分类决策函数。</p>
-<h1 id="3-合页损失函数"><a href="#3-合页损失函数" class="headerlink" title="3 合页损失函数"></a>3 合页损失函数</h1><p>硬间隔SVM和软间隔SVM都叫做线性SVM，是一种线性模型，线性SVM还有另外一种解释，就是最小化如下目标函数：</p>
-<script type="math/tex; mode=display">
-\min_{w,b}\sum_{i=1}^{M}[1-y_i(wx_i+b)]_{+}+\lambda ||w||^2 \tag{3.1}</script><p>式中第一项$[1-y_i(wx_i+b)]_{+}$称为合页损失函数，如:</p>
-<script type="math/tex; mode=display">
-[z]_{+}=\left\{\begin{matrix}
- z,z>0\\
-0,z\le 0
-\end{matrix}\right.\tag{3.2}</script><p>第二项是正则化项。</p>
-<p>由公式3.2可知:</p>
-<script type="math/tex; mode=display">
-[1-y_i(wx_i+b)]_{+}=\left\{\begin{matrix}
- 1-y_i(wx_i+b),y_i(wx_i+b)<1\\
-0,y_i(wx_i+b)\ge 1
-\end{matrix}\right. \tag{3.3}</script><p>当样本点$(x_i,y_i)$被正确分类且函数间隔$y_i(wx_i+b)$大于1时，损失是0，否则损失是$1-y_i(wx_i+b)$。</p>
-<p>令$[1-y_i(wx_i+b)]_{+}=\xi_i$，则$\xi_i\ge0$成立，且有：</p>
-<p>1) 当$1-y_i(wx_i+b)&gt;0$时，有$y_i(wx_i+b)=1-\xi_i$；</p>
-<p>2) 当$1-y_i(wx_i+b)\le0$时，有$\xi_i=0$，即$y_i(wx_i+b)\ge1-\xi_i$；</p>
-<p>综合1)和2)可知$y_i(wx_i+b)\ge1-\xi_i$恒成立。</p>
-<p>进一步，取$\lambda=\frac{1}{2c}$，则公式(3.1)等价于如下约束优化问题：</p>
-<script type="math/tex; mode=display">
-\min_{w,b,\xi } \frac{1}{c}(\frac{1}{2}||w||^2+c\sum_{i=1}^{M}\xi _i  )  \tag{3.4}</script><p>约束条件：</p>
-<script type="math/tex; mode=display">
-\begin{align*}
-s.t. y_i(wx_i+b)\ge 1-\xi _i,i=1,2,...,M \\
-\xi _i\ge 0,i=1,2,...,M
-\end{align*}</script><p>公式(3.4)就是前面软间隔支持向量机模型的原始最优化问题，即公式(2.1)。</p>
-<p>即软间隔SVM模型的原始最优化问题等价于最小化合页损失，从损失函数的角度证明了线性SVM模型的合理性。</p>
-<h1 id="4-非线性SVM"><a href="#4-非线性SVM" class="headerlink" title="4 非线性SVM"></a>4 非线性SVM</h1><p>对于输入空间中的非线性问题，可以通过非线性变换将它转换为某个维度特征空间中的线性分类问题，在高维特征空间中学习线性SVM。由于线性SVM学习的对偶问题里，目标函数和分类决策函数都只涉及实例和实例之间的内积，所以不需要显示指定非线性变换，而是用核函数替换当中的内积。核函数表示，通过一个非线性变换后的两个实例健的内积，具体地，$K(x,z)$是一个函数，或正定核，意味着存在一个从输入空间到特征空间的映射$\phi (x)$，对任意输入空间中的$x,z$，有：$K(x,z)=\phi(x)\cdot\phi(z)$，在线性SVM学习的对偶问题中，用核函数$K(x,z)$替代内积，求解得到的就是非线性SVM：</p>
-<script type="math/tex; mode=display">
-f(x)=sign(\sum_{i=1}^{M}\alpha _i^\ast y_iK(x,x_i)+b^\ast  ) \tag{4.1}</script><p>综合以上讨论，可以得到非线性SVM的学习算法如下：</p>
-<p>输入：</p>
-<p>训练数据集$T=\left \{ (x_1,y_1),(x_2,y_2),…,(x_M,y_M) \right \} ,其中y_i\int \left \{ +1,-1 \right \} ,i=1,2,…,M$；</p>
-<p>输出：分离超平面和分类决策函数；</p>
-<p>1) 选择适当的核函数$K(x,z)$和惩罚参数$c&gt;0$，构造并求解凸二次规划问题:</p>
-<script type="math/tex; mode=display">
-\min_{\alpha }\frac{1}{2}\sum_{i=1}^{M}\sum_{j=1}^{M}\alpha _i\alpha _jy_iy_jK(x_i,x_j)-\sum_{i=1}^{M}\alpha _i</script><p>约束条件：</p>
-<script type="math/tex; mode=display">
-\begin{align*}
-s.t. \sum_{i=1}^{M}\alpha _iy_i=0  \\
-0\le \alpha _i\le c,i=1,2,...,M
-\end{align*}</script><p>2) 计算</p>
-<p>选择$\alpha ^\ast $的一个分量$\alpha_j ^\ast $满足条件$0 &lt; \alpha_j ^\ast &lt; c$，计算$b^\ast =y_j-\sum_{i=1}^{M}\alpha _i^\ast  y_iK(x_i,x_j)$</p>
-<p>3) 得到分类决策函数，即公式(4.1)。</p>
-]]></content>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>随机森林算法原理</title>
+      <link href="2017/02/07/%E9%9A%8F%E6%9C%BA%E6%A3%AE%E6%9E%97%E7%AE%97%E6%B3%95%E5%8E%9F%E7%90%86/"/>
+      <url>2017/02/07/%E9%9A%8F%E6%9C%BA%E6%A3%AE%E6%9E%97%E7%AE%97%E6%B3%95%E5%8E%9F%E7%90%86/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>&ensp;&ensp;&ensp;&ensp;Bagging模型的代表作是大名鼎鼎的随机森林(Random Forest, RF)。RF默认采用CART作为基学习器，而且它在Bagging模型的基础上再进一步，每次训练基学习器时，除了样本随机采样外，对样本的特征也进行随机采样。</p></blockquote><p>如图所示：</p><p><img src="/images/AI/随机森林/1.JPG" alt=""></p><p>&ensp;&ensp;&ensp;&ensp;由于采用的是CART，所以RF既可以用来做分类，也可以用来回归。RF用来分类时使用CART分类树作为基学习器，最后的投票结果是取票数最多的类别作为最终的预测结果；RF用来回归时使用CART回归树作为基学习器，最后的预测结果采用所有CART回归树的预测值的均值。</p><p>&ensp;&ensp;&ensp;&ensp;由于RF每次都是对样本及样本的特征进行随机采样来训练基学习器，因此泛化能力较强。</p><p><strong>总结：</strong></p><p>&ensp;&ensp;&ensp;&ensp;树模型本身具有较强的非线性拟合能力，在分类和回归问题中都表现得比较出色，而RF是将多棵CART树进行集成，使其功能更加强大，RF每次都是通过随机抽取训练样本中的一部分样本和随机选择被抽取样本的一部分特征进行单个基模型的训练，一方面增强了模型的泛化能力，另一方面各个模型的训练过程都是相互独立的，可以并行进行。</p><p><strong>优点：</strong></p><p>(1)RF各个基学习器之间没有强关联，因此学习过程可以分开，实现并行化。</p><p>(2)由于RF每次训练时，各个基学习器只是抽取样本的部分特征进行训练，因此对于样本特征维度很高的情况，RF仍能高校地训练模型。</p><p>(3)由于RF的每个基学习器只是随机抽取部分样本和部分特征进行学习，因此模型的泛化能力较强。</p><p>(4)由于RF采用的基学习器是CART决策树，而CART决策树对缺失值不敏感，因此RF对部分特征确实也不敏感。</p><p>(5)RF训练模型后可以顺便输出各个特征对预测结果的重要性，因此可以辅助进行特征选择。</p><p><strong>缺点：</strong></p><p>RF的基学习器采用了决策树模型，而决策树模型的一个缺点似乎对噪声比较敏感，所以RF在某些噪声较大的样本集上容易产生过拟合。</p>]]></content>
+      
+      
       <categories>
-        <category>人工智能</category>
-        <category>机器学习</category>
+          
+          <category> 人工智能 </category>
+          
+          <category> 机器学习 </category>
+          
       </categories>
-  </entry>
-  <entry>
-    <title>朴素贝叶斯算法原理</title>
-    <url>/2017/01/21/%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF%E7%AE%97%E6%B3%95%E5%8E%9F%E7%90%86/</url>
-    <content><![CDATA[<blockquote>
-<p>&ensp;&ensp;&ensp;&ensp;朴素贝叶斯是一个基于贝叶斯定理和特征条件独立假设的分类方法，属于生成模型。<br>&ensp;&ensp;&ensp;&ensp;特征的条件独立假设指的是：假设训练集第$i$个样本$x_i$的$M$个特征${x_i}^{(1)},{x_i}^{(2)},…,{x_i}^{(M)}$彼此之间相互独立，基于条件独立假设，可以求出输入-输出的联合概率$P(x,y)$，然后对于新的输入$x_i$，利用贝叶斯定理求出后验概率$p(y_i|x_i)$，即该对象属于某一类的概率，然后选择具有最大后验概率的类作为该对象所属的类别。</p>
-</blockquote>
-<h1 id="1-算法原理"><a href="#1-算法原理" class="headerlink" title="1. 算法原理"></a>1. 算法原理</h1><p>&ensp;&ensp;&ensp;&ensp;给定训练集$T={(x_1,y_1),(x_2,y_2),…,(x_n,y_n)}$，我们可以知道分类结果$y_i$的种类，假设一共有K种，用$c_1,c_2,…,c_K$表示，则先验概率分布$p(y=c_k)$和$p(x=x_i|y=c_k)$是可以先求出来的， 我们的目标是求后验概率分布$p(y=c_k|x=x_i)$。</p>
-<p>由条件概率公式可知：</p>
-<script type="math/tex; mode=display">
-p(y=c_k|x=x_i)=\frac{p(x=x_i,y=c_k)}{p(x=x_i)} \tag{1.1}</script><p>由乘法公式：</p>
-<script type="math/tex; mode=display">
-p(x=x_i,y=c_k)=p(x=x_i|y=c_k)p(y=c_k) \tag{1.2}</script><p>由全概率公式：</p>
-<script type="math/tex; mode=display">
-p(x=x_i)=\sum_{k=1}^{K} p(x=x_i|y=c_k)\times p(y=c_k) \tag{1.3}</script><p>从而得到贝叶斯定理：</p>
-<script type="math/tex; mode=display">
-p(y=c_k|x=x_i)=\frac{p(x=x_i|y=c_k)\times p(y=c_k)}{ {\textstyle \sum_{k=1}^{K}p(x=x_i|y=c_k)\times p(y=c_k)} } \tag{1.4}</script><p>根据特征条件独立假设，即假设样本中各个特征之间是相互独立的，则有:</p>
-<script type="math/tex; mode=display">\begin{aligned}
-p(x=x_i|y=c_k)&=p(x^{(1)}={x_i}^{(1)},x^{(2)}={x_i}^{(2)},...,x^{(N)}={x_i}^{(N)})\\ &=p(x^{(1)}={x_i}^{(1)}|y=c_k)\cdot p(x^{(2)}={x_i}^{(2)}|y=c_k)\cdot ...\cdot p(x^{(N)}={x_i}^{(N)}|y=c_k)\\ &= \prod_{j=1}^{N}p(x^{(j)}={x_i}^{(j)}|y=c_k) 
-\end{aligned} \tag{1.5}</script><p>得到后验概率的完整表达式:</p>
-<script type="math/tex; mode=display">
-p(y=c_k|x=x_i)=\frac{p(y=c_k)\cdot  {\textstyle \prod_{j=1}^{N}}p(x^{j}={x_i}^{(j)}|y=c_k) }{ {\textstyle \sum_{k=1}^{K}[p(y=c_k)\cdot  {\textstyle \prod_{j=1}^{N}p(x^{(j)}={x_i}^{(j)}|y=c_k)} ]} } \tag{1.6}</script><p>公式1.6即是朴素贝叶斯分类的基本公式，当需要判定输入样本$x_i$的分类类别时，只需一次计算在样本$x_i$条件下$y_i$属于各类别$c_1,c_2,…,c_k$的条件概率$p(y=c_k|x=x_i),k=1,2,…,K$的大小，然后选择该条件概率最大的对应的类别作为预测的分类。</p>
-<h1 id="2-算法实例"><a href="#2-算法实例" class="headerlink" title="2. 算法实例"></a>2. 算法实例</h1><p>&ensp;&ensp;&ensp;&ensp;结合具体的实例来看一下朴素贝叶斯分类的应用过程。</p>
-<p>在实际应用中$x=x_i$代表“具有某些特征”，$y=c_k$代表“属于某类别”，我们要求$p(y=c_k|x=x_i)$，即已知某个样本具有某些特征的条件下，求具有这些特征的样本数据各个类别的概率，即$p(“属于某类别”|“具有某些特征”)$，根据贝叶斯公式：</p>
-<script type="math/tex; mode=display">\begin{aligned}
-p(“属于某类别”|“具有某些特征”) &= \frac{p(“具有某些特征”|“属于某类别”)|p(“属于某类别”)}{p(“具有某些特征”)}\\ &= \frac{p(“属于某类别”) {\textstyle \prod_{j=1}^{N}p(“具有特征j”|“属于某类别”)} }{p(“具有某些特征”)}  
-\end{aligned}\tag{2.1}</script><p>以常见的垃圾邮件识别为例，假设现在有10000封邮件，事先已经人为标记为“垃圾邮件”和“非垃圾邮件”两大类，其中“垃圾邮件”3000封，“非垃圾邮件”7000封，我们的任务是，基于这10000封邮件，运用朴素贝叶斯模型，预测新邮件是否为垃圾邮件。</p>
-<p><strong>第1步：分词</strong></p>
-<p>对训练集，即10000封邮件，每封邮件的内容进行分词，比如邮件内容“机器学习算法介绍”，分词后可能得到：“机器学习”，“算法”，“介绍”，分好的词按类别混合在一起，得到“词袋”。</p>
-<p><strong>第2步：统计</strong></p>
-<p>统计词袋中各个词在各个类别下出现的概率，比如统计3000封垃圾邮件中，“机器学习”这个词出现的概率：</p>
-<script type="math/tex; mode=display">
-p(“机器学习”|“垃圾邮件”)=\frac{N_{kj}}{N_K} \tag{2.2}</script><p>其中$N_k$表示该类别中包含的总邮件文本数目，$N_{kj}$表示该类别中“机器学习”这个词的邮件文本数目。</p>
-<p><strong>第3步：预测</strong></p>
-<p>对于新邮件，对其进行分词后，建设得到M个词，word1,word2,…,wordM，则要计算：</p>
-<script type="math/tex; mode=display">\begin{aligned}
-p(“垃圾邮件”|“word1”,“word2”,...,“wordM”)\\ =\frac{p(“word1”,“word2”,...,“wordM”|“垃圾邮件”)\times p(“垃圾邮件”)}{p(“word1”,“word2”,...,“wordM”)}
-\end{aligned}  \tag{2.3}</script><p>和</p>
-<script type="math/tex; mode=display">\begin{aligned}
-p(“非垃圾邮件”|“word1”,“word2”,...,“wordM”)\\ =\frac{p(“word1”,“word2”,...,“wordM”|“非垃圾邮件”)\times p(“非垃圾邮件”)}{p(“word1”,“word2”,...,“wordM”)}
-\end{aligned} \tag{2.4}</script><p>由于分母是一样的，所以比较分子大的作为最终预测的分类。根据训练集，p(“垃圾邮件”)和p(“非垃圾邮件”)基于统计可以计算得到，而根据特征条件独立，有：</p>
-<script type="math/tex; mode=display">\begin{aligned}
-p(“word1”,“word2”,...,“wordM”|“垃圾邮件”)\\ =p(“word1”|“垃圾邮件”)p(“word2”|“垃圾邮件”),...,p(“wordM”|“垃圾邮件”)
-\end{aligned} \tag{2.5}</script><p>$p(”wordi“|”垃圾邮件“)$即各个特征词的条件概率，基于词袋统计也可以计算得到，从而代入公式2.3和2.4即可比较新邮件属于不同类别的概率大小。</p>
-]]></content>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>集成学习</title>
+      <link href="2017/02/05/%E9%9B%86%E6%88%90%E5%AD%A6%E4%B9%A0/"/>
+      <url>2017/02/05/%E9%9B%86%E6%88%90%E5%AD%A6%E4%B9%A0/</url>
+      
+        <content type="html"><![CDATA[<p>&ensp;&ensp;&ensp;&ensp;集成学习的核心思想是将若干个个体学习器以一定策略结合起来，最终形成一个强学习器，以达到博采众长的目的。所以集成学习需要解决的核心问题主要有两点：1)如果得到若干个个体基学习器，2)以什么策略把这些个体基学习器结合起来。</p><p><strong>关于基学习器</strong></p><blockquote><p>可以采用相同类别，也可以采用不同类别；<br>各个即学习器之间可以有关联，也可以无关联；</p></blockquote><p><strong>关于组合策略</strong></p><blockquote><p>可以采用均等投票机制或者采用权重投票机制;</p></blockquote><p>根据以上几点不同，集成学习衍生出两类比较流行的方式，即Bagging模型和Boosting模型。</p><p><strong>Bagging模型：</strong></p><blockquote><p>Bagging模型的核心思想是每次同类别、彼此之间无强关联的基学习器，以均等投票机制进行基学习器的组合。</p></blockquote><p>具体方式是：从训练集样本中随机抽取一部分样本，采用任意一个适合样本数据的机器学习模型（如决策树模型或者Logistic回归模型）对该样本进行训练，得到一个训练好的基学习器；然后再次抽取样本，训练一个基学习器；重复指定的次数，得到多个基学习器，接着让每个基学习器对目标进行预测，得到一个预测结果，最后以均等投票的方式，采用少数服从多数的原则确定最后的预测结果。</p><p>需要注意的是，Bagging模型每次对样本数据的采样是有放回的，这样每次采样的数据可能会包含部分前面采样的数据。</p><p><strong>Boosting模型：</strong></p><blockquote><p>与Bagging模型不同，Boosting模型的各个基学习器之间存在强关联，即后面的基学习器是建立在它之前的基学习器的基础上的，Boosting模型的代表是提升算法(AdaBoost)，更具体的是提升树(Boosting Tree)，而提升树比较优秀的实现模型是梯度提升树(GBDT和XGBoost)。</p></blockquote>]]></content>
+      
+      
       <categories>
-        <category>人工智能</category>
-        <category>机器学习</category>
+          
+          <category> 人工智能 </category>
+          
+          <category> 机器学习 </category>
+          
       </categories>
-  </entry>
-  <entry>
-    <title>线性回归算法原理</title>
-    <url>/2017/01/15/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E7%AE%97%E6%B3%95%E5%8E%9F%E7%90%86/</url>
-    <content><![CDATA[<h1 id="1-问题引入"><a href="#1-问题引入" class="headerlink" title="1. 问题引入"></a>1. 问题引入</h1><p>&ensp;&ensp;&ensp;&ensp;回归分析是一种预测性建模技术，主要用来研究因变量$y_i$和自变量$x_i$之间的关系，通常被用于预测分析、时间序列等。</p>
-<p>&ensp;&ensp;&ensp;&ensp;假设特征和结果满足线性关系，则线性回归的目标就是用一条直线去拟合样本点，当新的样本数据进来时，根据拟合的直线去预测新样本的结果。</p>
-<h1 id="2-线性回归模型"><a href="#2-线性回归模型" class="headerlink" title="2. 线性回归模型"></a>2. 线性回归模型</h1><h2 id="2-1-模型建立"><a href="#2-1-模型建立" class="headerlink" title="2.1 模型建立"></a>2.1 模型建立</h2><p>&ensp;&ensp;&ensp;&ensp;假设南京的房价与房屋的特征满足线性回归模型，我们用$x(1),x(2),…x(N)$表示影响房子价格的特征因素，如面积、房子朝向、地理位置等，房子价格为$h(x)$，是一个由变量$x_i$共同决定的函数，由于不同的因素对房屋价格的影响程度是不同的，所以给每项特征因素赋予一个权重$w(j)$，则得到因变量与自变量之间的函数表达式：</p>
-<script type="math/tex; mode=display">h\left ( x \right ) =w_{1}x^{\left ( 1 \right ) } +w_{2}x^{\left ( 2 \right ) }+...+w_{N}x^{\left ( N \right ) } + b</script><p>写成矩阵的形式，即向量$w=\left ( w_1,w_2,…w_n \right ) $是由各个向量权重组成的，向量$x=\left (x ^{\left ( 1 \right ) } ,x ^{\left ( 2 \right ) },…,x ^{\left ( N \right ) } \right ) $是某个样本数据的特征向量；$b$为偏置常数，则：</p>
-<script type="math/tex; mode=display">h\left ( x \right ) =wx+b</script><p>那么机器学习的任务就是从过去的经验数据中，学习权重系数$w$和偏置常数$b$的最优值，使得回归模型对房子价格预测最准。</p>
-<h2 id="2-2-学习策略"><a href="#2-2-学习策略" class="headerlink" title="2.2 学习策略"></a>2.2 学习策略</h2><p>&ensp;&ensp;&ensp;&ensp;选择合适的策略来学习最优的权重系数$w$和偏置常数$b$。对于回归问题，我们可以使用最小均方误差损失来描述模型的好坏：</p>
-<script type="math/tex; mode=display">L\left ( w,b \right ) =\frac{1}{2} \sum_{i=1}^{M}\left [ h\left ( x_{i};w;b \right ) -y_{i} \right ]^{2}</script><p>其中$ h\left ( x_{i};w;b \right )$是对样本数据$x_{i}$的预测值，$y_{i}$是样本数据$x_{i}$的真实值，样本总数为$M$，$w$是各个特征权重组成的向量，$b$是偏置常数。</p>
-<p>当上面的损失函数$L(w,b)$取最小值时，意味着所有样本的预测值和实际值之间的差距是最小的，这时候相当于我们模型的预测效果是最好的。</p>
-<p>所以我们的策略就是最小化上面的损失函数：</p>
-<script type="math/tex; mode=display">\min_{w,b}L\left ( w,b \right )  =\min_{w} \frac{1}{2} \sum_{i=1}^{M}\left [ h\left ( x_{i};w;b \right ) -y_{i} \right ]^{2}</script><p>通过求解上面的最优化问题，我们可以得到其中的待定参数$w_j$和偏置常数$b$的值。</p>
-<h2 id="2-3-优化算法"><a href="#2-3-优化算法" class="headerlink" title="2.3 优化算法"></a>2.3 优化算法</h2><p>&ensp;&ensp;&ensp;&ensp;针对上述的优化问题，可以使用常用的梯度下降算法来求解，对损失函数求偏导：</p>
-<script type="math/tex; mode=display">\begin{aligned}
-\frac{\partial }{\partial w}L(w,b) &= \frac{\partial }{\partial w}  \left [ \frac{1}{2} \sum_{i=1}^{M} \left [ h\left ( x_i;w;b \right ) -y_i \right ]^2 \right ]\\ &=2\cdot \frac{1}{2}\cdot \left [ h\left ( x_i;w;b \right ) -y_i \right ]\cdot \frac{\partial }{\partial w} \left [ h\left ( x_i;w;b \right ) -y_i \right ]\\ &=\left ( wx_i+b-y_i \right )\cdot \frac{\partial }{\partial w} \left ( wx_i+b-y_i \right )\\ &=\left ( wx_i+b-y_i \right )x_i
-\end{aligned}</script><script type="math/tex; mode=display">\begin{aligned}
-\frac{\partial }{\partial b}L(w,b) &= \frac{\partial }{\partial b}\left [ \frac{1}{2}\sum_{i=1}^{M} \left [ h(x_i;w;b) -y_i \right ]^2   \right ]\\ &=2\cdot \frac{1}{2}\cdot \left [ h(x_i;w;b) -y_i\right ]\cdot \frac{\partial }{\partial b} \left [ h(x_i;w;b) -y_i \right ]\\ &= (wx_i+b-y_i)\cdot \frac{\partial }{\partial b}(wx_i+b-y_i)\\ &= (wx_i+b-y_i)
-\end{aligned}</script><p>所以得到权重系数向量$w$和偏置常数$b$的更新公式为：</p>
-<script type="math/tex; mode=display">\begin{aligned}
-w\longleftarrow w-\eta \cdot \frac{\partial }{\partial w}L(w,b)  =w-\eta (wx_i+b-y_i)x_i
-\end{aligned}</script><script type="math/tex; mode=display">
-b\longleftarrow b-\eta \cdot \frac{\partial }{\partial b}L(w,b)  =b-\eta (wx_i+b-y_i)</script><p>其中$0&lt; \eta &lt;1$是学习率，这样通过迭代可以使损失函数以较快的速度不断减小，直到满足要求。</p>
-<h1 id="3-算法流程与实现"><a href="#3-算法流程与实现" class="headerlink" title="3. 算法流程与实现"></a>3. 算法流程与实现</h1><h2 id="3-1-算法流程"><a href="#3-1-算法流程" class="headerlink" title="3.1 算法流程"></a>3.1 算法流程</h2><p>输入：训练集$T={(x_1,y_1),(x_2,y_2),…,(x_N,y_N)}$，学习率$\eta$。</p>
-<p>输出：线性回归模型$h(x)=wx+b$；</p>
-<p>步骤如下：</p>
-<p>第1步：选取初始向量$w$和偏置常数$b$。</p>
-<p>第2步：基于训练集进行参数更新:</p>
-<script type="math/tex; mode=display">\begin{aligned}
-w\longleftarrow w-\eta \cdot \frac{\partial }{\partial w}L(w,b)  =w-\eta (wx_i+b-y_i)x_i
-\end{aligned}</script><script type="math/tex; mode=display">
-b\longleftarrow b-\eta \cdot \frac{\partial }{\partial b}L(w,b)  =b-\eta (wx_i+b-y_i)</script><p>第3步：重复步骤2，直至模型满足训练要求。</p>
-<h2 id="3-2-算法实现"><a href="#3-2-算法实现" class="headerlink" title="3.2 算法实现"></a>3.2 算法实现</h2><p><strong>任务描述：</strong></p>
-<p>使用波士顿房价预测，波士顿房价数据与1978年开始统计，共包含506个样本数据点，每个样本都涵盖房屋的13种特征信息和对应的房屋价格，特征情况如下表所示：</p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th>特征值</th>
-<th>特征说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>ZN</td>
-<td>住宅用地所占比例</td>
-</tr>
-<tr>
-<td>INDUS</td>
-<td>城镇中非商业用地所占比例</td>
-</tr>
-<tr>
-<td>NOX</td>
-<td>环保指标</td>
-</tr>
-<tr>
-<td>RM</td>
-<td>每栋住宅的房间数</td>
-</tr>
-<tr>
-<td>AGE</td>
-<td>1940年以前建成的自住单位比例</td>
-</tr>
-<tr>
-<td>RAD</td>
-<td>距离高速公路的便利指数</td>
-</tr>
-<tr>
-<td>TAX</td>
-<td>每一万美元的不动产税率</td>
-</tr>
-<tr>
-<td>LSTAT</td>
-<td>房东属于低收入阶层的比例</td>
-</tr>
-<tr>
-<td>MEDV</td>
-<td>自住房屋房价的中位数</td>
-</tr>
-<tr>
-<td>…</td>
-<td>…</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p><strong>代码实现：</strong><br><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 1. 数据加载</span></span><br><span class="line"><span class="keyword">from</span> sklearn.datasets <span class="keyword">import</span> load_boston</span><br><span class="line">boston = load_boston()</span><br><span class="line">X = boston.data</span><br><span class="line">y = boston.target</span><br><span class="line">print(X.shape)</span><br><span class="line">print(y.shape)</span><br><span class="line"><span class="comment"># 2. 划分数据集</span></span><br><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> train_test_split</span><br><span class="line">X_train,X_test,y_train,y_test = train_test_split(X,y,train_size=<span class="number">0.7</span>)</span><br><span class="line"><span class="comment"># 3. 数据标准化</span></span><br><span class="line"><span class="keyword">from</span> sklearn <span class="keyword">import</span> preprocessing</span><br><span class="line">standard_X = preprocessing.StandardScaler()</span><br><span class="line">X_train = standard_X.fit_transform(X_train)</span><br><span class="line">X_test = standard_X.transform(X_test)</span><br><span class="line">standard_y = preprocessing.StandardScaler()</span><br><span class="line">y_train = standard_y.fit_transform(y_train.reshape(-<span class="number">1</span>,<span class="number">1</span>))</span><br><span class="line">y_test = standard_y.transform(y_test.reshape(-<span class="number">1</span>,<span class="number">1</span>))</span><br><span class="line"><span class="comment"># 4. 运用ElasticNet回归模型训练和预测</span></span><br><span class="line"><span class="keyword">from</span> sklearn.linear_model <span class="keyword">import</span> ElasticNet</span><br><span class="line">ElasticNet_clf = ElasticNet(alpha=<span class="number">0.1</span>, l1_ratio=<span class="number">0.71</span>)</span><br><span class="line">ElasticNet_clf.fit(X_train, y_train.ravel())</span><br><span class="line">ElasticNet_clf_score = ElasticNet_clf.score(X_test, y_test.ravel())</span><br><span class="line">print(<span class="string">&#x27;lasso模型得分:&#x27;</span>, ElasticNet_clf_score)</span><br><span class="line">print(<span class="string">&#x27;特征权重:&#x27;</span>,ElasticNet_clf.coef_)</span><br><span class="line">print(<span class="string">&#x27;偏置值:&#x27;</span>,ElasticNet_clf.intercept_)</span><br><span class="line">print(<span class="string">&#x27;迭代次数:&#x27;</span>, ElasticNet_clf.n_iter_)</span><br><span class="line"><span class="comment"># 5. 画图</span></span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line">fig = plt.figure(figsize=(<span class="number">20</span>,<span class="number">3</span>))</span><br><span class="line">axes = fig.add_subplot(<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>)</span><br><span class="line">line1, = axes.plot(<span class="built_in">range</span>(<span class="built_in">len</span>(y_test)), y_test, <span class="string">&#x27;b&#x27;</span>, label=<span class="string">&#x27;Actual_value&#x27;</span>)</span><br><span class="line">ElasticNet_clf_result = ElasticNet_clf.predict(X_test)</span><br><span class="line">line2, = axes.plot(<span class="built_in">range</span>(<span class="built_in">len</span>(ElasticNet_clf_result)), ElasticNet_clf_result, <span class="string">&#x27;r--&#x27;</span>, label=<span class="string">&#x27;ElasticNet_Predicted&#x27;</span>, linewidth = <span class="number">2</span>)</span><br><span class="line">axes.grid()</span><br><span class="line">fig.tight_layout()</span><br><span class="line">plt.legend(handles=[line1,line2])</span><br><span class="line">plt.title(<span class="string">&#x27;ElasticNet&#x27;</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure><br>预测结果：</p>
-<p><img src="/images/AI/线性回归/Figure_1.png" alt=""></p>
-]]></content>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>决策树算法原理</title>
+      <link href="2017/02/01/%E5%86%B3%E7%AD%96%E6%A0%91%E7%AE%97%E6%B3%95%E5%8E%9F%E7%90%86/"/>
+      <url>2017/02/01/%E5%86%B3%E7%AD%96%E6%A0%91%E7%AE%97%E6%B3%95%E5%8E%9F%E7%90%86/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>&ensp;&ensp;&ensp;&ensp;决策树是一种树状结构模型，可以进行基本的分类与回归，决策树也是集成学习经常采用的基模型。<br>&ensp;&ensp;&ensp;&ensp;决策树有多种类型，常用的ID3决策树、C4.5决策树、CART决策树等，不同决策树之间总体思想大同小异，主要涉及三个要素：特征选择、决策树生成和决策树剪枝。</p></blockquote><h1 id="1-特征选择"><a href="#1-特征选择" class="headerlink" title="1 特征选择"></a>1 特征选择</h1><p>在实际建立决策树的过程中，每次特征选择都要遵循对应的标准，比如信息增益、信息增益比、基尼系数等。</p><h2 id="1-1-信息增益"><a href="#1-1-信息增益" class="headerlink" title="1.1 信息增益"></a>1.1 信息增益</h2><p><strong>熵:</strong></p><p>在信息论中，用熵来度量随机变量的不确定程度，随机变量的不确定性越大，熵值越大。</p><p>如果一个随机变量$Y$的可能取值为$Y=\left \{ c_1,c_2,…,c_k \right \} $，其概率分布为$P(Y=c_i)=p_i,i=1,2,…,K$。则随机变量$Y$的熵定义为$H(Y)$，即：</p><script type="math/tex; mode=display">H(Y)=-\sum_{i=1}^{K}p_ilogp_i  \tag{1.1}</script><p>log为以2或者e为底的对数。</p><p><strong>联合熵：</strong></p><p>当有两个随机变量$X$和$Y$时，同理可以定义它们的联合熵$H(X,Y)$，即：</p><script type="math/tex; mode=display">H(X,Y)=-\sum_{i=1}^{N}p(x_i,y_i)logp(x_i,y_i) \tag{1.2}</script><p><strong>条件熵：</strong></p><p>有了联合熵，就可以得到条件熵的表达式了，在随机变量$X$发生的前提下，随机变量$Y$发生，新带来的的熵，用$H(Y|X)$表示：</p><script type="math/tex; mode=display">H(Y|X)=-\sum_{i=1}^{N}p(x_i,y_i)logp(y_i|x_i) \tag{1.3}</script><p>条件熵用来衡量在已知随机变量$X$的条件下，随机变量$Y$的不确定性。</p><p><strong>信息增益:</strong></p><p>随机变量$Y$的熵$H(Y)$与$Y$的条件熵$H(Y|X)$之差就是信息增益，记为$g(Y,X)$，即：</p><script type="math/tex; mode=display">g(Y,X)=H(Y)-H(Y|X) \tag{1.4}</script><p>实际上，熵与条件熵的差也称为互信息。ID3决策树使用信息增益作为特征选择标准，信息增益依赖于特征，不同特征往往具有不同的信息增益，信息增益大的特征具有更强的分类能力。</p><h2 id="1-2-信息增益比"><a href="#1-2-信息增益比" class="headerlink" title="1.2 信息增益比"></a>1.2 信息增益比</h2><p>用信息增益作为划分训练集特征的标准时，有一个潜在的问题，那就是相比之下其会倾向于选择类别取值较多的特征，因此人们提出使用信息增益比来对这一问题进行校正。</p><p>特征$X$对训练集的信息增益比定义为特征$X$的信息增益$g(Y,X)$与特征$X$的取值的熵$H(X)$的比值，记为$g_R(Y,X)$，即：</p><script type="math/tex; mode=display">g_R(Y,X) = \frac{g(Y,X)}{H(X)} \tag{1.5}</script><h2 id="1-3-基尼系数"><a href="#1-3-基尼系数" class="headerlink" title="1.3 基尼系数"></a>1.3 基尼系数</h2><p>基尼系数可以用来度量任何不均匀分布，且介于0~1之间的数(0指完全相等，1指完全不相等)。分类度量时，总体包含的类别越杂乱，基尼系数就越大（与熵的概念类似）。</p><p>基尼系数主要用来度量数据集的不纯度，基尼系数越小，表明样本只属于同一类的概率越高，即样本纯净度越高，在计算出数据集某个特征所有的基尼系数之后，就可以得到利用该特征进行样本产生的基尼系数增加值(GiniGain)，决策树模型在生成的过程中就是递归选择GiniGain最小的节点作为分叉点，直至子数据集都属于同一类或者所有特征用光。</p><p>在分类问题中，假设有K个类别$c_1,c_2,…,c_k$，样本点属于第k类的概率为$p_k$，则该概率分布的基尼系数定义为：</p><script type="math/tex; mode=display">Gini(p)=\sum_{k=1}^{K}p_k(1-p_k)=1-\sum_{k=1}^{K}p_k^2 \tag{1.6}</script><p>对于给定的样本集合D，其基尼系数为：</p><script type="math/tex; mode=display">Gini(D)=1-\sum_{k=1}^{K}(\frac{|c_k|}{|D|} )^2 \tag{1.7}</script><p>其中，$c_k$是属于第k类的样本子集，K是类别的个数。</p><h1 id="2-决策树生成"><a href="#2-决策树生成" class="headerlink" title="2 决策树生成"></a>2 决策树生成</h1><h2 id="2-1-ID3决策树"><a href="#2-1-ID3决策树" class="headerlink" title="2.1 ID3决策树"></a>2.1 ID3决策树</h2><p>ID3决策树使用信息增益作为特征选择标准。</p><p>输入：</p><p>假设训练数据集D包含M个样本，样本一共包含有K个类别，类别集合为C；每个样本含有N个特征，特征集合为F，停止分裂的阈值为$\varepsilon $。</p><p>输出：决策树T。</p><p>步骤如下：</p><p>第1步：如果训练集D中的M个样本不属于同一类别，但是特征集合只含有单个特征，则直接返回单节点树T，且该样本集合D中实例数最大的类作为该树节点的类别。</p><p>第2步：如果训练集D中的M个样本不属于同一类别，但是特征集合只含有单一特征，则也直接返回单节点树T，且该样本集合D中实例数最大的类作为该数节点的类别。</p><p>第3步：如果非以上两种情况，则分别计算特征集合F中的N个特征的信息增益，选择信息增益最大的特征$F_n$，如果该信息增益小于阈值$\varepsilon$，则返回上述单节点树T，其将该样本集合D中实例数最大的类作为该树节点的类别。</p><p>第4步：否则，按照特征$F_n$的不同取值种类，将对应的样本D分成不同的子类别$D_i$，每个字类别产生一棵树的子节点。</p><p>第5步：对于每个子节点，令$D=D_i,F=F-F_n$，递归调用第1步到第4步，直到得到满足条件的ID3决策树。</p><h2 id="2-2-C4-5决策树"><a href="#2-2-C4-5决策树" class="headerlink" title="2.2 C4.5决策树"></a>2.2 C4.5决策树</h2><p>使用信息增益来选择特征的一个缺点就是容易偏向于优先选取取值种类较多的特征，除此之外，ID3决策树还有两个缺点：1）不能处理连续值的特征；2）容易过拟合。</p><p>针对以上3个缺点，C4.5决策树给出了解决办法。</p><p>针对缺点1：ID3决策树容易偏向于优先选取取值种类较多的特征。</p><p>解决办法是使用信息增益比来替代信息增益进行特征选择。</p><p>针对缺点2：ID3决策树不能处理连续值的特征。</p><p>C4.5决策树的思路是先将连续的特征离散化，比如，年收入特征是一个连续特征，我们可以先对训练样本中年收入特征下的所有取值进行排序，找出类别标签有变化的地方，作为阈值进行划分。</p><p>针对缺点3：ID3决策树容易过拟合</p><p>决策树的过拟合问题主要是由于树的分叉过细造成的，决策树分叉过细会导致最后生成的决策树模型对训练集中的数据拟合很好，但是对新的预测数据拟合得较差。</p><p>C4.5决策树引入了正则化项进行初步的剪枝来缓解过拟合问题。</p><p>除了以上三点改进外，C4.5决策树和ID3决策树几乎一样。</p><h2 id="2-3-CART决策树"><a href="#2-3-CART决策树" class="headerlink" title="2.3 CART决策树"></a>2.3 CART决策树</h2><p>C4.5决策树虽然在ID3决策树的基础上做了一些改进，但是还是存在一些不足，主要表现在以下三点：</p><p>第一，C4.5决策树使用了熵模型，以信息增益比作为特征的选择标准，每次划分子树的过程中会涉及很多的对数计算，计算复杂度较高。</p><p>第二，ID3决策树和C4.5决策树采用的都是多叉树形式，每次分叉成子树时都是按照其所选择特征包含的所有种类数来划分的，也就是说，一旦按照某个特征切分后，该特征在之后的算法执行过程中将不再起作用，但事实证明，这样划分特征是过于粗糙的，特征信息的利用率低。另外C4.5决策树对连续值的处理方式是按照区间将其离散化，这样或多或少会损失一部分信息。</p><p>第三，当我们面对的不是一个类别的预测问题，而是一个连续结果预测的回归问题时，ID3决策树和C4.5决策树都无法处理。</p><p>针对问题1：ID3决策树和C4.5决策树特征选择过程对数计算复杂度高。</p><p>当CART决策树用于分类任务时，采用基尼系数作为特征选择的标准，当CART决策树用于回归任务时，采用平方误差最小化准则进行特征选择，可以减少大量的对数运算问题。</p><p>针对问题2：ID3决策树和C4.5决策树对特征划分过于迅速</p><p>与ID3决策树和C4.5决策树采用多叉树进行特征划分不同，CART分类树与回归树采用二叉树来对每个特征进行划分。</p><p>针对问题3：ID3决策树和C4.5决策树不能处理回归问题。</p><p>回归问题的结果取值是很多个连续的值，因此不能像分类问题一样采取信息增益或基尼系数等特征选择标准，那怎么办？很简单，直接使用均方误差就行，即计算每一次特征划分后的结果与实际结果值之间的均方误差，采用均方误差最小的划分作为最优划分。</p><p>解决了特征选择问题，还剩另外一个结果处理的问题，所以决策树采用的结果处理方式是对每一个叶子节点里面包含的样本类别进行统计，然后选择样本类别占多数的类别标签作为该叶子结点的类别标签。对于回归问题，稍作变化，即每个叶子节点对应的结果就取该叶子节点中所有样本点标签值的均值。</p><h3 id="2-3-1-CART分类树"><a href="#2-3-1-CART分类树" class="headerlink" title="2.3.1 CART分类树"></a>2.3.1 CART分类树</h3><p>CART分类树的生成过程以基尼系数最小准则来选择特征。</p><p>输入:假设训练数据集D包含M个样本，样本一共有K个类别，类别集合为C，每个样本含有N个特征，特征集合为F。</p><p>输出：CART分类树T。</p><p>步骤如下：</p><p>第1步：如果训练集D中的M个样本已经属于同一类别，则直接返回单节点树T，并将该唯一类$C_k$作为该树节点的类别。</p><p>第2步：否则，分别计算特征集合F中N个特征下面各个切分点的基尼系数，选择基尼系数最小的划分点将训练集D划分为$D_1$和$D_2$两个子集，分别对应二叉树的两个子节点上。</p><p>第3步：令左右节点的数据集$D_1=D,D2=D$，分别递归调用第1步和第2步，直到得到满足条件的CART分类树。</p><h3 id="2-3-2-CART回归树"><a href="#2-3-2-CART回归树" class="headerlink" title="2.3.2 CART回归树"></a>2.3.2 CART回归树</h3><p>前面说过，CART回归树和CART分类树的生成过程基本相似，差别主要体现在特征选择标准和结果输出处理方式两点上。</p><p><strong>差别1：特征选择标准不同</strong></p><p>对于CART分类树，在选取特征的最优划分点时，使用的是某一特征的某个划分点对应的基尼系数值，而对于CART回归树，我们使用了均方误差来衡量。</p><p><strong>差别2：决策树结果输出处理方式不同</strong></p><p>对于分类情况，CART分类树对结果的处理方式是对每一个叶子节点里面包含的所有样本的类别进行统计，然后选择样本类别占多数者对应的类别标签作为该叶子节点的类别标签；CART回归树的输出结果不是类别，因而把最终各个叶子结点中所有样本对应结果值的均值或者中位数当做预测的结果输出。</p><h1 id="3-决策树剪枝"><a href="#3-决策树剪枝" class="headerlink" title="3 决策树剪枝"></a>3 决策树剪枝</h1><p>决策树算法很容易对训练集过拟合，从而导致泛化能力较差，为了解决这个问题，一般需要对CART决策树进行剪枝。</p><p>剪枝有先剪枝和后剪枝两种，先剪枝是在生成决策树的过程中就采取一定措施来限制某些不必要的子树的生成。后剪枝就是先使用训练集中的大部分数据去尽可能生成一棵最大的树，然后从决策树的底端开始不断剪枝，直到形成一棵只有一个根节点的子树$T_0$，得到一个剪枝后的子树序列${T_0,T_1,…,T_K}$，最优利用余下的数据进行交叉验证，选出其中的最优子树。实际使用较多的是后剪枝。</p>]]></content>
+      
+      
       <categories>
-        <category>人工智能</category>
-        <category>机器学习</category>
+          
+          <category> 人工智能 </category>
+          
+          <category> 机器学习 </category>
+          
       </categories>
-  </entry>
-  <entry>
-    <title>决策树算法原理</title>
-    <url>/2017/02/01/%E5%86%B3%E7%AD%96%E6%A0%91%E7%AE%97%E6%B3%95%E5%8E%9F%E7%90%86/</url>
-    <content><![CDATA[<blockquote>
-<p>&ensp;&ensp;&ensp;&ensp;决策树是一种树状结构模型，可以进行基本的分类与回归，决策树也是集成学习经常采用的基模型。<br>&ensp;&ensp;&ensp;&ensp;决策树有多种类型，常用的ID3决策树、C4.5决策树、CART决策树等，不同决策树之间总体思想大同小异，主要涉及三个要素：特征选择、决策树生成和决策树剪枝。</p>
-</blockquote>
-<h1 id="1-特征选择"><a href="#1-特征选择" class="headerlink" title="1 特征选择"></a>1 特征选择</h1><p>在实际建立决策树的过程中，每次特征选择都要遵循对应的标准，比如信息增益、信息增益比、基尼系数等。</p>
-<h2 id="1-1-信息增益"><a href="#1-1-信息增益" class="headerlink" title="1.1 信息增益"></a>1.1 信息增益</h2><p><strong>熵:</strong></p>
-<p>在信息论中，用熵来度量随机变量的不确定程度，随机变量的不确定性越大，熵值越大。</p>
-<p>如果一个随机变量$Y$的可能取值为$Y=\left \{ c_1,c_2,…,c_k \right \} $，其概率分布为$P(Y=c_i)=p_i,i=1,2,…,K$。则随机变量$Y$的熵定义为$H(Y)$，即：</p>
-<script type="math/tex; mode=display">
-H(Y)=-\sum_{i=1}^{K}p_ilogp_i  \tag{1.1}</script><p>log为以2或者e为底的对数。</p>
-<p><strong>联合熵：</strong></p>
-<p>当有两个随机变量$X$和$Y$时，同理可以定义它们的联合熵$H(X,Y)$，即：</p>
-<script type="math/tex; mode=display">
-H(X,Y)=-\sum_{i=1}^{N}p(x_i,y_i)logp(x_i,y_i) \tag{1.2}</script><p><strong>条件熵：</strong></p>
-<p>有了联合熵，就可以得到条件熵的表达式了，在随机变量$X$发生的前提下，随机变量$Y$发生，新带来的的熵，用$H(Y|X)$表示：</p>
-<script type="math/tex; mode=display">
-H(Y|X)=-\sum_{i=1}^{N}p(x_i,y_i)logp(y_i|x_i) \tag{1.3}</script><p>条件熵用来衡量在已知随机变量$X$的条件下，随机变量$Y$的不确定性。</p>
-<p><strong>信息增益:</strong></p>
-<p>随机变量$Y$的熵$H(Y)$与$Y$的条件熵$H(Y|X)$之差就是信息增益，记为$g(Y,X)$，即：</p>
-<script type="math/tex; mode=display">
-g(Y,X)=H(Y)-H(Y|X) \tag{1.4}</script><p>实际上，熵与条件熵的差也称为互信息。ID3决策树使用信息增益作为特征选择标准，信息增益依赖于特征，不同特征往往具有不同的信息增益，信息增益大的特征具有更强的分类能力。</p>
-<h2 id="1-2-信息增益比"><a href="#1-2-信息增益比" class="headerlink" title="1.2 信息增益比"></a>1.2 信息增益比</h2><p>用信息增益作为划分训练集特征的标准时，有一个潜在的问题，那就是相比之下其会倾向于选择类别取值较多的特征，因此人们提出使用信息增益比来对这一问题进行校正。</p>
-<p>特征$X$对训练集的信息增益比定义为特征$X$的信息增益$g(Y,X)$与特征$X$的取值的熵$H(X)$的比值，记为$g_R(Y,X)$，即：</p>
-<script type="math/tex; mode=display">
-g_R(Y,X) = \frac{g(Y,X)}{H(X)} \tag{1.5}</script><h2 id="1-3-基尼系数"><a href="#1-3-基尼系数" class="headerlink" title="1.3 基尼系数"></a>1.3 基尼系数</h2><p>基尼系数可以用来度量任何不均匀分布，且介于0~1之间的数(0指完全相等，1指完全不相等)。分类度量时，总体包含的类别越杂乱，基尼系数就越大（与熵的概念类似）。</p>
-<p>基尼系数主要用来度量数据集的不纯度，基尼系数越小，表明样本只属于同一类的概率越高，即样本纯净度越高，在计算出数据集某个特征所有的基尼系数之后，就可以得到利用该特征进行样本产生的基尼系数增加值(GiniGain)，决策树模型在生成的过程中就是递归选择GiniGain最小的节点作为分叉点，直至子数据集都属于同一类或者所有特征用光。</p>
-<p>在分类问题中，假设有K个类别$c_1,c_2,…,c_k$，样本点属于第k类的概率为$p_k$，则该概率分布的基尼系数定义为：</p>
-<script type="math/tex; mode=display">
-Gini(p)=\sum_{k=1}^{K}p_k(1-p_k)=1-\sum_{k=1}^{K}p_k^2 \tag{1.6}</script><p>对于给定的样本集合D，其基尼系数为：</p>
-<script type="math/tex; mode=display">
-Gini(D)=1-\sum_{k=1}^{K}(\frac{|c_k|}{|D|} )^2 \tag{1.7}</script><p>其中，$c_k$是属于第k类的样本子集，K是类别的个数。</p>
-<h1 id="2-决策树生成"><a href="#2-决策树生成" class="headerlink" title="2 决策树生成"></a>2 决策树生成</h1><h2 id="2-1-ID3决策树"><a href="#2-1-ID3决策树" class="headerlink" title="2.1 ID3决策树"></a>2.1 ID3决策树</h2><p>ID3决策树使用信息增益作为特征选择标准。</p>
-<p>输入：</p>
-<p>假设训练数据集D包含M个样本，样本一共包含有K个类别，类别集合为C；每个样本含有N个特征，特征集合为F，停止分裂的阈值为$\varepsilon $。</p>
-<p>输出：决策树T。</p>
-<p>步骤如下：</p>
-<p>第1步：如果训练集D中的M个样本不属于同一类别，但是特征集合只含有单个特征，则直接返回单节点树T，且该样本集合D中实例数最大的类作为该树节点的类别。</p>
-<p>第2步：如果训练集D中的M个样本不属于同一类别，但是特征集合只含有单一特征，则也直接返回单节点树T，且该样本集合D中实例数最大的类作为该数节点的类别。</p>
-<p>第3步：如果非以上两种情况，则分别计算特征集合F中的N个特征的信息增益，选择信息增益最大的特征$F_n$，如果该信息增益小于阈值$\varepsilon$，则返回上述单节点树T，其将该样本集合D中实例数最大的类作为该树节点的类别。</p>
-<p>第4步：否则，按照特征$F_n$的不同取值种类，将对应的样本D分成不同的子类别$D_i$，每个字类别产生一棵树的子节点。</p>
-<p>第5步：对于每个子节点，令$D=D_i,F=F-F_n$，递归调用第1步到第4步，直到得到满足条件的ID3决策树。</p>
-<h2 id="2-2-C4-5决策树"><a href="#2-2-C4-5决策树" class="headerlink" title="2.2 C4.5决策树"></a>2.2 C4.5决策树</h2><p>使用信息增益来选择特征的一个缺点就是容易偏向于优先选取取值种类较多的特征，除此之外，ID3决策树还有两个缺点：1）不能处理连续值的特征；2）容易过拟合。</p>
-<p>针对以上3个缺点，C4.5决策树给出了解决办法。</p>
-<p>针对缺点1：ID3决策树容易偏向于优先选取取值种类较多的特征。</p>
-<p>解决办法是使用信息增益比来替代信息增益进行特征选择。</p>
-<p>针对缺点2：ID3决策树不能处理连续值的特征。</p>
-<p>C4.5决策树的思路是先将连续的特征离散化，比如，年收入特征是一个连续特征，我们可以先对训练样本中年收入特征下的所有取值进行排序，找出类别标签有变化的地方，作为阈值进行划分。</p>
-<p>针对缺点3：ID3决策树容易过拟合</p>
-<p>决策树的过拟合问题主要是由于树的分叉过细造成的，决策树分叉过细会导致最后生成的决策树模型对训练集中的数据拟合很好，但是对新的预测数据拟合得较差。</p>
-<p>C4.5决策树引入了正则化项进行初步的剪枝来缓解过拟合问题。</p>
-<p>除了以上三点改进外，C4.5决策树和ID3决策树几乎一样。</p>
-<h2 id="2-3-CART决策树"><a href="#2-3-CART决策树" class="headerlink" title="2.3 CART决策树"></a>2.3 CART决策树</h2><p>C4.5决策树虽然在ID3决策树的基础上做了一些改进，但是还是存在一些不足，主要表现在以下三点：</p>
-<p>第一，C4.5决策树使用了熵模型，以信息增益比作为特征的选择标准，每次划分子树的过程中会涉及很多的对数计算，计算复杂度较高。</p>
-<p>第二，ID3决策树和C4.5决策树采用的都是多叉树形式，每次分叉成子树时都是按照其所选择特征包含的所有种类数来划分的，也就是说，一旦按照某个特征切分后，该特征在之后的算法执行过程中将不再起作用，但事实证明，这样划分特征是过于粗糙的，特征信息的利用率低。另外C4.5决策树对连续值的处理方式是按照区间将其离散化，这样或多或少会损失一部分信息。</p>
-<p>第三，当我们面对的不是一个类别的预测问题，而是一个连续结果预测的回归问题时，ID3决策树和C4.5决策树都无法处理。</p>
-<p>针对问题1：ID3决策树和C4.5决策树特征选择过程对数计算复杂度高。</p>
-<p>当CART决策树用于分类任务时，采用基尼系数作为特征选择的标准，当CART决策树用于回归任务时，采用平方误差最小化准则进行特征选择，可以减少大量的对数运算问题。</p>
-<p>针对问题2：ID3决策树和C4.5决策树对特征划分过于迅速</p>
-<p>与ID3决策树和C4.5决策树采用多叉树进行特征划分不同，CART分类树与回归树采用二叉树来对每个特征进行划分。</p>
-<p>针对问题3：ID3决策树和C4.5决策树不能处理回归问题。</p>
-<p>回归问题的结果取值是很多个连续的值，因此不能像分类问题一样采取信息增益或基尼系数等特征选择标准，那怎么办？很简单，直接使用均方误差就行，即计算每一次特征划分后的结果与实际结果值之间的均方误差，采用均方误差最小的划分作为最优划分。</p>
-<p>解决了特征选择问题，还剩另外一个结果处理的问题，所以决策树采用的结果处理方式是对每一个叶子节点里面包含的样本类别进行统计，然后选择样本类别占多数的类别标签作为该叶子结点的类别标签。对于回归问题，稍作变化，即每个叶子节点对应的结果就取该叶子节点中所有样本点标签值的均值。</p>
-<h3 id="2-3-1-CART分类树"><a href="#2-3-1-CART分类树" class="headerlink" title="2.3.1 CART分类树"></a>2.3.1 CART分类树</h3><p>CART分类树的生成过程以基尼系数最小准则来选择特征。</p>
-<p>输入:假设训练数据集D包含M个样本，样本一共有K个类别，类别集合为C，每个样本含有N个特征，特征集合为F。</p>
-<p>输出：CART分类树T。</p>
-<p>步骤如下：</p>
-<p>第1步：如果训练集D中的M个样本已经属于同一类别，则直接返回单节点树T，并将该唯一类$C_k$作为该树节点的类别。</p>
-<p>第2步：否则，分别计算特征集合F中N个特征下面各个切分点的基尼系数，选择基尼系数最小的划分点将训练集D划分为$D_1$和$D_2$两个子集，分别对应二叉树的两个子节点上。</p>
-<p>第3步：令左右节点的数据集$D_1=D,D2=D$，分别递归调用第1步和第2步，直到得到满足条件的CART分类树。</p>
-<h3 id="2-3-2-CART回归树"><a href="#2-3-2-CART回归树" class="headerlink" title="2.3.2 CART回归树"></a>2.3.2 CART回归树</h3><p>前面说过，CART回归树和CART分类树的生成过程基本相似，差别主要体现在特征选择标准和结果输出处理方式两点上。</p>
-<p><strong>差别1：特征选择标准不同</strong></p>
-<p>对于CART分类树，在选取特征的最优划分点时，使用的是某一特征的某个划分点对应的基尼系数值，而对于CART回归树，我们使用了均方误差来衡量。</p>
-<p><strong>差别2：决策树结果输出处理方式不同</strong></p>
-<p>对于分类情况，CART分类树对结果的处理方式是对每一个叶子节点里面包含的所有样本的类别进行统计，然后选择样本类别占多数者对应的类别标签作为该叶子节点的类别标签；CART回归树的输出结果不是类别，因而把最终各个叶子结点中所有样本对应结果值的均值或者中位数当做预测的结果输出。</p>
-<h1 id="3-决策树剪枝"><a href="#3-决策树剪枝" class="headerlink" title="3 决策树剪枝"></a>3 决策树剪枝</h1><p>决策树算法很容易对训练集过拟合，从而导致泛化能力较差，为了解决这个问题，一般需要对CART决策树进行剪枝。</p>
-<p>剪枝有先剪枝和后剪枝两种，先剪枝是在生成决策树的过程中就采取一定措施来限制某些不必要的子树的生成。后剪枝就是先使用训练集中的大部分数据去尽可能生成一棵最大的树，然后从决策树的底端开始不断剪枝，直到形成一棵只有一个根节点的子树$T_0$，得到一个剪枝后的子树序列${T_0,T_1,…,T_K}$，最优利用余下的数据进行交叉验证，选出其中的最优子树。实际使用较多的是后剪枝。</p>
-]]></content>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>SVM算法原理</title>
+      <link href="2017/01/30/SVM%E7%AE%97%E6%B3%95%E5%8E%9F%E7%90%86/"/>
+      <url>2017/01/30/SVM%E7%AE%97%E6%B3%95%E5%8E%9F%E7%90%86/</url>
+      
+        <content type="html"><![CDATA[<h1 id="1-硬间隔SVM"><a href="#1-硬间隔SVM" class="headerlink" title="1 硬间隔SVM"></a>1 硬间隔SVM</h1><h2 id="1-1-由感知机到SVM"><a href="#1-1-由感知机到SVM" class="headerlink" title="1.1 由感知机到SVM"></a>1.1 由感知机到SVM</h2><p>假设样本点是线性可分的，感知机模型的思想是：利用分割超平面$\vec{w}\cdot \vec{x}+b=0$将样本点划分为两类；假设存在误分类点，则通过使误分类点到分割超平面的距离最小来不断调整超平面，直到所有误分类点被纠正后迭代停止。</p><p>感知机模型的表达式如下：</p><script type="math/tex; mode=display">h(x)=sign(wx+b)=\left\{\begin{matrix} -1,  & wx+b<0 \\ 1,  & wx+b>0\end{matrix}\right. \tag{1.1}</script><p>由于初始的$w$和b的取值不同，因此最后得到的分割超平面也可能不同，所以感知机模型的分割超平面$wx+b=0$有多个。</p><p>既然这样，那么能不能进一步找到一个最优的分割超平面呢？办法就是下面介绍的支持向量机(Support Vector Machines, SVM)模型。</p><p>SVM模型和感知机模型一样，也是一种二分类模型，SVM的思想是：不仅要让样本点被分割超平面分开，还希望那些距离分割超平面最近的点到分割超平面的距离最大。</p><h2 id="1-2-公式推导与求解"><a href="#1-2-公式推导与求解" class="headerlink" title="1.2 公式推导与求解"></a>1.2 公式推导与求解</h2><h3 id="1-2-1-公式推导"><a href="#1-2-1-公式推导" class="headerlink" title="1.2.1 公式推导"></a>1.2.1 公式推导</h3><p>假设样本点$(x_i, y_i)$到超平面$wx+b=0$的几何间距为$\gamma _i$，则：</p><script type="math/tex; mode=display">\gamma _i=\frac{\left | wx_i+b \right | }{\left \| w \right \| }  \tag{1.2}</script><p>又因为$\left | y_i \right | =1$恒成立，且对于正确分类点$y_i\times (wx_i+b)&gt;0$恒成立，所以进一步有：</p><script type="math/tex; mode=display">\gamma _i=\frac{\left | wx_i+b \right | }{\left \| w \right \| } =\frac{|y_i|\cdot  \left | wx_i+b \right | }{\left \| w \right \| }=\frac{ \left | y_i\cdot (wx_i+b) \right | }{\left \| w \right \| }=\frac{ y_i\cdot (wx_i+b)}{\left \| w \right \| } \tag{1.3}</script><p>取训练数据集T中距离超平面的最小几何间距$\min_{} \gamma _i,(i=1,2,…,M)$作为数据集T关于超平面$wx+b=0$的几何间距，记为$\gamma$，即：$\gamma=\min_{} \gamma _i,(i=1,2,…,M)$，按照SVM的思想，即需要求解以下优化问题：</p><script type="math/tex; mode=display">\begin{align*} \max_{w,b}\gamma   & \\ s.t. \gamma _i\ge \gamma , & i=1,2,...,M\end{align*} \tag{1.4}</script><p>即：</p><script type="math/tex; mode=display">\begin{align*} \max_{w,b}\gamma   & \\ s.t. \frac{ y_i\cdot (wx_i+b)}{\left \| w \right \| }\ge \gamma , & i=1,2,...,M\end{align*} \tag{1.5}</script><p>令：</p><script type="math/tex; mode=display">\begin{align*}M=\frac{w}{||w||\gamma }  \\N=\frac{b}{||w||\gamma }\end{align*} \tag{1.6}</script><p>则约束条件为：$s.t. y_i(M\cdot x_i+N)\ge 1$，优化目标为$\gamma$最大，由：$||M||=\frac{||w||}{||w||\gamma }=\frac{1}{\gamma } $，因此最大化$\gamma$，即最小化$\frac{1}{2}||M||^2 $，则整个优化问题转化为：</p><script type="math/tex; mode=display">\begin{align*}\min_{M,N} \frac{1}{2}||M||^2  \\s.t. y_i(Mx_i+N)\ge 1\end{align*} \tag{1.7}</script><p>重写为：</p><script type="math/tex; mode=display">\begin{align*}\min_{w,b} \frac{1}{2}||2||^2  \\s.t. y_i(wx_i+b)\ge 1,i=1,2,...,M\end{align*} \tag{1.8}</script><p>这是一个含有不等式约束的凸二次规划问题，可以对其使用拉格朗日乘子法得到其对偶问题。</p><h3 id="1-2-2-求最优解"><a href="#1-2-2-求最优解" class="headerlink" title="1.2.2 求最优解"></a>1.2.2 求最优解</h3><p>首先，我们将有约束条件的原始目标函数转换为无约束的新构造的拉格朗日目标函数：</p><script type="math/tex; mode=display">L(w,b,\alpha )=\frac{1}{2}||w||^2 - {\textstyle \sum_{i=1}^{M}} \alpha _i(y_i(wx_i+b)-1) \tag{1.9}</script><p>其中$\alpha _i$为拉格朗日乘子，且$\alpha _i\ge 0$，令：$\theta (w)=\max_{\alpha _i\ge 0} L(w,b,\alpha )$，当样本点不满足约束条件时，即在可行解区域外：$y_i(wx_i+b)&lt;1$，此时，将$\alpha _i$设置为无穷大，则$\theta(w)$也为无穷大。</p><p>当样本点满足约束条件时，即在可行解区域内：$y_i(wx_i+b)\ge1$，此时$\theta(w)$为原函数本身，于是，合并两种情况得到新的目标函数：</p><script type="math/tex; mode=display">\theta (w)=\left\{\begin{matrix}\frac{1}{2}||w||^2,x\in 可行区域  \\+\propto ,x\in 不可行区域\end{matrix}\right. \tag{1.10}</script><p>原约束问题等价于：</p><script type="math/tex; mode=display">\min_{w,b}\theta (w)=\min_{w,b}\max_{\alpha _i\ge 0}L(w,b,\alpha )=p^{\ast }   \tag{1.11}</script><p>新的目标函数先求最大值，再求最小值，这样的话首先要面对带有需要求解的参数$w$和$b$的方程，而$\alpha_i$又是不等式约束，求解过程不好做，所以我们需要使用拉格朗日函数对偶性，将最小和最大位置互换，得到：</p><script type="math/tex; mode=display">\max_{\alpha _i\ge 0}\min_{w,b}L(w,b,\alpha )=d^{\ast }   \tag{1.12}</script><p>要有$p^{\ast }=d^{\ast }$，需要满足两个条件：</p><p>1) 优化问题是凸优化问题；</p><p>2) 满足KKT条件；</p><p>本优化问题显然是一个凸优化问题，因此条件1满足，对于条件2，即要求：</p><script type="math/tex; mode=display">\left\{\begin{matrix}\alpha _i\ge 0 \\y_i(wx_i+b)-1\ge 0 \\\alpha _i(y_i(wx_i+b)-1)=0\end{matrix}\right. \tag{1.13}</script><p>为了得到求解对偶问题的具体形式，令$L(w,b,\alpha)$对$w$和$b$求偏导为0，可得：</p><script type="math/tex; mode=display">\begin{align*} w= {\textstyle \sum_{i=1}^{N}}\alpha _iy_ix_i \\ {\textstyle \sum_{i=1}^{N}}\alpha _iy_i=0 \end{align*} \tag{1.14}</script><p>将式(1.14)代入拉格朗日目标函数，即式(1.9)，消去$w$和$b$得到：</p><script type="math/tex; mode=display">\begin{aligned}L(w,b,\alpha )&=\frac{1}{2} {\textstyle \sum_{i=1}^{M}} {\textstyle \sum_{j=1}^{M}}\alpha _i\alpha _jy_iy_j(x_i\cdot x_j)- {\textstyle \sum_{i=1}^{M}}\alpha _iy_i(( {\textstyle \sum_{j=1}^{M}}\alpha _jy_jx_j)\cdot x_i+b)+ {\textstyle \sum_{i=1}^{M}}\alpha_i \\ &=-\frac{1}{2} {\textstyle \sum_{i=1}^{M}} {\textstyle \sum_{j=1}^{M}}\alpha _i\alpha _jy_iy_j(x_i\cdot x_j)+ {\textstyle \sum_{i=1}^{M}}\alpha _i         \end{aligned}\tag{1.15}</script><p>即：</p><script type="math/tex; mode=display">\min_{w,b}L(w,b,\alpha ) =\min_{w,b} -\frac{1}{2} {\textstyle \sum_{i=1}^{M}} {\textstyle \sum_{j=1}^{M}}\alpha _i\alpha _jy_iy_j(x_i\cdot x_j)+ {\textstyle \sum_{i=1}^{M}}\alpha _i \tag{1.16}</script><p>求$\min_{w,b}L(w,b,\alpha )$对$\alpha$的极大，即是对偶问题：</p><script type="math/tex; mode=display">\begin{align*} \max_{\alpha } -\frac{1}{2} {\textstyle \sum_{i=1}^{M}} {\textstyle \sum_{j=1}^{M}}\alpha _i\alpha _jy_iy_j(x_i\cdot x_j)+ {\textstyle \sum_{i=1}^{M}}\alpha _i \\s.t.    {\textstyle \sum_{i=1}^{M}}\alpha _iy_i=0  \\   \alpha _i \ge 0,i=1,2,...,N\end{align*} \tag{1.17}</script><p>把目标式子加一个负号，求解最大转换为求解最小:</p><script type="math/tex; mode=display">\begin{align*} \min_{\alpha } \frac{1}{2} {\textstyle \sum_{i=1}^{M}} {\textstyle \sum_{j=1}^{M}}\alpha _i\alpha _jy_iy_j(x_i\cdot x_j)- {\textstyle \sum_{i=1}^{M}}\alpha _i \\s.t.    {\textstyle \sum_{i=1}^{M}}\alpha _iy_i=0  \\   \alpha _i \ge 0,i=1,2,...,N\end{align*} \tag{1.18}</script><p>现在我们的优化问题变成了公式(1.18)，对于这个问题，有更高效的优化算法，即序列最小优化（SMO）算法，通过SMO算法可以得到$\alpha ^{\ast } $ ，在根据$\alpha ^{\ast } $可以求解出$w$和$b$，进而求得最初的目标：找到最优决策平面。</p><p>前面的推导都是基于KKT条件成立的假设进行的，KKT条件如下：</p><script type="math/tex; mode=display">\left\{\begin{matrix} \alpha _i\ge 0\\ y_i(w_i\cdot x_i+b)-1\ge 0\\ \alpha _i(y_i(w_i\cdot x_i+b)-1)=0\end{matrix}\right. \tag{1.19}</script><p>另外根据前面的推导，下面公式成立：</p><script type="math/tex; mode=display">\begin{align*} w= {\textstyle \sum_{i=1}^{M}}\alpha _iy_ix_i \\ {\textstyle \sum_{i=1}^{M}}\alpha _iy_i=0 \end{align*} \tag{1.20}</script><p>由此可知，在$\alpha ^{\ast } $中，至少存在一个$\alpha _j ^{\ast }&gt;0$(若全为0，则$w=0$，矛盾)，对此$j$有：$y_j(w^*\cdot x_j+b^{\ast })-1=0$，因此得到：</p><script type="math/tex; mode=display">w^{\ast }= {\textstyle \sum_{i=1}^{M}}\alpha _i^{\ast }y_ix_i</script><script type="math/tex; mode=display">b^{\ast }= y_j-{\textstyle \sum_{i=1}^{M}}\alpha _i^{\ast }y_i(x_i \cdot x_j) \tag{1.21}</script><p>对于任意训练样本$(x_i,y_i)$，总有$\alpha_i=0$<br>或者$y_j(wx_j+b)=1$,。若$\alpha_i=0$，则该样本不会再最后求解模型参数的式子中出现，若$\alpha_i&gt;0$，则必有$y_j(wx_j+b)=1$，所对应的样本点位于最大间隔边界上，是一个支持向量，这显示出SVM的一个重要特性：训练完成后，大部分的训练样本都不需要保留，最终模型只跟支持向量相关。</p><h3 id="1-2-3-小结"><a href="#1-2-3-小结" class="headerlink" title="1.2.3 小结"></a>1.2.3 小结</h3><p>总结一下线性可分SVM模型的过程：</p><p>输入：</p><p>线性可分训练集$T=\left \{ (x_1,y_1),(x_2,y_2),…,(x_M,y_M) \right \} $，且$y_i \in\left \{ -1,1 \right \} ,i=1,2,…,M$。</p><p>输出：</p><p>分割超平面$wx+b=0$和分类决策函数$h(x)=sign(wx+b)$。</p><p>步骤如下：</p><p>第1步：构造约束优化问题：</p><script type="math/tex; mode=display">\begin{align*} \min_{\alpha } \frac{1}{2} {\textstyle \sum_{i=1}^{M}} {\textstyle \sum_{j=1}^{M}}\alpha _i\alpha _jy_iy_j(x_i\cdot x_j)- {\textstyle \sum_{i=1}^{M}}\alpha _i \\s.t.    {\textstyle \sum_{i=1}^{M}}\alpha _iy_i=0  \\   \alpha _i \ge 0,i=1,2,...,N\end{align*} \tag{1.22}</script><p>第2步：利用SMO算法求解上面的优化问题，得到$\alpha$向量的值$\alpha ^\ast $；</p><p>第3步：利用公式1.21计算$w$向量的值$w ^\ast $；</p><p>第4步：找到满足$\alpha _{s}^{\ast } &gt;0$对应的支持向量点$(x_s,y_s),s=1,2,…,S$，利用公式1.21计算$b^{\ast }$；</p><p>第5步：由$w ^\ast $和$b^{\ast }$得到分割超平面$w^{\ast }x+b^{\ast }=0$和分类决策函数$h(x)=sign(w^{\ast }x+b^{\ast })$。</p><h1 id="2-软间隔SVM"><a href="#2-软间隔SVM" class="headerlink" title="2 软间隔SVM"></a>2 软间隔SVM</h1><p>硬间隔SVM模型虽然比感知机具有更好的鲁棒性，但其前提是要求样本数据点线性可分，在实际问题中，不同类别的样本点可能会存在混叠，针对这种情况，可以通过增加松弛因子来解决。</p><p>线性可分SVM模型的原始优化问题为公式(1.8)，考虑到实际情况下存在样本混叠，所以为每一个样本点$(x_i,y_i)$增加一个对应的松弛变量$\xi _i,\xi _i\ge 0$，则约束条件变为：$y_i(wx_i+b)\ge 1-\xi_i,i=1,2,…,M$，因为$1-\xi_i\le1$，所以这相当于在原来的基础上对每个样本点$(x_i,y_i)$降低了限制要求，这个特权可以随便给吗？显然不行，如果只是给予各个样本点特权而不对其进行适当的约束，那么这个模型之前建立的约束就变得毫无意义了，所以SVM模型采取的措施是：每个样本点在软间隔里面享受了优惠，对应的就要在优化问题里面接受惩罚，具体就是在优化目标里面加上一个惩罚项$c\xi_i$，所以原来的优化问题变为：</p><script type="math/tex; mode=display">\min_{w,b}\frac{1}{2}||w||^2 +c\sum_{i=1}^{M}\xi _i   \tag{2.1}</script><p>约束条件：</p><script type="math/tex; mode=display">\begin{align*} s.t. y_i(wx_i+b)\ge 1-\xi_i \\\xi _i\ge 0,i=1,2,...,M\end{align*}</script><p>其中$c&gt;0$是一个惩罚参数。</p><p>采取跟硬间隔SVM类似的步骤，先将优化问题(2.1)转换为对偶优化问题，然后依次求解出拉格朗日乘子向量、权重向量$w$和偏置常数b，得到分割超平面和分类决策函数。</p><h1 id="3-合页损失函数"><a href="#3-合页损失函数" class="headerlink" title="3 合页损失函数"></a>3 合页损失函数</h1><p>硬间隔SVM和软间隔SVM都叫做线性SVM，是一种线性模型，线性SVM还有另外一种解释，就是最小化如下目标函数：</p><script type="math/tex; mode=display">\min_{w,b}\sum_{i=1}^{M}[1-y_i(wx_i+b)]_{+}+\lambda ||w||^2 \tag{3.1}</script><p>式中第一项$[1-y_i(wx_i+b)]_{+}$称为合页损失函数，如:</p><script type="math/tex; mode=display">[z]_{+}=\left\{\begin{matrix} z,z>0\\0,z\le 0\end{matrix}\right.\tag{3.2}</script><p>第二项是正则化项。</p><p>由公式3.2可知:</p><script type="math/tex; mode=display">[1-y_i(wx_i+b)]_{+}=\left\{\begin{matrix} 1-y_i(wx_i+b),y_i(wx_i+b)<1\\0,y_i(wx_i+b)\ge 1\end{matrix}\right. \tag{3.3}</script><p>当样本点$(x_i,y_i)$被正确分类且函数间隔$y_i(wx_i+b)$大于1时，损失是0，否则损失是$1-y_i(wx_i+b)$。</p><p>令$[1-y_i(wx_i+b)]_{+}=\xi_i$，则$\xi_i\ge0$成立，且有：</p><p>1) 当$1-y_i(wx_i+b)&gt;0$时，有$y_i(wx_i+b)=1-\xi_i$；</p><p>2) 当$1-y_i(wx_i+b)\le0$时，有$\xi_i=0$，即$y_i(wx_i+b)\ge1-\xi_i$；</p><p>综合1)和2)可知$y_i(wx_i+b)\ge1-\xi_i$恒成立。</p><p>进一步，取$\lambda=\frac{1}{2c}$，则公式(3.1)等价于如下约束优化问题：</p><script type="math/tex; mode=display">\min_{w,b,\xi } \frac{1}{c}(\frac{1}{2}||w||^2+c\sum_{i=1}^{M}\xi _i  )  \tag{3.4}</script><p>约束条件：</p><script type="math/tex; mode=display">\begin{align*}s.t. y_i(wx_i+b)\ge 1-\xi _i,i=1,2,...,M \\\xi _i\ge 0,i=1,2,...,M\end{align*}</script><p>公式(3.4)就是前面软间隔支持向量机模型的原始最优化问题，即公式(2.1)。</p><p>即软间隔SVM模型的原始最优化问题等价于最小化合页损失，从损失函数的角度证明了线性SVM模型的合理性。</p><h1 id="4-非线性SVM"><a href="#4-非线性SVM" class="headerlink" title="4 非线性SVM"></a>4 非线性SVM</h1><p>对于输入空间中的非线性问题，可以通过非线性变换将它转换为某个维度特征空间中的线性分类问题，在高维特征空间中学习线性SVM。由于线性SVM学习的对偶问题里，目标函数和分类决策函数都只涉及实例和实例之间的内积，所以不需要显示指定非线性变换，而是用核函数替换当中的内积。核函数表示，通过一个非线性变换后的两个实例健的内积，具体地，$K(x,z)$是一个函数，或正定核，意味着存在一个从输入空间到特征空间的映射$\phi (x)$，对任意输入空间中的$x,z$，有：$K(x,z)=\phi(x)\cdot\phi(z)$，在线性SVM学习的对偶问题中，用核函数$K(x,z)$替代内积，求解得到的就是非线性SVM：</p><script type="math/tex; mode=display">f(x)=sign(\sum_{i=1}^{M}\alpha _i^\ast y_iK(x,x_i)+b^\ast  ) \tag{4.1}</script><p>综合以上讨论，可以得到非线性SVM的学习算法如下：</p><p>输入：</p><p>训练数据集$T=\left \{ (x_1,y_1),(x_2,y_2),…,(x_M,y_M) \right \} ,其中y_i\int \left \{ +1,-1 \right \} ,i=1,2,…,M$；</p><p>输出：分离超平面和分类决策函数；</p><p>1) 选择适当的核函数$K(x,z)$和惩罚参数$c&gt;0$，构造并求解凸二次规划问题:</p><script type="math/tex; mode=display">\min_{\alpha }\frac{1}{2}\sum_{i=1}^{M}\sum_{j=1}^{M}\alpha _i\alpha _jy_iy_jK(x_i,x_j)-\sum_{i=1}^{M}\alpha _i</script><p>约束条件：</p><script type="math/tex; mode=display">\begin{align*}s.t. \sum_{i=1}^{M}\alpha _iy_i=0  \\0\le \alpha _i\le c,i=1,2,...,M\end{align*}</script><p>2) 计算</p><p>选择$\alpha ^\ast $的一个分量$\alpha_j ^\ast $满足条件$0 &lt; \alpha_j ^\ast &lt; c$，计算$b^\ast =y_j-\sum_{i=1}^{M}\alpha _i^\ast  y_iK(x_i,x_j)$</p><p>3) 得到分类决策函数，即公式(4.1)。</p>]]></content>
+      
+      
       <categories>
-        <category>人工智能</category>
-        <category>机器学习</category>
+          
+          <category> 人工智能 </category>
+          
+          <category> 机器学习 </category>
+          
       </categories>
-  </entry>
-  <entry>
-    <title>集成学习</title>
-    <url>/2017/02/05/%E9%9B%86%E6%88%90%E5%AD%A6%E4%B9%A0/</url>
-    <content><![CDATA[<p>&ensp;&ensp;&ensp;&ensp;集成学习的核心思想是将若干个个体学习器以一定策略结合起来，最终形成一个强学习器，以达到博采众长的目的。所以集成学习需要解决的核心问题主要有两点：1)如果得到若干个个体基学习器，2)以什么策略把这些个体基学习器结合起来。</p>
-<p><strong>关于基学习器</strong></p>
-<blockquote>
-<p>可以采用相同类别，也可以采用不同类别；<br>各个即学习器之间可以有关联，也可以无关联；</p>
-</blockquote>
-<p><strong>关于组合策略</strong></p>
-<blockquote>
-<p>可以采用均等投票机制或者采用权重投票机制;</p>
-</blockquote>
-<p>根据以上几点不同，集成学习衍生出两类比较流行的方式，即Bagging模型和Boosting模型。</p>
-<p><strong>Bagging模型：</strong></p>
-<blockquote>
-<p>Bagging模型的核心思想是每次同类别、彼此之间无强关联的基学习器，以均等投票机制进行基学习器的组合。</p>
-</blockquote>
-<p>具体方式是：从训练集样本中随机抽取一部分样本，采用任意一个适合样本数据的机器学习模型（如决策树模型或者Logistic回归模型）对该样本进行训练，得到一个训练好的基学习器；然后再次抽取样本，训练一个基学习器；重复指定的次数，得到多个基学习器，接着让每个基学习器对目标进行预测，得到一个预测结果，最后以均等投票的方式，采用少数服从多数的原则确定最后的预测结果。</p>
-<p>需要注意的是，Bagging模型每次对样本数据的采样是有放回的，这样每次采样的数据可能会包含部分前面采样的数据。</p>
-<p><strong>Boosting模型：</strong></p>
-<blockquote>
-<p>与Bagging模型不同，Boosting模型的各个基学习器之间存在强关联，即后面的基学习器是建立在它之前的基学习器的基础上的，Boosting模型的代表是提升算法(AdaBoost)，更具体的是提升树(Boosting Tree)，而提升树比较优秀的实现模型是梯度提升树(GBDT和XGBoost)。</p>
-</blockquote>
-]]></content>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>K近邻算法原理</title>
+      <link href="2017/01/26/K%E8%BF%91%E9%82%BB%E7%AE%97%E6%B3%95%E5%8E%9F%E7%90%86/"/>
+      <url>2017/01/26/K%E8%BF%91%E9%82%BB%E7%AE%97%E6%B3%95%E5%8E%9F%E7%90%86/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>&ensp;&ensp;&ensp;&ensp;K近邻(K-Nearest Neighber, KNN)的思想是：对于任意一个新的样本点，我们可以在这M个已知类别标签的样本点选取k个与其距离最接近的点作为它的最近邻点，然后统计这k个最近邻点的类别标签，将统计最多的列表标签作为预测点的列表。</p></blockquote><h1 id="1-K近邻分类原理"><a href="#1-K近邻分类原理" class="headerlink" title="1 K近邻分类原理"></a>1 K近邻分类原理</h1><p>&ensp;&ensp;&ensp;&ensp;K近邻算法主要有3个要素：K值的选择、距离的度量、分类决策规则。</p><h2 id="1-1-K值选择"><a href="#1-1-K值选择" class="headerlink" title="1.1 K值选择"></a>1.1 K值选择</h2><p>&ensp;&ensp;&ensp;&ensp;K值的选择会对K近邻算法的结果产生较大影响：K值过小，相当于使用一个较小的邻域中的实例来训练模型，容易产生欠拟合，模型的估计误差较大；K值选择过大，相当于用一个较大的领域中的实例来训练模型，这种情况下输入较远的训练实例也会对预测起作用，容易产生过拟合，因而也会影响模型的估计误差。</p><h2 id="1-2-距离度量"><a href="#1-2-距离度量" class="headerlink" title="1.2 距离度量"></a>1.2 距离度量</h2><p>&ensp;&ensp;&ensp;&ensp;距离度量方式有多种，一般使用较多的是欧式距离，假设有两个N维向量$x_i,x_j$，如下：</p><script type="math/tex; mode=display">x_i = ({x_i}^{(1)},{x_i}^{(2)},...,{x_i}^{(N)})\tag{1.1}</script><script type="math/tex; mode=display">x_j = ({x_j}^{(1)},{x_j}^{(2)},...,{x_j}^{(N)})\tag{1.2}</script><p>则它们之间的闵可夫斯基距离为：</p><script type="math/tex; mode=display">L_p(x_i,x_j)=\sqrt[p]{\sum_{n=1}^{N} ({x_i}^{(n)}-{x_j}^{(n)})^p} \tag{1.3}</script><p>当$p=1$时，上面的距离即是曼哈顿距离，当$p=2$时，上面的距离就是欧氏距离。</p><h2 id="1-3-分类决策规则"><a href="#1-3-分类决策规则" class="headerlink" title="1.3 分类决策规则"></a>1.3 分类决策规则</h2><p>&ensp;&ensp;&ensp;&ensp;与朴素贝叶斯一样，可以使用0-1损失函数来衡量，误分类的概率为：</p><script type="math/tex; mode=display">p(y\ne f(x))=1-p(y=f(x)) \tag{1.4}</script><p>其中$f(x)$就是分类决策函数。对于给定的预测样本实例$x_j$，假设最后预测它的分类为$c_r$，再假设$x_j$最近邻的K个训练样本实例$x_i(i=1,2,…,K)$，构成的集合为$N_k$，训练样本实例$x_i$对应的类别标签为$y_i$，则误分类率为：</p><script type="math/tex; mode=display">L=\frac{1}{K} \sum_{x_i\in N_k}^{} I(y_i \ne c_r)=1-\frac{1}{K} \sum_{x_i\in N_k}^{}I(y_i=c_r)</script><p>这里I为指示函数，即I(true)=1,I(false)=0，我们的目标就是使误分类率L最小化，即：</p><script type="math/tex; mode=display">min[1-\frac{1}{K}\sum_{x_i\in N_k}^{}I(y_i=c_r)  ]\tag{1.5}</script><p>即:</p><script type="math/tex; mode=display">max\frac{1}{K}\sum_{x_i\in N_k}^{}I(y_i=c_r) \tag{1.6}</script><p>从上面的式子可以看出，使误分类率最小等价于使预测样本实例x选定的K个最近邻训练样本实例$x_i(i=1,2,…,K)$的类别标签$y_i$尽可能多的和预测样本实例$x_j$的预测类别$c_r$相同。</p><h1 id="2-K近邻分类算法流程"><a href="#2-K近邻分类算法流程" class="headerlink" title="2 K近邻分类算法流程"></a>2 K近邻分类算法流程</h1><p>输入：训练集$T={(x_1,y_1),(x_2,y_2),…,(x_M,y_M)}$，其中$x_i=((x_i)^(1),(x_i)^(2),…,(x_i)^(N))$为第i个训练样本实例，$y_i$为$x_i$对应的类别标签。</p><p>输出：带预测实例$x_j$所属的类别$y_j$。</p><p>步骤如下：</p><p>第1步：</p><p>根据选定的K值，选择合适的距离度量方式，在训练集T中找出待预测实例$x_j$的K个最近邻点$x_i$，这K个训练样本实例构成的集合记为$N_k$。</p><p>第2步：</p><p>根据多数表决规则决定待预测实例$x_j$所属的类别$y_j$，即：</p><script type="math/tex; mode=display">y_i=arg\max_{c_r}\frac{1}{K}\sum_{x_i\in N_k}^{} I(y_i=c_r) \tag{2.1}</script><p>其中$i=1,2,…,K;r=1,2,…,R$。</p><h1 id="3-K近邻回归原理"><a href="#3-K近邻回归原理" class="headerlink" title="3 K近邻回归原理"></a>3 K近邻回归原理</h1><p>K近邻算法不仅可以用于分类，也可以用于回归任务。当用于回归任务时，基本原理和分类任务是一样的，仍然是三要素：K值选择、距离度量方法、回归决策规则，前面两个要素一样，最后一点是将分类决策规则改成回归决策规则。</p><h2 id="3-1-回归决策规则"><a href="#3-1-回归决策规则" class="headerlink" title="3.1 回归决策规则"></a>3.1 回归决策规则</h2><p>在找到待预测实例$x_j$的K个最近邻训练样本实例$x_i(i=1,2,…,K)$后，分类问题采取的决策规则是统计这K个样本的类别情况，然后选择其中占比最高的类别作为待预测实例$x_j$的类别。回归问题稍加变化，把这K个最近邻训练样本实例$x_i$的输出值$y_i$的平均作为待预测实例的值，即：</p><script type="math/tex; mode=display">y_j=\frac{1}{K}\sum_{i=1}^{K}  y_i \tag{3.1}</script><h2 id="3-2-K近邻回归算法流程"><a href="#3-2-K近邻回归算法流程" class="headerlink" title="3.2 K近邻回归算法流程"></a>3.2 K近邻回归算法流程</h2><p>输入：训练集$T={(x_1,y_1),(x_2,y_2),…,(x_M,y_M)}$，其中$x_i=((x_i)^(1),(x_i)^(2),…,(x_i)^(N))$为第i个训练样本实例，$y_i$为$x_i$对应的类别标签。</p><p>输出：待预测实例$x_j$的输出值$y_j$。</p><p>步骤如下：</p><p>第1步：</p><p>根据选定的K值，选择合适的距离度量方式，在训练集T中找出待预测实例$x_j$的K个最近邻点$x_i$，这K个训练样本实例构成的集合记为$N_k$。</p><p>第2步：</p><p>根据取平均规则决定预测实例$x_j$所属的输出值$y_j$，即公式(3.1)。</p>]]></content>
+      
+      
       <categories>
-        <category>人工智能</category>
-        <category>机器学习</category>
+          
+          <category> 人工智能 </category>
+          
+          <category> 机器学习 </category>
+          
       </categories>
-  </entry>
-  <entry>
-    <title>随机森林算法原理</title>
-    <url>/2017/02/07/%E9%9A%8F%E6%9C%BA%E6%A3%AE%E6%9E%97%E7%AE%97%E6%B3%95%E5%8E%9F%E7%90%86/</url>
-    <content><![CDATA[<blockquote>
-<p>&ensp;&ensp;&ensp;&ensp;Bagging模型的代表作是大名鼎鼎的随机森林(Random Forest, RF)。RF默认采用CART作为基学习器，而且它在Bagging模型的基础上再进一步，每次训练基学习器时，除了样本随机采样外，对样本的特征也进行随机采样。</p>
-</blockquote>
-<p>如图所示：</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/16811553-b8e260241aaff3f1.jpg?imageMogr2/auto-orient/strip|imageView2/2/w/400/format/webp" alt=""></p>
-<p>&ensp;&ensp;&ensp;&ensp;由于采用的是CART，所以RF既可以用来做分类，也可以用来回归。RF用来分类时使用CART分类树作为基学习器，最后的投票结果是取票数最多的类别作为最终的预测结果；RF用来回归时使用CART回归树作为基学习器，最后的预测结果采用所有CART回归树的预测值的均值。</p>
-<p>&ensp;&ensp;&ensp;&ensp;由于RF每次都是对样本及样本的特征进行随机采样来训练基学习器，因此泛化能力较强。</p>
-]]></content>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>朴素贝叶斯算法原理</title>
+      <link href="2017/01/21/%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF%E7%AE%97%E6%B3%95%E5%8E%9F%E7%90%86/"/>
+      <url>2017/01/21/%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF%E7%AE%97%E6%B3%95%E5%8E%9F%E7%90%86/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>&ensp;&ensp;&ensp;&ensp;朴素贝叶斯是一个基于贝叶斯定理和特征条件独立假设的分类方法，属于生成模型。<br>&ensp;&ensp;&ensp;&ensp;特征的条件独立假设指的是：假设训练集第$i$个样本$x_i$的$M$个特征${x_i}^{(1)},{x_i}^{(2)},…,{x_i}^{(M)}$彼此之间相互独立，基于条件独立假设，可以求出输入-输出的联合概率$P(x,y)$，然后对于新的输入$x_i$，利用贝叶斯定理求出后验概率$p(y_i|x_i)$，即该对象属于某一类的概率，然后选择具有最大后验概率的类作为该对象所属的类别。</p></blockquote><h1 id="1-算法原理"><a href="#1-算法原理" class="headerlink" title="1. 算法原理"></a>1. 算法原理</h1><p>&ensp;&ensp;&ensp;&ensp;给定训练集$T={(x_1,y_1),(x_2,y_2),…,(x_n,y_n)}$，我们可以知道分类结果$y_i$的种类，假设一共有K种，用$c_1,c_2,…,c_K$表示，则先验概率分布$p(y=c_k)$和$p(x=x_i|y=c_k)$是可以先求出来的， 我们的目标是求后验概率分布$p(y=c_k|x=x_i)$。</p><p>由条件概率公式可知：</p><script type="math/tex; mode=display">p(y=c_k|x=x_i)=\frac{p(x=x_i,y=c_k)}{p(x=x_i)} \tag{1.1}</script><p>由乘法公式：</p><script type="math/tex; mode=display">p(x=x_i,y=c_k)=p(x=x_i|y=c_k)p(y=c_k) \tag{1.2}</script><p>由全概率公式：</p><script type="math/tex; mode=display">p(x=x_i)=\sum_{k=1}^{K} p(x=x_i|y=c_k)\times p(y=c_k) \tag{1.3}</script><p>从而得到贝叶斯定理：</p><script type="math/tex; mode=display">p(y=c_k|x=x_i)=\frac{p(x=x_i|y=c_k)\times p(y=c_k)}{ {\textstyle \sum_{k=1}^{K}p(x=x_i|y=c_k)\times p(y=c_k)} } \tag{1.4}</script><p>根据特征条件独立假设，即假设样本中各个特征之间是相互独立的，则有:</p><script type="math/tex; mode=display">\begin{aligned}p(x=x_i|y=c_k)&=p(x^{(1)}={x_i}^{(1)},x^{(2)}={x_i}^{(2)},...,x^{(N)}={x_i}^{(N)})\\ &=p(x^{(1)}={x_i}^{(1)}|y=c_k)\cdot p(x^{(2)}={x_i}^{(2)}|y=c_k)\cdot ...\cdot p(x^{(N)}={x_i}^{(N)}|y=c_k)\\ &= \prod_{j=1}^{N}p(x^{(j)}={x_i}^{(j)}|y=c_k) \end{aligned} \tag{1.5}</script><p>得到后验概率的完整表达式:</p><script type="math/tex; mode=display">p(y=c_k|x=x_i)=\frac{p(y=c_k)\cdot  {\textstyle \prod_{j=1}^{N}}p(x^{j}={x_i}^{(j)}|y=c_k) }{ {\textstyle \sum_{k=1}^{K}[p(y=c_k)\cdot  {\textstyle \prod_{j=1}^{N}p(x^{(j)}={x_i}^{(j)}|y=c_k)} ]} } \tag{1.6}</script><p>公式1.6即是朴素贝叶斯分类的基本公式，当需要判定输入样本$x_i$的分类类别时，只需一次计算在样本$x_i$条件下$y_i$属于各类别$c_1,c_2,…,c_k$的条件概率$p(y=c_k|x=x_i),k=1,2,…,K$的大小，然后选择该条件概率最大的对应的类别作为预测的分类。</p><h1 id="2-算法实例"><a href="#2-算法实例" class="headerlink" title="2. 算法实例"></a>2. 算法实例</h1><p>&ensp;&ensp;&ensp;&ensp;结合具体的实例来看一下朴素贝叶斯分类的应用过程。</p><p>在实际应用中$x=x_i$代表“具有某些特征”，$y=c_k$代表“属于某类别”，我们要求$p(y=c_k|x=x_i)$，即已知某个样本具有某些特征的条件下，求具有这些特征的样本数据各个类别的概率，即$p(“属于某类别”|“具有某些特征”)$，根据贝叶斯公式：</p><script type="math/tex; mode=display">\begin{aligned}p(“属于某类别”|“具有某些特征”) &= \frac{p(“具有某些特征”|“属于某类别”)|p(“属于某类别”)}{p(“具有某些特征”)}\\ &= \frac{p(“属于某类别”) {\textstyle \prod_{j=1}^{N}p(“具有特征j”|“属于某类别”)} }{p(“具有某些特征”)}  \end{aligned}\tag{2.1}</script><p>以常见的垃圾邮件识别为例，假设现在有10000封邮件，事先已经人为标记为“垃圾邮件”和“非垃圾邮件”两大类，其中“垃圾邮件”3000封，“非垃圾邮件”7000封，我们的任务是，基于这10000封邮件，运用朴素贝叶斯模型，预测新邮件是否为垃圾邮件。</p><p><strong>第1步：分词</strong></p><p>对训练集，即10000封邮件，每封邮件的内容进行分词，比如邮件内容“机器学习算法介绍”，分词后可能得到：“机器学习”，“算法”，“介绍”，分好的词按类别混合在一起，得到“词袋”。</p><p><strong>第2步：统计</strong></p><p>统计词袋中各个词在各个类别下出现的概率，比如统计3000封垃圾邮件中，“机器学习”这个词出现的概率：</p><script type="math/tex; mode=display">p(“机器学习”|“垃圾邮件”)=\frac{N_{kj}}{N_K} \tag{2.2}</script><p>其中$N_k$表示该类别中包含的总邮件文本数目，$N_{kj}$表示该类别中“机器学习”这个词的邮件文本数目。</p><p><strong>第3步：预测</strong></p><p>对于新邮件，对其进行分词后，建设得到M个词，word1,word2,…,wordM，则要计算：</p><script type="math/tex; mode=display">\begin{aligned}p(“垃圾邮件”|“word1”,“word2”,...,“wordM”)\\ =\frac{p(“word1”,“word2”,...,“wordM”|“垃圾邮件”)\times p(“垃圾邮件”)}{p(“word1”,“word2”,...,“wordM”)}\end{aligned}  \tag{2.3}</script><p>和</p><script type="math/tex; mode=display">\begin{aligned}p(“非垃圾邮件”|“word1”,“word2”,...,“wordM”)\\ =\frac{p(“word1”,“word2”,...,“wordM”|“非垃圾邮件”)\times p(“非垃圾邮件”)}{p(“word1”,“word2”,...,“wordM”)}\end{aligned} \tag{2.4}</script><p>由于分母是一样的，所以比较分子大的作为最终预测的分类。根据训练集，p(“垃圾邮件”)和p(“非垃圾邮件”)基于统计可以计算得到，而根据特征条件独立，有：</p><script type="math/tex; mode=display">\begin{aligned}p(“word1”,“word2”,...,“wordM”|“垃圾邮件”)\\ =p(“word1”|“垃圾邮件”)p(“word2”|“垃圾邮件”),...,p(“wordM”|“垃圾邮件”)\end{aligned} \tag{2.5}</script><p>$p(”wordi“|”垃圾邮件“)$即各个特征词的条件概率，基于词袋统计也可以计算得到，从而代入公式2.3和2.4即可比较新邮件属于不同类别的概率大小。</p>]]></content>
+      
+      
       <categories>
-        <category>人工智能</category>
-        <category>机器学习</category>
+          
+          <category> 人工智能 </category>
+          
+          <category> 机器学习 </category>
+          
       </categories>
-  </entry>
-  <entry>
-    <title>AdaBoost算法原理</title>
-    <url>/2017/02/10/AdaBoost%E7%AE%97%E6%B3%95%E5%8E%9F%E7%90%86/</url>
-    <content><![CDATA[]]></content>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Logistic回归算法原理</title>
+      <link href="2017/01/16/Logistic%E5%9B%9E%E5%BD%92%E7%AE%97%E6%B3%95%E5%8E%9F%E7%90%86/"/>
+      <url>2017/01/16/Logistic%E5%9B%9E%E5%BD%92%E7%AE%97%E6%B3%95%E5%8E%9F%E7%90%86/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>Logistic回归模型就是将线性回归的结果输入一个sigmoid函数，将回归值映射到0~1，表示输出为类别的概率。</p></blockquote><h1 id="1-Logistic回归模型"><a href="#1-Logistic回归模型" class="headerlink" title="1. Logistic回归模型"></a>1. Logistic回归模型</h1><p>&ensp;&ensp;&ensp;&ensp;线性回归表达式如下：</p><script type="math/tex; mode=display">z_i=w\cdot x_i+b</script><p>$x_i$是第$i$个样本的$N$个特征组成的特征向量，$w$为$N$个特征对应的特征权重组成的向量，$b$是偏置常数。</p><p>Sigmoid函数：</p><script type="math/tex; mode=display">y_i = \frac{1}{1+e^{-z_i}}</script><p>其中$z_i$是自变量，$y_i$是因变量，$e$是自然常数。</p><p>线性回归的结果套一个sigmoid函数就能得到Logistic回归的结果，即：</p><script type="math/tex; mode=display">y_i = \frac{1}{1+e^{-z_i}}=\frac{1}{1+e^{-(w\cdot x_i+b)}}</script><p>如果我们将$y_i=1$视为$x_i$作为正例的可能性，即：</p><script type="math/tex; mode=display">p(y_i=1|x_i)=\frac{1}{1+e^{-(w\cdot x_i+b)}}=\frac{e^{w\cdot x_i+b}}{1+e^{w\cdot x_i+b}}</script><p>那么反例$y_i=0$的可能性为:</p><script type="math/tex; mode=display">p(y_i=0|x_i)=1-p(y_i=1|x_i)=\frac{1}{1+e^{w\cdot x_i+b}}</script><p>定义两者的比值$\frac{p(y_i=1|x_i)}{p(y_i=0|x_i)}$为“概率”，对其取对数得到“对数概率”：</p><script type="math/tex; mode=display">ln\frac{p(y_i=1|x_i)}{p(y_i=0|x_i)}=w\cdot x_i+b</script><p>可见对数概率的结果正好是线性回归的预测结果$w\cdot x_i+b$，因此，Logistic回归的本质其实就是用线性回归的预测结果$w\cdot x_i+b$去逼近真实标记的对数概率$ln\frac{y}{1-y}$，实际上这也是Logistic回归也被称为“对数概率回归”的原因。</p><h1 id="2-Logistic回归学习策略"><a href="#2-Logistic回归学习策略" class="headerlink" title="2. Logistic回归学习策略"></a>2. Logistic回归学习策略</h1><p>&ensp;&ensp;&ensp;&ensp;在上面我们已经知道正例和反例的概率表达式，接下来则要构造似然函数，将其转换为一个优化问题来求解$w$和$b$。</p><p>对给定数据集$T={(x_1,y_1),(x_2,y_2),…,(x_M,y_M)}$，定义似然函数：</p><script type="math/tex; mode=display">L(w,b)=\prod_{i=1}^{M}[p(y_i=1|x_i)]^{y_i}[1-p(y_i=1|x_i)] ^{1-y_i}</script><p>取对数，得到对数似然函数：</p><script type="math/tex; mode=display">\begin{aligned}lnL(w,b) &= \sum_{i=1}^{M} {y_i\cdot ln[p(y_i=1|x_i)]+(1-y_i)ln[1-p(y_i=1|x_i)]}\\ &= \sum_{i=1}^{M}{y_i\cdot ln\frac{e^{w\cdot x_i+b}}{1+e^{w\cdot x_i+b}}+(1-y_i)\cdot ln\frac{1}{1+e^{}w\cdot x_i+b} }\\ &= \sum_{i=1}^{M}{y_i\cdot (w\cdot x_i+b)-y_i\cdot ln(1+e^{wx_i+b})+(y_i-1)\cdot ln(1+e^{wx_i+b})}\\ &= \sum_{i=1}^{M}{y_i\cdot (w\cdot x_i+b)-ln(1+e^{w\cdot x_i+b})}\end{aligned}</script><p>我们需要使每个样本属于其真实标记的概率越大越好，即最大对数似然函数：</p><script type="math/tex; mode=display">\max_{w,b}\sum_{i=1}^{M}{y_i\cdot (w\cdot x_i+b)-ln(1+e^{w\cdot x_i+b})}</script><p>可以用梯度下降或牛顿法来求解该优化问题。</p><h1 id="3-Logistic回归优化算法"><a href="#3-Logistic回归优化算法" class="headerlink" title="3. Logistic回归优化算法"></a>3. Logistic回归优化算法</h1><h2 id="3-1-算法流程"><a href="#3-1-算法流程" class="headerlink" title="3.1 算法流程"></a>3.1 算法流程</h2><p>选用批量梯度下降算法，现分别对权重矩阵$w$和偏置常数$b$求偏导：</p><script type="math/tex; mode=display">\begin{aligned}\frac{\partial }{\partial w}lnL(w,b)&=\frac{\partial }{\partial w}\sum_{i=1}^{M}{y_i\cdot (w\cdot x_i+b)-ln(1+e^{}wx_i+b)}\\ &= \sum_{i=1}^{M}(y_i-\frac{e^{wx_i+b}}{1+e^{wx_i+b}} )x_i\end{aligned}</script><script type="math/tex; mode=display">\begin{aligned}\frac{\partial }{\partial b}lnL(w,b) &= \frac{\partial }{\partial b}\sum_{i=1}^{M}{y_i\cdot (w\cdot x_i+b)-ln(1+e^{}wx_i+b)}\\ &= \sum_{i=1}^{M}(y_i-\frac{e^{wx_i+b}}{1+e^{wx_i+b}} )\end{aligned}</script><p>每次随机选取一个样本点$(x_i,y_i)$，对$w,b$进行一次更新，得到迭代公式：</p><script type="math/tex; mode=display">\begin{aligned}w\gets w+\eta (y_i-\frac{e^{wx_i+b}}{1+e^{wx_i+b}} )x_i\end{aligned}</script><script type="math/tex; mode=display">\begin{aligned}b\gets b+\eta (y_i-\frac{e^{wx_i+b}}{1+e^{wx_i+b}} )\end{aligned}</script><p>Logistic回归流程：</p><p>输入：训练集$T={(x_1,y_1),(x_2,y_2),…,(x_M,y_M)}$，学习率$\eta$;</p><p>输出：Logistic回归模型$h(x)=\frac{1}{1+e^{-(wx_i+b)}}$。</p><p>第1步：选取初始值向量$w$和偏置常数$b$;</p><p>第2步：在训练集中随机选取数据$(x_i,y_i)$，根据上面的迭代公式进行参数更新；</p><p>第3步：重复步骤2，直至模型满足训练要求。</p>]]></content>
+      
+      
       <categories>
-        <category>人工智能</category>
-        <category>机器学习</category>
+          
+          <category> 人工智能 </category>
+          
+          <category> 机器学习 </category>
+          
       </categories>
-  </entry>
-  <entry>
-    <title>梯度提升树</title>
-    <url>/2017/02/12/%E6%A2%AF%E5%BA%A6%E6%8F%90%E5%8D%87%E6%A0%91/</url>
-    <content><![CDATA[]]></content>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>线性回归算法原理</title>
+      <link href="2017/01/15/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E7%AE%97%E6%B3%95%E5%8E%9F%E7%90%86/"/>
+      <url>2017/01/15/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E7%AE%97%E6%B3%95%E5%8E%9F%E7%90%86/</url>
+      
+        <content type="html"><![CDATA[<h1 id="1-问题引入"><a href="#1-问题引入" class="headerlink" title="1. 问题引入"></a>1. 问题引入</h1><p>&ensp;&ensp;&ensp;&ensp;回归分析是一种预测性建模技术，主要用来研究因变量$y_i$和自变量$x_i$之间的关系，通常被用于预测分析、时间序列等。</p><p>&ensp;&ensp;&ensp;&ensp;假设特征和结果满足线性关系，则线性回归的目标就是用一条直线去拟合样本点，当新的样本数据进来时，根据拟合的直线去预测新样本的结果。</p><h1 id="2-线性回归模型"><a href="#2-线性回归模型" class="headerlink" title="2. 线性回归模型"></a>2. 线性回归模型</h1><h2 id="2-1-模型建立"><a href="#2-1-模型建立" class="headerlink" title="2.1 模型建立"></a>2.1 模型建立</h2><p>&ensp;&ensp;&ensp;&ensp;假设南京的房价与房屋的特征满足线性回归模型，我们用$x(1),x(2),…x(N)$表示影响房子价格的特征因素，如面积、房子朝向、地理位置等，房子价格为$h(x)$，是一个由变量$x_i$共同决定的函数，由于不同的因素对房屋价格的影响程度是不同的，所以给每项特征因素赋予一个权重$w(j)$，则得到因变量与自变量之间的函数表达式：</p><script type="math/tex; mode=display">h\left ( x \right ) =w_{1}x^{\left ( 1 \right ) } +w_{2}x^{\left ( 2 \right ) }+...+w_{N}x^{\left ( N \right ) } + b</script><p>写成矩阵的形式，即向量$w=\left ( w_1,w_2,…w_n \right ) $是由各个向量权重组成的，向量$x=\left (x ^{\left ( 1 \right ) } ,x ^{\left ( 2 \right ) },…,x ^{\left ( N \right ) } \right ) $是某个样本数据的特征向量；$b$为偏置常数，则：</p><script type="math/tex; mode=display">h\left ( x \right ) =wx+b</script><p>那么机器学习的任务就是从过去的经验数据中，学习权重系数$w$和偏置常数$b$的最优值，使得回归模型对房子价格预测最准。</p><h2 id="2-2-学习策略"><a href="#2-2-学习策略" class="headerlink" title="2.2 学习策略"></a>2.2 学习策略</h2><p>&ensp;&ensp;&ensp;&ensp;选择合适的策略来学习最优的权重系数$w$和偏置常数$b$。对于回归问题，我们可以使用最小均方误差损失来描述模型的好坏：</p><script type="math/tex; mode=display">L\left ( w,b \right ) =\frac{1}{2} \sum_{i=1}^{M}\left [ h\left ( x_{i};w;b \right ) -y_{i} \right ]^{2}</script><p>其中$ h\left ( x_{i};w;b \right )$是对样本数据$x_{i}$的预测值，$y_{i}$是样本数据$x_{i}$的真实值，样本总数为$M$，$w$是各个特征权重组成的向量，$b$是偏置常数。</p><p>当上面的损失函数$L(w,b)$取最小值时，意味着所有样本的预测值和实际值之间的差距是最小的，这时候相当于我们模型的预测效果是最好的。</p><p>所以我们的策略就是最小化上面的损失函数：</p><script type="math/tex; mode=display">\min_{w,b}L\left ( w,b \right )  =\min_{w} \frac{1}{2} \sum_{i=1}^{M}\left [ h\left ( x_{i};w;b \right ) -y_{i} \right ]^{2}</script><p>通过求解上面的最优化问题，我们可以得到其中的待定参数$w_j$和偏置常数$b$的值。</p><h2 id="2-3-优化算法"><a href="#2-3-优化算法" class="headerlink" title="2.3 优化算法"></a>2.3 优化算法</h2><p>&ensp;&ensp;&ensp;&ensp;针对上述的优化问题，可以使用常用的梯度下降算法来求解，对损失函数求偏导：</p><script type="math/tex; mode=display">\begin{aligned}\frac{\partial }{\partial w}L(w,b) &= \frac{\partial }{\partial w}  \left [ \frac{1}{2} \sum_{i=1}^{M} \left [ h\left ( x_i;w;b \right ) -y_i \right ]^2 \right ]\\ &=2\cdot \frac{1}{2}\cdot \left [ h\left ( x_i;w;b \right ) -y_i \right ]\cdot \frac{\partial }{\partial w} \left [ h\left ( x_i;w;b \right ) -y_i \right ]\\ &=\left ( wx_i+b-y_i \right )\cdot \frac{\partial }{\partial w} \left ( wx_i+b-y_i \right )\\ &=\left ( wx_i+b-y_i \right )x_i\end{aligned}</script><script type="math/tex; mode=display">\begin{aligned}\frac{\partial }{\partial b}L(w,b) &= \frac{\partial }{\partial b}\left [ \frac{1}{2}\sum_{i=1}^{M} \left [ h(x_i;w;b) -y_i \right ]^2   \right ]\\ &=2\cdot \frac{1}{2}\cdot \left [ h(x_i;w;b) -y_i\right ]\cdot \frac{\partial }{\partial b} \left [ h(x_i;w;b) -y_i \right ]\\ &= (wx_i+b-y_i)\cdot \frac{\partial }{\partial b}(wx_i+b-y_i)\\ &= (wx_i+b-y_i)\end{aligned}</script><p>所以得到权重系数向量$w$和偏置常数$b$的更新公式为：</p><script type="math/tex; mode=display">\begin{aligned}w\longleftarrow w-\eta \cdot \frac{\partial }{\partial w}L(w,b)  =w-\eta (wx_i+b-y_i)x_i\end{aligned}</script><script type="math/tex; mode=display">b\longleftarrow b-\eta \cdot \frac{\partial }{\partial b}L(w,b)  =b-\eta (wx_i+b-y_i)</script><p>其中$0&lt; \eta &lt;1$是学习率，这样通过迭代可以使损失函数以较快的速度不断减小，直到满足要求。</p><h1 id="3-算法流程与实现"><a href="#3-算法流程与实现" class="headerlink" title="3. 算法流程与实现"></a>3. 算法流程与实现</h1><h2 id="3-1-算法流程"><a href="#3-1-算法流程" class="headerlink" title="3.1 算法流程"></a>3.1 算法流程</h2><p>输入：训练集$T={(x_1,y_1),(x_2,y_2),…,(x_N,y_N)}$，学习率$\eta$。</p><p>输出：线性回归模型$h(x)=wx+b$；</p><p>步骤如下：</p><p>第1步：选取初始向量$w$和偏置常数$b$。</p><p>第2步：基于训练集进行参数更新:</p><script type="math/tex; mode=display">\begin{aligned}w\longleftarrow w-\eta \cdot \frac{\partial }{\partial w}L(w,b)  =w-\eta (wx_i+b-y_i)x_i\end{aligned}</script><script type="math/tex; mode=display">b\longleftarrow b-\eta \cdot \frac{\partial }{\partial b}L(w,b)  =b-\eta (wx_i+b-y_i)</script><p>第3步：重复步骤2，直至模型满足训练要求。</p><h2 id="3-2-算法实现"><a href="#3-2-算法实现" class="headerlink" title="3.2 算法实现"></a>3.2 算法实现</h2><p><strong>任务描述：</strong></p><p>使用波士顿房价预测，波士顿房价数据与1978年开始统计，共包含506个样本数据点，每个样本都涵盖房屋的13种特征信息和对应的房屋价格，特征情况如下表所示：</p><div class="table-container"><table><thead><tr><th>特征值</th><th>特征说明</th></tr></thead><tbody><tr><td>ZN</td><td>住宅用地所占比例</td></tr><tr><td>INDUS</td><td>城镇中非商业用地所占比例</td></tr><tr><td>NOX</td><td>环保指标</td></tr><tr><td>RM</td><td>每栋住宅的房间数</td></tr><tr><td>AGE</td><td>1940年以前建成的自住单位比例</td></tr><tr><td>RAD</td><td>距离高速公路的便利指数</td></tr><tr><td>TAX</td><td>每一万美元的不动产税率</td></tr><tr><td>LSTAT</td><td>房东属于低收入阶层的比例</td></tr><tr><td>MEDV</td><td>自住房屋房价的中位数</td></tr><tr><td>…</td><td>…</td></tr></tbody></table></div><p><strong>代码实现：</strong><br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1. 数据加载</span></span><br><span class="line"><span class="keyword">from</span> sklearn.datasets <span class="keyword">import</span> load_boston</span><br><span class="line">boston = load_boston()</span><br><span class="line">X = boston.data</span><br><span class="line">y = boston.target</span><br><span class="line">print(X.shape)</span><br><span class="line">print(y.shape)</span><br><span class="line"><span class="comment"># 2. 划分数据集</span></span><br><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> train_test_split</span><br><span class="line">X_train,X_test,y_train,y_test = train_test_split(X,y,train_size=<span class="number">0.7</span>)</span><br><span class="line"><span class="comment"># 3. 数据标准化</span></span><br><span class="line"><span class="keyword">from</span> sklearn <span class="keyword">import</span> preprocessing</span><br><span class="line">standard_X = preprocessing.StandardScaler()</span><br><span class="line">X_train = standard_X.fit_transform(X_train)</span><br><span class="line">X_test = standard_X.transform(X_test)</span><br><span class="line">standard_y = preprocessing.StandardScaler()</span><br><span class="line">y_train = standard_y.fit_transform(y_train.reshape(-<span class="number">1</span>,<span class="number">1</span>))</span><br><span class="line">y_test = standard_y.transform(y_test.reshape(-<span class="number">1</span>,<span class="number">1</span>))</span><br><span class="line"><span class="comment"># 4. 运用ElasticNet回归模型训练和预测</span></span><br><span class="line"><span class="keyword">from</span> sklearn.linear_model <span class="keyword">import</span> ElasticNet</span><br><span class="line">ElasticNet_clf = ElasticNet(alpha=<span class="number">0.1</span>, l1_ratio=<span class="number">0.71</span>)</span><br><span class="line">ElasticNet_clf.fit(X_train, y_train.ravel())</span><br><span class="line">ElasticNet_clf_score = ElasticNet_clf.score(X_test, y_test.ravel())</span><br><span class="line">print(<span class="string">&#x27;lasso模型得分:&#x27;</span>, ElasticNet_clf_score)</span><br><span class="line">print(<span class="string">&#x27;特征权重:&#x27;</span>,ElasticNet_clf.coef_)</span><br><span class="line">print(<span class="string">&#x27;偏置值:&#x27;</span>,ElasticNet_clf.intercept_)</span><br><span class="line">print(<span class="string">&#x27;迭代次数:&#x27;</span>, ElasticNet_clf.n_iter_)</span><br><span class="line"><span class="comment"># 5. 画图</span></span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line">fig = plt.figure(figsize=(<span class="number">20</span>,<span class="number">3</span>))</span><br><span class="line">axes = fig.add_subplot(<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>)</span><br><span class="line">line1, = axes.plot(<span class="built_in">range</span>(<span class="built_in">len</span>(y_test)), y_test, <span class="string">&#x27;b&#x27;</span>, label=<span class="string">&#x27;Actual_value&#x27;</span>)</span><br><span class="line">ElasticNet_clf_result = ElasticNet_clf.predict(X_test)</span><br><span class="line">line2, = axes.plot(<span class="built_in">range</span>(<span class="built_in">len</span>(ElasticNet_clf_result)), ElasticNet_clf_result, <span class="string">&#x27;r--&#x27;</span>, label=<span class="string">&#x27;ElasticNet_Predicted&#x27;</span>, linewidth = <span class="number">2</span>)</span><br><span class="line">axes.grid()</span><br><span class="line">fig.tight_layout()</span><br><span class="line">plt.legend(handles=[line1,line2])</span><br><span class="line">plt.title(<span class="string">&#x27;ElasticNet&#x27;</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure><br>预测结果：</p><p><img src="/images/AI/线性回归/Figure_1.png" alt=""></p>]]></content>
+      
+      
       <categories>
-        <category>人工智能</category>
-        <category>机器学习</category>
+          
+          <category> 人工智能 </category>
+          
+          <category> 机器学习 </category>
+          
       </categories>
-  </entry>
-  <entry>
-    <title>XGBoost算法原理</title>
-    <url>/2017/02/14/XGBoost%E7%AE%97%E6%B3%95%E5%8E%9F%E7%90%86/</url>
-    <content><![CDATA[]]></content>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>梯度下降算法</title>
+      <link href="2017/01/13/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E7%AE%97%E6%B3%95/"/>
+      <url>2017/01/13/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E7%AE%97%E6%B3%95/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>&ensp; &ensp;【摘要】当前位置的梯度方向，为函数在该位置处方向导数最大的方向，也是函数值上升最快的方向，梯度的反方向为函数值下降最快的方向；<br>&ensp; &ensp;&ensp;当前位置的梯度的模，为最大方向导数的值。</p></blockquote><h1 id="下山问题"><a href="#下山问题" class="headerlink" title="下山问题"></a>下山问题</h1><blockquote><p>假设处在一个山的半山腰位置，问怎么走，下山最快？</p></blockquote><h1 id="答案"><a href="#答案" class="headerlink" title="答案"></a>答案</h1><blockquote><p>不断沿着梯度的反方向走，下山最快。</p></blockquote><h1 id="解释与证明"><a href="#解释与证明" class="headerlink" title="解释与证明"></a>解释与证明</h1><p><strong>导数：</strong>对于一元函数，导数表示一元函数的变化率，比如$f\left ( x \right ) =x^{2}$，导数为：$\lim_{t \to 0} \frac{f\left ( x+t \right )-f\left ( x \right )  }{t} =2x$。</p><p><strong>偏导数：</strong>对于多元函数，用偏导数表示多元函数沿着自变量坐标轴方向的导数，也即函数沿坐标轴方向的切线的斜率。$z=f\left ( x,y \right ) $，对x,y的偏导数分别为：$\frac{\partial z}{\partial x} $和$\frac{\partial z}{\partial y} $。</p><p><strong>方向导数：</strong>如果方向不是沿着坐标轴方向，而是沿着任意方向呢？则是方向导数，表示多元函数沿某一方向的变化率。</p><p>定义$xy$平面上一点$(a,b)$，以及单位向量：$\vec{u} =\left ( \cos \theta ,\sin \theta  \right )  $，$\theta$表示该单位向量与x轴的夹角，在曲面$z=f(x,y)$上，从点$(a,b,f(a,b))$出发，沿$\vec{u} $方向走$t$个单位长度后，函数值$z=f\left ( a+\cos \theta ,b+\sin \theta  \right ) $，则在点$(a,b)$处$\vec{方向的方向导数：<br>u} =\left ( \cos \theta ,\sin \theta  \right )  $方向的方向导数：</p><script type="math/tex; mode=display">\lim_{t \to 0}\frac{f\left ( a+t\cos \theta ,b+t\sin \theta  \right ) - f\left ( a,b \right )  }{t} \\= \lim_{t \to 0}\frac{f\left ( a+t\cos \theta ,b+t\sin \theta \right )  - f\left ( a,b+t\sin \theta \right ) }{t} + \lim_{t \to 0}\frac{f\left ( a,b+t\sin \theta \right )  - f\left ( a,b \right ) }{t}</script><p>令$x=t\cos \theta, y=t\sin \theta$，则通过链式法则，上式为：</p><script type="math/tex; mode=display">\frac{\partial }{\partial x} f\left ( a,b \right ) \frac{dx}{dt} +\frac{\partial }{\partial y} f\left ( a,b \right ) \frac{dy}{dt} \\=f_{x}  \left ( a,b \right ) \cos \theta + f_{y} \left ( a,b \right ) \sin \theta</script><p>写成向量内积的形式，即：</p><script type="math/tex; mode=display">方向导数=(f_{x}(a,b),f_{y}(a,b))(\cos \theta ,\sin \theta )</script><p>也就是说，在该点，<strong>任意方向的方向导数是偏导数的线性组合，组合系数是该方向的方向向量。</strong></p><p>注意内积是标量，所以方向导数是标量。</p><p><strong>梯度：</strong>偏导数构成的向量为梯度，记作$\bigtriangledown f$，对于二元函数$\bigtriangledown f=(\frac{\partial z}{\partial x},\frac{\partial z}{\partial y}  )$，对于多元函数$\bigtriangledown f=(\frac{\partial z}{\partial x},\frac{\partial z}{\partial y},…  )$ 。</p><p>根据：</p><script type="math/tex; mode=display">方向导数=(f_{x}(a,b),f_{y}(a,b))(\cos \theta ,\sin \theta ) \\=\left | f_{x}(a,b),f_{y}(a,b) \right | \cdot 1 \cdot \cos \varphi  \\=\left | \bigtriangledown f(a,b) \right |\cdot \cos \varphi</script><p>其中$\varPhi$为梯度与方向向量$\vec{u} $的夹角，显然当$\varphi = 0$时，即方向向量沿着梯度方向时，方向导数最大，最大值为梯度的模；当$\varphi = \pi$时，即方向向量沿着梯度的反方向时，方向导数最小，最小值为梯度的模的负数。</p><p>至此，得到梯度的几何意义：</p><blockquote><ol><li>当前位置的额梯度方向，为函数在该位置处方向导数最大的方向，也是函数值上升最快的方向，梯度的反方向为函数值下降最快的方向；</li><li>当前位置的梯度的模，为最大方向导数的值。</li></ol></blockquote>]]></content>
+      
+      
       <categories>
-        <category>人工智能</category>
-        <category>机器学习</category>
+          
+          <category> 人工智能 </category>
+          
+          <category> 机器学习 </category>
+          
       </categories>
-  </entry>
-  <entry>
-    <title>K-Means聚类算法原理</title>
-    <url>/2017/02/18/K-Means%E8%81%9A%E7%B1%BB%E7%AE%97%E6%B3%95%E5%8E%9F%E7%90%86/</url>
-    <content><![CDATA[]]></content>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>机器学习概述</title>
+      <link href="2017/01/12/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%A6%82%E8%BF%B0/"/>
+      <url>2017/01/12/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%A6%82%E8%BF%B0/</url>
+      
+        <content type="html"><![CDATA[<!--<img src="/images/AI/机器学习概述/0.jpg" width="250" height="150" hspace="5" style="float:right">--><blockquote><p>【摘要】传统编程基于规则和数据，通过快速地计算来得到指定规则下的答案，对于特定c输入，给出确定输出的；而与传统编程不同的是，机器学习其实是从已知的数据和标签中学习得到某种规则，然后运用该规则去预测新数据的标签的过程，对机器学习而言，输入的是训练数据和对应的标签，得到的是数据和标签背后的映射规则。</p></blockquote><a id="more"></a><h1 id="机器学习的定义"><a href="#机器学习的定义" class="headerlink" title="机器学习的定义"></a>机器学习的定义</h1><h2 id="什么是学习？"><a href="#什么是学习？" class="headerlink" title="什么是学习？"></a>什么是学习？</h2><blockquote><p>“如果一个系统，能够通过执行某个过程，就此改进它的性能，那么这个过程就是学习。” —— 1978年诺贝尔经济学奖获得者 Herbert Simon</p></blockquote><h2 id="什么是机器学习？"><a href="#什么是机器学习？" class="headerlink" title="什么是机器学习？"></a>什么是机器学习？</h2><blockquote><p>“对于某类任务T和某项性能评价准则P，如果一个计算机程序在T上，以P作为性能的度量，随着经验E的积累，不断自我完善，那么我们称这个计算机程序从E中进行了学习。”卡耐基梅隆大学教授， Tom Mitchell</p></blockquote><h1 id="机器学习的分类"><a href="#机器学习的分类" class="headerlink" title="机器学习的分类"></a>机器学习的分类</h1><h2 id="按任务类型分类"><a href="#按任务类型分类" class="headerlink" title="按任务类型分类"></a>按任务类型分类</h2><ol><li><p>回归问题：输入输出均为连续变量；</p></li><li><p>分类问题：输出为离散变量；</p></li></ol><h2 id="按学习方式分类"><a href="#按学习方式分类" class="headerlink" title="按学习方式分类"></a>按学习方式分类</h2><ol><li><p>监督学习：训练样本带有标注</p></li><li><p>无监督学习：训练样本无标注，发现数据中的隐藏模式，如聚类和降维任务。</p></li><li><p>强化学习：不断试探和奖励的学习过程。</p></li></ol><h2 id="生成模型和判别模型"><a href="#生成模型和判别模型" class="headerlink" title="生成模型和判别模型"></a>生成模型和判别模型</h2><p>在监督学习中，学习方法可以进一步分为生成方法和判别方法，对应的模型即为生成模型和判别模型。</p><ol><li><p>生成模型</p><p> 生成方法是由数据学习训练集的联合概率分布P(x,y)，然后求出条件概率P(Y|X)作为预测的模型。</p><p> $P\left ( Y|X \right ) =\frac{P\left ( X,Y \right ) }{P\left ( X \right ) } $</p><p> 因为模型表示了给定输入X产生输出Y的生成关系，因此这样的方法被称为生成方法。</p></li><li><p>判别模型</p><p> 判别方法是由数据直接学习决策函数f(x)或条件概率分布P(Y|X)作为预测模型。</p></li></ol><h1 id="机器学习方法三要素"><a href="#机器学习方法三要素" class="headerlink" title="机器学习方法三要素"></a>机器学习方法三要素</h1><blockquote><p>机器学习方法 = 模型 + 策略 + 算法</p></blockquote><p><strong>模型：</strong><br>就是对一个实际业务问题进行建模，将其转化为一个可以用数学语言来描述得问题；</p><p><strong>策略：</strong><br>定义损失函数来描述预测值和理论值之间的误差，将其转换为一个使损失函数最小的优化问题；</p><p><strong>算法：</strong><br>求解最优化问题的方法，一般将其转化为无约束条件的优化问题，然后利用梯度下降或牛顿法求解。</p><h1 id="模型评估的指标"><a href="#模型评估的指标" class="headerlink" title="模型评估的指标"></a>模型评估的指标</h1><h2 id="回归模型评估指标"><a href="#回归模型评估指标" class="headerlink" title="回归模型评估指标"></a>回归模型评估指标</h2><ol><li><p>绝对误差(Mean Absolute Error, MAE)</p><p> 预测值与真实值差的绝对值的平均值：</p><p> $MAE\left ( X,h \right ) = \frac{1}{m} \sum_{i=1}^{m} \left | h\left ( x_{i}  \right ) - y_{i} \right | $</p></li><li><p>均方误差(Mean Squared Error, MSE)</p><p> 预测值与真实值差的平方和的平均值：</p><p> $MAE\left ( X,h \right ) = \frac{1}{m} \sum_{i=1}^{m} \left ( h\left ( x_{i}  \right ) - y_{i} \right )^2 $</p></li><li><p>均方根误差(Root Mean Squared Error, RMSE)</p><p> 预测值与真实值差的平方和的平均值取开方：</p><p> $MAE\left ( X,h \right ) =\sqrt{\frac{1}{m} \sum_{i=1}^{m} \left ( h\left ( x_{i}  \right ) - y_{i} \right )^2 }$</p></li></ol><h2 id="分类模型评估指标"><a href="#分类模型评估指标" class="headerlink" title="分类模型评估指标"></a>分类模型评估指标</h2><ol><li><p>二分类的混淆矩阵</p><p> TP（True Positive）：真正类<br> FP（False Positive）：假正类<br> TN（True Negative）：真负类<br> FN（False Negative）：假负类</p></li><li><p>准确率（accuracy）</p><p> 衡量模型对数据集中样本预测准确的比例。</p><p> $accuracy = \frac{预测正确的样本数目}{总样本数} $</p></li><li><p>精确度(precision)，又称查准率</p><p> 所有预测为正的样本中，真正为正的比例，也就是说预测为正的样本中，有多少预测对了。</p><p> $precision= \frac{TP}{TP+FP} $</p></li><li><p>召回率(recall),又称查全率</p><p> 所有的正样本，有多少被预测出来了</p><p> $recall = \frac{TP}{TP+FN} $</p></li><li><p>F1值与PR曲线</p><p> 在有的任务中，比如搜索引擎，既要关注“检索出的信息有多少是用户感兴趣的”（查准），又要关注“用户感兴趣的信息有多少被检索出来了”（查全），为了兼顾查准和查全，提出了新的衡量标准F1值。</p><p> <strong>PR曲线：</strong></p><p> PR曲线以查全率为x轴，以查准为y轴，按照如下步骤绘制：</p><p> 1) 将预测结果按照预测为正的概率值排序；</p><p> 2) 将概率阈值从1逐渐降低，计算这时的查准和查全率，得到PR曲线上的点；</p><p> 3) 以recall为横坐标，以precision为纵坐标，绘制PR曲线。</p><p> <strong>PR(precision-recall)曲线比较模型性能：</strong></p><p> 1) 如果一条PR曲线完全包住另一条，前者性能优；</p><p> 2) 如果PR曲线发生交叉，则PR曲线下面积大的性能优；</p><p> 3) 使用平衡点(recall==precision)，平衡点值越大性能优；</p><p> 4) F1值度量：</p><p> F1值是precision和recall的调和平均数：<br> $\frac{1}{F_{1} } =\frac{1}{2} \left ( \frac{1}{precision}  + \frac{1}{recall}  \right ) $</p></li><li><p>ROC曲线</p><p> ROC曲线(Receiver Operating Characterstic Curve，受试者工作特征曲线)，一开始并不是为机器学习领域设计的，最早源于军事领域，后来逐渐用于医学、心理学等领域。</p><p> 在ML领域，ROC曲线可以看做是混淆矩阵的改良版本：通过不断调整阈值，从而给出不同版本的混淆矩阵，然后连点成线，得到ROC曲线。</p><p> y轴=真正率=TP/(TP+FN)</p><p> x轴=假正率=FP/(TN+FP)</p><p> ROC曲线作图步骤：</p><p> 1) 将预测结果按照预测为正的概率值排序；</p><p> 2) 将概率阈值从1逐渐降低，计算这时的真正率和假正率，得到ROC曲线上的点；</p><p> 3) 连点成线得到ROC曲线；</p><p> <strong>如何通过ROC曲线对比模型性能：</strong></p><p> 1) 如果一条ROC曲线完全包住另一条ROC曲线，前者性能优；</p><p> 2) 如果ROC曲线发生交叉，则曲线下面积AUC大的性能优；</p></li></ol><h2 id="过拟合、欠拟合和正则化"><a href="#过拟合、欠拟合和正则化" class="headerlink" title="过拟合、欠拟合和正则化"></a>过拟合、欠拟合和正则化</h2><h3 id="过拟合和欠拟合"><a href="#过拟合和欠拟合" class="headerlink" title="过拟合和欠拟合"></a>过拟合和欠拟合</h3><p>误差：模型的预测输出与样本真实值之间的差；</p><p>经验误差也称为训练误差：模型在训练集上的误差；</p><p>泛化误差也称测试误差：模型在新样本上的误差；</p><p>过拟合：模型对训练数据预测很好，对未知数据预测很差；</p><p>欠拟合：特征没有学习到位，对训练数据和测试数据预测都比较差；</p><p>过拟合原因：</p><p>1) 样本特征数量过多；</p><p>2) 噪声过大；</p><p>3) 模型过于复杂；</p><p>解决过拟合的方法：</p><p>1) 获取额外数据进行价差验证；</p><p>2) 重新清洗数据；</p><p>3) 加入正则化项；</p><h3 id="经验风险与结构风险"><a href="#经验风险与结构风险" class="headerlink" title="经验风险与结构风险"></a>经验风险与结构风险</h3><p>经验风险：最小化损失函数</p><p>结构风险：加上了约束项之后的模型，对应的损失函数即为结构风险</p><p>常用的正则化项：L0范数，L1范数，L2范数等。</p>]]></content>
+      
+      
       <categories>
-        <category>人工智能</category>
-        <category>机器学习</category>
+          
+          <category> 人工智能 </category>
+          
+          <category> 机器学习 </category>
+          
       </categories>
-  </entry>
+      
+      
+    </entry>
+    
+    
+  
+  
 </search>
