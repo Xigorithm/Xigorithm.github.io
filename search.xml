@@ -216,6 +216,36 @@ b\gets b+\eta (y_i-\frac{e^{wx_i+b}}{1+e^{wx_i+b}} )
       </categories>
   </entry>
   <entry>
+    <title>XGBoost算法原理</title>
+    <url>/2017/02/14/XGBoost%E7%AE%97%E6%B3%95%E5%8E%9F%E7%90%86/</url>
+    <content><![CDATA[<blockquote>
+<p>XGBoost(eXtreme Gradient Boosting)是GBDT的一种改进形式，具有很好的性能，在各大比赛中大放异彩。</p>
+</blockquote>
+<h1 id="1-XGBoost的算法原理"><a href="#1-XGBoost的算法原理" class="headerlink" title="1 XGBoost的算法原理"></a>1 XGBoost的算法原理</h1><p>经过k轮迭代后，GBDT/GBRT的损失函数可写成$L(y,f_k(\boldsymbol{x}))$，将$f_k(\boldsymbol{x})$视为变量，对$L(y,f_k(\boldsymbol{x}))$在$f_{k-1}(\boldsymbol{x})$进行二阶泰勒展开：</p>
+<script type="math/tex; mode=display">
+L(y,f_k(\boldsymbol{x}))\approx L(y,f_{k-1}(\boldsymbol{x}))+\frac{\partial L(y,f_{k-1}(\boldsymbol{x}))}{\partial f_{k-1}(\boldsymbol{x})}[f_k(\boldsymbol{x})-f_{k-1}(\boldsymbol{x})]+\frac{1}{2} \frac{\partial ^2L(y,f_{k-1})}{\partial ^2f_{k-1}(\boldsymbol{x})}[f_k(\boldsymbol{x})-f_{k-1}(\boldsymbol{x})] ^2 \tag{1.1}</script><p>取$g=\frac{\partial L(y,f_{k-1}(\boldsymbol{x}))}{\partial f_{k-1}(\boldsymbol{x})},h=\frac{\partial ^2L(y,f_{k-1}(\boldsymbol{x}))}{\partial f_{k-1}^2(\boldsymbol{x})}  $，代入上式，得到：</p>
+<script type="math/tex; mode=display">
+L(y,f_k(\boldsymbol{x}))\approx L(y,f_{k-1}(\boldsymbol{x}))+g[f_k(\boldsymbol{x})-f_{k-1}(\boldsymbol{x})]+\frac{1}{2}h[f_k(\boldsymbol{x})-f_{k-1}(\boldsymbol{x})]^2 \tag{1.2}</script><p>在GBDT中，利用前向分布算法，有$f_k(\boldsymbol{x})-f_{k-1}(\boldsymbol{x})=T_k(\boldsymbol{x})$，代入上式，得到：</p>
+<script type="math/tex; mode=display">
+L(y,f_k(\boldsymbol{x}))\approx L(y,f_{k-1}(\boldsymbol{x}))+gT_k(\boldsymbol{x})+\frac{1}{2}h[T_k{\boldsymbol{x}}]^2 \tag{1.3}</script><p>上面的损失函数目前是针对一个样本数据而言，对于整体样本，其损失函数为：</p>
+<script type="math/tex; mode=display">
+L\approx  {\textstyle \sum_{i=1}^{N}}L(y_i,f_k{\boldsymbol{x}_i}) =\sum_{i=1}^{N} [L(y_i,f_{k-1}(\boldsymbol{x}_i))+g_iT_k(\boldsymbol{x}_i)+\frac{1}{2}h_i[T_k{\boldsymbol{x_i}}]^2] \tag{1.4}</script><p>等式右边中第一项$L(y_i,f_{k-1}(\boldsymbol{x}_i))$只与前k-1轮有关，第k轮优化中可将该项视为常数。另外，在GBDT的损失函数上再加上一项与第k轮的基学习器CART决策树相关的正则化项$\omega (T_k(x))$防止过拟合，可得到新的第k轮迭代时的等价损失函数：</p>
+<script type="math/tex; mode=display">
+L_k=\sum_{i=1}^{N}[g_iT_k(\boldsymbol{x}_i)+\frac{1}{2}h_i[T_k(\boldsymbol{x}_i)]^2+\Omega (T_k(\boldsymbol{x})) ]  \tag{1.5}</script><p>上式就是XGBoost模型的损失函数。</p>
+<p>假设第k棵CART回归树其对应的叶子区域样本子集为$D_{k1},D_{k2},…,D_{kT}$，且第j个小单元$D_{kj}$中仍然包含$N_{kj}$个样本数据，则计算每个小单元里面的样本的输出均值为：</p>
+<script type="math/tex; mode=display">
+\bar{c}_{kj}=\frac{1}{N_{kj}}\sum_{x_i\in D_{kj}}^{}y_i   \tag{1.6}</script><p>得到:</p>
+<script type="math/tex; mode=display">
+T_k(\boldsymbol{x})=\sum_{j=1}^{T}\bar{c}_{kj}I(x_i\in D_{kj})   \tag{1.7}</script><p>正则化项的构造为：</p>
+<script type="math/tex; mode=display">
+\Omega (T_k(\boldsymbol{x}))=\gamma T+\frac{1}{2}\lambda \sum_{j=1}^{T}\bar{c}_{kj}^2 \tag{1.8}</script><p>其中，参数T为$T_k(x)$决策树的叶子节点的个数，参数$\bar{c}_{kj},j=1,2,…,T $是第$j$个叶子节点的输出均值，$\gamma ,\lambda $是两个权衡因子。叶子节点的数量及其权重因子一起用来控制决策树模型的复杂度。</p>
+<h1 id="2-XGBoost与GBDT的比较"><a href="#2-XGBoost与GBDT的比较" class="headerlink" title="2 XGBoost与GBDT的比较"></a>2 XGBoost与GBDT的比较</h1>]]></content>
+      <categories>
+        <category>人工智能</category>
+        <category>机器学习</category>
+      </categories>
+  </entry>
+  <entry>
     <title>SVM算法原理</title>
     <url>/2017/01/30/SVM%E7%AE%97%E6%B3%95%E5%8E%9F%E7%90%86/</url>
     <content><![CDATA[<h1 id="1-硬间隔SVM"><a href="#1-硬间隔SVM" class="headerlink" title="1 硬间隔SVM"></a>1 硬间隔SVM</h1><h2 id="1-1-由感知机到SVM"><a href="#1-1-由感知机到SVM" class="headerlink" title="1.1 由感知机到SVM"></a>1.1 由感知机到SVM</h2><p>假设样本点是线性可分的，感知机模型的思想是：利用分割超平面$\vec{w}\cdot \vec{x}+b=0$将样本点划分为两类；假设存在误分类点，则通过使误分类点到分割超平面的距离最小来不断调整超平面，直到所有误分类点被纠正后迭代停止。</p>
@@ -385,36 +415,6 @@ s.t. \sum_{i=1}^{M}\alpha _iy_i=0  \\
 <p>选择$\alpha ^\ast $的一个分量$\alpha_j ^\ast $满足条件$0 &lt; \alpha_j ^\ast &lt; c$，计算$b^\ast =y_j-\sum_{i=1}^{M}\alpha _i^\ast  y_iK(x_i,x_j)$</p>
 <p>3) 得到分类决策函数，即公式(4.1)。</p>
 ]]></content>
-      <categories>
-        <category>人工智能</category>
-        <category>机器学习</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>XGBoost算法原理</title>
-    <url>/2017/02/14/XGBoost%E7%AE%97%E6%B3%95%E5%8E%9F%E7%90%86/</url>
-    <content><![CDATA[<blockquote>
-<p>XGBoost(eXtreme Gradient Boosting)是GBDT的一种改进形式，具有很好的性能，在各大比赛中大放异彩。</p>
-</blockquote>
-<h1 id="1-XGBoost的算法原理"><a href="#1-XGBoost的算法原理" class="headerlink" title="1 XGBoost的算法原理"></a>1 XGBoost的算法原理</h1><p>经过k轮迭代后，GBDT/GBRT的损失函数可写成$L(y,f_k(\boldsymbol{x}))$，将$f_k(\boldsymbol{x})$视为变量，对$L(y,f_k(\boldsymbol{x}))$在$f_{k-1}(\boldsymbol{x})$进行二阶泰勒展开：</p>
-<script type="math/tex; mode=display">
-L(y,f_k(\boldsymbol{x}))\approx L(y,f_{k-1}(\boldsymbol{x}))+\frac{\partial L(y,f_{k-1}(\boldsymbol{x}))}{\partial f_{k-1}(\boldsymbol{x})}[f_k(\boldsymbol{x})-f_{k-1}(\boldsymbol{x})]+\frac{1}{2} \frac{\partial ^2L(y,f_{k-1})}{\partial ^2f_{k-1}(\boldsymbol{x})}[f_k(\boldsymbol{x})-f_{k-1}(\boldsymbol{x})] ^2 \tag{1.1}</script><p>取$g=\frac{\partial L(y,f_{k-1}(\boldsymbol{x}))}{\partial f_{k-1}(\boldsymbol{x})},h=\frac{\partial ^2L(y,f_{k-1}(\boldsymbol{x}))}{\partial f_{k-1}^2(\boldsymbol{x})}  $，代入上式，得到：</p>
-<script type="math/tex; mode=display">
-L(y,f_k(\boldsymbol{x}))\approx L(y,f_{k-1}(\boldsymbol{x}))+g[f_k(\boldsymbol{x})-f_{k-1}(\boldsymbol{x})]+\frac{1}{2}h[f_k(\boldsymbol{x})-f_{k-1}(\boldsymbol{x})]^2 \tag{1.2}</script><p>在GBDT中，利用前向分布算法，有$f_k(\boldsymbol{x})-f_{k-1}(\boldsymbol{x})=T_k(\boldsymbol{x})$，代入上式，得到：</p>
-<script type="math/tex; mode=display">
-L(y,f_k(\boldsymbol{x}))\approx L(y,f_{k-1}(\boldsymbol{x}))+gT_k(\boldsymbol{x})+\frac{1}{2}h[T_k{\boldsymbol{x}}]^2 \tag{1.3}</script><p>上面的损失函数目前是针对一个样本数据而言，对于整体样本，其损失函数为：</p>
-<script type="math/tex; mode=display">
-L\approx  {\textstyle \sum_{i=1}^{N}}L(y_i,f_k{\boldsymbol{x}_i}) =\sum_{i=1}^{N} [L(y_i,f_{k-1}(\boldsymbol{x}_i))+g_iT_k(\boldsymbol{x}_i)+\frac{1}{2}h_i[T_k{\boldsymbol{x_i}}]^2] \tag{1.4}</script><p>等式右边中第一项$L(y_i,f_{k-1}(\boldsymbol{x}_i))$只与前k-1轮有关，第k轮优化中可将该项视为常数。另外，在GBDT的损失函数上再加上一项与第k轮的基学习器CART决策树相关的正则化项$\omega (T_k(x))$防止过拟合，可得到新的第k轮迭代时的等价损失函数：</p>
-<script type="math/tex; mode=display">
-L_k=\sum_{i=1}^{N}[g_iT_k(\boldsymbol{x}_i)+\frac{1}{2}h_i[T_k(\boldsymbol{x}_i)]^2+\Omega (T_k(\boldsymbol{x})) ]  \tag{1.5}</script><p>上式就是XGBoost模型的损失函数。</p>
-<p>假设第k棵CART回归树其对应的叶子区域样本子集为$D_{k1},D_{k2},…,D_{kT}$，且第j个小单元$D_{kj}$中仍然包含$N_{kj}$个样本数据，则计算每个小单元里面的样本的输出均值为：</p>
-<script type="math/tex; mode=display">
-\bar{c}_{kj}=\frac{1}{N_{kj}}\sum_{x_i\in D_{kj}}^{}y_i   \tag{1.6}</script><p>得到:</p>
-<script type="math/tex; mode=display">
-T_k(\boldsymbol{x})=\sum_{j=1}^{T}\bar{c}_{kj}I(x_i\in D_{kj})   \tag{1.7}</script><p>正则化项的构造为：</p>
-<script type="math/tex; mode=display">
-\Omega (T_k(\boldsymbol{x}))=\gamma T+\frac{1}{2}\lambda \sum_{j=1}^{T}\bar{c}_{kj}^2 \tag{1.8}</script><p>其中，参数T为$T_k(x)$决策树的叶子节点的个数，参数$\bar{c}_{kj},j=1,2,…,T $是第$j$个叶子节点的输出均值，$\gamma ,\lambda $是两个权衡因子。叶子节点的数量及其权重因子一起用来控制决策树模型的复杂度。</p>
-<h1 id="2-XGBoost与GBDT的比较"><a href="#2-XGBoost与GBDT的比较" class="headerlink" title="2 XGBoost与GBDT的比较"></a>2 XGBoost与GBDT的比较</h1>]]></content>
       <categories>
         <category>人工智能</category>
         <category>机器学习</category>
