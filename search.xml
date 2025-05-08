@@ -510,55 +510,6 @@ Gini(D)=1-\sum_{k=1}^{K}(\frac{|c_k|}{|D|} )^2 \tag{1.7}</script><p>其中，$c_
       </categories>
   </entry>
   <entry>
-    <title>朴素贝叶斯算法原理</title>
-    <url>/2017/01/21/%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF%E7%AE%97%E6%B3%95%E5%8E%9F%E7%90%86/</url>
-    <content><![CDATA[<blockquote>
-<p>&ensp;&ensp;&ensp;&ensp;朴素贝叶斯是一个基于贝叶斯定理和特征条件独立假设的分类方法，属于生成模型。<br>&ensp;&ensp;&ensp;&ensp;特征的条件独立假设指的是：假设训练集第$i$个样本$x_i$的$M$个特征${x_i}^{(1)},{x_i}^{(2)},…,{x_i}^{(M)}$彼此之间相互独立，基于条件独立假设，可以求出输入-输出的联合概率$P(x,y)$，然后对于新的输入$x_i$，利用贝叶斯定理求出后验概率$p(y_i|x_i)$，即该对象属于某一类的概率，然后选择具有最大后验概率的类作为该对象所属的类别。</p>
-</blockquote>
-<h1 id="1-算法原理"><a href="#1-算法原理" class="headerlink" title="1. 算法原理"></a>1. 算法原理</h1><p>&ensp;&ensp;&ensp;&ensp;给定训练集$T={(x_1,y_1),(x_2,y_2),…,(x_n,y_n)}$，我们可以知道分类结果$y_i$的种类，假设一共有K种，用$c_1,c_2,…,c_K$表示，则先验概率分布$p(y=c_k)$和$p(x=x_i|y=c_k)$是可以先求出来的， 我们的目标是求后验概率分布$p(y=c_k|x=x_i)$。</p>
-<p>由条件概率公式可知：</p>
-<script type="math/tex; mode=display">
-p(y=c_k|x=x_i)=\frac{p(x=x_i,y=c_k)}{p(x=x_i)} \tag{1.1}</script><p>由乘法公式：</p>
-<script type="math/tex; mode=display">
-p(x=x_i,y=c_k)=p(x=x_i|y=c_k)p(y=c_k) \tag{1.2}</script><p>由全概率公式：</p>
-<script type="math/tex; mode=display">
-p(x=x_i)=\sum_{k=1}^{K} p(x=x_i|y=c_k)\times p(y=c_k) \tag{1.3}</script><p>从而得到贝叶斯定理：</p>
-<script type="math/tex; mode=display">
-p(y=c_k|x=x_i)=\frac{p(x=x_i|y=c_k)\times p(y=c_k)}{ {\textstyle \sum_{k=1}^{K}p(x=x_i|y=c_k)\times p(y=c_k)} } \tag{1.4}</script><p>根据特征条件独立假设，即假设样本中各个特征之间是相互独立的，则有:</p>
-<script type="math/tex; mode=display">\begin{aligned}
-p(x=x_i|y=c_k)&=p(x^{(1)}={x_i}^{(1)},x^{(2)}={x_i}^{(2)},...,x^{(N)}={x_i}^{(N)})\\ &=p(x^{(1)}={x_i}^{(1)}|y=c_k)\cdot p(x^{(2)}={x_i}^{(2)}|y=c_k)\cdot ...\cdot p(x^{(N)}={x_i}^{(N)}|y=c_k)\\ &= \prod_{j=1}^{N}p(x^{(j)}={x_i}^{(j)}|y=c_k) 
-\end{aligned} \tag{1.5}</script><p>得到后验概率的完整表达式:</p>
-<script type="math/tex; mode=display">
-p(y=c_k|x=x_i)=\frac{p(y=c_k)\cdot  {\textstyle \prod_{j=1}^{N}}p(x^{j}={x_i}^{(j)}|y=c_k) }{ {\textstyle \sum_{k=1}^{K}[p(y=c_k)\cdot  {\textstyle \prod_{j=1}^{N}p(x^{(j)}={x_i}^{(j)}|y=c_k)} ]} } \tag{1.6}</script><p>公式1.6即是朴素贝叶斯分类的基本公式，当需要判定输入样本$x_i$的分类类别时，只需一次计算在样本$x_i$条件下$y_i$属于各类别$c_1,c_2,…,c_k$的条件概率$p(y=c_k|x=x_i),k=1,2,…,K$的大小，然后选择该条件概率最大的对应的类别作为预测的分类。</p>
-<h1 id="2-算法实例"><a href="#2-算法实例" class="headerlink" title="2. 算法实例"></a>2. 算法实例</h1><p>&ensp;&ensp;&ensp;&ensp;结合具体的实例来看一下朴素贝叶斯分类的应用过程。</p>
-<p>在实际应用中$x=x_i$代表“具有某些特征”，$y=c_k$代表“属于某类别”，我们要求$p(y=c_k|x=x_i)$，即已知某个样本具有某些特征的条件下，求具有这些特征的样本数据各个类别的概率，即$p(“属于某类别”|“具有某些特征”)$，根据贝叶斯公式：</p>
-<script type="math/tex; mode=display">\begin{aligned}
-p(“属于某类别”|“具有某些特征”) &= \frac{p(“具有某些特征”|“属于某类别”)|p(“属于某类别”)}{p(“具有某些特征”)}\\ &= \frac{p(“属于某类别”) {\textstyle \prod_{j=1}^{N}p(“具有特征j”|“属于某类别”)} }{p(“具有某些特征”)}  
-\end{aligned}\tag{2.1}</script><p>以常见的垃圾邮件识别为例，假设现在有10000封邮件，事先已经人为标记为“垃圾邮件”和“非垃圾邮件”两大类，其中“垃圾邮件”3000封，“非垃圾邮件”7000封，我们的任务是，基于这10000封邮件，运用朴素贝叶斯模型，预测新邮件是否为垃圾邮件。</p>
-<p><strong>第1步：分词</strong></p>
-<p>对训练集，即10000封邮件，每封邮件的内容进行分词，比如邮件内容“机器学习算法介绍”，分词后可能得到：“机器学习”，“算法”，“介绍”，分好的词按类别混合在一起，得到“词袋”。</p>
-<p><strong>第2步：统计</strong></p>
-<p>统计词袋中各个词在各个类别下出现的概率，比如统计3000封垃圾邮件中，“机器学习”这个词出现的概率：</p>
-<script type="math/tex; mode=display">
-p(“机器学习”|“垃圾邮件”)=\frac{N_{kj}}{N_K} \tag{2.2}</script><p>其中$N_k$表示该类别中包含的总邮件文本数目，$N_{kj}$表示该类别中“机器学习”这个词的邮件文本数目。</p>
-<p><strong>第3步：预测</strong></p>
-<p>对于新邮件，对其进行分词后，建设得到M个词，word1,word2,…,wordM，则要计算：</p>
-<script type="math/tex; mode=display">\begin{aligned}
-p(“垃圾邮件”|“word1”,“word2”,...,“wordM”)\\ =\frac{p(“word1”,“word2”,...,“wordM”|“垃圾邮件”)\times p(“垃圾邮件”)}{p(“word1”,“word2”,...,“wordM”)}
-\end{aligned}  \tag{2.3}</script><p>和</p>
-<script type="math/tex; mode=display">\begin{aligned}
-p(“非垃圾邮件”|“word1”,“word2”,...,“wordM”)\\ =\frac{p(“word1”,“word2”,...,“wordM”|“非垃圾邮件”)\times p(“非垃圾邮件”)}{p(“word1”,“word2”,...,“wordM”)}
-\end{aligned} \tag{2.4}</script><p>由于分母是一样的，所以比较分子大的作为最终预测的分类。根据训练集，p(“垃圾邮件”)和p(“非垃圾邮件”)基于统计可以计算得到，而根据特征条件独立，有：</p>
-<script type="math/tex; mode=display">\begin{aligned}
-p(“word1”,“word2”,...,“wordM”|“垃圾邮件”)\\ =p(“word1”|“垃圾邮件”)p(“word2”|“垃圾邮件”),...,p(“wordM”|“垃圾邮件”)
-\end{aligned} \tag{2.5}</script><p>$p(”wordi“|”垃圾邮件“)$即各个特征词的条件概率，基于词袋统计也可以计算得到，从而代入公式2.3和2.4即可比较新邮件属于不同类别的概率大小。</p>
-]]></content>
-      <categories>
-        <category>人工智能</category>
-        <category>机器学习</category>
-      </categories>
-  </entry>
-  <entry>
     <title>机器学习概述</title>
     <url>/2017/01/12/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%A6%82%E8%BF%B0/</url>
     <content><![CDATA[<!--<img src="/images/AI/机器学习概述/0.jpg" width="250" height="150" hspace="5" style="float:right">-->
@@ -724,6 +675,55 @@ p(“word1”,“word2”,...,“wordM”|“垃圾邮件”)\\ =p(“word1”|�
       </categories>
   </entry>
   <entry>
+    <title>朴素贝叶斯算法原理</title>
+    <url>/2017/01/21/%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF%E7%AE%97%E6%B3%95%E5%8E%9F%E7%90%86/</url>
+    <content><![CDATA[<blockquote>
+<p>&ensp;&ensp;&ensp;&ensp;朴素贝叶斯是一个基于贝叶斯定理和特征条件独立假设的分类方法，属于生成模型。<br>&ensp;&ensp;&ensp;&ensp;特征的条件独立假设指的是：假设训练集第$i$个样本$x_i$的$M$个特征${x_i}^{(1)},{x_i}^{(2)},…,{x_i}^{(M)}$彼此之间相互独立，基于条件独立假设，可以求出输入-输出的联合概率$P(x,y)$，然后对于新的输入$x_i$，利用贝叶斯定理求出后验概率$p(y_i|x_i)$，即该对象属于某一类的概率，然后选择具有最大后验概率的类作为该对象所属的类别。</p>
+</blockquote>
+<h1 id="1-算法原理"><a href="#1-算法原理" class="headerlink" title="1. 算法原理"></a>1. 算法原理</h1><p>&ensp;&ensp;&ensp;&ensp;给定训练集$T={(x_1,y_1),(x_2,y_2),…,(x_n,y_n)}$，我们可以知道分类结果$y_i$的种类，假设一共有K种，用$c_1,c_2,…,c_K$表示，则先验概率分布$p(y=c_k)$和$p(x=x_i|y=c_k)$是可以先求出来的， 我们的目标是求后验概率分布$p(y=c_k|x=x_i)$。</p>
+<p>由条件概率公式可知：</p>
+<script type="math/tex; mode=display">
+p(y=c_k|x=x_i)=\frac{p(x=x_i,y=c_k)}{p(x=x_i)} \tag{1.1}</script><p>由乘法公式：</p>
+<script type="math/tex; mode=display">
+p(x=x_i,y=c_k)=p(x=x_i|y=c_k)p(y=c_k) \tag{1.2}</script><p>由全概率公式：</p>
+<script type="math/tex; mode=display">
+p(x=x_i)=\sum_{k=1}^{K} p(x=x_i|y=c_k)\times p(y=c_k) \tag{1.3}</script><p>从而得到贝叶斯定理：</p>
+<script type="math/tex; mode=display">
+p(y=c_k|x=x_i)=\frac{p(x=x_i|y=c_k)\times p(y=c_k)}{ {\textstyle \sum_{k=1}^{K}p(x=x_i|y=c_k)\times p(y=c_k)} } \tag{1.4}</script><p>根据特征条件独立假设，即假设样本中各个特征之间是相互独立的，则有:</p>
+<script type="math/tex; mode=display">\begin{aligned}
+p(x=x_i|y=c_k)&=p(x^{(1)}={x_i}^{(1)},x^{(2)}={x_i}^{(2)},...,x^{(N)}={x_i}^{(N)})\\ &=p(x^{(1)}={x_i}^{(1)}|y=c_k)\cdot p(x^{(2)}={x_i}^{(2)}|y=c_k)\cdot ...\cdot p(x^{(N)}={x_i}^{(N)}|y=c_k)\\ &= \prod_{j=1}^{N}p(x^{(j)}={x_i}^{(j)}|y=c_k) 
+\end{aligned} \tag{1.5}</script><p>得到后验概率的完整表达式:</p>
+<script type="math/tex; mode=display">
+p(y=c_k|x=x_i)=\frac{p(y=c_k)\cdot  {\textstyle \prod_{j=1}^{N}}p(x^{j}={x_i}^{(j)}|y=c_k) }{ {\textstyle \sum_{k=1}^{K}[p(y=c_k)\cdot  {\textstyle \prod_{j=1}^{N}p(x^{(j)}={x_i}^{(j)}|y=c_k)} ]} } \tag{1.6}</script><p>公式1.6即是朴素贝叶斯分类的基本公式，当需要判定输入样本$x_i$的分类类别时，只需一次计算在样本$x_i$条件下$y_i$属于各类别$c_1,c_2,…,c_k$的条件概率$p(y=c_k|x=x_i),k=1,2,…,K$的大小，然后选择该条件概率最大的对应的类别作为预测的分类。</p>
+<h1 id="2-算法实例"><a href="#2-算法实例" class="headerlink" title="2. 算法实例"></a>2. 算法实例</h1><p>&ensp;&ensp;&ensp;&ensp;结合具体的实例来看一下朴素贝叶斯分类的应用过程。</p>
+<p>在实际应用中$x=x_i$代表“具有某些特征”，$y=c_k$代表“属于某类别”，我们要求$p(y=c_k|x=x_i)$，即已知某个样本具有某些特征的条件下，求具有这些特征的样本数据各个类别的概率，即$p(“属于某类别”|“具有某些特征”)$，根据贝叶斯公式：</p>
+<script type="math/tex; mode=display">\begin{aligned}
+p(“属于某类别”|“具有某些特征”) &= \frac{p(“具有某些特征”|“属于某类别”)|p(“属于某类别”)}{p(“具有某些特征”)}\\ &= \frac{p(“属于某类别”) {\textstyle \prod_{j=1}^{N}p(“具有特征j”|“属于某类别”)} }{p(“具有某些特征”)}  
+\end{aligned}\tag{2.1}</script><p>以常见的垃圾邮件识别为例，假设现在有10000封邮件，事先已经人为标记为“垃圾邮件”和“非垃圾邮件”两大类，其中“垃圾邮件”3000封，“非垃圾邮件”7000封，我们的任务是，基于这10000封邮件，运用朴素贝叶斯模型，预测新邮件是否为垃圾邮件。</p>
+<p><strong>第1步：分词</strong></p>
+<p>对训练集，即10000封邮件，每封邮件的内容进行分词，比如邮件内容“机器学习算法介绍”，分词后可能得到：“机器学习”，“算法”，“介绍”，分好的词按类别混合在一起，得到“词袋”。</p>
+<p><strong>第2步：统计</strong></p>
+<p>统计词袋中各个词在各个类别下出现的概率，比如统计3000封垃圾邮件中，“机器学习”这个词出现的概率：</p>
+<script type="math/tex; mode=display">
+p(“机器学习”|“垃圾邮件”)=\frac{N_{kj}}{N_K} \tag{2.2}</script><p>其中$N_k$表示该类别中包含的总邮件文本数目，$N_{kj}$表示该类别中“机器学习”这个词的邮件文本数目。</p>
+<p><strong>第3步：预测</strong></p>
+<p>对于新邮件，对其进行分词后，建设得到M个词，word1,word2,…,wordM，则要计算：</p>
+<script type="math/tex; mode=display">\begin{aligned}
+p(“垃圾邮件”|“word1”,“word2”,...,“wordM”)\\ =\frac{p(“word1”,“word2”,...,“wordM”|“垃圾邮件”)\times p(“垃圾邮件”)}{p(“word1”,“word2”,...,“wordM”)}
+\end{aligned}  \tag{2.3}</script><p>和</p>
+<script type="math/tex; mode=display">\begin{aligned}
+p(“非垃圾邮件”|“word1”,“word2”,...,“wordM”)\\ =\frac{p(“word1”,“word2”,...,“wordM”|“非垃圾邮件”)\times p(“非垃圾邮件”)}{p(“word1”,“word2”,...,“wordM”)}
+\end{aligned} \tag{2.4}</script><p>由于分母是一样的，所以比较分子大的作为最终预测的分类。根据训练集，p(“垃圾邮件”)和p(“非垃圾邮件”)基于统计可以计算得到，而根据特征条件独立，有：</p>
+<script type="math/tex; mode=display">\begin{aligned}
+p(“word1”,“word2”,...,“wordM”|“垃圾邮件”)\\ =p(“word1”|“垃圾邮件”)p(“word2”|“垃圾邮件”),...,p(“wordM”|“垃圾邮件”)
+\end{aligned} \tag{2.5}</script><p>$p(”wordi“|”垃圾邮件“)$即各个特征词的条件概率，基于词袋统计也可以计算得到，从而代入公式2.3和2.4即可比较新邮件属于不同类别的概率大小。</p>
+]]></content>
+      <categories>
+        <category>人工智能</category>
+        <category>机器学习</category>
+      </categories>
+  </entry>
+  <entry>
     <title>梯度提升树</title>
     <url>/2017/02/12/%E6%A2%AF%E5%BA%A6%E6%8F%90%E5%8D%87%E6%A0%91/</url>
     <content><![CDATA[<h1 id="1-提升树的定义"><a href="#1-提升树的定义" class="headerlink" title="1 提升树的定义"></a>1 提升树的定义</h1><p>提升树(Boosting Tree)是一种以分类树或回归树作为基分类器的提升方法，具有非常好的性能。实际上，提升树就是一种采用加法模型与前向分步算法，并以决策树为基分类器的提升方法。当处理分类问题时，基分类器采用CART分类树，当处理回归问题时，基分类器采用CART回归树。</p>
@@ -792,11 +792,6 @@ L(y,f_k{\boldsymbol{x}})\le L(y,f_{k-1}{\boldsymbol{x}})
       </categories>
   </entry>
   <entry>
-    <title>梯度策略算法</title>
-    <url>/2025/05/08/%E6%A2%AF%E5%BA%A6%E7%AD%96%E7%95%A5%E7%AE%97%E6%B3%95/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>父亲节快乐</title>
     <url>/2021/06/20/%E7%88%B6%E4%BA%B2%E8%8A%82%E5%BF%AB%E4%B9%90/</url>
     <content><![CDATA[<!--<img src="/images/xiaopingguo.jpg" width="250" height="150" hspace="5" style="float:right">-->
@@ -815,6 +810,67 @@ L(y,f_k{\boldsymbol{x}})\le L(y,f_{k-1}{\boldsymbol{x}})
 ]]></content>
       <categories>
         <category>生活随笔</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>梯度策略算法</title>
+    <url>/2025/05/08/%E6%A2%AF%E5%BA%A6%E7%AD%96%E7%95%A5%E7%AE%97%E6%B3%95/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>读书笔记——《蛤蟆先生去看心理医生》</title>
+    <url>/2022/01/25/%E8%9B%A4%E8%9F%86%E5%85%88%E7%94%9F%E5%8E%BB%E7%9C%8B%E5%BF%83%E7%90%86%E5%8C%BB%E7%94%9F/</url>
+    <content><![CDATA[<blockquote>
+<p>&ensp; &ensp; 【摘要】蛤蟆本是一个热情、时尚又爱冒险的家伙，惹出过不少麻烦和笑话。可他现在陷入抑郁，不能自拔。他的朋友们决定出手相助，其中包括智慧又威严的獾、关心朋友但有点絮叨的河鼠，还有体贴善良的鼹鼠。他们商量来商量去，决定督促蛤蟆重视这个问题，并带他去接受心理咨询。<br>&ensp; &ensp;&ensp;这本书在微信读书上也得到了很高的评价，5.7万人点评有90%的推荐率，而且这本书也排进了TOP200的总榜单。</p>
+</blockquote>
+<p><img src="/images/book/2022/蛤蟆先生去看心理医生/0.jpg" alt=""></p>
+<a id="more"></a>
+<p>&ensp;&ensp;&ensp;<font size = "6">蛤</font>蟆本是一个热情、时尚又爱冒险的家伙，惹出过不少麻烦和笑话。可他现在陷入抑郁，不能自拔。他的朋友们决定出手相助，其中包括智慧又威严的獾、关心朋友但有点絮叨的河鼠，还有体贴善良的鼹鼠。他们商量来商量去，决定督促蛤蟆重视这个问题，并带他去接受心理咨询。</p>
+]]></content>
+      <categories>
+        <category>我的书单</category>
+        <category>2022年书单</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>读书笔记——《肖逸群的创业手记》</title>
+    <url>/2022/12/29/%E8%82%96%E9%80%B8%E7%BE%A4%E7%9A%84%E5%88%9B%E4%B8%9A%E6%89%8B%E8%AE%B0/</url>
+    <content><![CDATA[<p><img src="/images/book/2022/肖逸群创业手记/封面.JPG" width="250" height="150" hspace="5" style="float:right"></p>
+<blockquote>
+<p>&ensp; &ensp;【摘要】最近两周花了一些时间，看完了肖厂长的这本创业手记，基本是作者对自己创业一路走来的心路历程的所思所想。作者跟我基本是同龄，应该是比我早一届上的大学，然而他已经多次入选30x30创业领袖榜单，确实是我应该努力学习的榜样。<br>摘取书中的一些金句(鸡汤)自勉吧。</p>
+</blockquote>
+<a id="more"></a>
+<ol>
+<li><p>The dots will somehow connect in your future.</p>
+<p> 乔布斯在一次经典演讲中的一段话:</p>
+<blockquote>
+<p>&ensp;&ensp;Again, you can’t connect the dots looking forward; you can only connect them looking backwards. So you have to trust that the dots will somehow connect in your future. You have to trust in something — your gut, destiny, life, karma, whatever. Because believing that the dots will connect down the road, will give you the confidence to follow your heart, even when it leads you off the well-worn path. And that will make all the difference.<br>&ensp;&ensp;再次说明的是，你在向未来展望的时候不可能将这些点联系起来，而只可能在回顾过去的时候这么做。所以你必须相信这些点会在你未来的某一天串联在一起。你必须相信某样东西，无论是你的勇气、命运、生命还是因缘。因为如果你相信一路上的这些点会串联起来，你将会有信心追随自己的内心而前进，哪怕由此走上不同于常人的道路也无所畏惧。而这将会让一切都变得不同。</p>
+</blockquote>
+</li>
+<li><p>today you do things others not do, tomorrow you do things others can’t do.</p>
+</li>
+<li><p>无知和弱小不是生存的障碍，傲慢才是。</p>
+</li>
+<li><p>life is unfair, get used to it.</p>
+</li>
+<li><p>像诗人一样思考，像农夫一样耕耘。</p>
+</li>
+<li><p>I leave uncultivated today, was precisely yesterday perished tomorrow which person of the body implored.</p>
+<p>我荒废的今日，正是昨日殒身之人祈求的明日。</p>
+</li>
+<li><p>人短期内会为做错的事后悔，但长期会为自己没做的事情后悔。</p>
+</li>
+<li><p>做正确的事比正确地做事更重要。</p>
+</li>
+<li><p>up or not——不增长就死亡。</p>
+</li>
+<li><p>众生畏果，菩萨畏因。</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>我的书单</category>
+        <category>2022年书单</category>
       </categories>
   </entry>
   <entry>
@@ -909,62 +965,6 @@ b\longleftarrow b-\eta \cdot \frac{\partial }{\partial b}L(w,b)  =b-\eta (wx_i+b
       <categories>
         <category>人工智能</category>
         <category>机器学习</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>读书笔记——《肖逸群的创业手记》</title>
-    <url>/2022/12/29/%E8%82%96%E9%80%B8%E7%BE%A4%E7%9A%84%E5%88%9B%E4%B8%9A%E6%89%8B%E8%AE%B0/</url>
-    <content><![CDATA[<p><img src="/images/book/2022/肖逸群创业手记/封面.JPG" width="250" height="150" hspace="5" style="float:right"></p>
-<blockquote>
-<p>&ensp; &ensp;【摘要】最近两周花了一些时间，看完了肖厂长的这本创业手记，基本是作者对自己创业一路走来的心路历程的所思所想。作者跟我基本是同龄，应该是比我早一届上的大学，然而他已经多次入选30x30创业领袖榜单，确实是我应该努力学习的榜样。<br>摘取书中的一些金句(鸡汤)自勉吧。</p>
-</blockquote>
-<a id="more"></a>
-<ol>
-<li><p>The dots will somehow connect in your future.</p>
-<p> 乔布斯在一次经典演讲中的一段话:</p>
-<blockquote>
-<p>&ensp;&ensp;Again, you can’t connect the dots looking forward; you can only connect them looking backwards. So you have to trust that the dots will somehow connect in your future. You have to trust in something — your gut, destiny, life, karma, whatever. Because believing that the dots will connect down the road, will give you the confidence to follow your heart, even when it leads you off the well-worn path. And that will make all the difference.<br>&ensp;&ensp;再次说明的是，你在向未来展望的时候不可能将这些点联系起来，而只可能在回顾过去的时候这么做。所以你必须相信这些点会在你未来的某一天串联在一起。你必须相信某样东西，无论是你的勇气、命运、生命还是因缘。因为如果你相信一路上的这些点会串联起来，你将会有信心追随自己的内心而前进，哪怕由此走上不同于常人的道路也无所畏惧。而这将会让一切都变得不同。</p>
-</blockquote>
-</li>
-<li><p>today you do things others not do, tomorrow you do things others can’t do.</p>
-</li>
-<li><p>无知和弱小不是生存的障碍，傲慢才是。</p>
-</li>
-<li><p>life is unfair, get used to it.</p>
-</li>
-<li><p>像诗人一样思考，像农夫一样耕耘。</p>
-</li>
-<li><p>I leave uncultivated today, was precisely yesterday perished tomorrow which person of the body implored.</p>
-<p>我荒废的今日，正是昨日殒身之人祈求的明日。</p>
-</li>
-<li><p>人短期内会为做错的事后悔，但长期会为自己没做的事情后悔。</p>
-</li>
-<li><p>做正确的事比正确地做事更重要。</p>
-</li>
-<li><p>up or not——不增长就死亡。</p>
-</li>
-<li><p>众生畏果，菩萨畏因。</p>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>我的书单</category>
-        <category>2022年书单</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>读书笔记——《蛤蟆先生去看心理医生》</title>
-    <url>/2022/01/25/%E8%9B%A4%E8%9F%86%E5%85%88%E7%94%9F%E5%8E%BB%E7%9C%8B%E5%BF%83%E7%90%86%E5%8C%BB%E7%94%9F/</url>
-    <content><![CDATA[<blockquote>
-<p>&ensp; &ensp; 【摘要】蛤蟆本是一个热情、时尚又爱冒险的家伙，惹出过不少麻烦和笑话。可他现在陷入抑郁，不能自拔。他的朋友们决定出手相助，其中包括智慧又威严的獾、关心朋友但有点絮叨的河鼠，还有体贴善良的鼹鼠。他们商量来商量去，决定督促蛤蟆重视这个问题，并带他去接受心理咨询。<br>&ensp; &ensp;&ensp;这本书在微信读书上也得到了很高的评价，5.7万人点评有90%的推荐率，而且这本书也排进了TOP200的总榜单。</p>
-</blockquote>
-<p><img src="/images/book/2022/蛤蟆先生去看心理医生/0.jpg" alt=""></p>
-<a id="more"></a>
-<p>&ensp;&ensp;&ensp;<font size = "6">蛤</font>蟆本是一个热情、时尚又爱冒险的家伙，惹出过不少麻烦和笑话。可他现在陷入抑郁，不能自拔。他的朋友们决定出手相助，其中包括智慧又威严的獾、关心朋友但有点絮叨的河鼠，还有体贴善良的鼹鼠。他们商量来商量去，决定督促蛤蟆重视这个问题，并带他去接受心理咨询。</p>
-]]></content>
-      <categories>
-        <category>我的书单</category>
-        <category>2022年书单</category>
       </categories>
   </entry>
   <entry>
